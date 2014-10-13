@@ -1,0 +1,20 @@
+.breadcrumb p {
+  font-family: 'Gotham A', 'Gotham B', sans-serif;
+  margin: 0;
+  font-size: .6em;
+  letter-spacing: .05em;
+  font-weight: 500;
+  text-transform: uppercase; }
+
+.breadcrumb a {
+  display: inline-block; }
+  .breadcrumb a:first-child {
+    padding-left: 0; }
+
+.breadcrumb a:after {
+  content: "›";
+  padding: 0 1em; }
+
+.breadcrumb a:last-child:after {
+  content: "";
+  padding: 0; }

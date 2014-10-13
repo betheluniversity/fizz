@@ -1,0 +1,25 @@
+@media screen and (min-width: 60em) {
+  .global__navigation {
+    background: #fff;
+    background: #133868;
+    overflow: auto; }
+
+  .global__navigation ul {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 1em 0;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+
+  .global__navigation ul li a {
+    padding: .5em .5em;
+    color: #fff; } }

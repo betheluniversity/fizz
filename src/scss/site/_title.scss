@@ -1,0 +1,30 @@
+.site__title {
+  padding: .75em 1.5em 1.5em;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+  margin-bottom: 1em; }
+  @media screen and (min-width: 60em) {
+    .site__title {
+      display: none; } }
+
+.site__title h1 {
+  font-size: 1.1rem; }
+
+.site__title__button {
+  width: 100%; }
+
+.site__title__button a {
+  background: #ffc600;
+  margin: 0 auto;
+  padding: .75em 2em;
+  border-radius: 2em;
+  font-family: "Gotham A", "Gotham B", Helvetica, Arial, sans;
+  font-size: .8rem;
+  display: inline-block;
+  position: absolute;
+  bottom: -25%;
+  left: 0;
+  right: 0;
+  width: 12em;
+  font-weight: 500; }
