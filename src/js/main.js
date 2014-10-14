@@ -1,12 +1,12 @@
-var sayHello = require('./say-hello');
-var imager = require('../../node_modules/imager.js/Imager.js')
+// var sayHello = require('./say-hello');
+// var imager = require('../../node_modules/imager.js/Imager.js')
 
-sayHello();
-imager();
+// sayHello();
+// imager();
 
 
 var domReady = require("../../node_modules/domready/src/ready.js");
-var offCanvas = require("./offCanvas.js");
+// var offCanvas = require("./offCanvas.js");
 var accordion = require("./accordion.js");
 var Imager = require("../../bower_components/imager.js/Imager.js");
 
