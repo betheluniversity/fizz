@@ -71,7 +71,7 @@ gulp.task('clean', function(){
 		.pipe(clean());
 })
 
-gulp.task('default', ['clean','js','styles','images','assemble','browser-sync'], function() {
+gulp.task('default', ['clean', 'js','styles','images','assemble','browser-sync'], function() {
 	gulp.watch('./src/scss/**/*.scss', ['scss'])
 	gulp.watch('./src/templates/**/*.hbs', ['assemble']);
 	gulp.watch('./src/js/*.js', ['js', browserSync.reload]);

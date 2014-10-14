@@ -2,15 +2,24 @@
 layout:default.hbs
 ---
 
-<html>
+<!doctype html>
+<html class="no-js" lang="">
 
 {{> head }}
 
 <body>
+<a data-scroll href="#bazinga">Anchor Link</a>
 
-{{> global--nav }}
+{{> global__header }}
+{{> global__navigation }}
+{{> school__navigation }}
+{{> site__title }}
+
 {{> body }}
 
+<span id="bazinga">Bazinga!</span>
+
+{{> global__footer }}
 
 <script src="/js/bundle.js"></script>
 </body>

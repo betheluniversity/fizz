@@ -18,3 +18,7 @@ openNav = function(e) {
         this.innerHTML = "+";
     }
 };
+
+[].forEach.call(document.querySelectorAll('.accordion-list__button'), function(el){
+    el.addEventListener('click',openNav);
+});
