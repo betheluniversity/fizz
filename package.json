@@ -15,6 +15,7 @@
     "gulp-uglify": "^1.0.1",
     "handlebars-helpers": "^0.5.8",
     "imager.js": "^0.3.0",
+    "smooth-scroll": "git://github.com/cferdinandi/smooth-scroll",
     "vinyl-source-stream": "^1.0.0"
   }
 }
