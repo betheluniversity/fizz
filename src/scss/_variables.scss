@@ -1,0 +1,15 @@
+$small: max-width 35em;
+$medium: 35em;
+$large: 52em;
+$x-large: 60em;
+
+$breakpoints: (
+    "small" "(max-width: 35em)",
+    "medium" "(min-width: 35em)",
+    "large" "(min-width: 52em)",
+    "x-large" "(min-width: 60em)"
+    );
+
+$bethel--blue: #0069aa;
+$bethel--navy: #0f2c52;
+$bethel--yellow: #ffc600;

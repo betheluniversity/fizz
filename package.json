@@ -12,6 +12,7 @@
     "gulp-plumber": "^0.6.5",
     "gulp-sass": "^0.7.3",
     "gulp-streamify": "0.0.5",
+    "gulp-svg-sprites": "^1.0.3",
     "gulp-uglify": "^1.0.1",
     "handlebars-helpers": "^0.5.8",
     "imager.js": "^0.3.0",

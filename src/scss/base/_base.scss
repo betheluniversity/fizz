@@ -1,0 +1,14 @@
+html {
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+// LOBOTOMIZED OWL
+// http://alistapart.com/article/axiomatic-css-and-lobotomized-owls
+
+* + * {margin-top: 1.5em;}
+.compact * + * {margin-top: .75em;}
+.margins-off > * {margin-top: 0;}

@@ -63,8 +63,8 @@ $add-legacy-support: false !default;
     display: flex; // [1]
     flex-wrap: wrap; // [2]
     list-style: none;
-    margin:0;
-    padding: 0;
+    // margin:0;
+    // padding: 0;
 }
 
 // Setting width to 100% defaults to full-width on mobile

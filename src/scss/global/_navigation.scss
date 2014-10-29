@@ -1,25 +1,33 @@
 @media screen and (min-width: 60em) {
-  .global__navigation {
-    background: #fff;
-    background: #133868;
-    overflow: auto; }
+ 
+    .global__navigation {
+        background: #133868;
+        margin-top: 0;
 
-  .global__navigation ul {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    width: 100%;
-    list-style: none;
-    margin: 0;
-    padding: 1em 0;
-    -webkit-justify-content: space-around;
-    -ms-flex-pack: distribute;
-    justify-content: space-around;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap; }
+        ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 1em 0;
+            justify-content: space-around;
+            flex-wrap: wrap; 
+        }
 
-  .global__navigation ul li a {
-    padding: .5em .5em;
-    color: #fff; } }
+        ul li {
+            margin-top: 0;
+        }
+
+        ul li a {
+            padding: .5em 1em;
+            color: #fff;
+        } 
+
+        // Styling the svg home icon
+        .home-icon {
+            height: 1.05em;
+            width: 1.05em;
+            vertical-align: text-top;
+            fill: #fff;
+        }
+    }
+}

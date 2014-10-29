@@ -1,0 +1,28 @@
+.global__toolbox {
+	margin-top: 0;
+}
+
+@include respond-max(60em) {
+    .global__toolbox {
+        position: absolute;
+        top: 0;
+        z-index: 20;
+        overflow: hidden;
+        width: 100%;
+        background-color: #333; 
+    }
+    .global__toolbox:not(:target) {
+        z-index: 1;
+        height: 0;
+    }
+    .global__toolbox:target .close-btn { display: block }
+}
+
+.global__toolbox__close-btn {
+    margin: 10px 7% 2em;
+    display: inline-block;
+}
+
+@include respond-min(60em) { 
+    .global__toolbox__close-btn { display: none }
+}

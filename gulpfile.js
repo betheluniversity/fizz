@@ -10,7 +10,8 @@ var gulp 		= require('gulp'),
 	clean		= require('gulp-clean'),
 	plumber		= require('gulp-plumber'),
 	autoprefixer= require('gulp-autoprefixer'),
-	imagemin	= require('gulp-imagemin');
+	imagemin	= require('gulp-imagemin'),
+	svgSprite = require("gulp-svg-sprites");
 
 var outputDir = './builds/';
 
@@ -36,7 +37,7 @@ gulp.task('styles', function(){
 gulp.task('images', function(){
 	gulp.src('./src/images/*')
 		.pipe(imagemin())
-		.pipe(gulp.dest(outputDir + '/images'));
+		.pipe(gulp.dest(outputDir + '/assets/images'));
 })
 
 // ==========================
@@ -56,6 +57,13 @@ gulp.task('assemble', function(){
 })
 // ===========================
 
+// https://github.com/shakyShane/gulp-svg-sprites
+gulp.task('sprites', function () {
+    return gulp.src('./src/assets/svg/*.svg')
+        .pipe(svgSprite({mode:"symbols"}))
+        .pipe(gulp.dest(outputDir + '/assets'));
+});
+
 // browser-sync task for starting the server
 gulp.task('browser-sync', function() {
 	browserSync({
@@ -71,8 +79,9 @@ gulp.task('clean', function(){
 		.pipe(clean());
 })
 
-gulp.task('default', ['clean', 'js','styles','images','assemble','browser-sync'], function() {
-	gulp.watch('./src/scss/**/*.scss', ['scss'])
+gulp.task('default', ['clean', 'js','styles','images','sprites','assemble','browser-sync'], function() {
+	gulp.watch('./src/scss/**/*.scss', ['styles']);
 	gulp.watch('./src/templates/**/*.hbs', ['assemble']);
+	gulp.watch('./src/assets/svg/*.svg', ['sprites']);
 	gulp.watch('./src/js/*.js', ['js', browserSync.reload]);
 });
