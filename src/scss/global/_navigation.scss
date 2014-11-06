@@ -20,10 +20,15 @@
         ul li a {
             padding: .5em 1em;
             color: #fff;
-        } 
+        }
+
+        a:hover {
+            background: lighten(#133868, 10%);
+            border-radius: .5em;
+        }
 
         // Styling the svg home icon
-        .home-icon {
+        .svg-icon {
             height: 1.05em;
             width: 1.05em;
             vertical-align: text-top;

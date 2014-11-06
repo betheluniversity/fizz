@@ -18,9 +18,14 @@
     .global__toolbox:target .close-btn { display: block }
 }
 
+.global__toolbox li {
+    margin-top: 0;
+}
+
 .global__toolbox__close-btn {
-    margin: 10px 7% 2em;
-    display: inline-block;
+    margin: .8em 2em 0 0;
+    float: right;
+    // display: inline-block;
 }
 
 @include respond-min(60em) { 

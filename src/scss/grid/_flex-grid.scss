@@ -155,11 +155,11 @@ $add-legacy-support: false !default;
     @if $name == "" {
         $sep: "";
     }
-    .#{$name}#{$sep}grid-pad-\.5x {padding: .5em;}
-    .#{$name}#{$sep}grid-pad-1x {padding: 1em;}
-    .#{$name}#{$sep}grid-pad-1\.5x {padding: 1.5em;}
-    .#{$name}#{$sep}grid-pad-2x {padding: 2em;}
-    .#{$name}#{$sep}grid-pad-3x {padding: 3em;}
+    .#{$name}#{$sep}grid-pad-\.5x {padding: 0 .5em;}
+    .#{$name}#{$sep}grid-pad-1x {padding: 0 1em;}
+    .#{$name}#{$sep}grid-pad-1\.5x {padding: 0 1.5em;}
+    .#{$name}#{$sep}grid-pad-2x {padding: 0 2em;}
+    .#{$name}#{$sep}grid-pad-3x {padding: 0 3em;}
 
     // IF .grid--full is applied, remove the vertical padding between the stacked cells
     .grid--full .#{$name}#{$sep}grid-pad-\.5x {padding: 0 .5em;}

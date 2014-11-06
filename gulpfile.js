@@ -8,10 +8,10 @@ var gulp 		= require('gulp'),
 	reload		= browserSync.reload,
 	assemble	= require('gulp-assemble'),
 	clean		= require('gulp-clean'),
-	plumber		= require('gulp-plumber'),
 	autoprefixer= require('gulp-autoprefixer'),
 	imagemin	= require('gulp-imagemin'),
-	svgSprite = require("gulp-svg-sprites");
+	del 		= require('del'),
+	svgSprite   = require("gulp-svg-sprites");
 
 var outputDir = './builds/';
 
@@ -27,7 +27,6 @@ gulp.task('js', function(){
 // CSS styles task
 gulp.task('styles', function(){
 	return gulp.src('./src/scss/*.scss')
-		.pipe(plumber())
 		.pipe(sass({ outputStyle:'compressed', debug:true })) // compress styles
 		.pipe(autoprefixer({browsers:['last 2 versions']}))
 		.pipe(gulp.dest(outputDir + '/css')) // sending to output directory
@@ -58,11 +57,24 @@ gulp.task('assemble', function(){
 // ===========================
 
 // https://github.com/shakyShane/gulp-svg-sprites
+// This task add all the src files in gulp.src to an icon sprite
 gulp.task('sprites', function () {
-    return gulp.src('./src/assets/svg/*.svg')
-        .pipe(svgSprite({mode:"symbols"}))
-        .pipe(gulp.dest(outputDir + '/assets'));
+    return gulp.src('./src/assets/icon-sprite/*.svg')
+        .pipe(svgSprite({
+        	mode:"symbols",
+        	preview: false,
+        	svg: {
+        		symbols:"symbols.svg"}
+        		}
+        	))
+        .pipe(gulp.dest(outputDir + '/assets/icon-sprite'));
 });
+
+gulp.task('copyfiles', function(){
+	gulp.src('./src/assets/filters/*.svg')
+	.pipe(gulp.dest(outputDir + '/assets/filters'))
+	.pipe(reload({stream:true}));
+})
 
 // browser-sync task for starting the server
 gulp.task('browser-sync', function() {
@@ -74,14 +86,16 @@ gulp.task('browser-sync', function() {
 });
 
 // Clean output directory before saving new 
-gulp.task('clean', function(){
-	return gulp.src(outputDir + '/*', {read:false})
-		.pipe(clean());
+// https://github.com/gulpjs/gulp/blob/master/docs/recipes/delete-files-folder.md
+gulp.task('clean', function (cb) {
+	del([outputDir + '/*'], cb())
+	// .on('error', console.error.bind(console));
 })
 
-gulp.task('default', ['clean', 'js','styles','images','sprites','assemble','browser-sync'], function() {
+gulp.task('default', ['js','styles','images','sprites','copyfiles','assemble','browser-sync'], function() {
 	gulp.watch('./src/scss/**/*.scss', ['styles']);
 	gulp.watch('./src/templates/**/*.hbs', ['assemble']);
-	gulp.watch('./src/assets/svg/*.svg', ['sprites']);
+	gulp.watch('./src/assets/icon-sprite/*.svg', ['sprites']);
+	gulp.watch('./src/assets/filters/*.svg', ['copyfiles']);
 	gulp.watch('./src/js/*.js', ['js', browserSync.reload]);
 });

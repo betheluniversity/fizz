@@ -1,64 +1,89 @@
 .school__navigation {
-  background: #fff;
-  margin: 0;
-  padding: 1em .5em;
-  box-shadow: 0 4px 4px 0 rgba(210, 210, 210, 0.8);
-  overflow-x: scroll;
-  -webkit-overflow-scrolling: touch; 
+    background: #fff;
+    margin: 0;
+    padding: .8em .5em;
+    box-shadow: 0 4px 4px 0 rgba(210, 210, 210, 0.8);
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
 }
 
 .school__navigation__head {
-  padding: 0;
-  margin: 0; }
+    padding: 0;
+    margin: 0;
+}
 
-.js .school__navigation__head {
-  display: table-cell; }
+// .js
+.school__navigation__head {
+    display: table-cell;
+}
 
 .school__navigation__button {
-  margin: 0; }
-  @media screen and (min-width: 60em) {
+    margin: 0;
+}
+
+@media screen and (min-width: 60em) {
     .school__navigation__button {
-      display: none; } }
+        display: none;
+    }
+}
 
 .school__navigation h1 {
-  font-size: 1rem;
-  font-family: "Gotham A", "Gotham B", Helvetica, Arial, sans;
-  font-weight: 500;
-  white-space: nowrap;
-  line-height: 1.5; }
-  @media screen and (min-width: 35em) {
+    font-size: 1rem;
+    font-family: "Gotham A", "Gotham B", Helvetica, Arial, sans;
+    font-weight: 500;
+    white-space: nowrap;
+    line-height: 1.5;
+}
+
+@media screen and (min-width: 35em) {
     .school__navigation h1 {
-      font-size: 1.4rem; } }
-  @media screen and (min-width: 52em) {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (min-width: 52em) {
     .school__navigation h1 {
-      font-size: 1.75rem; } }
-  @media screen and (min-width: 60em) {
+        font-size: 1.55rem;
+    }
+}
+
+@media screen and (min-width: 60em) {
     .school__navigation h1 {
-      font-size: 2rem; } }
+        font-size: 1.8rem;
+    }
+}
 
 .school__navigation ul {
-  padding: 0;
-  margin: 0;
-  line-height: 1.5;
-  vertical-align: middle; }
+    padding: 0;
+    margin: 0;
+    line-height: 1.5;
+    vertical-align: middle;
+}
 
-.js .school__navigation ul {
-  display: table-cell; }
+// .js
+.school__navigation ul {
+    display: table-cell;
+}
 
 .school__navigation ul li {
-  display: inline-block;
-  padding: 0 .5em;
-  font-size: 1rem;
-  font-family: "Gotham A", "Gotham B", Helvetica, Arial, sans;
-  white-space: nowrap; }
+    display: inline-block;
+    padding: 0 .5em;
+    font-size: 1rem;
+    font-family: "Gotham A", "Gotham B", Helvetica, Arial, sans;
+    white-space: nowrap;
+}
 
-.js .school__navigation ul li {
-  display: table-cell; }
+// .js
+.school__navigation ul li {
+    display: table-cell;
+}
 
 .school__navigation a {
-  padding: 0  .25em; }
+    padding: 0  .25em;
+}
 
 .school__navigation a.active {
-  background: #ccc;
-  border-radius: 3px;
-  color: #333; }
+    background: #ccc;
+    border-radius: 3px;
+    color: #333;
+}

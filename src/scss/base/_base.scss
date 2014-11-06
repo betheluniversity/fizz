@@ -6,9 +6,27 @@ html {
 	box-sizing: inherit;
 }
 
+// https://twitter.com/paul_irish/status/524959136782364672
+
+// * {
+// 	position: relative;
+// 	display: flex;
+// 	flex-flow: column;
+// 	flex-shrink: 0;
+// 	overflow:hidden;
+// }
+
+// head, script {
+// 	display:none;
+// }
+
 // LOBOTOMIZED OWL
 // http://alistapart.com/article/axiomatic-css-and-lobotomized-owls
 
 * + * {margin-top: 1.5em;}
 .compact * + * {margin-top: .75em;}
 .margins-off > * {margin-top: 0;}
+
+li + li {
+	margin-top: 0;
+}

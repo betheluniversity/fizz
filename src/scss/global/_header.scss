@@ -82,36 +82,36 @@
 .global__logo a { 
     display: block }
 
-.quickLinksNav .quickLinks { display: block }
-.quickLinksNav .quickLinks a { color: #aadeff }
-@media screen and (min-width: 60em) { 
-    .quickLinksNav { display: none }
-}
-.quickLinksHead { display: none }
-@media screen and (min-width: 60em) { 
-    .quickLinksHead {
-        display: block;
-        margin: 0 2em 0 0;
-        position: absolute;
-        top: 2.75em;
-        right: 2em;
-    }
-}
-.quickLinksHead .quickLinks ul {
-    margin: 0;
-    padding: 0;
-}
-.quickLinksHead .quickLinks li {
-    display: inline;
-    margin: 0 .3em;
-}
-.quickLinksHead .quickLinks a {
-    color: #99aeca;
-    font-size: .79rem;
-}
-@media screen and (min-width: 60em) { 
-    .quickLinksHead .unstyled { float: left }
-}
+// .quickLinksNav .quickLinks { display: block }
+// .quickLinksNav .quickLinks a { color: #aadeff }
+// @media screen and (min-width: 60em) { 
+//     .quickLinksNav { display: none }
+// }
+// .quickLinksHead { display: none }
+// @media screen and (min-width: 60em) { 
+//     .quickLinksHead {
+//         display: block;
+//         margin: 0 2em 0 0;
+//         position: absolute;
+//         top: 2.75em;
+//         right: 2em;
+//     }
+// }
+// .quickLinksHead .quickLinks ul {
+//     margin: 0;
+//     padding: 0;
+// }
+// .quickLinksHead .quickLinks li {
+//     display: inline;
+//     margin: 0 .3em;
+// }
+// .quickLinksHead .quickLinks a {
+//     color: #99aeca;
+//     font-size: .79rem;
+// }
+// @media screen and (min-width: 60em) { 
+//     .quickLinksHead .unstyled { float: left }
+// }
 
 // @media screen and (max-width: 60em) { 
 //     .js #inner-wrap { left: 0 }
@@ -176,13 +176,14 @@
 //     }
 // }
 .burger {
-    font-size: 1rem;
-    margin-left: 1.5em;
+    // font-size: 1rem;
+    // margin-left: 1.5em;
 }
 .burger {
     background: #17437d;
     padding: .25em .6em;
     margin-right: 1em;
+    margin-top: 0;
 
     @include respond-min(60em){
       display: none;
