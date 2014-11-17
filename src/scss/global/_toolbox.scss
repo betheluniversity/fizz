@@ -1,33 +1,49 @@
 .global__toolbox {
-	margin-top: 0;
-}
-
-@include respond-max(60em) {
-    .global__toolbox {
-        position: absolute;
-        top: 0;
-        z-index: 20;
-        overflow: hidden;
-        width: 100%;
-        background-color: #333; 
-    }
-    .global__toolbox:not(:target) {
-        z-index: 1;
-        height: 0;
-    }
-    .global__toolbox:target .close-btn { display: block }
-}
-
-.global__toolbox li {
     margin-top: 0;
+    transition: all 1s ease;
+
+    transform: translate3d(0,-100%,0)
+    // max-height: 0;
+    // overflow: hidden;
+}
+
+.menu-open .global__toolbox {
+    // max-height: 2000px;
+    // min-height: 100%;
 }
 
 .global__toolbox__close-btn {
-    margin: .8em 2em 0 0;
-    float: right;
-    // display: inline-block;
+    display: none;
 }
 
-@include respond-min(60em) { 
-    .global__toolbox__close-btn { display: none }
+.no-js {
+
+    @include respond-max(60em) {
+        .global__toolbox {
+            position: absolute;
+            top: 0;
+            z-index: 20;
+            overflow: hidden;
+            width: 100%;
+            background-color: #333; 
+        }
+        .global__toolbox:not(:target) {
+            z-index: 1;
+            height: 0;
+        }
+        .global__toolbox:target .close-btn { display: block }
+    }
+
+    .global__toolbox li {
+        margin-top: 0;
+    }
+
+    .global__toolbox__close-btn {
+        margin: .8em 2em 0 0;
+        float: right;
+    }
+
+    @include respond-min(60em) { 
+        .global__toolbox__close-btn { display: none }
+    }
 }

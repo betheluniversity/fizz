@@ -17,6 +17,8 @@
         <link href="//cdn4.bethel.edu/images/favicon.ico" rel="icon" type="image/x-icon"/>
     <link rel="stylesheet" href="/css/fizz.css"/>
     <link href="//cloud.typography.com/6664852/692222/css/fonts.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.3.14/slick.css"/>
+    <script src="//ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.7.2.js"></script>
 </head>
 
 <body>
@@ -182,40 +184,76 @@
     </div>
 
 
+
+
+<style>
+
+.slick-item {
+	position: relative;
+}
+.slick-next:before,.slick-prev:before {
+	font-size: 30px;
+}
+.slick-next,.slick-prev {
+	margin-top: 0;
+	height: 30px;
+	width: 30px;
+}
+
+.slick-next {
+	right: 1em;
+}
+
+.slick-prev {
+	left: 1em;
+}
+</style>
+
+<div class="slick-carousel  carousel--basic">
+	<div class="slick-item">
+	<a class="" href="http://www.bethel.edu/stories/marina-hannus">
+                                            
+    
+        
+        <img src="//cdn2.bethel.edu/resize/unsafe/1100x0/smart/http://www.bethel.edu/stories/images/profile-hannus-home.jpg" class="feature__img image-replace" alt="$imgDesc" data-src="//cdn2.bethel.edu/resize/unsafe/{width}x0/smart/http://www.bethel.edu/stories/images/profile-hannus-home.jpg" width="1100">
+                         <figure class="feature__figure">
+                        <blockquote class="feature__blockquote">There are so many people here that I’ve connected to really quickly.</blockquote>
+                        <figcaption class="feature__figcaption">Seminary student Marina Hannus on theology, community, and her transition from Sweden to Bethel.</figcaption>
+                    </figure>
+                
+    </a>
+    </div>
+    <div class="slick-item">
+    <a class="" href="http://www.bethel.edu/stories/marina-hannus">
+                                        
+    
+        
+        <img src="//cdn2.bethel.edu/resize/unsafe/1100x0/smart/http://www.bethel.edu/stories/images/profile-keefe-home.jpg" class="feature__img image-replace" alt="$imgDesc" data-src="//cdn2.bethel.edu/resize/unsafe/{width}x0/smart/http://www.bethel.edu/stories/images/profile-keefe-home.jpg" width="1100">
+                         <figure class="feature__figure">
+                        <blockquote class="feature__blockquote">There are so many people here that I’ve connected to really quickly.</blockquote>
+                        <figcaption class="feature__figcaption">Seminary student Marina Hannus on theology, community, and her transition from Sweden to Bethel.</figcaption>
+                    </figure>
+                
+    </a>
+    </div>
+        <div class="slick-item">
+    <a class="" href="http://www.bethel.edu/stories/marina-hannus">
+                                            
+    
+        
+        <img src="//cdn2.bethel.edu/resize/unsafe/1100x0/smart/http://www.bethel.edu/stories/images/profile-masten-home.jpg" class="feature__img image-replace" alt="$imgDesc" data-src="//cdn2.bethel.edu/resize/unsafe/{width}x0/smart/http://www.bethel.edu/stories/images/profile-masten-home.jpg" width="1100">
+                         <figure class="feature__figure">
+                        <blockquote class="feature__blockquote">There are so many people here that I’ve connected to really quickly.</blockquote>
+                        <figcaption class="feature__figcaption">Seminary student Marina Hannus on theology, community, and her transition from Sweden to Bethel.</figcaption>
+                    </figure>
+                
+    </a>
+    </div>
+</div>
+
+
 <h1>TURTLES are friendly</h1>
 
-
-<div class="grid margins-off">
-	<div class="grid-cell">
-		<a href="//www.bethel.edu/events/arts/index">
-			<figure class=" hover-effect  hover-dim-zoom  margins-off">			
-				<img src="//cdn1.bethel.edu/resize/unsafe/1200x0/smart/http://www.bethel.edu/events/images/events--theatre.jpg" alt="img09">
-				<figcaption>
-					<p>Performing and <span>Visual Arts</span></p>
-					<span class="btn  btn-mini  btn-yellow" href="#turtles">View events</span>
-				</figcaption>		
-			</figure>
-		</a>
-	</div>
-	<div class="grid-cell">
-<figure class=" hover-effect hover-dim-zoom margins-off"> 
-	<img alt="Bethel Athletics" class="overlay--blue" src="//cdn1.bethel.edu/resize/unsafe/1200x0/smart/http://www.bethel.edu/events/images/events--athletics.jpg"/> 
-	<figcaption>
-		<p>Bethel <span>Athletics</span></p>
-		<a class="btn  btn-mini  btn-yellow" href="//athletics.bethel.edu">View Events</a>
-	</figcaption>	
-</figure>
-	</div>
-	<div class="grid-cell">
-		<figure class=" hover-effect  hover-dim-zoom  margins-off">
-			<img class="overlay--blue" src="//cdn1.bethel.edu/resize/unsafe/1200x0/smart/http://www.bethel.edu/events/images/events--calendar.jpg" alt="img09">
-			<figcaption>
-				<p>University <span>Calendar</span></p>
-				<a class="btn  btn-mini  btn-yellow" href="#">View more</a>
-			</figcaption>			
-		</figure>
-	</div>
-</div>
 
 <div class="grid">
 
@@ -301,6 +339,17 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis sint laudantiu
                 </p>
             </section>
         </footer>
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.3.14/slick.min.js"></script>
 <script src="/js/bundle.js"></script>
+
+<script>
+$(document).ready(function(){
+	$('.slick-carousel').slick({
+	  lazyLoad: 'ondemand',
+	});
+});
+</script>
 </body>
 </html>

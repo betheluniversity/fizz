@@ -22,3 +22,14 @@ openNav = function(e) {
 [].forEach.call(document.querySelectorAll('.accordion-list__button'), function(el){
     el.addEventListener('click',openNav);
 });
+
+openMenu = function(e) {
+
+    e.preventDefault();
+    var subList = document.querySelector('html');
+    subList.classList.toggle('menu-open');
+};
+
+[].forEach.call(document.querySelectorAll('.burger'), function(el){
+    el.addEventListener('click',openMenu);
+});

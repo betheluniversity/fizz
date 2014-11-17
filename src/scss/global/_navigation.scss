@@ -1,38 +1,38 @@
-@media screen and (min-width: 60em) {
- 
-    .global__navigation {
-        background: #133868;
-        margin-top: 0;
+.global__navigation {
+    background: #133868;
+    margin-top: 0;
 
-        ul {
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 1em 0;
+
+
+        @include respond-min(60em) {
             display: flex;
-            list-style: none;
-            margin: 0;
-            padding: 1em 0;
             justify-content: space-around;
             flex-wrap: wrap; 
         }
+    }
 
-        ul li {
-            margin-top: 0;
-        }
+    ul li {
+        margin-top: 0;
+    }
 
-        ul li a {
-            padding: .5em 1em;
-            color: #fff;
-        }
+    ul li a {
+        padding: .5em 1em;
+        color: #fff;
+    }
 
-        a:hover {
-            background: lighten(#133868, 10%);
-            border-radius: .5em;
-        }
+    a:hover {
+        background: lighten(#133868, 10%);
+        border-radius: .5em;
+    }
 
-        // Styling the svg home icon
-        .svg-icon {
-            height: 1.05em;
-            width: 1.05em;
-            vertical-align: text-top;
-            fill: #fff;
-        }
+    .svg-icon {
+        height: 1.05em;
+        width: 1.05em;
+        vertical-align: text-top;
+        fill: #fff;
     }
 }
