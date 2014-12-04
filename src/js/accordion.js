@@ -33,3 +33,15 @@ openMenu = function(e) {
 [].forEach.call(document.querySelectorAll('.burger'), function(el){
     el.addEventListener('click',openMenu);
 });
+
+
+collapsibleBlock = function(e) {
+    e.preventDefault();
+    var subList = document.querySelectorAll('.collapsible-block');
+    this.classList.toggle('open-block');
+    this.nextElementSibling.classList.toggle('open-block');
+};
+
+[].forEach.call(document.querySelectorAll('.collapsible-heading'), function(el){
+    el.addEventListener('click',collapsibleBlock);
+});

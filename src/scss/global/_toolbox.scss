@@ -1,15 +1,21 @@
+@-webkit-keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+
 .global__toolbox {
     margin-top: 0;
     transition: all 1s ease;
-
-    transform: translate3d(0,-100%,0)
-    // max-height: 0;
-    // overflow: hidden;
+    display: none;
 }
 
 .menu-open .global__toolbox {
-    // max-height: 2000px;
-    // min-height: 100%;
+    display: block;
 }
 
 .global__toolbox__close-btn {

@@ -184,28 +184,41 @@
     </div>
 
 
+<h2 class="collapsible-heading">Heading</h2>
+<div class="collapsible-block">
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam delectus placeat eum, facere velit, magnam ad perspiciatis inventore animi impedit veniam et maiores reiciendis labore nulla ex laborum nesciunt cum libero aut eaque dolorem incidunt quod! Natus odio accusantium debitis tenetur ex quaerat maiores voluptates optio inventore cum quas, nesciunt ab earum autem nobis. Ipsum eligendi, quos distinctio ipsam accusantium minus laboriosam veniam illum id veritatis tempore velit odio, voluptate ducimus provident repellendus temporibus voluptas molestiae totam quasi eos. Dolorum rem, unde eos debitis! Dolore itaque laudantium eum aperiam officia at necessitatibus accusamus, vitae similique? Fuga eos dicta vero mollitia.
+</div>
+
+<h2 class="collapsible-heading">Heading</h2>
+<div class="collapsible-block">
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam delectus placeat eum, facere velit, magnam ad perspiciatis inventore animi impedit veniam et maiores reiciendis labore nulla ex laborum nesciunt cum libero aut eaque dolorem incidunt quod! Natus odio accusantium debitis tenetur ex quaerat maiores voluptates optio inventore cum quas, nesciunt ab earum autem nobis. Ipsum eligendi, quos distinctio ipsam accusantium minus laboriosam veniam illum id veritatis tempore velit odio, voluptate ducimus provident repellendus temporibus voluptas molestiae totam quasi eos. Dolorum rem, unde eos debitis! Dolore itaque laudantium eum aperiam officia at necessitatibus accusamus, vitae similique? Fuga eos dicta vero mollitia.
+</div>
+
 
 
 <style>
-
 .slick-item {
-	position: relative;
+    position: relative;
+    height: auto;
 }
-.slick-next:before,.slick-prev:before {
-	font-size: 30px;
+.slick-next:before {
+    content: '»';
+}
+.slick-prev:before {
+    content: '«';
 }
 .slick-next,.slick-prev {
-	margin-top: 0;
-	height: 30px;
-	width: 30px;
+    background: tomato;
 }
-
+.slick-next:hover,.slick-prev:hover{
+    opacity: 1;
+    background: tomato;
+}
 .slick-next {
-	right: 1em;
+    right: 0;
 }
-
 .slick-prev {
-	left: 1em;
+    left: 0;
 }
 </style>
 
