@@ -1,5 +1,7 @@
 .global__navigation {
-    background: #133868;
+    // background: #133868;
+    background: $bethel--navy;
+    border-bottom: 1px solid #133868;
     margin-top: 0;
 
     ul {
@@ -17,6 +19,11 @@
 
     ul li {
         margin-top: 0;
+        font-family: $gotham;
+        font-size: .7em;
+        font-weight: 500;
+        letter-spacing: .1em;
+        text-transform: uppercase;
     }
 
     ul li a {

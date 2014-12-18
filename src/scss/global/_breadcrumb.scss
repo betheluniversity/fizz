@@ -1,20 +1,42 @@
+.breadcrumb {
+  // margin-top: .5em;
+}
+
 .breadcrumb p {
-  font-family: 'Gotham A', 'Gotham B', sans-serif;
+  font-family: $gotham;
   margin: 0;
-  font-size: .6em;
+  font-size: .7em;
   letter-spacing: .05em;
-  font-weight: 500;
-  text-transform: uppercase; }
+  // font-weight: 500;
+  // text-transform: uppercase; 
+}
 
 .breadcrumb a {
-  display: inline-block; }
-  .breadcrumb a:first-child {
-    padding-left: 0; }
+  display: inline-block;
+  // padding: 0;
+  color: #999;
+}
+  
+.breadcrumb a:first-child {
+    padding-left: 0; 
+  }
 
 .breadcrumb a:after {
-  content: "›";
-  padding: 0 1em; }
+  // content: "›";
+  content: "•";
+  padding-left: .75em;
+  padding-right: .5em; 
+}
 
 .breadcrumb a:last-child:after {
   content: "";
-  padding: 0; }
+  padding: 0; 
+}
+
+.breadcrumb .svg-icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: text-top;
+  fill: $bethel--blue;
+  fill: #bbb;
+}

@@ -57,15 +57,18 @@ gulp.task('assemble', function(){
 // ===========================
 
 // https://github.com/shakyShane/gulp-svg-sprites
+// http://css-tricks.com/svg-symbol-good-choice-icons/
 // This task add all the src files in gulp.src to an icon sprite
 gulp.task('sprites', function () {
     return gulp.src('./src/assets/icon-sprite/*.svg')
         .pipe(svgSprite({
         	mode:"symbols",
         	preview: false,
+        	baseSize: 16,
         	svg: {
-        		symbols:"symbols.svg"}
-        		}
+        		symbols:"symbols.svg"
+        	}
+   			}
         	))
         .pipe(gulp.dest(outputDir + '/assets/icon-sprite'));
 });

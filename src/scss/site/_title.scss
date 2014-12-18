@@ -1,30 +1,102 @@
 .site__title {
-  padding: .75em 1.5em 1.5em;
-  text-align: center;
+  padding: .75em 1em .75em 0;
+  // text-align: center;
+  // border-bottom: 1px solid $bethel--navy;
   border-bottom: 1px solid #ddd;
-  position: relative;
-  margin-bottom: 1em; }
-  @media screen and (min-width: 60em) {
-    .site__title {
-      display: none; } }
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  align-items: center;
+  // justify-content: space-between;
+  margin: 0;
+  background: rgba($bethel--blue, .1);
+  // background: rgb(229,239,246);
+  // background: rgba($bethel--yellow, .1);
+  // background: #fff;
+
+  @include respond-min(60em){
+    display: none;
+  }
+}
 
 .site__title h1 {
-  font-size: 1.1rem; }
+  font-size: 1.1rem; 
+  // font-family: $sentinel-ssm;
+  // background: tomato;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: $bethel--navy;
+  // margin-top: 0;
+  // padding-right: 1em;
+  // // flex-basis: 75%;
+  font-weight: 400;
+}
 
 .site__title__button {
-  width: 100%; }
+  // background: yellow;
+  flex-shrink: 0;
+  font-size: .8rem;
+  // // width: 100%; 
+  // margin-top: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 1em 0;
+  // // margin: .5em;
+  // // flex: 0 0 25%;
+  // white-space: nowrap;
+  // display: inline-block;
+  margin-right: 1em;
+  font-family: $gotham;
+  font-weight: 700;
+  text-transform: uppercase;
+}
 
 .site__title__button a {
   background: #ffc600;
-  margin: 0 auto;
-  padding: .75em 2em;
-  border-radius: 2em;
-  font-family: "Gotham A", "Gotham B", Helvetica, Arial, sans;
-  font-size: .8rem;
-  display: inline-block;
-  position: absolute;
-  bottom: -25%;
-  left: 0;
-  right: 0;
-  width: 12em;
-  font-weight: 500; }
+  // // margin: 0 auto;
+  padding: 1em;
+  // border-radius: .3em;
+  // display: inline-block;
+  // display: inline-block;
+  // position: absolute;
+  // bottom: -25%;
+  // left: 0;
+  // right: 0;
+  // width: 12em;
+  white-space: nowrap;
+  // font-weight: 500; 
+}
+
+// .site__title {
+//   padding: .75em 1.5em 1.5em;
+//   text-align: center;
+//   border-bottom: 1px solid #ddd;
+//   position: relative;
+//   margin-bottom: 1em; }
+
+//   @include respond-min(60em){
+//     display: none;
+//   }
+// }
+
+// .site__title h1 {
+//   font-size: 1.1rem; }
+
+// .site__title__button {
+//   width: 100%; }
+
+// .site__title__button a {
+//   background: #ffc600;
+//   margin: 0 auto;
+//   padding: .75em 2em;
+//   border-radius: 2em;
+//   font-size: .8rem;
+//   display: inline-block;
+//   position: absolute;
+//   bottom: -25%;
+//   left: 0;
+//   right: 0;
+//   width: 12em;
+//   font-weight: 500; }

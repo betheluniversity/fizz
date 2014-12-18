@@ -32,6 +32,8 @@
     padding: .25em .6em;
     margin-right: 1em;
     margin-top: 0;
+    font-family: $gotham;
+    font-size: .9rem;
 
     @include respond-min(60em){
       display: none;

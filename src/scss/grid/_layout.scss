@@ -1,26 +1,52 @@
-@media screen and (min-width: 60em) {
-  .wazowski {
-    -webkit-box-ordinal-group: 0;
-    -webkit-order: -1;
-    -ms-flex-order: -1;
-    order: -1;
-    -webkit-flex-basis: 25%;
-    -ms-flex-preferred-size: 25%;
-    flex-basis: 25%; } }
 
-.sulley {
-  -webkit-flex-basis: 75%;
-  -ms-flex-preferred-size: 75%;
-  flex-basis: 75%;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1; }
+.inner {
+  max-width: 75em;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-.boo {
-  -webkit-flex-basis: 100%;
-  -ms-flex-preferred-size: 100%;
-  flex-basis: 100%;
-  -webkit-flex-shrink: 1;
-  -ms-flex-negative: 1;
-  flex-shrink: 1; }
+.main-content--with-nav {
+  flex: 0 0 100%;
+  padding-left: 1em;
+  padding-right: 1em;
+
+  @include respond-min(30em){
+    padding-left: 2em;
+    padding-right: 2em;
+    }
+
+    @include respond-min(45em){
+        padding-left: 3em;
+        padding-right: 3em;
+    }
+
+    @include respond-min(60em){
+       flex: 0 0 75%;
+       order: 1;
+       padding-left: 3em;
+       padding-right: 3em;
+    }
+}
+
+.site__navigation {
+  flex: 0 0 100%;
+
+  @include respond-min(30em){
+      // flex: 0 0 100%;
+  }
+
+  @include respond-min(60em){
+      flex: 0 0 25%;
+      order: 0;
+      padding-left: 1em;
+  }
+}
+
+.main-content--flex {
+    flex: 0 0 100%;
+
+    @include respond-min(60em){
+      order: 2;
+      flex: 0 0 100%;
+  }
+}

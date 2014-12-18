@@ -9,12 +9,16 @@ layout:default.hbs
 <body>
 {{!-- <a data-scroll href="#bazinga">Anchor Link</a> --}}
 
-{{> global__header }}
 {{> global__navigation }}
+{{> global__header }}
 {{> school__navigation }}
 {{> site__title }}
 
+<div class="inner">
+{{> breadcrumb }}
+{{> page__title }}
 {{> body }}
+</div>
 
 {{!-- <span id="bazinga">Bazinga!</span> --}}
 
@@ -26,11 +30,11 @@ layout:default.hbs
 <script src="/js/bundle.js"></script>
 
 <script>
-$(document).ready(function(){
-	$('.slick-carousel').slick({
-	  lazyLoad: 'ondemand',
-	});
-});
+// $(document).ready(function(){
+// 	$('.slick-carousel').slick({
+// 	  lazyLoad: 'ondemand',
+// 	});
+// });
 </script>
 </body>
 </html>

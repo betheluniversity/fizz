@@ -1,6 +1,26 @@
 
 body {
-	line-height: 1.5;
+	line-height: 1.7;
+	font-family: $sentinel-ssm;
+	font-weight: 300;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $gotham;
+	font-weight: 700;
+	color: #333;
+}
+
+h1,
+h2,
+h3 {
+	line-height: 1.2;
+	margin-bottom: 0;
 }
 
 p {
@@ -16,4 +36,15 @@ a {
 	list-style: none;
 	margin: 0;
 	padding: 0;
+}
+
+.uppercase-underlined {
+    text-transform: uppercase;
+    padding-bottom: 0.5em;
+    margin: 0 auto 3em;
+    letter-spacing: 3px;
+    font-size: 0.75em;
+    display: table;
+    text-align: center;
+    border-bottom: 1px solid #333;
 }
