@@ -1,0 +1,123 @@
+.school__navigation {
+    background: #fff;
+    // background: #eee;
+    // background: rgba($bethel--blue, .2);
+    margin: 0;
+    padding: .75em .5em;
+    // box-shadow: 0 4px 4px 0 rgba(210, 210, 210, 0.8);
+    overflow-x: scroll;
+    // -webkit-overflow-scrolling: touch;
+    border-bottom: 1px solid #ccc;
+    font-family: $gotham;
+    // display: table;
+
+    @include respond-min(60em){
+        padding: 1.5em;
+    }
+}
+
+.school__navigation__head {
+    padding: 0;
+    margin: 0;
+    // display: table-cell;
+    font-size: 1.25em;
+    // font-family: $sentinel-ssm;
+    // font-weight: 500;
+    white-space: nowrap;
+    line-height: 1.5;
+    // padding: 0 .5em;
+    // color: #fff;
+    text-align: center;
+    // text-transform: uppercase;
+    // margin-bottom: .5em;
+
+    @include respond-min(60em){
+        font-size: 1.5em;
+        line-height: 2;
+    }
+}
+
+.school__navigation__button {
+    margin: 0;
+
+    @include respond-min(60em){
+        display: none;
+    }
+}
+
+// .school__navigation h1 {
+//     font-size: 1em;
+//     // font-family: $sentinel-ssm;
+//     // font-weight: 500;
+//     white-space: nowrap;
+//     line-height: 1.5;
+//     // padding: 0 .5em;
+//     // color: #fff;
+//     text-align: center;
+//     text-transform: uppercase;
+//     // margin-bottom: .5em;
+
+//     @include respond-min(60em){
+//         font-size: 1.5em;
+//         line-height: 2;
+//     }
+// }
+
+@keyframes scrollIn {
+    from {
+        transform: translate3d(5em,0,0);
+        // opacity: 0;
+    }
+    to {
+        transform: translate3d(0,0,0);
+        // opacity: 1;
+    }
+}
+
+.school__navigation ul {
+    padding: 0;
+    margin: 0;
+    line-height: 1.5;
+    vertical-align: middle;
+    text-align: center;
+    // animation: scrollIn 750ms;
+    // position: relative;
+    // display: table-cell;
+}
+
+.school__navigation ul li {
+    display: inline-block;
+    // padding: 0 .75em;
+    margin: 0 .35em;
+    font-size: .9rem;
+    // font-weight: 500;
+    // font-family: $gotham;
+    white-space: nowrap;
+    // display: table-cell;
+    // letter-spacing: .05em;
+}
+
+.school__navigation a {
+    padding: .15em .35em;
+    // color: #fff;
+    // color: #aaa;
+    // opacity: .6;
+}
+
+.school__navigation a.active {
+      background: rgba($bethel--blue, .1);
+      // background: rgba(#ddd, .35);
+    border-radius: 3px;
+    // color: #fff;
+    // opacity: 1;
+    font-weight: 500;
+}
+
+.school__navigation .svg-icon {
+        width: 1em;
+        height: 1em;
+        // margin-right: .5em;
+        vertical-align: text-top;
+        fill: $bethel--blue;
+        // fill-opacity: .5;
+    }
