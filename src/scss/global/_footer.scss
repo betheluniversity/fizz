@@ -1,11 +1,14 @@
 .global__footer {
-    
+    margin-top: 0;
     background: #0069aa;
+    background: $bethel--navy;
+    // background: #ddd;
     padding-top: 2em;
     padding-bottom: 2em;
 
     p, li {
         color: #77cbff; 
+        font-family: $gotham;
     }
 
     a, a i {

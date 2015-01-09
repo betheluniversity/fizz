@@ -87,7 +87,7 @@
 
 .school__navigation ul li {
     display: inline-block;
-    // padding: 0 .75em;
+    // padding: .25em;
     margin: 0 .35em;
     font-size: .9rem;
     // font-weight: 500;
@@ -95,6 +95,8 @@
     white-space: nowrap;
     // display: table-cell;
     // letter-spacing: .05em;
+    // display: flex;
+    // justify-content: space-between;
 }
 
 .school__navigation a {
@@ -104,13 +106,19 @@
     // opacity: .6;
 }
 
-.school__navigation a.active {
+.school__navigation .active {
       background: rgba($bethel--blue, .1);
+      // background: tomato;
       // background: rgba(#ddd, .35);
     border-radius: 3px;
     // color: #fff;
     // opacity: 1;
-    font-weight: 500;
+    // font-weight: 500;
+}
+
+.school__navigation__menu {
+    background: $bethel--yellow;
+    margin-top: 0;
 }
 
 .school__navigation .svg-icon {

@@ -34,6 +34,18 @@ openMenu = function(e) {
     el.addEventListener('click',openMenu);
 });
 
+// openSiteNav = function(e) {
+
+//     e.preventDefault();
+//     var siteNav = document.querySelector('.off-canvas');
+//     console.log('siteNav');
+//     siteNav.classList.toggle('off-canvas--open');
+// };
+
+// [].forEach.call(document.querySelectorAll('.site__title__button'), function(el){
+//     el.addEventListener('click',openSiteNav);
+// });
+
 
 collapsibleBlock = function(e) {
     e.preventDefault();

@@ -6,7 +6,7 @@
 
 
 var domReady = require("../../node_modules/domready/src/ready.js");
-// var offCanvas = require("./offCanvas.js");
+var offCanvas = require("./off-canvas.js");
 var accordion = require("./accordion.js");
 var Imager = require("../../node_modules/imager.js/Imager.js");
 

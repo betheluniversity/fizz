@@ -1,8 +1,6 @@
 .breadcrumb {
-  // margin-top: .5em;
-}
-
-.breadcrumb p {
+  padding-left: 1rem;
+  padding-right: 1rem;
   font-family: $gotham;
   margin: 0;
   font-size: .7em;
@@ -22,8 +20,8 @@
   }
 
 .breadcrumb a:after {
-  // content: "›";
-  content: "•";
+  content: "›";
+  // content: "•";
   padding-left: .7em;
   padding-right: .45em; 
 }
