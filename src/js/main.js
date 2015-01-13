@@ -12,17 +12,17 @@ var Imager = require("../../node_modules/imager.js/Imager.js");
 
 // var binPolyfill = require("bindPolyfill");
 // var smothScroll = require("smoothScroll");
-var bindPolyfill = require("../../node_modules/smooth-scroll/dist/js/bind-polyfill.js")
-var smoothScroll = require("../../node_modules/smooth-scroll/dist/js/smooth-scroll.js")
+// var bindPolyfill = require("../../node_modules/smooth-scroll/dist/js/bind-polyfill.js")
+// var smoothScroll = require("../../node_modules/smooth-scroll/dist/js/smooth-scroll.js")
 
 new Imager({ availableWidths: [300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200] });
 
 domReady(function () {
     console.log("domReady is ready");
-    smoothScroll.init({
-        speed: 500, // Integer. How fast to complete the scroll in milliseconds
-        easing: 'easeInOutCubic', // Easing pattern to use
-        updateURL: false, // Boolean. Whether or not to update the URL with the anchor hash on scroll
-        offset: 0, // Integer. How far to offset the scrolling anchor location in pixels
-    });
+    // smoothScroll.init({
+    //     speed: 500, // Integer. How fast to complete the scroll in milliseconds
+    //     easing: 'easeInOutCubic', // Easing pattern to use
+    //     updateURL: false, // Boolean. Whether or not to update the URL with the anchor hash on scroll
+    //     offset: 0, // Integer. How far to offset the scrolling anchor location in pixels
+    // });
 });

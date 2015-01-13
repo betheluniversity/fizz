@@ -1,10 +1,14 @@
+.no-js .accordion-list {
+    display: block;
+}
+
 .accordion-list {
     padding-left: 1.1em;
     display: none;
     border-left: 1px dashed #ddd;
-    margin-left: .75em;
-    margin-bottom: 0;
-    margin-top: 0;
+    // margin-left: .75em;
+    // margin-bottom: 0;
+    // margin-top: 0;
 }
 
 .accordion-list {

@@ -82,6 +82,7 @@ gulp.task('copyfiles', function(){
 // browser-sync task for starting the server
 gulp.task('browser-sync', function() {
 	browserSync({
+		tunnel: true,
 		server: {
 			baseDir: outputDir
 		}

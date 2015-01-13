@@ -1,4 +1,4 @@
-openNav = function(e) {
+openItem = function(e) {
 
     e.preventDefault();
 
@@ -20,7 +20,7 @@ openNav = function(e) {
 };
 
 [].forEach.call(document.querySelectorAll('.accordion-list__button'), function(el){
-    el.addEventListener('click',openNav);
+    el.addEventListener('click',openItem);
 });
 
 openMenu = function(e) {
