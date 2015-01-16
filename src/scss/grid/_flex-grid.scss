@@ -71,6 +71,8 @@ $add-legacy-support: false !default;
 
 .grid-cell {
     width: 100%;
+    min-width: 1px;
+    margin-top: 0; // cancelling out OWL
 }
 
 @include respond-min($medium) {

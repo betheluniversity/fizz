@@ -62,7 +62,7 @@
         var _init = false,
             app = {};
 
-        var inner = document.getElementById('inner-wrap'),
+        var inner = document.getElementById('js-inner-wrap'),
 
             nav_open = false,
 
@@ -115,7 +115,7 @@
             };
 
             // open nav with main "nav" button
-            document.getElementById('site__title__button').addEventListener('click', app.toggleNav, false);
+            document.getElementById('js-site__title__button').addEventListener('click', app.toggleNav, false);
 
             // close nav with main "close" button
             // document.getElementById('nav-close-btn').addEventListener('click', app.toggleNav, false);

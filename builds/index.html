@@ -17,7 +17,7 @@
         <link href="//cdn4.bethel.edu/images/favicon.ico" rel="icon" type="image/x-icon"/>
     <link rel="stylesheet" href="/css/fizz.css"/>
     <link href="//cloud.typography.com/6664852/692222/css/fonts.css" rel="stylesheet"/>
-    <script src="//ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.7.2.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 </head>
 
 <body>
@@ -69,16 +69,11 @@
 
 <div class="inner">
 	<div class="site__title">
-	    <p class="site__title__button" id="site__title__button"><a href="#nav">☰ Menu</a></p>
-	        <p class="breadcrumb  margins-off"><a href="/"><svg class="svg-icon"><use xlink:href="../assets/icon-sprite/symbols.svg#home" xmlns="#"></use></svg></a><a href="/undergrad">Adult Undergrad</a>
+	    <p class="site__title__button" id="js-site__title__button"><a href="#siteNav">☰ Menu</a></p>
+	    <p class="breadcrumb  margins-off"><a href="/"><svg class="svg-icon"><use xlink:href="../assets/icon-sprite/symbols.svg#home" xmlns="#"></use></svg></a><a href="/undergrad">Adult Undergrad</a>
 	        <span class="h2">Tuition & Financial Aid</span></p>
 	</div>
-</div> <div class="inner">
-	<div class="page__title">
-		<h1>Our Faculty</h1>
-	</div>
-</div>
-<div class="inner--content">
+</div> 
 
 
 <div class="grid  margins-off  mt0">
@@ -103,35 +98,31 @@
 </div>
 <div class="grid-cell  site__navigation"  role="navigation">
 
-<div class="site__navgiation">
-    <div class="xblock">
-        <a class="btn  btn-yellow  close-btn" id="nav-close-btn" href="#top">x Close</a>
-        <h2 class="block-title">Chapters</h2>
+<div class="site__navigation" id="siteNav">
+    <a class="btn  btn-yellow  close-btn" id="nav-close-btn" href="#top">x Close</a>
 
-        <ul class="accordion-list  accordion-list--open  first-level  margins-off">
-            <li class="accordion-list__item"><button class="accordion-list__button" href="#"> </button> <a class="accordion-list__link" href="index.php">Art &amp; Design Home</a> </li>
-            <li class="accordion-list__item "><button class="accordion-list__button" href="#">+</button> <a class="accordion-list__link" href="/undergrad/academics/art/majors-minors">Majors &amp; Minors</a> </li>
-            
-            <ul class="accordion-list">
-                <li class="accordion-list__item"><button class="accordion-list__button" href="#"> </button> <a class="accordion-list__link" href="majors-minors/art.php">Art</a> </li>
-                <li class="accordion-list__item"><button class="accordion-list__button" href="#"> </button> <a class="accordion-list__link" href="majors-minors/fine-arts.php">Bachelor of Fine Arts (B.F.A.)</a> </li>
-                <li class="accordion-list__item"><button class="accordion-list__button" href="#"> </button> <a class="accordion-list__link" href="majors-minors/graphic-design.php">Graphic Design</a> </li>
-                <li class="accordion-list__item"><button class="accordion-list__button" href="#"> </button> <a class="accordion-list__link" href="majors-minors/arts-education.php">Visual Arts Education K-12</a> </li>
-                <li class="accordion-list__item"><button class="accordion-list__button" href="#"> </button> <a class="accordion-list__link" href="majors-minors/art-minor.php">Art Minor</a> </li>
-                <li class="accordion-list__item"><button class="accordion-list__button" href="#"> </button> <a class="accordion-list__link" href="majors-minors/graphic-design-minor.php">Graphic Design Minor</a> </li>
-            </ul>
-
-            <li class="accordion-list__item "><button class="accordion-list__button" href="#">+</button> <a class="accordion-list__link" href="/undergrad/academics/art/scholarship">Performance Scholarship</a> </li>
-            
-            <ul class="accordion-list">
-                <li class="accordion-list__item"><button class="accordion-list__button" href="#"> </button> <a class="accordion-list__link" href="scholarship/apply.php">Application</a> </li>
-            </ul>
-
-            <li class="accordion-list__item accordion--active"><button class="accordion-list__button" href="#"> </button> <a class="accordion-list__link" href="faculty.php">Faculty</a> </li>
-            <li class="accordion-list__item "><button class="accordion-list__button" href="#"> </button> <a class="accordion-list__link" href="/undergrad/academics/art/news">News</a> </li>
+    <ul class="accordion-list  accordion-list--open  first-level  margins-off">
+        <li class="accordion-list__item"><button class="accordion-list__button" href="#"> </button> <a class="accordion-list__link" href="index.php">Art &amp; Design Home</a> </li>
+        <li class="accordion-list__item "><button class="accordion-list__button" href="#">+</button> <a class="accordion-list__link" href="/undergrad/academics/art/majors-minors">Majors &amp; Minors</a> </li>
+        
+        <ul class="accordion-list">
+            <li class="accordion-list__item"><button class="accordion-list__button" href="#"> </button> <a class="accordion-list__link" href="majors-minors/art.php">Art</a> </li>
+            <li class="accordion-list__item"><button class="accordion-list__button" href="#"> </button> <a class="accordion-list__link" href="majors-minors/fine-arts.php">Bachelor of Fine Arts (B.F.A.)</a> </li>
+            <li class="accordion-list__item"><button class="accordion-list__button" href="#"> </button> <a class="accordion-list__link" href="majors-minors/graphic-design.php">Graphic Design</a> </li>
+            <li class="accordion-list__item"><button class="accordion-list__button" href="#"> </button> <a class="accordion-list__link" href="majors-minors/arts-education.php">Visual Arts Education K-12</a> </li>
+            <li class="accordion-list__item"><button class="accordion-list__button" href="#"> </button> <a class="accordion-list__link" href="majors-minors/art-minor.php">Art Minor</a> </li>
+            <li class="accordion-list__item"><button class="accordion-list__button" href="#"> </button> <a class="accordion-list__link" href="majors-minors/graphic-design-minor.php">Graphic Design Minor</a> </li>
         </ul>
-    </div>
-</div>
+
+        <li class="accordion-list__item "><button class="accordion-list__button" href="#">+</button> <a class="accordion-list__link" href="/undergrad/academics/art/scholarship">Performance Scholarship</a> </li>
+        
+        <ul class="accordion-list">
+            <li class="accordion-list__item"><button class="accordion-list__button" href="#"> </button> <a class="accordion-list__link" href="scholarship/apply.php">Application</a> </li>
+        </ul>
+
+        <li class="accordion-list__item accordion--active"><button class="accordion-list__button" href="#"> </button> <a class="accordion-list__link" href="faculty.php">Faculty</a> </li>
+        <li class="accordion-list__item "><button class="accordion-list__button" href="#"> </button> <a class="accordion-list__link" href="/undergrad/academics/art/news">News</a> </li>
+    </ul>
 </div>
 </div>
 </div>

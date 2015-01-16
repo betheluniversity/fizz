@@ -27,10 +27,10 @@ body {
 // LOBOTOMIZED OWL
 // http://alistapart.com/article/axiomatic-css-and-lobotomized-owls
 
-* + * {margin-top: 1.5em;}
-.compact * + * {margin-top: .75em;}
-.margins-off > * {margin-top: 0;}
+// * + * {margin-top: 1.5em;}
+// .compact * + * {margin-top: .75em;}
+// .margins-off ~ * {margin-top: 0;}
 
-li + li {
-	margin-top: 0;
-}
+// li + li {
+// 	margin-top: 0;
+// }

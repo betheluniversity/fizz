@@ -12,7 +12,7 @@ h4, .h4,
 h5, .h5,
 h6, .h6 {
 	font-family: $gotham;
-	font-weight: 700;
+	font-weight: 500;
 	color: #333;
 }
 
@@ -21,6 +21,10 @@ h2,
 h3 {
 	line-height: 1.2;
 	margin-bottom: 0;
+}
+
+p:first-child {
+	margin-top: 0;
 }
 
 p {

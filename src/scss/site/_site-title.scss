@@ -18,27 +18,19 @@
   // background: #fff;
   // background: rgba($bethel--yellow, .8);
   // background: #fff;
+  margin-top: 1em;
 
-  // @include respond-min(60em){
-  //   display: none;
-  // }
+  @include respond-min(46em){
+    margin-top: 2em;
+  }
 }
 
 .site__title h1 {
   font-size: 1rem; 
-  // font-family: $sentinel-ssm;
-  // background: tomato;
   margin-bottom: 0;
   margin-top: 0;
   color: $bethel--navy;
-  // color: tomato;
-  // margin-top: 0;
-  // padding-right: 1em;
-  // // flex-basis: 75%;
   font-weight: 500;
-  // text-transform: uppercase;
-  // width: 60%;
-  // float: left;
 }
 
 .site__title__button {

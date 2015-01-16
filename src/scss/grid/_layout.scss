@@ -28,15 +28,19 @@
   // overflow-x: hidden; /* added to hide title in mobile when off canvas is activated */
   // padding-left: 1em;
   // padding-right: 1em;
+  // margin-top: 1rem;
+  position: relative;
 
   @include respond-min(46em){
       padding-left: 2rem;
       padding-right: 2rem;
+      // margin-top: 2rem;
   }
 
   @include respond-min(60em){
       padding-left: 3rem;
       padding-right: 3rem;
+      // margin-top: 3rem;
   }
 }
 
