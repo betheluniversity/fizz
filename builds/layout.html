@@ -22,17 +22,32 @@
 
 <body>
 
-<div class="global__toolbox" id="toolbox">
+<div class="global__header" role="banner">
+    <div class="inner">
+        <div class="global__logo">
+            <a href="http://www.bethel.edu"><img alt="Bethel University" src="//cdn1.bethel.edu/dev/images/logo-white.png"/></a>
+        </div>
+
+		<p class="quick-links">
+		<a href="#">Blink</a>
+		<a href="#">News</a>
+		<a href="#">Events</a>
+		<a href="#">Offices</a>
+		<svg class="svg-icon  search-icon"><use xlink:href="../assets/icon-sprite/symbols.svg#search"></use></svg>
+		</p>
+
+
+        <a class="burger" href="#toolbox" id="toolbox-open-btn">
+            <span class="burger-icon"></span>
+            <span class="burger-text">Menu</span>
+        </a>
+    </div>
+</div><div class="global__toolbox" id="toolbox">
     <a class="global__toolbox__close-btn" id="global__toolbox__close-btn" href="#top">✖ close</a>
     
     <nav class="global__navigation" role="navigation">
         <div class="inner">
             <ul>
-                <li><a href="http://www.bethel.edu">
-                        <svg class="svg-icon  home-icon"><use xlink:href="../assets/icon-sprite/symbols.svg#home"></use></svg>
-                        <span style="display:none">Home</span>
-                    </a>
-                </li>
                  <li class="active"> <a href="http://www.bethel.edu/about">About</a></li>
                  <li><a href="http://www.bethel.edu/academics/">Academics</a></li>
                  <li><a href="http://www.bethel.edu/admissions/">Admissions</a></li>
@@ -44,17 +59,7 @@
             </ul>
         </div>
     </nav>
-</div><div class="global__header" role="banner">
-    <div class="inner">
-        <div class="global__logo">
-            <a href="http://www.bethel.edu"><img alt="Bethel University" src="//cdn1.bethel.edu/dev/images/logo-white.png"/></a>
-        </div>
-        <a class="burger" href="#toolbox" id="toolbox-open-btn">
-            <span class="burger-icon"></span>
-            <span class="burger-text">Menu</span>
-        </a>
-    </div>
-</div><div class="school__navigation">
+</div> <div class="school__navigation">
     <h1 class="school__navigation__head">Adult Undergrad</h1> 
     <ul class="margins-off">
         <li><a href="/undergrad/about/" class="">About</a></li>

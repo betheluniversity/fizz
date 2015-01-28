@@ -1,5 +1,5 @@
 .page__title {
-	margin-top: 2em;
+	// margin-top: 2em;
 	// margin-bottom: 1em;
 	padding: 0 1em;
 	flex-basis: 100%;
@@ -12,17 +12,20 @@
 }
 
 .page__title h1 { 
+	// font-weight: 700;
 	font-weight: 400;
-	// font-size: 2rem;
+	font-size: 2.25rem;
 	// line-height: 1;
-	margin-top: 0;
+	margin-top: 1rem;
+	margin-bottom: 0;
 	// padding: 0;
+	// font-family: $sentinel;
 
 	@include respond-min(46em){
-		font-size: 2.25em;
+		font-size: 2.5rem;
 	}
 
 	@include respond-min(60em){
-		font-size: 2.75em;
+		font-size: 2.75rem;
 	}
 }

@@ -1,12 +1,4 @@
 
-.demo {
-    background: tomato;
-    text-align: center;
-    padding: 2em 5%;
-    border-radius: 3px;
-    border: 1px solid black;
-}
-
 /*------------------------------------*\
     $GRID
 \*------------------------------------*/
@@ -26,6 +18,10 @@
 
 // These are styles for browsers that don't support flexbox - IE8 and IE9
 // Once we drop support for these browsers, these styles can be removed
+
+/*section*/.grid-section {
+  margin-top: 2em;
+}
 
 $add-legacy-support: false !default;
 
@@ -65,6 +61,19 @@ $add-legacy-support: false !default;
     list-style: none;
     // margin:0;
     // padding: 0;
+
+    @include respond-min($medium){
+      flex-wrap: nowrap;
+    }
+}
+
+// Mobile grid is set to wrap, and set to nowrap at $medium.
+// This is to allow us to set :first-child and :last-child negative
+// margins on basic grids. If flex-wrap is required above medium
+// use .grid--wrap
+
+.grid--wrap {
+  flex-wrap: wrap;
 }
 
 // Setting width to 100% defaults to full-width on mobile
@@ -79,7 +88,18 @@ $add-legacy-support: false !default;
     .grid-cell {
         flex: 1;
     }
+
+    .grid-cell:first-child {
+      margin-left: -1em;
+    }
+
+    .grid-cell:last-child {
+      margin-right: -1em;
+    }
 }
+
+.grid--wrap .grid-cell:first-child {margin-left: 0;}
+.grid--wrap .grid-cell:last-child {margin-right: 0; flex-grow: 0}
 
 // .grid > .grid {
 //     & > .grid-cell {
@@ -157,11 +177,11 @@ $add-legacy-support: false !default;
     @if $name == "" {
         $sep: "";
     }
-    .#{$name}#{$sep}grid-pad-\.5x {padding: 0 .5em;}
-    .#{$name}#{$sep}grid-pad-1x {padding: 0 1em;}
-    .#{$name}#{$sep}grid-pad-1\.5x {padding: 0 1.5em;}
-    .#{$name}#{$sep}grid-pad-2x {padding: 0 2em;}
-    .#{$name}#{$sep}grid-pad-3x {padding: 0 3em;}
+    .#{$name}#{$sep}grid-pad-\.5x {padding: .5em;}
+    .#{$name}#{$sep}grid-pad-1x {padding: 1em;}
+    .#{$name}#{$sep}grid-pad-1\.5x {padding: 1.5em;}
+    .#{$name}#{$sep}grid-pad-2x {padding: 2em;}
+    .#{$name}#{$sep}grid-pad-3x {padding: 3em;}
 
     // IF .grid--full is applied, remove the vertical padding between the stacked cells
     .grid--full .#{$name}#{$sep}grid-pad-\.5x {padding: 0 .5em;}
@@ -198,39 +218,39 @@ $add-legacy-support: false !default;
     }
 
     @if $add-legacy-support != true{
-      .u-#{$name}#{$sep}1-12  {flex: 0 0 8.33333%;}
+      .u-#{$name}#{$sep}1-12  {flex-basis: 8.33333%;}
       .u-#{$name}#{$sep}2-12,
-      .u-#{$name}#{$sep}1-6  {flex: 0 0 16.66667%;}
-      .u-#{$name}#{$sep}1-5   {flex: 0 0 20%;}
+      .u-#{$name}#{$sep}1-6  {flex-basis: 16.66667%;}
+      .u-#{$name}#{$sep}1-5   {flex-basis: 20%;}
       .u-#{$name}#{$sep}3-12,
-      .u-#{$name}#{$sep}1-4  {flex: 0 0 25%;}
+      .u-#{$name}#{$sep}1-4  {flex-basis: 25%;}
       .u-#{$name}#{$sep}4-12,
       .u-#{$name}#{$sep}2-6,
-      .u-#{$name}#{$sep}1-3  {flex: 0 0 33.33333%;}
-      .u-#{$name}#{$sep}2-5   {flex: 0 0 40%;}
-      .u-#{$name}#{$sep}5-12  {flex: 0 0 41.66667%;}
+      .u-#{$name}#{$sep}1-3  {flex-basis: 33.33333%;}
+      .u-#{$name}#{$sep}2-5   {flex-basis: 40%;}
+      .u-#{$name}#{$sep}5-12  {flex-basis: 41.66667%;}
       .u-#{$name}#{$sep}6-12,
       .u-#{$name}#{$sep}3-6
       .u-#{$name}#{$sep}2-4,
-      .u-#{$name}#{$sep}1-2  {flex: 0 0 50%;}
-      .u-#{$name}#{$sep}7-12  {flex: 0 0 58.33333%;}
-      .u-#{$name}#{$sep}3-5   {flex: 0 0 60%;}
+      .u-#{$name}#{$sep}1-2  {flex-basis: 50%;}
+      .u-#{$name}#{$sep}7-12  {flex-basis: 58.33333%;}
+      .u-#{$name}#{$sep}3-5   {flex-basis: 60%;}
       .u-#{$name}#{$sep}8-12,
       .u-#{$name}#{$sep}2-3,
-      .u-#{$name}#{$sep}4-6  {flex: 0 0 66.66667%;}
+      .u-#{$name}#{$sep}4-6  {flex-basis: 66.66667%;}
       .u-#{$name}#{$sep}9-12,
-      .u-#{$name}#{$sep}3-4  {flex: 0 0 75%;}
-      .u-#{$name}#{$sep}4-5   {flex: 0 0 80%;}
+      .u-#{$name}#{$sep}3-4  {flex-basis: 75%;}
+      .u-#{$name}#{$sep}4-5   {flex-basis: 80%;}
       .u-#{$name}#{$sep}10-12,
-      .u-#{$name}#{$sep}5-6 {flex: 0 0 83.33333%;}
-      .u-#{$name}#{$sep}11-12 {flex: 0 0 91.66667%;}
+      .u-#{$name}#{$sep}5-6 {flex-basis: 83.33333%;}
+      .u-#{$name}#{$sep}11-12 {flex-basis: 91.66667%;}
       .u-#{$name}#{$sep}12-12,
       .u-#{$name}#{$sep}6-6,
       .u-#{$name}#{$sep}5-5,
       .u-#{$name}#{$sep}4-4,
       .u-#{$name}#{$sep}3-3,
       .u-#{$name}#{$sep}2-2,
-      .u-#{$name}#{$sep}1-1   {flex: 0 0 100%;}
+      .u-#{$name}#{$sep}1-1   {flex-basis: 100%;}
     };
   }
 

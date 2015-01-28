@@ -26,6 +26,14 @@
         text-transform: uppercase;
     }
 
+    ul li:first-child {
+        margin-left: -1em;
+    }
+
+    ul li:last-child {
+        margin-right: -1em;
+    }
+
     ul li a {
         padding: .5em 1em;
         color: #fff;

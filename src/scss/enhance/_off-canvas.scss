@@ -21,12 +21,19 @@
   background: #fff;
   position: absolute;
   margin-top: 2em;
+  font-family: $gotham;
+  // font-weight: 300;
 
   @include respond-min(46em){
     position: relative;
     left: 0;
-    margin-right: 2em;
+    margin-right: 5%;
     order: 2;
+    flex-basis:30%;
+  }
+
+  a {
+    color: #777;
   }
 }
 
@@ -51,14 +58,32 @@
 
 .main {
   margin-top: 2em;
+  margin-bottom: 2em;
   padding-left: 1em;
   padding-right: 1em;
   flex-basis: 100%;
   order: 3;
+  min-width: 1%;
 
   @include respond-min(46em) {
-    flex: 3;
+    // flex: 3;
+    padding-left: 0;
+    padding-right: 0;
+    flex-basis: 65%;
+    flex-grow:1;
   }
+}
+
+.main + h2,
+.main + h3,
+.main + h4 {
+  margin-top: 0;
+}
+
+section + h2,
+section + h3,
+section + h4 {
+  margin-top: 0;
 }
 
 // @include respond-min(46.0625em){

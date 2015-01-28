@@ -1,0 +1,38 @@
+.events-date-tag {
+	background: #eee;
+	//width: 3.75em;
+	text-align: center;
+	margin-right: 1em;
+	padding: .4em 1em 1em;
+	border: 1px solid #ccc;
+	font-family: $gotham;
+	float: left;
+	border-radius: 3px;
+	font-size: .889em;
+	// @include border-radius(3px);
+	// @include font-size (.889);
+}
+
+.events-date-tag span {
+	display: block;
+	font-size: 32px;
+	line-height: 30px;
+	font-weight: 200;
+}
+
+[class*='event-feed']{
+
+	.media-box {
+		display: table;
+		width: 100%;
+	}
+
+	.media-box-body {
+		display: table;
+		margin-top: 0;
+	}
+
+	.media-box-body h2 {
+		margin-top: 0;
+	}
+}

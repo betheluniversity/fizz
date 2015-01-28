@@ -1,18 +1,19 @@
 .school__navigation {
     background: #fff;
     // background: #eee;
-    // background: rgba($bethel--blue, .2);
+    // background: rgba($bethel--blue, .1);
     margin: 0;
-    padding: .75em .5em;
+    padding: 1em .5em;
     // box-shadow: 0 4px 4px 0 rgba(210, 210, 210, 0.8);
     // overflow-x: scroll;
     // -webkit-overflow-scrolling: touch;
     border-bottom: 1px solid #ccc;
+    // border-top: 1px solid #ccc;
     font-family: $gotham;
     // display: table;
 
     @include respond-min(60em){
-        padding: 1.5em;
+        padding: 2em;
     }
 }
 
@@ -20,15 +21,15 @@
     padding: 0;
     margin: 0;
     // display: table-cell;
-    font-size: 1.25em;
-    // font-family: $sentinel-ssm;
-    // font-weight: 500;
+    font-size: 1.5em;
+    // font-family: $sentinel;
+    // font-weight: 700;
     white-space: nowrap;
     line-height: 1.5;
     // padding: 0 .5em;
-    // color: #fff;
+    // color: #333;
     text-align: center;
-    // text-transform: uppercase;
+    text-transform: uppercase;
     // margin-bottom: .5em;
 
     @include respond-min(60em){

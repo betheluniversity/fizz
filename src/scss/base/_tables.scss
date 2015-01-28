@@ -1,7 +1,16 @@
-table.basic {
+table {
   width: 100%;
   font-size: 90%; }
 
-table.basic td {
+table td {
   padding: .7em;
   border: 1px solid #ddd; }
+
+
+.majors-table tr {
+    border-bottom: 1px solid #ddd;
+}
+
+.majors-table td {
+   border: none;
+}

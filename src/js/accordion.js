@@ -48,12 +48,13 @@ openMenu = function(e) {
 
 
 collapsibleBlock = function(e) {
-    e.preventDefault();
-    var subList = document.querySelectorAll('.collapsible-block');
-    this.classList.toggle('open-block');
-    this.nextElementSibling.classList.toggle('open-block');
+  e.preventDefault();
+  // var subList = this.('.collapsible-block');
+  this.classList.toggle('open-block');
+  var next = nextByClass(this, 'collapsible-block');
+  next.classList.toggle('open-block');
 };
 
 [].forEach.call(document.querySelectorAll('.collapsible-heading'), function(el){
-    el.addEventListener('click',collapsibleBlock);
+  el.addEventListener('click',collapsibleBlock);
 });

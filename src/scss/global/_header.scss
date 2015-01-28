@@ -1,7 +1,8 @@
 .global__header {
-    background: #0f2c52;
+    background: lighten(#0f2c52,2%);
     position: relative;
-    margin-top: 0;
+    // margin-top: 0;
+    padding: 1em 0;
 }
 
 .global__header .inner {
@@ -21,6 +22,16 @@
 }
 .global__logo a { 
     display: block }
+
+.quick-links {
+    font-family: $gotham;
+
+    a {
+        color: lighten($bethel--blue, 15%);
+        padding: 0 .25em;
+        font-size: .8rem;
+    }
+}
 
 .burger {
     // font-size: 1rem;

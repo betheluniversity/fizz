@@ -1,0 +1,18 @@
+.quote__text,
+.quote cite {
+    // font-family: "Gotham A", "Gotham B";
+    font-weight: 400;
+    font-style:normal;
+}
+
+.quote__text {
+    // font-size: 1.2em;
+    // font-size: 1.2rem;
+    // margin-bottom: 1.5em;
+}
+
+.quote__avatar {
+    border-radius: 50%;
+    overflow:hidden;
+    line-height:0;
+}
