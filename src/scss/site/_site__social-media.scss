@@ -1,0 +1,14 @@
+.site__social-media {
+	background: #eee;
+	font-family: $gotham;
+
+	a {
+		white-space: nowrap;
+		margin-right: 1em;
+	}
+
+	.svg-icon {
+		fill: $bethel--blue;
+		vertical-align: text-top;
+	}
+}

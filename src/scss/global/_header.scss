@@ -2,7 +2,7 @@
     background: lighten(#0f2c52,2%);
     position: relative;
     // margin-top: 0;
-    padding: 1em 0;
+    padding: 2em 0;
 }
 
 .global__header .inner {
@@ -25,13 +25,35 @@
 
 .quick-links {
     font-family: $gotham;
+    // display: none;
+    position: relative;
+
+    @include respond-min(60em){
+        display: flex;
+        align-items: center;
+    }
 
     a {
         color: lighten($bethel--blue, 15%);
-        padding: 0 .25em;
+        padding: 0 .5em;
         font-size: .8rem;
     }
+
+    .svg-icon {
+        width: .7em;
+        height: .7em;
+        margin: 0 .5em;
+        fill: lighten($bethel--blue, 15%);
+    }
 }
+
+.turtles {
+    // display: none;
+    // position: absolute;
+    // top: 0;
+    // right: 0;
+}
+
 
 .burger {
     // font-size: 1rem;

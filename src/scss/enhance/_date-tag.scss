@@ -1,6 +1,6 @@
 .events-date-tag {
 	background: #eee;
-	//width: 3.75em;
+	width: 5.5em;
 	text-align: center;
 	margin-right: 1em;
 	padding: .4em 1em 1em;
@@ -15,9 +15,9 @@
 
 .events-date-tag span {
 	display: block;
-	font-size: 32px;
-	line-height: 30px;
-	font-weight: 200;
+	font-size: 2.2em;
+	line-height: 1;
+	// font-weight: 200;
 }
 
 [class*='event-feed']{

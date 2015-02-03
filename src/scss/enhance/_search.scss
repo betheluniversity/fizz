@@ -41,13 +41,13 @@
 		// @include border-radius(.3em 0 0 .3em);
 		border-radius: .3em 0 0 .3em;	
 		// @include single-box-shadow(#aaa, inset, 0, 0, 7px);
-		box-shadow: #aaa inset 0 0 7px;
+		// box-shadow: #aaa inset 0 0 7px;
 		// width: 70%;
 		padding: 9px 1em 8px;
-		line-height: 1.602;
-		border-left: 1px solid #999;
-		border-top: 1px solid #999;
-		border-bottom: 1px solid #999;
+		// line-height: 1.602;
+		// border-left: 1px solid #999;
+		// border-top: 1px solid #999;
+		// border-bottom: 1px solid #999;
 
 		&:focus {
 			outline: 0;

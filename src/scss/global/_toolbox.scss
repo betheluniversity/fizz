@@ -7,6 +7,7 @@
     margin-top: 0;
     // transition: all 1s ease;
     display: none;
+    background: $bethel--navy;
 
     @include respond-min(60em){
         display: block;

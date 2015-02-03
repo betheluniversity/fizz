@@ -77,6 +77,10 @@ a {
 	text-decoration: none;
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
 .unstyled {
 	list-style: none;
 	margin: 0;
