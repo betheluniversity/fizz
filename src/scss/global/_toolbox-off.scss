@@ -1,28 +1,5 @@
-// @keyframes fadeIn {
-//     from { opacity: 0; }
-//       to { opacity: 1; }
-// }
-
 // .global__toolbox {
-//     margin-top: 0;
-//     // transition: all 1s ease;
-//     display: none;
-//     background: $bethel--navy;
-
-//     @include respond-min(60em){
-//         display: block;
-//     }
-// }
-
-.global__toolbox .inner {
-    // display: flex;
-    // justify-content: space-between;
-    padding: 0 2em;
-}
-
-// .menu-open .global__toolbox {
-//     display: block;
-//     animation: fadeIn 300ms;
+//     position: absolute;
 // }
 
 // .global__toolbox__close-btn {

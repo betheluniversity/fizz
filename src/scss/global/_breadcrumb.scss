@@ -2,18 +2,20 @@
   // padding-left: 1rem;
   // padding-right: 1rem;
   font-family: $gotham;
-  margin: 0;
+  // margin: 0;
   font-size: .7em;
-  letter-spacing: .05em;
+  // letter-spacing: .05em;
   // font-weight: 500;
   // text-transform: uppercase; 
   // margin-top: 2em;
 }
 
-.breadcrumb a {
+.breadcrumb a, .breadcrumb span {
   display: inline-block;
   // padding: 0;
   color: #bbb;
+  // float:left;
+  // clear: left;
 }
   
 .breadcrumb a:first-child {
@@ -38,4 +40,9 @@
   vertical-align: text-top;
   fill: $bethel--blue;
   fill: #bbb;
+}
+
+.breadcrumb--active {
+  color: tomato;
+  // color: $bethel--yellow;
 }

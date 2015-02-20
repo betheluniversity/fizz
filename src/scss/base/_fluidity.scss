@@ -49,3 +49,11 @@ textarea {
   overflow:hidden;
   line-height: 0;
 }
+
+.image__caption {
+  background: #ddd;
+  margin: 0;
+  padding: 1.5em;
+  font-family: $gotham;
+  font-size: 80%;
+}

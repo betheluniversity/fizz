@@ -1,15 +1,15 @@
 
-.outer-wrap {
-  position: relative;
-  overflow-x: hidden;
-  width: 100%;
+// .outer-wrap--site__navigation {
+//   position: relative;
+//   overflow-x: hidden;
+//   width: 100%;
 
-  @include respond-min($navToggle){
-    margin-top: 0;
-  }
-}
+//   @include respond-min($navToggle){
+//     margin-top: 0;
+//   }
+// }
 
-.inner-wrap {
+.inner-wrap--site__navigation {
   position: relative;
   width: 100%;
   display: flex;
@@ -39,23 +39,9 @@
   }
 }
 
-// .site__navigation .block-title {
-//   border: 0;
-//   clip: rect(0 0 0 0);
-//   height: 1px;
-//   margin: -1px;
-//   overflow: hidden;
-//   padding: 0;
-//   position: absolute;
-//   width: 1px;
-// }
-
-// .site__navigation ul:before, .site__navigation ul:after {
-//   content: "";
-//   display: table;
-// }
-// .site__navigation ul:after {
-//   clear: both;
+// .title-content {
+//   flex-basis: 65%;
+//   flex-grow: 1;
 // }
 
 .main {
@@ -118,40 +104,40 @@ section + h4 {
     background: #333;
   }
 
-  .js-ready .site__navigation {
+  .js .site__navigation {
     height: auto;
     width: 18em;
   }
 
-  .js-ready .site__navigation {
+  .js .site__navigation {
     left: -18em
   }
-  .js-ready .inner-wrap {
+  .js .inner-wrap--site__navigation {
     left: 0;
   }
 
-  .js-nav .inner-wrap {
+  .js-openSiteNav .inner-wrap--site__navigation {
     left: 18em;
   }
 
-  /*.csstransforms3d.csstransitions*/.js-ready .inner-wrap {
+  /*.csstransforms3d.csstransitions*/.js .inner-wrap--site__navigation {
     left: 0 !important;
     transform: translate3d(0, 0, 0);
     transition: transform 500ms ease;
     backface-visibility: hidden;
   }
 
-  /*.csstransforms3d.csstransitions*/.js-ready .site__navigation {
+  /*.csstransforms3d.csstransitions*/.js .site__navigation {
     transition: transform 500ms ease;
     transform: translate3d(0, 0, 0);
     backface-visibility: hidden;
   }
 
-  /*.csstransforms3d.csstransitions*/.js-nav .inner-wrap {
+  /*.csstransforms3d.csstransitions*/.js-openSiteNav .inner-wrap--site__navigation {
     transform: translate3d(18em, 0, 0);
   }
 
-  /*.csstransforms3d.csstransitions*/.js-nav .site__navigation{
+  /*.csstransforms3d.csstransitions*/.js-openSiteNav .site__navigation{
     transform: translate3d(0, 0, 0);
   }
 }

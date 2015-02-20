@@ -1,9 +1,10 @@
 .school__navigation {
     background: #fff;
+    // background: $bethel--yellow;
     // background: #eee;
     // background: rgba($bethel--blue, .1);
     margin: 0;
-    padding: 1em .5em;
+    padding: .5em .5em;
     // box-shadow: 0 4px 4px 0 rgba(210, 210, 210, 0.8);
     // overflow-x: scroll;
     // -webkit-overflow-scrolling: touch;
@@ -21,7 +22,7 @@
     padding: 0;
     margin: 0;
     // display: table-cell;
-    font-size: 1.5em;
+    font-size: 1em;
     // font-family: $sentinel;
     // font-weight: 700;
     white-space: nowrap;
@@ -78,7 +79,7 @@
 .school__navigation ul {
     padding: 0;
     margin: 0;
-    line-height: 1.5;
+    line-height: 1.4;
     vertical-align: middle;
     text-align: center;
     // animation: scrollIn 750ms;

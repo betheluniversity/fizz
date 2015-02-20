@@ -7,7 +7,7 @@
   // border-bottom: 1px solid #ddd;
   // position: sticky;
   // top: 0;
-  display: flex;
+  // display: flex;
   // flex-direction: row;
   overflow: hidden;
   align-items: center;
@@ -19,18 +19,19 @@
   // background: rgba($bethel--yellow, .8);
   // background: #fff;
   margin-top: 1em;
+  margin-bottom: 1em;
 
-  @include respond-min(46em){
+  @include respond-min($navToggle){
     margin-top: 2em;
   }
 }
 
 .site__title h1 {
-  font-size: 1rem; 
-  margin-bottom: 0;
+  font-size: 1.5rem; 
+  // margin-bottom: 0;
   margin-top: 0;
-  color: $bethel--navy;
-  font-weight: 500;
+  color: #777;
+  font-weight: 400;
 }
 
 .site__title__button {
@@ -54,7 +55,7 @@
   // float:right;
   // margin-left: 7em;
 
-  @include respond-min(46em){
+  @include respond-min($navToggle){
     display: none;
   }
 }
@@ -73,6 +74,7 @@
   // width: 12em;
   // white-space: nowrap;
   // font-weight: 500; 
+  // border-radius: .9em;
 }
 
 // .site__title {

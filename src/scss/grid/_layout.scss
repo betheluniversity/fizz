@@ -9,7 +9,7 @@
   padding-left: 1rem;
   padding-right: 1rem;
 
-  @include respond-min(46em){
+  @include respond-min($navToggle){
       padding-left: 2rem;
       padding-right: 2rem;
   }
@@ -31,7 +31,7 @@
   // margin-top: 1rem;
   position: relative;
 
-  @include respond-min(46em){
+  @include respond-min($navToggle){
       padding-left: 2rem;
       padding-right: 2rem;
       // margin-top: 2rem;

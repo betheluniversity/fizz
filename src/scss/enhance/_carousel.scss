@@ -1,0 +1,213 @@
+.slick-carousel {
+    position: relative;
+    height: auto;
+}
+
+.slick-item a {
+    display: block;
+    position: relative;
+}
+
+.slick-next:before {
+    content: '»';
+}
+.slick-prev:before {
+    content: '«';
+}
+.slick-next,.slick-prev {
+    // background: #0069aa;
+    background: transparent;
+    // width: 3em;
+    // height: 3em;
+    border: 0;
+    color: #fff;
+    // position: absolute;
+    // top: 50%;
+}
+.slick-next:hover,.slick-prev:hover{
+    opacity: 1;
+    background: #0069aa;
+}
+
+.carousel--basic a:hover,
+.carousel--overlay a:hover {
+    text-decoration: none;
+}
+
+.carousel--basic .feature__img {
+    display: block;
+    width: 100%
+}
+
+.carousel--basic .feature__figure {
+    background: #bdbcb0;
+    margin: 0;
+    padding: 2em
+}
+
+.carousel--basic .feature__blockquote {
+    margin-bottom: .4em;
+    margin-left: .8em;
+    margin-right: .8em;
+    font-size: 1.5em;
+    color: #fff;
+    font-family: "Gotham 5r","Gotham A","Gotham B","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 1.4
+}
+
+.carousel--basic .feature__blockquote:before {
+    content: '“';
+    font-size: 1.5em;
+    margin-left: -.6em;line-height:0;
+    padding-right: .1em;
+    display: inline-block;
+    vertical-align: middle;
+    color: #ddd
+}
+
+.carousel--basic .feature__blockquote:after {
+    content: '”';
+    font-size: 1.5em;
+    line-height: 0;
+    padding-left: .1em;
+    color: #ddd;
+    vertical-align: middle
+}
+
+.carousel--basic .feature__figcaption {
+    margin-bottom: 0;
+    color: #665;
+    font-family: "Gotham 5r","Gotham A","Gotham B","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: .8em
+}
+
+
+
+.carousel--overlay {
+
+    a {
+        width: 100%;
+        height: 300px;
+        max-height: 600px;
+        position: relative;
+        // top: 0;
+        // left: 0;
+        overflow: hidden;
+        // max-width: 75em;
+        margin: 0 auto;
+        // text-align: center;
+        // max-width: 75em;
+
+        // background-image: url('/assets/images/large.png');
+        // background-position: center;
+        // background-size: cover;
+
+        @include respond-min(50em){
+            // height: 185px;
+            height: auto;
+        }
+
+        // @include respond-min($large){
+        //     // height: 250px;
+        // }
+
+        // @include respond-min($x-large){
+        //     // height: 300px;
+        // }
+
+        // @include respond-min(1600px){
+        //     height: 300px;
+        // }
+    }
+
+    .feature__img {
+        // display: block;
+        width: 100%;
+        // height: 100%;
+
+        @include respond-max(49.999em){
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%);
+
+            min-width: 750px;
+        }
+    }
+
+    a:before {
+        content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-image: linear-gradient(to bottom,transparent,#000);
+            opacity: .7; 
+      }
+
+    .feature__figure {
+        width: 70%;
+        position: absolute;
+        bottom: 4%;
+        // left: 5%;
+        border-bottom: 0;
+        // background: #0069aa;
+        // background: rgba(0,105,170,.4);
+        padding: 1% 2% 2%
+    }
+
+    .feature__blockquote {
+        margin: 0 0 1%;
+        z-index: 30;
+        line-height: 1.2;
+        font-family: "Gotham 4r","Gotham A","Gotham B","Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        color: #fff;
+        text-shadow: 0 1px 1px #004977;
+        font-size: 25.63px;
+        font-size: 1.3rem;
+    }
+
+    .ie8 .feature__blockquote {
+        background-color: #0069aa;
+        font-size: 23px
+    }
+
+    .feature__figcaption {
+        margin: 0;
+        font-size: 12.64px;
+        font-size: .79rem;
+        font-size: 14.22px;
+        font-size: .889rem;
+        color: #fff
+    }
+
+    .slick-next,
+    .slick-prev {
+        position: absolute;
+        top: 50%;
+        border-radius: 50%;
+        font-size: 1.5em;
+    }
+
+    .slick-next:hover,
+    .slick-prev:hover {
+        background: transparent;
+    }
+
+    .slick-next {
+        right: 0;
+    }
+
+    .slick-prev {
+        left: 0;
+    }
+}

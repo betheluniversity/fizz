@@ -44,8 +44,21 @@
 
     var doc = document.documentElement;
 
-    var transform_prop = window.Modernizr.prefixed('transform'),
-        transition_prop = window.Modernizr.prefixed('transition'),
+    // var transform_prop = window.Modernizr.prefixed('transform'),
+    //     transition_prop = window.Modernizr.prefixed('transition'),
+    //     transition_end = (function() {
+    //         var props = {
+    //             'WebkitTransition': 'webkitTransitionEnd',
+    //             'MozTransition': 'transitionend',
+    //             'OTransition': 'oTransitionEnd otransitionend',
+    //             'msTransition': 'MSTransitionEnd',
+    //             'transition': 'transitionend'
+    //         };
+    //         return props.hasOwnProperty(transition_prop) ? props[transition_prop] : false;
+    //     })();
+
+    var transform_prop = '',
+        transition_prop = '',
         transition_end = (function() {
             var props = {
                 'WebkitTransition': 'webkitTransitionEnd',
@@ -62,10 +75,9 @@
         var _init = false,
             app = {};
 
-        var inner = document.getElementById('js-inner-wrap'),
-
+        var innerSite = document.getElementById('js-inner-wrap--site__navigation'),
+            outerSite = document.getElementById('js-inner-wrap--global__navigation'),
             nav_open = false,
-
             nav_class = 'js-nav';
 
 
@@ -76,7 +88,7 @@
             _init = true;
 
             var closeNavEnd = function(e) {
-                if (e && e.target === inner) {
+                if (e && e.target === innerSite) {
                     document.removeEventListener(transition_end, closeNavEnd, false);
                 }
                 nav_open = false;
@@ -85,7 +97,7 @@
             app.closeNav = function() {
                 if (nav_open) {
                     // close navigation after transition or immediately
-                    var duration = (transition_end && transition_prop) ? parseFloat(window.getComputedStyle(inner, '')[transition_prop + 'Duration']) : 0;
+                    var duration = (transition_end && transition_prop) ? parseFloat(window.getComputedStyle(innerSite, '')[transition_prop + 'Duration']) : 0;
                     if (duration > 0) {
                         document.addEventListener(transition_end, closeNavEnd, false);
                     } else {
@@ -115,7 +127,17 @@
             };
 
             // open nav with main "nav" button
-            document.getElementById('js-site__title__button').addEventListener('click', app.toggleNav, false);
+            var titleButton = document.getElementById('js-site__title__button');
+
+            if(titleButton){
+                titleButton.addEventListener('click', app.toggleNav, false);
+            };
+
+            var navButton = document.getElementById('js-toolbox-open-btn');
+
+            if(navButton){
+                navButton.addEventListener('click', app.toggleNav, false);
+            };
 
             // close nav with main "close" button
             // document.getElementById('nav-close-btn').addEventListener('click', app.toggleNav, false);

@@ -34,7 +34,7 @@ gulp.task('styles', function(){
 });
 
 gulp.task('images', function(){
-	gulp.src('./src/images/*')
+	gulp.src('./src/assets/images/*')
 		.pipe(imagemin())
 		.pipe(gulp.dest(outputDir + '/assets/images'));
 })
@@ -82,8 +82,7 @@ gulp.task('copyfiles', function(){
 // browser-sync task for starting the server
 gulp.task('browser-sync', function() {
 	browserSync({
-		// tunnel: true,
-		logConnections: true,
+		tunnel: true,
 		server: {
 			baseDir: outputDir
 		}
