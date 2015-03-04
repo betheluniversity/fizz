@@ -28,7 +28,7 @@ gulp.task('js', function(){
 gulp.task('styles', function(){
 	return gulp.src('./src/scss/*.scss')
 		.pipe(sass({ outputStyle:'compressed', debug:true })) // compress styles
-		.pipe(autoprefixer({browsers:['last 2 versions',]}))
+		.pipe(autoprefixer({browsers:['last 2 versions', 'IE 9']}))
 		.pipe(gulp.dest(outputDir + '/css')) // sending to output directory
 		.pipe(reload({stream:true})); // inject into browser using browserSync
 });
@@ -82,7 +82,7 @@ gulp.task('copyfiles', function(){
 // browser-sync task for starting the server
 gulp.task('browser-sync', function() {
 	browserSync({
-		tunnel: true,
+		// tunnel: true,
 		server: {
 			baseDir: outputDir
 		}

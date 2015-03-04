@@ -13,7 +13,8 @@
 .global__toolbox {
   // background: tomato;
   background: $bethel--navy;
-  position: fixed;
+  // background: $bethel--blue;
+  // position: fixed;
   // margin-top: 2em;
   // margin-bottom: 2em;
   font-family: $gotham;
@@ -32,7 +33,7 @@
   }
 
   a {
-    color: #777;
+    // color: #777;
   }
 }
 
@@ -135,7 +136,7 @@
 .global__toolbox__close-btn {
   // display: none;
     float: right;
-    margin-top: 1.5em;
+    margin-top: 1em;
 
     @include respond-min($navToggle){
         display: none;

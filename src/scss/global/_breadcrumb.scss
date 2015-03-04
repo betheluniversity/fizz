@@ -5,15 +5,19 @@
   // margin: 0;
   font-size: .7em;
   // letter-spacing: .05em;
-  // font-weight: 500;
+  font-weight: 400;
   // text-transform: uppercase; 
   // margin-top: 2em;
+  margin-top: 0;
+  padding-top: 0;
+  // line-height: 1.5;
 }
 
 .breadcrumb a, .breadcrumb span {
   display: inline-block;
   // padding: 0;
   color: #bbb;
+  color: #aaa;
   // float:left;
   // clear: left;
 }
@@ -40,6 +44,7 @@
   vertical-align: text-top;
   fill: $bethel--blue;
   fill: #bbb;
+  margin-bottom: 0;
 }
 
 .breadcrumb--active {

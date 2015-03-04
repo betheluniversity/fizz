@@ -9,6 +9,7 @@
 	margin: 0 auto;
 	// text-align: center;
 	max-width: 75em;
+	max-height: 250px;
 
 	// background-image: url('/assets/images/large.png');
 	// background-position: center;
@@ -23,17 +24,39 @@
 	// 	// height: 250px;
 	// }
 
-	// @include respond-min($x-large){
-	// 	// height: 300px;
-	// }
+	@include respond-min($x-large){
+		// height: 240px;
+	}
 
-	// @include respond-min(1600px){
-	// 	height: 300px;
-	// }
+	@include respond-min(1600px){
+		// height: 300px;
+		// padding: 0 3em;
+	}
+}
+
+.turts {
+	// position: absolute;
+	bottom: 0;
+	background: rgba(#000,.55);
+	// display: table;
+	width: 100%;
+	height: 100%;
+	// top: 0;
+
+	@include respond-min($medium) {
+		position: absolute;
+	}
+}
+
+.burts {
+	display: table;
+	// height: 300px;
+	height: 100%;
+	// width: 100%;
 }
 
 .site__image-bank img {
- 	height: 100%;
+ 	// height: 100%;
  	display: block;
  	// min-height: 100%;
  	// object-fit:cover;
@@ -53,14 +76,18 @@
  	}
 }
 
-.site__image-bank .title {
+.site__image-bank .site__title {
 	// text-al
-	background: rgba(#333,.4);
-	padding: .5em 1em;
+	// background: rgba(#333,.4);
+	padding: 1em;
 	color: #fff;
 	margin: 0;
 	font-size: 1.5rem;
-	font-weight: 300;
+	// font-weight: 300;
+
+	display: table-cell;
+	vertical-align: bottom;
+	// text-align: center;
 
 	small {
 		font-size: .8rem;
@@ -68,53 +95,58 @@
 
 	@include respond-min($medium){
 		padding-left: 1rem;
-		font-size: 1.25rem;
+		font-size: 1.5em;
+		// line-height: .6;
 	}
 
 	@include respond-min($large){
 		// position: absolute;
 		padding-left: 2rem;
-		font-size: 1.5rem;
+		// font-size: 1.5rem;
 	}
 
 	@include respond-min($x-large){
 		// position: absolute;
 		padding-left: 3rem;
-		font-size: 1.75rem;
+		// font-size: 1.75rem;
 	}
 }
 
 // With an img
-.site__image-bank img + .title {
+.site__image-bank img + .site__title {
 	// position: absolute;
 	margin: 0;
 	padding: .75em .5em .75em 1rem;
-	bottom: 0;
-	left: 0;
-	right: 0;
+	// bottom: 0;
+	// left: 0;
+	// right: 0;
 	text-align: left;
 	color: #fff;
 	// color: $bethel--blue;
 	// color: $bethel--yellow;
-	background: rgba(#000,.75);
+	// background: rgba(#000,.45);
 	font-size: 1.5rem;
-	font-weight: 300;
+	// font-weight: 300;
+	// height: 100%;
 
 	@include respond-min($medium){
-		position: absolute;
+		// position: absolute;
 		padding-left: 1rem;
-		font-size: 1.8rem;
+		font-size: 2.5rem;
+		// height: 100%;
+		// text-align: center;
 	}
 
 	@include respond-min($large){
 		// position: absolute;
 		padding-left: 2rem;
-		font-size: 2rem;
+		font-size: 2.5rem;
 	}
 
 	@include respond-min($x-large){
 		// position: absolute;
 		padding-left: 3rem;
-		font-size: 1.5rem;
+		font-size: 3.5rem;
+		line-height: .5;
 	}
 }

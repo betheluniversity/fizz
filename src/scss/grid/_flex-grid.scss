@@ -96,6 +96,15 @@ $add-legacy-support: false !default;
     .grid-cell:last-child {
       margin-right: -1em;
     }
+
+    // removing negative margins on nested grids
+    .grid .grid .grid-cell:first-child {
+      margin-left:0;
+    }
+
+    .grid .grid .grid-cell:last-child {
+      margin-right: 0;
+    }
 }
 
 .grid--wrap .grid-cell:first-child {margin-left: 0;}

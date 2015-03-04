@@ -7,10 +7,70 @@ table td {
   border: 1px solid #ddd; }
 
 
+.majors-table {
+	font-family: $gotham;
+	font-size: .8rem;
+}
+
 .majors-table tr {
     border-bottom: 1px solid #ddd;
 }
 
 .majors-table td {
    border: none;
+}
+
+.majors-table__item {
+	display: flex;
+	border-bottom: 1px solid #ddd;
+	flex-wrap: wrap;
+	padding: 1em 0;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.majors-table__title {
+	flex-basis: 100%;
+	flex-basis: 35%;
+	// flex-grow:1;
+	// margin-right: .5em;
+	flex-shrink:0;
+	font-weight: 500;
+
+	@include respond-min($medium){
+		flex-basis: 40%;
+	}
+
+	@include respond-min($large){
+		flex-basis: 60%;
+	}
+}
+
+.majors-table__type {
+	flex-basis: 20%;
+	flex-shrink: 0;
+	// background: $bethel--navy;
+	// border-radius: .3em;
+	text-align: center;
+
+	@include respond-min($medium){
+		flex-basis: 15%;
+	}	
+
+	@include respond-min($large){
+		flex-basis: 10%;
+	}
+
+	a {
+		font-size: .7rem;
+		background: $bethel--blue;
+		color: #fff;
+		padding: .25em .5em;
+		border-radius: .3em;
+	}
+
+	a:hover {
+		text-decoration: none;
+
+	}
 }

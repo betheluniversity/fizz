@@ -90,10 +90,15 @@ a:hover {
 .uppercase-underlined {
     text-transform: uppercase;
     padding-bottom: 0.5em;
-    margin: 0 auto 3em;
+    margin: 0 auto 2.5em;
     letter-spacing: 3px;
-    font-size: 0.75em;
+    font-size: .9em;
+    font-weight: 400;
     display: table;
     text-align: center;
     border-bottom: 1px solid #333;
+}
+
+.parallax .uppercase-underlined {
+  border-color: #fff;
 }

@@ -1,27 +1,29 @@
 .global__header {
     background: lighten(#0f2c52,2%);
+    // background: $bethel--blue;
     position: relative;
     // margin-top: 0;
-    padding: 1em 0;
+    padding: 0;
     width: 100%;
 }
 
 .global__header .inner {
     position: relative;
-
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
+
 .global__logo {
     width: 9em;
-    // margin: .5em 1em .25em 1em;
+    padding: .5em 0;
     
     @include respond-min($navToggle){ 
-        padding: .5em 0;
+        padding: 1.5em 0;
         width: 11em;
     }
 }
+
 .global__logo a { 
     display: block; 
 }

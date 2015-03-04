@@ -1,11 +1,28 @@
 .parallax {
 	// background: url("//cdn1.bethel.edu/resize/unsafe/1600x0/smart/https://www.bethel.edu/_testing/kelsey-testing/images/benson-outside.jpg");
-	background-attachment: fixed;
+	// background-attachment: fixed;
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
+
+	@include respond-min(40em){
+		background-attachment: fixed;
+	}
 }
 
 .parallax_content {
 	// padding: 5em;
+}
+
+.parallax h1,
+.parallax h2,
+.parallax h3,
+.parallax h4,
+.parallax p,
+.parallax li {
+	color: #fff;
+}
+
+.parallax__box {
+	background: rgba($bethel--navy,.6);
 }

@@ -19,7 +19,14 @@ var picturefill = require("./picturefill.min.js")
 
 document.body.className = document.body.className.replace("no-js","js");
 
-new Imager({ availableWidths: [300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200] });
+new Imager({ availableWidths: [300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300, 1400, 1500, 1600] });
+
+// if (window.matchMedia("(min-width: 400px)").matches) {
+//   console.log("over 400px");
+//   document.querySelector("#calendar-mode").classList.toggle('NOOGS');
+// } else {
+// 	console.log("under 400px")
+// }
 
 domReady(function () {
     console.log("domReady is ready");
@@ -37,3 +44,18 @@ domReady(function () {
     //     offset: 0, // Integer. How far to offset the scrolling anchor location in pixels
     // });
 });
+
+// Calendar Stuff
+// var mq  = matchMedia('(min-width: 800px)');
+// mq.addListener(function(mql) {
+//     if (mql.matches) {
+//         document.querySelector("#calendar-mode").classList.add('calendar-grid');
+//         document.querySelector("#calendar-mode").classList.remove('calendar-list');
+//         document.querySelector(".view-mode--list > a").classList.remove('active');
+//         document.querySelector(".view-mode--grid > a").classList.add('active');
+//     }
+//     else {
+//     	document.querySelector("#calendar-mode").classList.add('calendar-list');
+//     	document.querySelector("#calendar-mode").classList.remove('calendar-grid');
+//     }
+// });

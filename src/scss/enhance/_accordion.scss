@@ -13,6 +13,8 @@
 
 .accordion-list {
 
+    margin-left: .75em;
+
     @include respond-min(60em){
         margin-left: .375em;
     }
@@ -41,7 +43,7 @@ a.accordion-list__link {
 }
 
 .accordion-list__link--active {
-    font-weight: 500;
+    // font-weight: 500;
 }
 
 .accordion-list__button {
@@ -63,7 +65,7 @@ a.accordion-list__link {
 }
 
 .accordion--active a {
-    font-weight: 700;
+    // font-weight: 700;
 }
 
 .first-level {

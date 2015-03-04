@@ -49,12 +49,12 @@
     margin-bottom: .4em;
     margin-left: .8em;
     margin-right: .8em;
-    font-size: 1.5em;
+    font-size: 1.5rem;
     color: #fff;
     font-family: "Gotham 5r","Gotham A","Gotham B","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 500;
     font-style: normal;
-    line-height: 1.4
+    line-height: 1.4;
 }
 
 .carousel--basic .feature__blockquote:before {
@@ -86,12 +86,36 @@
 }
 
 
+.carousel--quote {
+    background: #fff;
+    padding: 1em;
+    position: relative;
+
+    .slick-next,.slick-prev {
+        background: $bethel--blue;
+        border: 0;
+        position: absolute;
+        top: 50%;
+    }
+
+    .slick-prev {
+        left: 0;
+    }
+
+    .slick-next {
+        right: 0;
+    }
+}
+
+
 
 .carousel--overlay {
 
+    font-family: $gotham;
+
     a {
         width: 100%;
-        height: 300px;
+        height: 350px;
         max-height: 600px;
         position: relative;
         // top: 0;
@@ -138,6 +162,7 @@
             transform: translate(-50%, -50%);
 
             min-width: 750px;
+            min-width: 875px;
         }
     }
 
@@ -149,31 +174,41 @@
             bottom: 0;
             left: 0;
             background-image: linear-gradient(to bottom,transparent,#000);
-            opacity: .7; 
+            opacity: .7;
+            z-index: 1; 
       }
 
     .feature__figure {
         width: 70%;
         position: absolute;
         bottom: 4%;
+        bottom: 0;
         // left: 5%;
         border-bottom: 0;
         // background: #0069aa;
         // background: rgba(0,105,170,.4);
-        padding: 1% 2% 2%
+        padding: 1% 2% 2%;
+        z-index: 2;
     }
 
     .feature__blockquote {
         margin: 0 0 1%;
         z-index: 30;
         line-height: 1.2;
-        font-family: "Gotham 4r","Gotham A","Gotham B","Helvetica Neue",Helvetica,Arial,sans-serif;
         font-weight: 400;
         font-style: normal;
+        text-shadow: 0 1px 1px #333;
         color: #fff;
-        text-shadow: 0 1px 1px #004977;
         font-size: 25.63px;
         font-size: 1.3rem;
+
+        @include respond-min($medium){
+            font-size: 2rem;
+        }
+
+        @include respond-min($x-large){
+            font-size: 2.5rem;
+        }
     }
 
     .ie8 .feature__blockquote {
@@ -183,9 +218,6 @@
 
     .feature__figcaption {
         margin: 0;
-        font-size: 12.64px;
-        font-size: .79rem;
-        font-size: 14.22px;
         font-size: .889rem;
         color: #fff
     }
