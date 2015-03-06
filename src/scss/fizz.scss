@@ -30,13 +30,16 @@
 "site/site__image-bank",
 
 "page/page__title",
+"page/page--home",
 
 "modules/section--apply",
 "modules/maps",
 "modules/calendar",
 "modules/news",
+"modules/search",
 
 "enhance/accordion",
+"enhance/animation",
 "enhance/big-steps",
 "enhance/buttons",
 "enhance/date-tag",
@@ -45,11 +48,11 @@
 "enhance/parallax",
 "enhance/proof-points",
 "enhance/quotes",
-"enhance/search",
+// "enhance/search",
 "../../../rex/src/scss/enhance/svg-icons",
 "enhance/slick",
 "enhance/carousel",
-// "enhance/image-hover" // Symlinked to REX : ~/Sites/rex/src/scss/enhance/_image-hover.scss
+"enhance/image-hover", // Symlinked to REX : ~/Sites/rex/src/scss/enhance/_image-hover.scss
 "enhance/collapsible-block", // Symlinked to REX : ~/Sites/rex/src/scss/enhance/_collapsible-block.scss
 
 "base/utils"
