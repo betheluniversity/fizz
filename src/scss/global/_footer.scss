@@ -4,15 +4,21 @@
     background: $bethel--navy;
     // background: #ddd;
     padding-top: 2em;
-    padding-bottom: 2em;
+    // padding-bottom: 2em;
+
+    ul {
+        padding-left: 1.25em;
+    }
 
     p, li {
         color: #77cbff; 
         font-family: $gotham;
+        // font-weight: 300;
     }
 
+
     a, a i {
-        color: #fff; 
+        color: rgba(#fff, .5); 
     }
 
     a:hover {
@@ -30,6 +36,7 @@
         font-style: normal;
         margin-bottom: 0;
         color: #77cbff; 
+        font-family: $gotham;
     }
 
     .svg-icon {
@@ -39,5 +46,10 @@
         vertical-align: text-top;
         fill: white;
         fill-opacity: .5;
+        margin-bottom: 0;
+    }
+
+    small, small a {
+        color: #777;
     }
 }
