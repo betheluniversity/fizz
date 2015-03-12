@@ -13,6 +13,7 @@ var slick = require("../../node_modules/slick-carousel/slick/slick.js");
 var picturefill = require("./picturefill.min.js");
 var odometer = require("./odometer.js");
 var responsiveTables = require("./responsive-tables.js");
+var bu_animate = require("./bu_animate.js");
 
 // var binPolyfill = require("bindPolyfill");
 // var smothScroll = require("smoothScroll");
@@ -33,11 +34,55 @@ new Imager({ availableWidths: [300, 400, 500, 600, 700, 800, 900, 1000, 1100, 12
 domReady(function () {
     console.log("domReady is ready");
 
-	$('.slick-carousel').slick({
-	  lazyLoad: 'ondemand',
-	  prevArrow: '<button type="button" class="slick-prev"></button>',
-	  nextArrow: '<button type="button" class="slick-next"></button>'
-	});
+	// if a slick carousel exists
+	if( $('.slick-carousel').length ){
+	    // if the slick carousel needs a cookie to choose starting slide
+	    if( $('.slick-cookie').length  ){
+	        function getCookie(cname) {
+	            var name = cname + "=";
+	            var ca = document.cookie.split(';');
+	            for(var i=0; i<ca.length; i++) {
+	                var c = ca[i];
+	                while (c.charAt(0)==' ') 
+	                    c = c.substring(1);
+	                if (c.indexOf(name) == 0) 
+	                    return c.substring(name.length,c.length);
+	            }
+	            return "";
+	        };
+
+	        // Create cookie
+	        var d = new Date();
+	        // 180 days
+	        d.setTime(d.getTime() + (180*24*60*60*1000));
+	        var expires = "expires="+d.toUTCString();
+	        var cookie = getCookie("bethel_carousel_cookie_counter:" + document.URL);
+	        if( cookie == "" ){
+	            // cookie doesn't exist
+	            var index = 0;
+	            document.cookie = "bethel_carousel_cookie_counter:" + document.URL + "=" + 0 + "; " + expires;
+	        }
+	        else{
+	            // cookie exists
+	            var index = parseInt(cookie)+1;
+	            document.cookie = "bethel_carousel_cookie_counter:" + document.URL + "=" + index + "; " + expires;
+	        }
+	        $('.slick-carousel').slick({
+	            lazyLoad: 'ondemand',
+	            prevArrow: '<button type="button" class="slick-prev"></button>',
+	            nextArrow: '<button type="button" class="slick-next"></button>',
+	            initialSlide: (index)%document.getElementsByClassName("slick-item").length
+	        });
+	    }
+	    else{
+	        // normal slick carousel
+	        $('.slick-carousel').slick({
+	            lazyLoad: 'ondemand',
+	            prevArrow: '<button type="button" class="slick-prev"></button>',
+	            nextArrow: '<button type="button" class="slick-next"></button>'
+	        });
+	    }
+	}
 
 	// smoothScroll.init({
     //     speed: 500, // Integer. How fast to complete the scroll in milliseconds

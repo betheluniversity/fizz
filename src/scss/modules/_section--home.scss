@@ -1,0 +1,79 @@
+.section--home .grid-cell {
+		margin: 0;
+}
+
+.section--home__holder:before {
+	background-image: linear-gradient(to bottom left, transparent, #000);
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	content: '';
+}
+
+.section--home__holder {
+	overflow: auto;
+	height: 110vh;
+	width: 100vw;
+	padding: 5em 0;
+	font-family: $gotham;
+	background: $bethel--blue;
+	font-size: 100%;
+	color: #ccc;
+	position: relative;
+	display: table;
+
+	@include respond-min($medium){
+		padding: 10em 0;
+	}
+
+	.inner {
+		position: relative;
+		z-index: 1;
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+	h2 {
+		color: #fff;
+		font-size: 2rem;
+		font-weight: 400;
+
+		@include respond-min($medium) {
+			font-size: 3rem;
+		}
+	}
+
+	a:not(.btn) {
+		color: $bethel--yellow;
+	}
+}
+
+
+.section--home__academics {
+	background: url("//c2.staticflickr.com/6/5001/13992066213_1c78bc7f90_h.jpg");
+	background-size: cover;
+	background-position: center;
+}
+
+.section--home__faith {
+	background: url("cdn1.bethel.edu/resize/unsafe/1600x0/smart/https://www.bethel.edu/_homepages/www/images/girl-laughing.jpg");
+	background-size: cover;
+	background-position: center;
+}
+
+.section--home__community {
+	background: url("//cdn1.bethel.edu/resize/unsafe/1200x0/smart/https://www.bethel.edu/_homepages/www/images/group-laughing.jpg");
+	background-size: cover;
+	background-position: center;
+}
+
+.section--home__story {
+	background-color: #000;
+
+	.grid-cell {
+		margin: 0 auto !important;
+		text-align: center;
+	}
+}
