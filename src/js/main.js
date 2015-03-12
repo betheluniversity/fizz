@@ -11,7 +11,8 @@ var accordion = require("./accordion.js");
 var Imager = require("../../node_modules/imager.js/Imager.js");
 var slick = require("../../node_modules/slick-carousel/slick/slick.js");
 var picturefill = require("./picturefill.min.js");
-var odometer = require("./odometer.js");
+var odometer = require('./odometer.min.js');
+var bu_animate = require("./bu_animate.js");
 
 // var binPolyfill = require("bindPolyfill");
 // var smothScroll = require("smoothScroll");
