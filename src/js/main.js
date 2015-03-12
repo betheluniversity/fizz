@@ -77,7 +77,7 @@ domReady(function () {
 	    else{
 	        // normal slick carousel
 	        $('.slick-carousel').slick({
-	            lazyLoad: 'ondemand',
+                lazyLoad: 'ondemand',
 	            prevArrow: '<button type="button" class="slick-prev"></button>',
 	            nextArrow: '<button type="button" class="slick-next"></button>'
 	        });
