@@ -3,7 +3,7 @@
     background: #0069aa;
     background: $bethel--navy;
     // background: #ddd;
-    padding-top: 2em;
+    padding-top: 3em;
     // padding-bottom: 2em;
 
     ul {
@@ -52,4 +52,16 @@
     small, small a {
         color: #777;
     }
+}
+
+.arrow-up {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    margin: -2px 20px;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjEwcHgiIGhlaWdodD0iN3B4IiB2aWV3Qm94PSIwIDAgMTAgNyIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTAgNyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PGc+PHBhdGggZmlsbD0iIzQzNDM0NiIgZD0iTTcuNzgxLDQuODQ0SDIuMTU2bDIuODEyLTIuODEzTDcuNzgxLDQuODQ0eiIvPjwvZz48L3N2Zz4=);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center center;
+    fill: #fff;
 }

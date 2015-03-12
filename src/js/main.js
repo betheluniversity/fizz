@@ -12,6 +12,7 @@ var Imager = require("../../node_modules/imager.js/Imager.js");
 var slick = require("../../node_modules/slick-carousel/slick/slick.js");
 var picturefill = require("./picturefill.min.js");
 var odometer = require("./odometer.js");
+var responsiveTables = require("./responsive-tables.js");
 
 // var binPolyfill = require("bindPolyfill");
 // var smothScroll = require("smoothScroll");

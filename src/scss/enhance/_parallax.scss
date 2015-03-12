@@ -10,10 +10,6 @@
 	}
 }
 
-.parallax_content {
-	// padding: 5em;
-}
-
 .parallax h1,
 .parallax h2,
 .parallax h3,
@@ -25,4 +21,8 @@
 
 .parallax__box {
 	background: rgba($bethel--navy,.6);
+}
+
+.parallax .image__caption {
+	background: $bethel--navy;
 }

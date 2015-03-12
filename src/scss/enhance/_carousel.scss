@@ -4,8 +4,8 @@
 }
 
 .slick-item a {
-    display: block;
-    position: relative;
+    // display: block;
+    // position: relative;
 }
 
 .slick-next:before {
@@ -111,116 +111,89 @@
 
 .carousel--overlay {
 
-    font-family: $gotham;
+    // font-family: $gotham;
 
-    a {
-        width: 100%;
-        height: 350px;
-        max-height: 600px;
-        position: relative;
-        // top: 0;
-        // left: 0;
-        overflow: hidden;
-        // max-width: 75em;
-        margin: 0 auto;
-        // text-align: center;
-        // max-width: 75em;
+    // a {
+    //     width: 100%;
+    //     height: 350px;
+    //     max-height: 600px;
+    //     position: relative;
+    //     overflow: hidden;
+    //     margin: 0 auto;
 
-        // background-image: url('/assets/images/large.png');
-        // background-position: center;
-        // background-size: cover;
+    //     @include respond-min(50em){
+    //         height: auto;
+    //     }
+    // }
 
-        @include respond-min(50em){
-            // height: 185px;
-            height: auto;
-        }
+    // .feature__img {
+    //     width: 100%;
 
-        // @include respond-min($large){
-        //     // height: 250px;
-        // }
+    //     @include respond-max(49.999em){
+    //         margin: 0;
+    //         position: absolute;
+    //         top: 50%;
+    //         left: 50%;
+    //         margin-right: -50%;
+    //         transform: translate(-50%, -50%);
 
-        // @include respond-min($x-large){
-        //     // height: 300px;
-        // }
+    //         min-width: 750px;
+    //         min-width: 875px;
+    //     }
+    // }
 
-        // @include respond-min(1600px){
-        //     height: 300px;
-        // }
-    }
+    // a:before {
+    //     content: '';
+    //         position: absolute;
+    //         top: 0;
+    //         right: 0;
+    //         bottom: 0;
+    //         left: 0;
+    //         background-image: linear-gradient(to bottom,transparent,#000);
+    //         opacity: .7;
+    //         z-index: 1; 
+    //   }
 
-    .feature__img {
-        // display: block;
-        width: 100%;
-        // height: 100%;
+    // .feature__figure {
+    //     width: 70%;
+    //     position: absolute;
+    //     bottom: 4%;
+    //     bottom: 0;
+    //     border-bottom: 0;
+    //     padding: 1% 2% 2%;
+    //     z-index: 2;
+    // }
 
-        @include respond-max(49.999em){
-            margin: 0;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            margin-right: -50%;
-            transform: translate(-50%, -50%);
+    // .feature__blockquote {
+    //     margin: 0 0 1%;
+    //     z-index: 30;
+    //     line-height: 1.2;
+    //     font-weight: 400;
+    //     font-style: normal;
+    //     text-shadow: 0 1px 1px #333;
+    //     color: #fff;
+    //     font-size: 25.63px;
+    //     font-size: 1.3rem;
 
-            min-width: 750px;
-            min-width: 875px;
-        }
-    }
+    //     @include respond-min($medium){
+    //         font-size: 2rem;
+    //     }
 
-    a:before {
-        content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            background-image: linear-gradient(to bottom,transparent,#000);
-            opacity: .7;
-            z-index: 1; 
-      }
+    //     @include respond-min($x-large){
+    //         font-size: 2.5rem;
+    //     }
+    // }
 
-    .feature__figure {
-        width: 70%;
-        position: absolute;
-        bottom: 4%;
-        bottom: 0;
-        // left: 5%;
-        border-bottom: 0;
-        // background: #0069aa;
-        // background: rgba(0,105,170,.4);
-        padding: 1% 2% 2%;
-        z-index: 2;
-    }
+    // .ie8 .feature__blockquote {
+    //     background-color: #0069aa;
+    //     font-size: 23px
+    // }
 
-    .feature__blockquote {
-        margin: 0 0 1%;
-        z-index: 30;
-        line-height: 1.2;
-        font-weight: 400;
-        font-style: normal;
-        text-shadow: 0 1px 1px #333;
-        color: #fff;
-        font-size: 25.63px;
-        font-size: 1.3rem;
-
-        @include respond-min($medium){
-            font-size: 2rem;
-        }
-
-        @include respond-min($x-large){
-            font-size: 2.5rem;
-        }
-    }
-
-    .ie8 .feature__blockquote {
-        background-color: #0069aa;
-        font-size: 23px
-    }
-
-    .feature__figcaption {
-        margin: 0;
-        font-size: .889rem;
-        color: #fff
-    }
+    // .feature__figcaption {
+    //     margin: 0;
+    //     font-size: .889rem;
+    //     color: #fff
+    // }
 
     .slick-next,
     .slick-prev {
