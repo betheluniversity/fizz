@@ -12,6 +12,8 @@ var gulp 		= require('gulp'),
 	imagemin	= require('gulp-imagemin'),
 	del 		= require('del'),
 	svgSprite   = require("gulp-svg-sprites");
+	critical 	= require('critical');
+	rename		= require('gulp-rename');
 
 var outputDir = './builds/';
 
@@ -75,8 +77,29 @@ gulp.task('sprites', function () {
 
 gulp.task('copyfiles', function(){
 	gulp.src('./src/assets/filters/*.svg')
-	.pipe(gulp.dest(outputDir + '/assets/filters'))
-	.pipe(reload({stream:true}));
+		.pipe(gulp.dest(outputDir + '/assets/filters'))
+		.pipe(reload({stream:true}));
+})
+
+gulp.task('copystyles', function(){
+	return gulp.src([outputDir + '/css/fizz.css'])
+		.pipe(rename({
+			basename: "site"
+		}))
+		.pipe(gulp.dest(outputDir + '/css'))
+})
+
+gulp.task('critical', ['build'], function(){
+	critical.generate({
+		base: outputDir + 'builds/',
+		src: 'index.html',
+		// styleTarget: 'css/main.css',
+		dest: 'css/critical.css',
+		width: 320,
+		height: 480,
+		minify: true
+	})
+
 })
 
 // browser-sync task for starting the server
@@ -95,6 +118,8 @@ gulp.task('clean', function (cb) {
 	del([outputDir + '/*'], cb())
 	// .on('error', console.error.bind(console));
 })
+
+gulp.task('build', ['js','styles','images','sprites','copyfiles','copystyles','assemble']);
 
 gulp.task('default', ['js','styles','images','sprites','copyfiles','assemble','browser-sync'], function() {
 	gulp.watch('./src/scss/**/*.scss', ['styles']);

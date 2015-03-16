@@ -96,6 +96,8 @@
 }
 .moving-picture__overlay__teaser {
 	display: none;
+	text-rendering: geometricPrecision;
+	margin-top: .75em;
 
 	@include respond-min($large){
 		display: block;
@@ -111,4 +113,6 @@
 	text-transform: uppercase;
 	font-weight: 500;
 	letter-spacing: .02em;
+	margin-top: .5em;
+	display: inline-block;
 }

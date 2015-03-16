@@ -4,7 +4,7 @@
 // sayHello();
 // imager();
 
-document.body.className = document.body.className.replace("no-js","js");
+// document.body.className = document.body.className.replace("no-js","js");
 
 var $ = require("jquery");
 var domReady = require("../../node_modules/domready/src/ready.js");
@@ -12,30 +12,19 @@ var domReady = require("../../node_modules/domready/src/ready.js");
 // var Imager = require("../../node_modules/imager.js/Imager.js");
 var slick = require("../../node_modules/slick-carousel/slick/slick.js");
 var picturefill = require("./picturefill.min.js");
-<<<<<<< HEAD
 var skrollr = require("./skrollr.min.js");
-var odometer = require("./odometer.min.js");
-var responsiveTables = require("./responsive-tables.js");
-=======
-var odometer = require("./odometer.min.js");
->>>>>>> origin/master
 var bu_animate = require("./bu_animate.js");
+var odometer = require("./odometer.min.js");
 var accordion = require("./accordion.js");
 var responsiveTables = require("./responsive-tables.js");
+var rotateText = require("./rotate-text.js");
 
 // var binPolyfill = require("bindPolyfill");
 // var smothScroll = require("smoothScroll");
 // var bindPolyfill = require("../../node_modules/smooth-scroll/dist/js/bind-polyfill.js")
 // var smoothScroll = require("../../node_modules/smooth-scroll/dist/js/smooth-scroll.js")
 
-
-<<<<<<< HEAD
-
-
-new Imager({ availableWidths: [300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300, 1400, 1500, 1600] });
-=======
 // new Imager({ availableWidths: [300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300, 1400, 1500, 1600] });
->>>>>>> origin/master
 
 // if (window.matchMedia("(min-width: 400px)").matches) {
 //   console.log("over 400px");
