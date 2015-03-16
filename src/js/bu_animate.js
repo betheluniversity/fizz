@@ -21,38 +21,25 @@
        return testObj.parentNode;
    }
 
-   window.onload = function(){
-       if(document.getElementsByClassName('odometer').length > 0){
-           intervalID = setInterval(function() {
-               if(didScroll) {
-                   doAnimations();
-                   didScroll = false;
-               }
-           }, 100);
-           window.onscroll = markScroll;
-           //trigger once if the odometers are in view on load
-           doAnimations();
-       }   
-   }
-
-
-
    // Function which adds the 'animated' class to any '.animatable' in view
    var doAnimations = function() {
        // Calc current offset and get all animatables
-       var offset = window.scrollY + window.innerHeight,
+       var offset = (window.scrollY || window.pageYOffset),
            odometers = document.getElementsByClassName('odometer');
            done_odometers = document.getElementsByClassName('odometer_done');
-       
        // Unbind scroll handler if we have no animatables
+
+       offset += window.innerHeight;
+
        if (odometers.length == done_odometers.length) {
          window.onscroll = "";
          clearInterval(intervalID);
        }
        for (index = 0; index < odometers.length; ++index) {
-           var odometer = odometers[index];
-           var scrollPos = odometer.getBoundingClientRect().top + document.body.scrollTop - document.body.clientTop + odometer.offsetHeight - 20;
-           if (scrollPos < offset) {
+            var odometer = odometers[index];
+            var scrollPos = odometer.getBoundingClientRect().top + document.body.scrollTop - document.body.clientTop + odometer.offsetHeight - 20;
+
+            if (scrollPos < offset){
                var ppcParent = findProofPointCollectionParentNode(odometer);
                // don't add twice
                if(!ppcParent.classList){
@@ -66,3 +53,17 @@
            }
        }
    };
+
+    (function(){
+       if(document.getElementsByClassName('odometer').length > 0){
+           intervalID = setInterval(function() {
+               if(didScroll) {
+                   doAnimations();
+                   didScroll = false;
+               }
+           }, 100);
+           window.onscroll = markScroll;
+           //trigger once if the odometers are in view on load
+           doAnimations();
+       }   
+   })();

@@ -11,7 +11,8 @@ var accordion = require("./accordion.js");
 var Imager = require("../../node_modules/imager.js/Imager.js");
 var slick = require("../../node_modules/slick-carousel/slick/slick.js");
 var picturefill = require("./picturefill.min.js");
-var odometer = require("./odometer.js");
+var skrollr = require("./skrollr.min.js");
+var odometer = require("./odometer.min.js");
 var responsiveTables = require("./responsive-tables.js");
 var bu_animate = require("./bu_animate.js");
 
@@ -21,6 +22,8 @@ var bu_animate = require("./bu_animate.js");
 // var smoothScroll = require("../../node_modules/smooth-scroll/dist/js/smooth-scroll.js")
 
 document.body.className = document.body.className.replace("no-js","js");
+
+
 
 new Imager({ availableWidths: [300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300, 1400, 1500, 1600] });
 
@@ -33,6 +36,13 @@ new Imager({ availableWidths: [300, 400, 500, 600, 700, 800, 900, 1000, 1100, 12
 
 domReady(function () {
     console.log("domReady is ready");
+
+    // Init Skrollr
+	$(window).load(function($){
+		if(window.innerWidth > 960){
+			var s = skrollr.init(); 
+		}
+	});
 
 	// if a slick carousel exists
 	if( $('.slick-carousel').length ){
@@ -82,6 +92,24 @@ domReady(function () {
 	            nextArrow: '<button type="button" class="slick-next"></button>'
 	        });
 	    }
+
+	    lazyloadSlide = function(slide){
+		  var picture = $(slide).find('picture');
+		  var srcset = $(picture.children()[0]);
+		  var image = $(picture.children()[1]);
+		  srcset.attr('srcset', srcset.attr('bethel-lazy'));
+		  image.attr('src', image.attr('bethel-lazy'));
+	    }
+
+    	//lazyload
+		var currentSlide = $('.slick-active');
+		lazyloadSlide(currentSlide);
+		$('.slick-carousel').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+		  var next = slick.$slides.get(nextSlide);
+		  lazyloadSlide(next);
+		});
+
+
 	}
 
 	// smoothScroll.init({
