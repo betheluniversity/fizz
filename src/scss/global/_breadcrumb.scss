@@ -1,25 +1,14 @@
 .breadcrumb {
-  // padding-left: 1rem;
-  // padding-right: 1rem;
   font-family: $gotham;
-  // margin: 0;
   font-size: .7em;
-  // letter-spacing: .05em;
   font-weight: 400;
-  // text-transform: uppercase; 
-  // margin-top: 2em;
-  margin-top: 0;
+  margin-top: 1em;
   padding-top: 0;
-  // line-height: 1.5;
 }
 
 .breadcrumb a, .breadcrumb span {
   display: inline-block;
-  // padding: 0;
-  color: #bbb;
   color: #aaa;
-  // float:left;
-  // clear: left;
 }
   
 .breadcrumb a:first-child {
@@ -28,7 +17,6 @@
 
 .breadcrumb a:after {
   content: "›";
-  // content: "•";
   padding-left: .7em;
   padding-right: .45em; 
 }
@@ -45,9 +33,4 @@
   fill: $bethel--blue;
   fill: #bbb;
   margin-bottom: 0;
-}
-
-.breadcrumb--active {
-  color: tomato;
-  // color: $bethel--yellow;
 }

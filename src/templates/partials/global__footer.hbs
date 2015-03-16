@@ -1,20 +1,23 @@
 <footer class="global__footer">
     <div class="inner">
-
-        <div class="center"><button class="btn btn-small"><span class="arrow-up"></span>Back to Top<span class="arrow-up"></span></button></div>
+        <div class="center"><a class="btn btn-small" href="#top"><span class="arrow-up"></span>Back to Top<span class="arrow-up"></span></a></div>
 
         <div class="grid mt2">
-        <div class="grid-cell u-medium-1-3">
-            <div class="grid-pad-1x">
-                <img src="//cdn4.bethel.edu/images/seal2.png"/>
-                <h1 class="h5">Bethel University</h1>
-                <address>3900 Bethel Drive
-                    <br/>St. Paul, MN 55112</address>
-                <p>651.638.6400</p>
+            <div class="grid-cell u-medium-1-3">
+                <div class="grid-pad-1x">
+                    <img src="//cdn4.bethel.edu/images/seal2.png"/>
+                    <div itemscope="" itemtype="https://schema.org/CollegeOrUniversity" class="bd">
+                        <h1 class="h5"><span itemprop="legalName">Bethel University</span></h1>
+                        <div itemprop="address" itemscope="" itemtype="https://schema.org/PostalAddress">
+                            <address><span itemprop="streetAddress">3900 Bethel Drive</span>
+                                <br/><span itemprop="addressLocality">St. Paul</span>, <span itemprop="addressRegion">MN</span> <span itemprop="postalCode">55112</span></address>
+                            <p><span itemprop="telephone">651.638.6400</span></p>
+                        </div>
+                    </div>
 
-                <p><svg class="svg-icon"><use xlink:href="../assets/icon-sprite/symbols.svg#location"></use></svg><a href="http://www.bethel.edu/about/maps-directions/">Maps &amp; Directions</a></p>
-                <p><a class="btn btn-blue-dark" href="http://www.bethel.edu/giving/">Support Bethel</a></p>
-            
+                    <p>#svgIcon("location")<a href="https://www.bethel.edu/about/maps-directions/">Maps &amp; Directions</a></p>
+                    <p><a class="btn btn-blue-dark" href="https://www.bethel.edu/giving/">Support Bethel</a></p>
+
                 </div>
             </div>
 
@@ -26,27 +29,34 @@
                         <li><a href="https://blink.bethel.edu/">Current Students</a></li>
                         <li><a href="/alumni/">Alumni</a></li>
                         <li><a href="/parents/">Parents &amp; Families</a></li>
-                        <li><a href="https://blink.bethel.edu/">Faculty &amp; Staff</a></li>
-                        <li><a href="/church-ministries/">Churches</a></li>
-                    </ul> 
-               </div>
+                        <li><a href="//blink.bethel.edu/">Faculty &amp; Staff</a></li>
+                        <li><a href="//www.bethel.edu/church-relations/">Churches</a></li>
+                    </ul>
+                </div>
             </div>
+
+
             <div class="grid-cell u-medium-1-3">
                 <div class="grid-pad-1x">
                     <ul class=" ">
-                        <li>{{!-- <svg class="svg-icon"><use xlink:href="../assets/icon-sprite/symbols.svg#user"></use></svg> --}}<a href="http://www.bethel.edu/about/employment">Jobs at Bethel</a></li>
-                        <li><a href="http://www.bethel.edu/events/calendar/">Calendar</a></li>
-                        <li><a href="http://www.bethel.edu/library/">Library</a></li>
-                        <li>{{!-- <svg class="svg-icon"><use xlink:href="../assets/icon-sprite/symbols.svg#help"></use></svg> --}}<a href="https://www.bethel.edu/about/contact/questions-comments">Questions &amp; Comments</a></li>
+                        <li><a href="//www.bethel.edu/about/employment/">Jobs at Bethel</a></li>
+                        <li><a href="//www.bethel.edu/events/calendar/">Calendar</a></li>
+                        <li><a href="//www.bethel.edu/library/">Library</a></li>
+                        <li><a href="//www.bethel.edu/about/contact/questions-comments/">Questions &amp; Comments</a></li>
                     </ul>
                 </div>
             </div>
         </div>
 
-        <div class="mt3"> 
-            {{> social-media }}
+        <div class="mt3">
+            <div class="social-media">
+                <p class="social-media__title">Join our community</p>
+                <a href="https://www.facebook.com/betheluniversity">#svgIcon("facebook")Facebook</a>
+                <a href="https://twitter.com/BethelU">#svgIcon("twitter")Twitter</a>
+                <a href="https://www.instagram.com/bethelumn">#svgIcon("instagram")Instagram</a>
+                <a href="https://www.linkedin.com/company/bethel-university">#svgIcon("linkedin")LinkedIn</a>
+            </div>
         </div>
     </div>
-
-    <p class="center pa1"><small>© 2004-2015 Bethel University | <a href="http://knowledgebase.its.bethel.edu/articles/41/">DMCA Notification</a></small></p>
+    <p class="center pa1"><small>© 2004-2015 Bethel University | <a href="https://knowledgebase.its.bethel.edu/articles/41/">DMCA Notification</a></small></p>
 </footer>

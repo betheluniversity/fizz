@@ -84,7 +84,7 @@
     // z-index: 1;
     position: fixed;
     top: 0;
-    height: auto;
+    // height: auto;
     overflow-y: auto;
   }
 
@@ -107,31 +107,6 @@
     transform: translate3d(-18em, 0, 0);
   }
 }
-
-
-.burger {
-    background: #17437d;
-    padding: .25em .6em;
-    margin-right: 1em;
-    margin-top: 0;
-    font-family: $gotham;
-    font-size: .9rem;
-
-    @include respond-min($navToggle){
-      display: none;
-    }
-}
-.burger-icon {
-    content: "";
-    display: block;
-    width: 1em;
-    box-shadow: 0 6px 0 1px #fff,0 12px 0 1px #fff,0 18px 0 1px #fff;
-}
-.burger-text {
-    margin-left: 1.5em;
-    color: #fff;
-}
-
 
 
 .global__toolbox__close-btn {
