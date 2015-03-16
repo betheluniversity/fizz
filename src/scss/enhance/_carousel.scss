@@ -209,10 +209,29 @@
     }
 
     .slick-next {
-        right: 0;
+        right: 3%;
     }
 
     .slick-prev {
-        left: 0;
+        left: 3%;
+    }
+}
+
+.carousel-constrain {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    @include respond-min($medium){
+        padding: 0 1em;
+    }
+
+    @include respond-min($large){
+        padding: 0 3em;
+    }
+
+    .moving-picture {
+        @include respond-min(1200px){
+            height: 639px;
+        }
     }
 }

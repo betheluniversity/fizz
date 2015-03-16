@@ -27,6 +27,7 @@
     // font-family: Georgia, serif;
     display: inline-block;
     margin-bottom: .25em;
+    white-space: nowrap;
 
     @include respond-min($medium){
     	font-size: 3rem;

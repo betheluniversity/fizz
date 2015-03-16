@@ -1,86 +1,114 @@
 .moving-picture {
 	position: relative;
-	height: 300px;
+	background-color: #000;
+	height: 415px;
 	
-	@include respond-min($medium){
-		height: 400px;
+	@include respond-min(830px){
+		height: auto;
 	}
 
-	@include respond-min($x-large){
-		height: 468px;
+	@include respond-min(1200px){
+		height: 675px;
 	}
 }
 
 .moving-picture:before {
+	@include respond-min(0){
         content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            background-image: linear-gradient(to bottom left,transparent,#000);
-            opacity: .7;
-            z-index: 1; 
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-image: linear-gradient(to bottom,transparent 35%,#000);
+        opacity: .8;
+        z-index: 1; 
       }
+ }
 
 .moving-picture__media {
-	// z-index: -1;
 	position: absolute;
-	right: 0;
-	top: 0;
+	top:0;
+	bottom:0;
 	left: 0;
-	bottom: 0;
+	right: 0;
 	overflow: hidden;
 
-	background-color: #000;
+	@include respond-min(830px){
+		position: relative;
+	}
 }
 
-#home-video {
+.moving-picture__media picture img {
 	height: 100%;
 	width: auto;
-	bottom: 0;
+	// bottom: 0;
 	position: absolute;
 	max-width: none;
+	top: 0;
+	right: 0;
 
-	@include respond-min(710px){
+	@include respond-min($large){
 		height: auto;
-	}
-
-	@include respond-min(1100px){
-		height: auto;
+		position: relative;
+		max-width: 100%;
 		width: 100%;
 	}
 }
 
 .moving-picture__overlay {
-	position: relative;
-	// top: 50px;
-	// height: 550px;
-	width: 50%;
-	margin-left: 5%;
-	// text-align: center;
+	position: absolute;
+	left: 0;
+	bottom: 0;
 	color: #fff;
 	font-family: $gotham;
 	z-index: 1;
-	padding-bottom: 2em;
+	padding: 1em 2.5em;
 
 	@include respond-min($medium){
-		margin-left: 3rem;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 75%;
+		padding: 5% 8%;
+	}
+
+	@include respond-min($x-large){
+		// margin-left: 3rem;
+		width: 50%;
 	}
 }
 
 .moving-picture__overlay__headline {
-	font-size: 2em;
+	font-size: 1.35em;
 	margin: 0;
+	font-weight: 100;
+	letter-spacing: .02em;
 	// text-transform: uppercase;
 
-	@include respond-min(48em){
-		// font-size: 3em;
+	@include respond-min($medium){
+		font-size: 2em;
+	}
+
+	@include respond-min($x-large){
+		font-size: 3em;
 	}
 }
-.moving-picture__overlay__teaser {}
+.moving-picture__overlay__teaser {
+	display: none;
+
+	@include respond-min($large){
+		display: block;
+	}
+}
 
 .moving-picture__overlay__button {
-	display: inline-block;
-	width: auto;
+	background-color: $bethel--blue;
+	padding: .75em;
+	border-radius: .3em;
+	font-size: .8rem;
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: 500;
+	letter-spacing: .02em;
 }
