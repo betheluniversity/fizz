@@ -66,21 +66,24 @@ domReady(function () {
 	        d.setTime(d.getTime() + (180*24*60*60*1000));
 	        var expires = "expires="+d.toUTCString();
 	        var cookie = getCookie("bethel_carousel_cookie_counter:" + document.URL);
+	        var initial_load = 0;
 	        if( cookie == "" ){
 	            // cookie doesn't exist
 	            var index = 0;
 	            document.cookie = "bethel_carousel_cookie_counter:" + document.URL + "=" + 0 + "; " + expires;
+	            initial_load = index;
 	        }
 	        else{
 	            // cookie exists
 	            var index = parseInt(cookie)+1;
-	            document.cookie = "bethel_carousel_cookie_counter:" + document.URL + "=" + index%%document.getElementsByClassName("slick-item").length + "; " + expires;
+	            initial_load = index % ($('.slick-cookie').find('.slick-item:not(.slick-cloned)').length);
+	            document.cookie = "bethel_carousel_cookie_counter:" + document.URL + "=" + initial_load + "; " + expires;
 	        }
 	        $('.slick-carousel').slick({
 	            lazyLoad: 'ondemand',
 	            prevArrow: '<button type="button" class="slick-prev"></button>',
 	            nextArrow: '<button type="button" class="slick-next"></button>',
-	            initialSlide: (index)%document.getElementsByClassName("slick-item").length
+	            initialSlide: initial_load
 	        });
 	    }
 	    else{
