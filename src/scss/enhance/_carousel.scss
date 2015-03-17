@@ -209,11 +209,19 @@
     }
 
     .slick-next {
-        right: 3%;
+        right: 0;
+
+        @include respond-min($medium){
+            right: 3%;
+        }
     }
 
     .slick-prev {
-        left: 3%;
+        left: 0%;
+
+        @include respond-min($medium){
+            left: 3%;
+        }
     }
 }
 

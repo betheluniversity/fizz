@@ -18,7 +18,7 @@
 	width: 100vw;
 	padding: 5em 0;
 	font-family: $gotham;
-	background: $bethel--blue;
+	background: $bethel--navy;
 	font-size: 100%;
 	color: #ddd;
 	position: relative;
@@ -80,6 +80,12 @@
 	.rotate-text__holder {
 		color: $bethel--yellow;
 		font-weight: 400;
-		font-size: 2rem;
+		font-size: 1.5rem;
+	}
+
+	h3 {
+		font-weight: 400;
+		font-size: 1.35rem;
+		// color: $bethel--yellow;
 	}
 }

@@ -11,7 +11,7 @@ var gulp 		= require('gulp'),
 	autoprefixer= require('gulp-autoprefixer'),
 	imagemin	= require('gulp-imagemin'),
 	del 		= require('del'),
-	svgSprite   = require("gulp-svg-sprites");
+	// svgSprite   = require("gulp-svg-sprites");
 	critical 	= require('critical');
 	rename		= require('gulp-rename');
 
@@ -89,17 +89,17 @@ gulp.task('copystyles', function(){
 		.pipe(gulp.dest(outputDir + '/css'))
 })
 
-gulp.task('critical', ['build'], function(){
+gulp.task('critical', ['clean','build'], function(){
 	critical.generate({
-		base: outputDir + 'builds/',
-		src: 'index.html',
-		// styleTarget: 'css/main.css',
-		dest: 'css/critical.css',
+		base: outputDir,
+		src: '/index.html',
+		css: outputDir + '/css/fizz.css',
+		styleTarget: 'css/critical.css',
+		// dest: '/css/critical.css',
 		width: 320,
 		height: 480,
 		minify: true
 	})
-
 })
 
 // browser-sync task for starting the server
