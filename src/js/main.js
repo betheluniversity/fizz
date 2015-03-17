@@ -74,7 +74,7 @@ domReady(function () {
 	        else{
 	            // cookie exists
 	            var index = parseInt(cookie)+1;
-	            document.cookie = "bethel_carousel_cookie_counter:" + document.URL + "=" + index + "; " + expires;
+	            document.cookie = "bethel_carousel_cookie_counter:" + document.URL + "=" + index%%document.getElementsByClassName("slick-item").length + "; " + expires;
 	        }
 	        $('.slick-carousel').slick({
 	            lazyLoad: 'ondemand',
