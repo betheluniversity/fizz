@@ -48,7 +48,7 @@
                else if(!ppcParent.classList.contains('js-animate')){
                 ppcParent.className = ppcParent.className + " js-animate"
                }
-               odometer.innerHTML = odometer.dataset.finalNumber;
+               odometer.innerHTML = odometer.getAttribute('data-final-number');
                odometer.className = odometer.className + " odometer_done"
            }
        }
