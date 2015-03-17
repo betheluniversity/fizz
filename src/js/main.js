@@ -101,7 +101,8 @@ domReady(function () {
 		  var image = $(picture.children()[1]);
 		  srcset.attr('srcset', srcset.attr('bethel-lazy'));
 		  image.attr('src', image.attr('bethel-lazy'));
-
+          //re-run picturefill
+          picturefill({ reevaluate: true });
 	    }
 
     	//lazyload
