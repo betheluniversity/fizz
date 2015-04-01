@@ -34,14 +34,14 @@ var rotateText = require("./rotate-text.js");
 // }
 
 domReady(function () {
-    console.log("domReady is ready");
-
     // Init Skrollr
-	$(window).load(function($){
-		if(window.innerWidth > 960){
-			var s = skrollr.init(); 
-		}
-	});
+	var isiPad = navigator.userAgent.match(/iPad/i) != null;
+    var isiPhone = navigator.userAgent.match(/iPhone/i) != null;
+    $(window).load(function($){
+        if(window.innerWidth > 1024 && (!isiPhone || !isiPad)){
+            var s = skrollr.init(); 
+        }
+    });
 
 	// if a slick carousel exists
 	if( $('.slick-carousel').length ){

@@ -1,5 +1,5 @@
 ---
-layout:default.hbs
+layout:default
 ---
 <!doctype html>
 <html class="" lang="">
@@ -18,7 +18,6 @@ layout:default.hbs
 
 		{{> moving-picture }}
 
-
 		<p class="site__title__button" id="js-site__title__button"><a href="#siteNav">☰ In This Section</a></p>
 
 		<div class="inner--content  margins-off">
@@ -28,7 +27,7 @@ layout:default.hbs
 
 		        {{> page__title }}
 
-				{{> body }}
+				{% body %}
 
 		    </div>
 		</div>
