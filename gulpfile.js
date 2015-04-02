@@ -46,12 +46,10 @@ gulp.task('images', function(){
 //     helpers: './node_modules/handlebars-helpers'
 // };
 
-// setup items on the assemble object
-
 gulp.task('assemble', function(){
 	assemble.partials('./src/templates/partials/*.hbs');
 	assemble.layouts(['./src/templates/layouts/*.hbs']);
-	
+
 	gulp.src('./src/templates/pages/*.hbs')
 		.pipe($.assemble(assemble))
 		.pipe($.rename({

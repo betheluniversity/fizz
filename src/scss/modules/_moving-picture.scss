@@ -46,6 +46,7 @@
 
 	@include respond-min(830px){
 		position: relative;
+		display: inline-block;
 	}
 }
 
