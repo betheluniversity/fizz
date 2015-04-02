@@ -22,6 +22,7 @@
     "gulp-uglify": "^1.1.0",
     "handlebars-helpers": "^0.5.8",
     "imager.js": "^0.5.0",
+    "picturefill": "^2.3.0",
     "slick-carousel": "^1.4.1",
     "smooth-scroll": "^1.5.0",
     "vinyl-paths": "^1.0.0",

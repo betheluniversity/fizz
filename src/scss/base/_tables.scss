@@ -2,7 +2,7 @@ table {
   width: 100%;
   font-size: 90%; }
 
-table td {
+table td, table th {
   padding: .7em;
   border: 1px solid #ddd; }
 
@@ -91,7 +91,7 @@ table td {
    Shared Styles
 ----------------------------------------- */
 
-table th { font-weight: bold; }
+table th { font-weight: bold; background-color: #e8e8e8; }
 table td, table th { padding: 9px 10px; text-align: left; }
 
 /* Mobile */
