@@ -11,13 +11,14 @@ var domReady = require("../../node_modules/domready/src/ready.js");
 // var offCanvas = require("./off-canvas.js");
 // var Imager = require("../../node_modules/imager.js/Imager.js");
 var slick = require("../../node_modules/slick-carousel/slick/slick.js");
-var picturefill = require("../../node_modules/dist/picturefill.min.js");
+var picturefill = require("../../node_modules/picturefill");
 var skrollr = require("./skrollr.min.js");
 var bu_animate = require("./bu_animate.js");
 var odometer = require("./odometer.min.js");
 var accordion = require("./accordion.js");
 var responsiveTables = require("./responsive-tables.js");
-var rotateText = require("./rotate-text.js");
+// var rotateText = require("./rotate-text.js");
+var Flickity = require("../../node_modules/flickity");
 
 // var binPolyfill = require("bindPolyfill");
 // var smothScroll = require("smoothScroll");
