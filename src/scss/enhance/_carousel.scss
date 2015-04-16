@@ -91,6 +91,18 @@
     padding: 1em;
     position: relative;
 
+    @include respond-min($large){
+        padding: 1em 2em;
+    }
+
+    /* arrow color */
+    .flickity-prev-next-button .arrow {
+      fill: $bethel--blue;
+    }
+    .flickity-prev-next-button.no-svg {
+      color: $bethel--blue;
+    }
+
     .slick-next,.slick-prev {
         background: $bethel--blue;
         border: 0;
