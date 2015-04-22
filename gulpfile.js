@@ -35,7 +35,7 @@ gulp.task('images', function(){
 	gulp.src('./src/assets/images/*')
 		.pipe($.imagemin())
 		.pipe(gulp.dest(outputDir + '/assets/images'));
-})
+});
 
 // ==========================
 // Using Assemble (assemble.io) to compile handlebars templates
@@ -57,7 +57,7 @@ gulp.task('assemble', function(){
 		}))
 		.pipe(gulp.dest(outputDir + ''))
 		.pipe(reload({stream:true}));
-})
+});
 
 // gulp.task('assemble', function(){
 // 	gulp.src('./src/templates/pages/*.hbs')
@@ -85,12 +85,40 @@ gulp.task('assemble', function(){
 //         .pipe(gulp.dest(outputDir + '/assets/icon-sprite'));
 // });
 
+var config = {"mode":{"symbol":true}};
+
+gulp.task('sprites', function(){
+	gulp.src('./src/assets/icon-sprite/*.svg', {cwd: config})
+	    .pipe($.svgSprite( /* ... Insert your configuration here ... */ ))
+	    .pipe(gulp.dest(outputDir + '/assets/icon-sprite'));
+});
+
+
+
+baseDir      = './src/assets/icon-sprite',   // <-- Set to your SVG base directory
+svgGlob      = './src/assets/icon-sprite/*.svg',       // <-- Glob to match your SVG files
+outDir       = outputDir + '/assets/icon-sprite',     // <-- Main output directory
+config       = {
+    "dest": "output",
+    "mode": {
+        "symbol": true
+    }
+};
+
+gulp.task('svgsprite', function() {
+    return gulp.src(svgGlob, {cwd: baseDir})
+        .pipe($.svgSprite(config)).on('error', function(error){ console.log(error); })
+        .pipe(gulp.dest(outDir))
+});
+
+
+
+
 gulp.task('copyfiles', function(){
 	gulp.src('./src/assets/filters/*.svg')
 		.pipe(gulp.dest(outputDir + '/assets/filters'))
 		.pipe(reload({stream:true}));
-})
-
+});
 
 gulp.task('copystyles', function () {
     return gulp.src([outputDir + 'css/fizz.css'])
