@@ -134,7 +134,6 @@
             };
 
             var navButton = document.getElementById('js-toolbox-open-btn');
-
             if(navButton){
                 navButton.addEventListener('click', app.toggleNav, false);
             };

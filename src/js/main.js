@@ -37,8 +37,10 @@ domReady(function () {
     console.log("domReady is ready");
 
     // Init Skrollr
+    var isiPad = navigator.userAgent.match(/iPad/i) != null;
+    var isiPhone = navigator.userAgent.match(/iPhone/i) != null;
 	$(window).load(function($){
-		if(window.innerWidth > 960){
+		if(window.innerWidth > 960 && (!isiPhone || !isiPad)){
 			var s = skrollr.init(); 
 		}
 	});
@@ -46,64 +48,55 @@ domReady(function () {
 	// if a slick carousel exists
 	if( $('.slick-carousel').length ){
 	    // if the slick carousel needs a cookie to choose starting slide
-	    if( $('.slick-cookie').length  ){
-	        function getCookie(cname) {
-	            var name = cname + "=";
-	            var ca = document.cookie.split(';');
-	            for(var i=0; i<ca.length; i++) {
-	                var c = ca[i];
-	                while (c.charAt(0)==' ') 
-	                    c = c.substring(1);
-	                if (c.indexOf(name) == 0) 
-	                    return c.substring(name.length,c.length);
-	            }
-	            return "";
-	        };
 
-	        // Create cookie
-	        var d = new Date();
-	        // 180 days
-	        d.setTime(d.getTime() + (180*24*60*60*1000));
-	        var expires = "expires="+d.toUTCString();
-	        var cookie = getCookie("bethel_carousel_cookie_counter:" + document.URL);
-	        var initial_load = 0;
-	        if( cookie == "" ){
-	            // cookie doesn't exist
-	            var index = 0;
-	            document.cookie = "bethel_carousel_cookie_counter:" + document.URL + "=" + 0 + "; " + expires;
-	            initial_load = index;
-	        }
-	        else{
-	            // cookie exists
-	            var index = parseInt(cookie)+1;
-	            initial_load = index % ($('.slick-cookie').find('.slick-item:not(.slick-cloned)').length);
-	            document.cookie = "bethel_carousel_cookie_counter:" + document.URL + "=" + initial_load + "; " + expires;
-	        }
-	        $('.slick-carousel').slick({
-	            lazyLoad: 'ondemand',
-	            prevArrow: '<button type="button" class="slick-prev"></button>',
-	            nextArrow: '<button type="button" class="slick-next"></button>',
-	            initialSlide: initial_load
-	        });
-	    }
-	    else{
-	        // normal slick carousel
-	        $('.slick-carousel').slick({
-                lazyLoad: 'ondemand',
-	            prevArrow: '<button type="button" class="slick-prev"></button>',
-	            nextArrow: '<button type="button" class="slick-next"></button>'
-	        });
-	    }
+        if(typeof(Storage) !== "undefined") {
+            // Set a unique index.
+            var index_of_array = "bethel-carousel-counter_" + document.location.pathname;
 
-	    lazyloadSlide = function(slide){
-		  var picture = $(slide).find('picture');
-		  var srcset = $(picture.children()[0]);
-		  var image = $(picture.children()[1]);
-		  srcset.attr('srcset', srcset.attr('bethel-lazy'));
-		  image.attr('src', image.attr('bethel-lazy'));
-          //re-run picturefill
-          picturefill({ reevaluate: true });
-	    }
+            // if the storage value exists
+            if( localStorage.getItem(index_of_array) ){
+                // grab the old value.
+                var old_index = localStorage.getItem(index_of_array);
+                var max_carousel_items = ($('.slick-cookie').find('.slick-item:not(.slick-cloned)').length);
+                if( max_carousel_items ){
+                    var initial_load = (parseInt(old_index)+1) % max_carousel_items;
+                    try{
+                        localStorage.setItem(index_of_array, initial_load);
+                    }catch(error){
+                        var initial_load = 0;
+                    }
+                }
+            } else {
+                // Create a new default value of 0.
+                try{
+                    localStorage.setItem(index_of_array, 0);
+                }catch(error){
+                    var initial_load = 0;
+                }
+            }
+
+        } else {
+                // localStorage doesn't work on browser, so just use 0
+                var initial_load = 0;
+
+        }
+
+        $('.slick-carousel').slick({
+            lazyLoad: 'ondemand',
+            prevArrow: '<button type="button" class="slick-prev"></button>',
+            nextArrow: '<button type="button" class="slick-next"></button>',
+            initialSlide: initial_load
+        });
+        
+    lazyloadSlide = function(slide) {
+        var picture = $(slide).find('picture');
+        var srcset = $(picture.children()[0]);
+        var image = $(picture.children()[1]);
+        srcset.attr('srcset', srcset.attr('bethel-lazy'));
+        image.attr('src', image.attr('bethel-lazy'));
+        //re-run picturefill
+        picturefill({reevaluate: true});
+    }
 
     	//lazyload
 		var currentSlide = $('.slick-active');
