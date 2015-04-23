@@ -11,7 +11,7 @@ var domReady = require("../../node_modules/domready/src/ready.js");
 // var offCanvas = require("./off-canvas.js");
 // var Imager = require("../../node_modules/imager.js/Imager.js");
 var slick = require("../../node_modules/slick-carousel/slick/slick.js");
-var picturefill = require("./picturefill.min.js");
+var picturefill = require("../../node_modules/dist/picturefill.min.js");
 var skrollr = require("./skrollr.min.js");
 var bu_animate = require("./bu_animate.js");
 var odometer = require("./odometer.min.js");
@@ -34,17 +34,14 @@ var rotateText = require("./rotate-text.js");
 // }
 
 domReady(function () {
-    console.log("domReady is ready");
-
     // Init Skrollr
-    var isiPad = navigator.userAgent.match(/iPad/i) != null;
+	var isiPad = navigator.userAgent.match(/iPad/i) != null;
     var isiPhone = navigator.userAgent.match(/iPhone/i) != null;
-	$(window).load(function($){
-		if(window.innerWidth > 960 && (!isiPhone || !isiPad)){
-			var s = skrollr.init(); 
-		}
-	});
-
+    $(window).load(function($){
+        if(window.innerWidth > 1024 && (!isiPhone || !isiPad)){
+            var s = skrollr.init(); 
+        }
+    });
 	// if a slick carousel exists
 	if( $('.slick-carousel').length ){
 	    // if the slick carousel needs a cookie to choose starting slide

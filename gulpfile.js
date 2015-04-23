@@ -35,7 +35,7 @@ gulp.task('images', function(){
 	gulp.src('./src/assets/images/*')
 		.pipe($.imagemin())
 		.pipe(gulp.dest(outputDir + '/assets/images'));
-})
+});
 
 // ==========================
 // Using Assemble (assemble.io) to compile handlebars templates
@@ -46,11 +46,10 @@ gulp.task('images', function(){
 //     helpers: './node_modules/handlebars-helpers'
 // };
 
-// setup items on the assemble object
-assemble.partials('./src/templates/partials/*.hbs');
-assemble.layouts(['./src/templates/layouts/*.hbs']);
-
 gulp.task('assemble', function(){
+	assemble.partials('./src/templates/partials/*.hbs');
+	assemble.layouts(['./src/templates/layouts/*.hbs']);
+
 	gulp.src('./src/templates/pages/*.hbs')
 		.pipe($.assemble(assemble))
 		.pipe($.rename({
@@ -58,7 +57,7 @@ gulp.task('assemble', function(){
 		}))
 		.pipe(gulp.dest(outputDir + ''))
 		.pipe(reload({stream:true}));
-})
+});
 
 // gulp.task('assemble', function(){
 // 	gulp.src('./src/templates/pages/*.hbs')
@@ -69,29 +68,26 @@ gulp.task('assemble', function(){
 
 // ===========================
 
-// https://github.com/shakyShane/gulp-svg-sprites
-// http://css-tricks.com/svg-symbol-good-choice-icons/
-// This task add all the src files in gulp.src to an icon sprite
-// gulp.task('sprites', function () {
-//     return gulp.src('./src/assets/icon-sprite/*.svg')
-//         .pipe(svgSprite({
-//         	mode:"symbols",
-//         	preview: false,
-//         	baseSize: 16,
-//         	svg: {
-//         		symbols:"symbols.svg"
-//         	}
-//    			}
-//         	))
-//         .pipe(gulp.dest(outputDir + '/assets/icon-sprite'));
-// });
+// http://css-tricks.com/svg-symbol-good-choice-icons
+// https://github.com/jkphl/svg-sprite
+var config = {
+	"mode": {
+		"symbol":true
+	}
+};
+
+gulp.task('sprites', function(){
+	return gulp.src('./src/assets/icon-sprite/*.svg')
+	    .pipe($.svgSprite(config))
+	    .pipe(gulp.dest(outputDir + '/assets/icon-sprite'));
+});
+
 
 gulp.task('copyfiles', function(){
 	gulp.src('./src/assets/filters/*.svg')
 		.pipe(gulp.dest(outputDir + '/assets/filters'))
 		.pipe(reload({stream:true}));
-})
-
+});
 
 gulp.task('copystyles', function () {
     return gulp.src([outputDir + 'css/fizz.css'])

@@ -5,11 +5,18 @@
 	
 	@include respond-min(830px){
 		height: auto;
-		display: inline-block;
+		display: table;
 	}
 
 	@include respond-min(1200px){
-		height: 675px;
+		max-height: 80vh;
+	}
+
+	@media screen and (min-width: 1200px) and (max-height: 850px){
+		display: block;
+	}
+
+	@include respond-min(1600px){
 		display: block;
 	}
 }
@@ -35,6 +42,7 @@
 	left: 0;
 	right: 0;
 	overflow: hidden;
+	width: 100%;
 
 	@include respond-min(830px){
 		position: relative;
@@ -51,7 +59,7 @@
 	top: 0;
 	right: 0;
 
-	@include respond-min($large){
+	@include respond-min(830px){
 		height: auto;
 		position: relative;
 		max-width: 100%;
