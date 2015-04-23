@@ -1,3 +1,18 @@
+Skip to content
+ This repository
+Explore
+Gist
+Blog
+Help
+@c-schwarze c-schwarze
+ 
+ Watch 3
+  Star 0
+ Fork 1betheluniversity/fizz
+ tree: 0d8c418954  fizz/src/js/main.js
+@c-schwarzec-schwarze 2 minutes ago Update main.js
+3 contributors @johjacb @e-jameson @c-schwarze
+RawBlameHistory    131 lines (112 sloc)  5.134 kb
 // var sayHello = require('./say-hello');
 // var imager = require('../../node_modules/imager.js/Imager.js')
 
@@ -42,9 +57,9 @@ domReady(function () {
             var s = skrollr.init(); 
         }
     });
-	// if a slick carousel exists
-	if( $('.slick-carousel').length ){
-	    // if the slick carousel needs a cookie to choose starting slide
+	// if a carousel exists that should have the cookie
+	if( $('.rotate-order-carousel').length ){
+	    // if the carousel needs local storage to choose starting slide
 
         if(typeof(Storage) !== "undefined") {
             // Set a unique index.
@@ -54,7 +69,7 @@ domReady(function () {
             if( localStorage.getItem(index_of_array) ){
                 // grab the old value.
                 var old_index = localStorage.getItem(index_of_array);
-                var max_carousel_items = ($('.slick-cookie').find('.slick-item:not(.slick-cloned)').length);
+                var max_carousel_items = ($('.rotate-order-carousel').find('.flickity--cell').length);
                 if( max_carousel_items ){
                     var initial_load = (parseInt(old_index)+1) % max_carousel_items;
                     try{
@@ -128,3 +143,5 @@ domReady(function () {
 //     	document.querySelector("#calendar-mode").classList.remove('calendar-grid');
 //     }
 // });
+Status API Training Shop Blog About
+© 2015 GitHub, Inc. Terms Privacy Security Contact
