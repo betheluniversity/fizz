@@ -68,50 +68,19 @@ gulp.task('assemble', function(){
 
 // ===========================
 
-// https://github.com/shakyShane/gulp-svg-sprites
-// http://css-tricks.com/svg-symbol-good-choice-icons/
-// This task add all the src files in gulp.src to an icon sprite
-// gulp.task('sprites', function () {
-//     return gulp.src('./src/assets/icon-sprite/*.svg')
-//         .pipe(svgSprite({
-//         	mode:"symbols",
-//         	preview: false,
-//         	baseSize: 16,
-//         	svg: {
-//         		symbols:"symbols.svg"
-//         	}
-//    			}
-//         	))
-//         .pipe(gulp.dest(outputDir + '/assets/icon-sprite'));
-// });
-
-var config = {"mode":{"symbol":true}};
-
-gulp.task('sprites', function(){
-	gulp.src('./src/assets/icon-sprite/*.svg', {cwd: config})
-	    .pipe($.svgSprite( /* ... Insert your configuration here ... */ ))
-	    .pipe(gulp.dest(outputDir + '/assets/icon-sprite'));
-});
-
-
-
-baseDir      = './src/assets/icon-sprite',   // <-- Set to your SVG base directory
-svgGlob      = './src/assets/icon-sprite/*.svg',       // <-- Glob to match your SVG files
-outDir       = outputDir + '/assets/icon-sprite',     // <-- Main output directory
-config       = {
-    "dest": "output",
-    "mode": {
-        "symbol": true
-    }
+// http://css-tricks.com/svg-symbol-good-choice-icons
+// https://github.com/jkphl/svg-sprite
+var config = {
+	"mode": {
+		"symbol":true
+	}
 };
 
-gulp.task('svgsprite', function() {
-    return gulp.src(svgGlob, {cwd: baseDir})
-        .pipe($.svgSprite(config)).on('error', function(error){ console.log(error); })
-        .pipe(gulp.dest(outDir))
+gulp.task('sprites', function(){
+	return gulp.src('./src/assets/icon-sprite/*.svg')
+	    .pipe($.svgSprite(config))
+	    .pipe(gulp.dest(outputDir + '/assets/icon-sprite'));
 });
-
-
 
 
 gulp.task('copyfiles', function(){
