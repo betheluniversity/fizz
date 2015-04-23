@@ -28,6 +28,7 @@
     "picturefill": "^2.3.0",
     "slick-carousel": "^1.4.1",
     "smooth-scroll": "^1.5.0",
+    "svg-sprite": "^1.1.2",
     "vinyl-paths": "^1.0.0",
     "vinyl-source-stream": "^1.1.0"
   },

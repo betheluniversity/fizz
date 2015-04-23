@@ -1,5 +1,5 @@
 var $ = require("jquery");
-// var	lazySizes = require("../../node_modules/lazysizes");
+var	lazySizes = require("../../node_modules/lazysizes");
 var domReady = require("../../node_modules/domready/src/ready.js");
 var slick = require("../../node_modules/slick-carousel/slick/slick.js");
 var picturefill = require("../../node_modules/picturefill");
