@@ -1,18 +1,3 @@
-Skip to content
- This repository
-Explore
-Gist
-Blog
-Help
-@c-schwarze c-schwarze
- 
- Watch 3
-  Star 0
- Fork 1betheluniversity/fizz
- tree: 0d8c418954  fizz/src/js/main.js
-@c-schwarzec-schwarze 2 minutes ago Update main.js
-3 contributors @johjacb @e-jameson @c-schwarze
-RawBlameHistory    131 lines (112 sloc)  5.134 kb
 // var sayHello = require('./say-hello');
 // var imager = require('../../node_modules/imager.js/Imager.js')
 
@@ -143,5 +128,3 @@ domReady(function () {
 //     	document.querySelector("#calendar-mode").classList.remove('calendar-grid');
 //     }
 // });
-Status API Training Shop Blog About
-© 2015 GitHub, Inc. Terms Privacy Security Contact
