@@ -94,7 +94,6 @@ domReady(function () {
 	}
 });
 
-// if a carousel exists that should have the cookie
 if( $('.js-rotate-order-carousel').length ){
 	if(typeof(Storage) !== "undefined") {
 	    // Set a unique index.
@@ -114,8 +113,9 @@ if( $('.js-rotate-order-carousel').length ){
 	            }
 	        }
 	    } else {
-	        // Create a new default value of 0.
 	        try{
+        		// iOS Safari Prive mode reports having localStorage available but 
+        		// does not let you write to it.
 	            localStorage.setItem(index_of_array, 0);
 	        }catch(error){
 	            var initial_load = 0;
@@ -129,13 +129,16 @@ if( $('.js-rotate-order-carousel').length ){
 	initial_load = 0;
 }
 
-var flkty = new Flickity('.flickity', { 
-	wrapAround: true,
-	imagesLoaded: true,
-	initialIndex: initial_load,
-	pageDots:false,
-	percentPosition:false
-});
+var carousels = document.getElementsByClassName('flickity');
+for (var i = 0, len = carousels.length; i < len; i++) {
+	var fkty = new Flickity(carousels[i], {
+		wrapAround: true,
+		imagesLoaded: true,
+		initialIndex: initial_load,
+		pageDots:false,
+		percentPosition:false
+	});
+}
 
 
 
