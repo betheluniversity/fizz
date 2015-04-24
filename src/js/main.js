@@ -125,15 +125,17 @@ if( $('.js-rotate-order-carousel').length ){
 	    // localStorage doesn't work on browser, so just use 0
 	    var initial_load = 0;
 	}
-	
-	var flkty = new Flickity('.flickity', { 
-		wrapAround: true,
-		imagesLoaded: true,
-		initialIndex: initial_load,
-		pageDots:false,
-		percentPosition:false
-	});
+}else{
+	initial_load = 0;
 }
+
+var flkty = new Flickity('.flickity', { 
+	wrapAround: true,
+	imagesLoaded: true,
+	initialIndex: initial_load,
+	pageDots:false,
+	percentPosition:false
+});
 
 
 
