@@ -93,3 +93,48 @@ domReady(function () {
 
 	}
 });
+
+// if a carousel exists that should have the cookie
+if( $('.js-rotate-order-carousel').length ){
+	if(typeof(Storage) !== "undefined") {
+	    // Set a unique index.
+	    var index_of_array = "bethel-carousel-counter_" + document.location.pathname;
+
+	    // if the storage value exists
+	    if( localStorage.getItem(index_of_array) ){
+	        // grab the old value.
+	        var old_index = localStorage.getItem(index_of_array);
+	        var max_carousel_items = ($('.js-rotate-order-carousel').find('.flickity--cell').length);
+	        if( max_carousel_items ){
+	            var initial_load = (parseInt(old_index)+1) % max_carousel_items;
+	            try{
+	                localStorage.setItem(index_of_array, initial_load);
+	            }catch(error){
+	                var initial_load = 0;
+	            }
+	        }
+	    } else {
+	        // Create a new default value of 0.
+	        try{
+	            localStorage.setItem(index_of_array, 0);
+	        }catch(error){
+	            var initial_load = 0;
+	        }
+	    }
+	} else {
+	    // localStorage doesn't work on browser, so just use 0
+	    var initial_load = 0;
+	}
+	
+	var flkty = new Flickity('.flickity', { 
+		wrapAround: true,
+		imagesLoaded: true,
+		initialIndex: initial_load,
+		pageDots:false,
+		percentPosition:false
+	});
+}
+
+
+
+
