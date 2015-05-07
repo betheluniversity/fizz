@@ -18,6 +18,7 @@ var odometer = require("./odometer.min.js");
 var accordion = require("./accordion.js");
 var responsiveTables = require("./responsive-tables.js");
 var rotateText = require("./rotate-text.js");
+var flickity = require("../../node_modules/flickity");
 
 // var binPolyfill = require("bindPolyfill");
 // var smothScroll = require("smoothScroll");
@@ -44,39 +45,6 @@ domReady(function () {
     });
 	// if a carousel exists that should have the cookie
 	if( $('.rotate-order-carousel').length ){
-	    // if the carousel needs local storage to choose starting slide
-
-        if(typeof(Storage) !== "undefined") {
-            // Set a unique index.
-            var index_of_array = "bethel-carousel-counter_" + document.location.pathname;
-
-            // if the storage value exists
-            if( localStorage.getItem(index_of_array) ){
-                // grab the old value.
-                var old_index = localStorage.getItem(index_of_array);
-                var max_carousel_items = ($('.rotate-order-carousel').find('.flickity--cell').length);
-                if( max_carousel_items ){
-                    var initial_load = (parseInt(old_index)+1) % max_carousel_items;
-                    try{
-                        localStorage.setItem(index_of_array, initial_load);
-                    }catch(error){
-                        var initial_load = 0;
-                    }
-                }
-            } else {
-                // Create a new default value of 0.
-                try{
-                    localStorage.setItem(index_of_array, 0);
-                }catch(error){
-                    var initial_load = 0;
-                }
-            }
-
-        } else {
-                // localStorage doesn't work on browser, so just use 0
-                var initial_load = 0;
-
-        }
 
         $('.slick-carousel').slick({
             lazyLoad: 'ondemand',
@@ -112,6 +80,43 @@ domReady(function () {
     //     updateURL: false, // Boolean. Whether or not to update the URL with the anchor hash on scroll
     //     offset: 0, // Integer. How far to offset the scrolling anchor location in pixels
     // });
+});
+
+if(typeof(Storage) !== "undefined") {
+    // Set a unique index.
+    var index_of_array = "bethel-carousel-counter_" + document.location.pathname;
+
+    // if the storage value exists
+    if( localStorage.getItem(index_of_array) ){
+        // grab the old value.
+        var old_index = localStorage.getItem(index_of_array);
+        var max_carousel_items = ($('.rotate-order-carousel').find('.flickity--cell').length);
+        if( max_carousel_items ){
+            var initial_load = (parseInt(old_index)+1) % max_carousel_items;
+            try{
+                localStorage.setItem(index_of_array, initial_load);
+            }catch(error){
+                var initial_load = 0;
+            }
+        }
+    } else {
+        // Create a new default value of 0.
+        try{
+            localStorage.setItem(index_of_array, 0);
+        }catch(error){
+            var initial_load = 0;
+        }
+    }
+
+} else {
+    // localStorage doesn't work on browser, so just use 0
+    var initial_load = 0;
+}
+var flkty = new Flickity('.flickity', { 
+	wrapAround: true,
+	imagesLoaded: true,
+	initialIndex: initial_load,
+	pageDots:false
 });
 
 // Calendar Stuff
