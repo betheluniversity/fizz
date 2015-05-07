@@ -8,7 +8,6 @@ var bu_animate = require("./bu_animate.js");
 var odometer = require("./odometer.min.js");
 var accordion = require("./accordion.js");
 var responsiveTables = require("./responsive-tables.js");
-<<<<<<< HEAD
 var rotateText = require("./rotate-text.js");
 var flickity = require("../../node_modules/flickity");
 
@@ -16,10 +15,7 @@ var flickity = require("../../node_modules/flickity");
 // var smothScroll = require("smoothScroll");
 // var bindPolyfill = require("../../node_modules/smooth-scroll/dist/js/bind-polyfill.js")
 // var smoothScroll = require("../../node_modules/smooth-scroll/dist/js/smooth-scroll.js")
-=======
 var Flickity = require("../../node_modules/flickity-imagesloaded");
->>>>>>> flickity
-
 
 domReady(function () {
     // Init Skrollr
@@ -98,55 +94,14 @@ if( $('.js-rotate-order-carousel').length ){
 
 var carousels = document.getElementsByClassName('flickity');
 for (var i = 0, len = carousels.length; i < len; i++) {
-	var fkty = new Flickity(carousels[i], {
-		wrapAround: true,
-		imagesLoaded: true,
-		initialIndex: initial_load,
-		pageDots:false,
-		percentPosition:false
-	});
+    var fkty = new Flickity(carousels[i], {
+        wrapAround: true,
+        imagesLoaded: true,
+        initialIndex: initial_load,
+        pageDots:false,
+        percentPosition:false
+    });
 }
-
-
-
-
-<<<<<<< HEAD
-if(typeof(Storage) !== "undefined") {
-    // Set a unique index.
-    var index_of_array = "bethel-carousel-counter_" + document.location.pathname;
-
-    // if the storage value exists
-    if( localStorage.getItem(index_of_array) ){
-        // grab the old value.
-        var old_index = localStorage.getItem(index_of_array);
-        var max_carousel_items = ($('.rotate-order-carousel').find('.flickity--cell').length);
-        if( max_carousel_items ){
-            var initial_load = (parseInt(old_index)+1) % max_carousel_items;
-            try{
-                localStorage.setItem(index_of_array, initial_load);
-            }catch(error){
-                var initial_load = 0;
-            }
-        }
-    } else {
-        // Create a new default value of 0.
-        try{
-            localStorage.setItem(index_of_array, 0);
-        }catch(error){
-            var initial_load = 0;
-        }
-    }
-
-} else {
-    // localStorage doesn't work on browser, so just use 0
-    var initial_load = 0;
-}
-var flkty = new Flickity('.flickity', { 
-	wrapAround: true,
-	imagesLoaded: true,
-	initialIndex: initial_load,
-	pageDots:false
-});
 
 // Calendar Stuff
 // var mq  = matchMedia('(min-width: 800px)');
@@ -162,5 +117,4 @@ var flkty = new Flickity('.flickity', {
 //     	document.querySelector("#calendar-mode").classList.remove('calendar-grid');
 //     }
 // });
-=======
->>>>>>> flickity
+
