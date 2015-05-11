@@ -8,13 +8,7 @@ var bu_animate = require("./bu_animate.js");
 var odometer = require("./odometer.min.js");
 var accordion = require("./accordion.js");
 var responsiveTables = require("./responsive-tables.js");
-var rotateText = require("./rotate-text.js");
-var flickity = require("../../node_modules/flickity");
-
-// var binPolyfill = require("bindPolyfill");
-// var smothScroll = require("smoothScroll");
-// var bindPolyfill = require("../../node_modules/smooth-scroll/dist/js/bind-polyfill.js")
-// var smoothScroll = require("../../node_modules/smooth-scroll/dist/js/smooth-scroll.js")
+// var rotateText = require("./rotate-text.js");
 var Flickity = require("../../node_modules/flickity-imagesloaded");
 
 domReady(function () {
@@ -102,19 +96,3 @@ for (var i = 0, len = carousels.length; i < len; i++) {
         percentPosition:false
     });
 }
-
-// Calendar Stuff
-// var mq  = matchMedia('(min-width: 800px)');
-// mq.addListener(function(mql) {
-//     if (mql.matches) {
-//         document.querySelector("#calendar-mode").classList.add('calendar-grid');
-//         document.querySelector("#calendar-mode").classList.remove('calendar-list');
-//         document.querySelector(".view-mode--list > a").classList.remove('active');
-//         document.querySelector(".view-mode--grid > a").classList.add('active');
-//     }
-//     else {
-//     	document.querySelector("#calendar-mode").classList.add('calendar-list');
-//     	document.querySelector("#calendar-mode").classList.remove('calendar-grid');
-//     }
-// });
-

@@ -88,11 +88,12 @@
 
 .carousel--quote {
     background: #fff;
-    padding: 1em;
+    margin-bottom: 2em;
+    padding: 2em 3em;
     position: relative;
 
     @include respond-min($large){
-        padding: 1em 2em;
+        padding: 3em 4em;
     }
 
     /* arrow color */
