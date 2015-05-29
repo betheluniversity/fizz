@@ -14,13 +14,14 @@ var Flickity = require("../../node_modules/flickity-imagesloaded");
 
 domReady(function () {
     // Init Skrollr
-	var isiPad = navigator.userAgent.match(/iPad/i) != null;
+    var isiPad = navigator.userAgent.match(/iPad/i) != null;
     var isiPhone = navigator.userAgent.match(/iPhone/i) != null;
-    $(window).load(function($){
-        if(window.innerWidth > 1024 && !(isiPhone || isiPad)){
-            var s = skrollr.init(); 
-        }
-    });
+    window.onload = function() {
+         if(window.innerWidth > 1024 && !(isiPhone || isiPad)){
+               var s = skrollr.init(); 
+         }
+    };
+    
 	// if a carousel exists that should have the cookie
 	if( $('.rotate-order-carousel').length ){
 
