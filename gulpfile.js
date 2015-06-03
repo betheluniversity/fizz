@@ -49,6 +49,7 @@ gulp.task('images', function(){
 gulp.task('assemble', function(){
 	assemble.partials('./src/templates/partials/*.hbs');
 	assemble.layouts(['./src/templates/layouts/*.hbs']);
+	assemble.data(['./src/templates/data/*.json']);
 
 	gulp.src('./src/templates/pages/*.hbs')
 		.pipe($.assemble(assemble))
@@ -147,6 +148,7 @@ gulp.task('build', ['js','styles','images','copyfiles','assemble']);
 gulp.task('default', ['js','styles','images','copyfiles','assemble','browser-sync'], function() {
 	gulp.watch('./src/scss/**/*.scss', ['styles']);
 	gulp.watch('./src/templates/**/*.hbs', ['assemble']);
+	gulp.watch('./src/templates/**/*.json', ['assemble']);
 	gulp.watch('./src/assets/icon-sprite/*.svg', ['sprites']);
 	gulp.watch('./src/assets/filters/*.svg', ['copyfiles']);
 	gulp.watch('./src/js/*.js', ['js', browserSync.reload]);

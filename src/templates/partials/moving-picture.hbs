@@ -1,141 +1,32 @@
-<div    class="flickity  js-rotate-order-carousel">
+<div class="flickity  js-rotate-order-carousel">
 
-    <div class="flickity--cell">
-        <div class="moving-picture">
-            <div class="moving-picture__media">
-
-                    <picture>
-                        <!--[if IE 9]><video style="display: none"><![endif]-->
-                        <source
-                            data-srcset="//cdn2.bethel.edu/resize/unsafe/900x0/smart/https://www.bethel.edu/_homepages/www/images/feature/affordability-student-16x9.jpg"
-                            media="(min-width: 830px)" 
-                        />
-                        <source
-                            data-srcset="//cdn2.bethel.edu/resize/unsafe/830x0/smart/https://www.bethel.edu/_homepages/www/images/feature/affordability-student-2x1.jpg"
-                        />
-                        <!--[if IE 9]></video><![endif]-->
-                        <img
-                                {{!-- src="//cdn2.bethel.edu/resize/unsafe/320x0/smart/https://www.bethel.edu/_homepages/www/images/feature/affordability-student-2x1.jpg" --}}
-                                class="lazyload"
-                                alt="image with artdirection"
-                                data-sizes="auto"
-                        />
-                    </picture>
-            </div>
-
-            <div class="moving-picture__overlay">
-                <h2 class="moving-picture__overlay__headline">Making your Bethel education more affordable.</h2>
-                <p class="moving-picture__overlay__teaser">We're committed to not letting cost stand in the way of your life-changing education, so we doubled the amount of Bethel funded scholarships and grants over the last few years to $32 million and reset tuition and aid at the seminary. Talk to your enrollment counselor to find out how financial aid can work for you.</p> 
-                <p><a class="moving-picture__overlay__button" href="admissions/index.php">Learn More</a></p>
-            </div>
-        </div>
-    </div>
-
-    <div class="flickity--cell">
-        <div class="moving-picture">
-            <div class="moving-picture__media">
-{{!--                 <picture>
-                    <source media="(min-width: 830px)"
-                            data-srcset="//cdn2.bethel.edu/resize/unsafe/{width}x0/smart/https://www.bethel.edu/_homepages/www/images/feature/best-professors-16x9.jpg">          
-                    <img    class="lazyload" 
-                            src="//cdn2.bethel.edu/resize/unsafe/830x0/smart/https://www.bethel.edu/_homepages/www/images/feature/best-professors-2x1.jpg" 
-                            data-srcset="//cdn2.bethel.edu/resize/unsafe/{width}x0" 
-                            data-sizes="auto"
-                            >
-                </picture> --}}
-
-                <picture>
-                    <!--[if IE 9]><video style="display: none"><![endif]-->
-                    <source
-                        data-srcset="//cdn2.bethel.edu/resize/unsafe/900x0/smart/https://www.bethel.edu/_homepages/www/images/feature/best-professors-16x9.jpg"
-                        media="(min-width: 830px)" 
-                    />
-                    <source
-                        data-srcset="//cdn2.bethel.edu/resize/unsafe/830x0/smart/https://www.bethel.edu/_homepages/www/images/feature/best-professors-2x1.jpg"
-                    />
-                    <!--[if IE 9]></video><![endif]-->
-                    <img
-                            {{!-- src="//cdn2.bethel.edu/resize/unsafe/320x0/smart/https://www.bethel.edu/_homepages/www/images/feature/affordability-student-2x1.jpg" --}}
-                            class="lazyload"
-                            alt="image with artdirection"
-                            data-sizes="auto"
-                    />
-                </picture>
-            </div>
-
-            <div class="moving-picture__overlay">
-                <h2 class="moving-picture__overlay__headline">Really Making your Bethel education more affordable.</h2>
-                <p class="moving-picture__overlay__teaser">We're committed to not letting cost stand in the way of your life-changing education, so we doubled the amount of Bethel funded scholarships and grants over the last few years to $32 million and reset tuition and aid at the seminary. Talk to your enrollment counselor to find out how financial aid can work for you.</p> 
-                <p><a class="moving-picture__overlay__button" href="admissions/index.php">Yes Learn More</a></p>
-            </div>
-
-        </div>
-    </div>
+{{#each movingPic}}
 
     <div class="flickity--cell">
         <div class="moving-picture">
             <div class="moving-picture__media">
                 <picture>
                     <!--[if IE 9]><video style="display: none"><![endif]-->
-                    <source
-                        data-srcset="//cdn2.bethel.edu/resize/unsafe/900x0/smart/https://www.bethel.edu/_homepages/www/images/feature/seminary-theology-16x9.jpg"
-                        media="(min-width: 830px)" 
-                    />
-                    <source
-                        data-srcset="//cdn2.bethel.edu/resize/unsafe/830x0/smart/https://www.bethel.edu/_homepages/www/images/feature/seminary-theology-2x1.jpg"
-                    />
+                    <source data-srcset="{{ this.bigImg}}" media="(min-width: 830px)" />
+                    <source data-srcset="{{ this.mobileImg}}" />
                     <!--[if IE 9]></video><![endif]-->
                     <img
-                            {{!-- src="//cdn2.bethel.edu/resize/unsafe/320x0/smart/https://www.bethel.edu/_homepages/www/images/feature/affordability-student-2x1.jpg" --}}
+                            {{!-- src="{{ this.baseImg }}" --}}
                             class="lazyload"
                             alt="image with artdirection"
-                            data-sizes="auto"
+                            {{!-- data-sizes="auto" --}}
                     />
                 </picture>
             </div>
 
-
             <div class="moving-picture__overlay">
-                <h2 class="moving-picture__overlay__headline">We live our beliefs inside and outside the classroom.</h2>
-                <p class="moving-picture__overlay__teaser">Join a community of people who love to ask important questions, talk about their faith, and learn from each other’s perspectives. </p>
-                <p><a class="moving-picture__overlay__button" href="seminary/index.php">Learn More about Bethel Seminary</a></p>
-
+                <h2 class="moving-picture__overlay__headline">{{  this.headline }}</h2>
+                <p class="moving-picture__overlay__teaser">{{  this.teaser }}</p> 
+                <p><a class="moving-picture__overlay__button" href="admissions/index.php">{{ this.button }}</a></p>
             </div>
-
         </div>
     </div>
 
-    <div class="flickity--cell">
-        <div class="moving-picture">
-            <div class="moving-picture__media">
-                <picture>
-                    <!--[if IE 9]><video style="display: none"><![endif]-->
-                    <source
-                        data-srcset="//cdn2.bethel.edu/resize/unsafe/900x0/smart/https://www.bethel.edu/_homepages/www/images/feature/practice-passion-16x9.jpg"
-                        media="(min-width: 830px)" 
-                    />
-                    <source
-                        data-srcset="//cdn2.bethel.edu/resize/unsafe/830x0/smart/https://www.bethel.edu/_homepages/www/images/feature/practice-passion-2x1.jpg"
-                    />
-                    <!--[if IE 9]></video><![endif]-->
-                    <img
-                            {{!-- src="//cdn2.bethel.edu/resize/unsafe/320x0/smart/https://www.bethel.edu/_homepages/www/images/feature/affordability-student-2x1.jpg" --}}
-                            class="lazyload"
-                            alt="image with artdirection"
-                            data-sizes="auto"
-                    />
-                </picture>
-            </div>
-
-
-            <div class="moving-picture__overlay">
-                <h2 class="moving-picture__overlay__headline">Practice because you love to.</h2>
-                <p class="moving-picture__overlay__teaser">At Bethel, we make the extra effort to be great. Because when you love what you do, it’s not work.</p>
-
-                <p><a class="moving-picture__overlay__button" href="admissions/apply/index.php">Follow your passion</a></p>
-
-            </div>
-        </div>
-    </div>
+{{/each}}
 
 </div>
