@@ -15,7 +15,7 @@
 .section--home__holder {
 	overflow: auto;
 	height: 110vh;
-	width: 100vw;
+	width: 100%;
 	padding: 5em 0;
 	font-family: $gotham;
 	background: $bethel--navy;
@@ -64,7 +64,7 @@
 }
 
 .section--home__community {
-	background: url("//cdn1.bethel.edu/resize/unsafe/1200x0/smart/https://www.bethel.edu/_homepages/www/images/group-laughing.jpg");
+	background: url("//cdn1.bethel.edu/resize/unsafe/1600x0/smart/https://www.bethel.edu/_homepages/www/images/group-laughing.jpg");
 	background-size: cover;
 	background-position: center;
 }
@@ -88,4 +88,10 @@
 		font-size: 1.35rem;
 		// color: $bethel--yellow;
 	}
+}
+
+.section--home__online {
+	background: url("//cdn1.bethel.edu/resize/unsafe/1600x0/smart/https://www.bethel.edu/_homepages/online/images/online-study.jpg");
+	background-size: cover;
+	background-position: center;	
 }
