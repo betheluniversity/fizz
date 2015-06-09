@@ -1,4 +1,4 @@
-<div class="flickity  js-rotate-order-carousel">
+<div class="flickity js-rotate-order-carousel">
 
 {{#each movingPic}}
 
@@ -7,14 +7,14 @@
             <div class="moving-picture__media">
                 <picture>
                     <!--[if IE 9]><video style="display: none"><![endif]-->
-                    <source data-srcset="{{ this.bigImg}}" media="(min-width: 830px)" />
-                    <source data-srcset="{{ this.mobileImg}}" />
+                    <source data-srcset="{{ this.bigImg }}" media="(min-width: 830px)" />
+                    <source data-srcset="{{ this.mobileImg }}" />
                     <!--[if IE 9]></video><![endif]-->
                     <img
                             {{!-- src="{{ this.baseImg }}" --}}
-                            class="lazyload"
+                            {{!-- class="lazyload" --}}
                             alt="image with artdirection"
-                            {{!-- data-sizes="auto" --}}
+                            data-sizes="auto"
                     />
                 </picture>
             </div>

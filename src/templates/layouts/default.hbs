@@ -20,7 +20,7 @@ layout:default
 		{{!-- {{> school__navigation }} --}}
 
 		{{!-- {{> carousel }} --}}
-		{{!-- {{> moving-picture }} --}}
+		{{> moving-picture }}
 
 
 		<p class="site__title__button" id="js-site__title__button"><a href="#siteNav">☰ In This Section</a></p>
@@ -41,10 +41,6 @@ layout:default
 
 	</div>
 
-
-	{{!-- // <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jsquery.min.js" async=""></script> --}}
-	<script src="/js/bundle.js" type="text/javascript" async=""></script>
-
 	<script>
 	      var cb = function() {
 	        var l = document.createElement('link'); l.rel = 'stylesheet';
@@ -57,10 +53,12 @@ layout:default
 	      else window.addEventListener('load', cb);
 	</script>
 
+	<script src="/js/bundle.js" type="text/javascript" async=""></script>
+
 	<script>
 		  var cb = function() {
 		    var l = document.createElement('link'); l.rel = 'stylesheet';
-		    l.href = 'https://cloud.typography.com/6664852/762926/css/fonts.css';
+		    l.href = 'https://cloud.typography.com/6664852/762926xxxx/css/fonts.css';
 		    var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
 		  };
 		  var raf = requestAnimationFrame || mozRequestAnimationFrame ||
