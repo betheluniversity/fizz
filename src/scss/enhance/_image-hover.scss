@@ -12,11 +12,6 @@
 .hover-effect img {
 	position: relative;
 	display: block;
-	height: 100%;
-
-	@include respond-min($medium){
-		height: auto;
-	}
 }
 
 .hover-effect figcaption {
