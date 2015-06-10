@@ -1,33 +1,33 @@
-.slick-carousel {
-    position: relative;
-    height: auto;
-}
+// .slick-carousel {
+//     position: relative;
+//     height: auto;
+// }
 
-.slick-item a {
-    // display: block;
-    // position: relative;
-}
+// .slick-item a {
+//     // display: block;
+//     // position: relative;
+// }
 
-.slick-next:before {
-    content: '»';
-}
-.slick-prev:before {
-    content: '«';
-}
-.slick-next,.slick-prev {
-    // background: #0069aa;
-    background: transparent;
-    // width: 3em;
-    // height: 3em;
-    border: 0;
-    color: #fff;
-    // position: absolute;
-    // top: 50%;
-}
-.slick-next:hover,.slick-prev:hover{
-    opacity: 1;
-    background: #0069aa;
-}
+// .slick-next:before {
+//     content: '»';
+// }
+// .slick-prev:before {
+//     content: '«';
+// }
+// .slick-next,.slick-prev {
+//     // background: #0069aa;
+//     background: transparent;
+//     // width: 3em;
+//     // height: 3em;
+//     border: 0;
+//     color: #fff;
+//     // position: absolute;
+//     // top: 50%;
+// }
+// .slick-next:hover,.slick-prev:hover{
+//     opacity: 1;
+//     background: #0069aa;
+// }
 
 .carousel--basic a:hover,
 .carousel--overlay a:hover {

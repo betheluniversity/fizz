@@ -98,26 +98,18 @@ gulp.task('copystyles', function () {
         .pipe(gulp.dest(outputDir + 'css'));
 });
 
-gulp.task('critical',['build'], function (cb) {
-
-    // At this point, we have our
-    // production styles in main/styles.css
-
-    // As we're going to overwrite this with
-    // our critical-path CSS let's create a copy
-    // of our site-wide styles so we can async
-    // load them in later. We do this with
-    // 'copystyles' above
-
-	critical.generate({
-		base: outputDir,
-		src: 'index.html',
-		dest: 'css/critical.css',
-		width: 730,
-		height: 1000
-	}, function(err, output){
-        console.log("critical completed")
-	});
+gulp.task('critical', function () {
+	return gulp.src([outputDir + '*.html'])
+		.pipe(
+			critical({
+				base: outputDir,
+				inline: true,
+				css: ['css/fizz.css'],
+				// width: 414,
+				// height: 736,
+			})
+		)
+		.pipe(gulp.dest(outputDir));
 });
 
 // browser-sync task for starting the server
