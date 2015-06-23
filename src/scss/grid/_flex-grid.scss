@@ -23,6 +23,16 @@
   margin-top: 2em;
 }
 
+// Removing top margin and padding from first child
+/*section*/.grid-section:first-child {
+    margin-top: 0;
+}
+
+/*section*/.grid-section:first-child [class*="pad"] {
+    padding-top: 0;
+}
+
+
 $add-legacy-support: false !default;
 
 @if $add-legacy-support == true{
@@ -137,7 +147,16 @@ $add-legacy-support: false !default;
 
 .grid--reverse {
     flex-flow: row-reverse wrap;
+
+    .grid-cell:first-child {
+        margin-left: 0;
+    }
+
+    .grid-cell:last-child {
+        margin-right: 0;
+    }
 }
+
 
 // Aligns individual cells
 .grid-cell--top {
