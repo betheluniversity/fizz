@@ -20,7 +20,7 @@ var accordion = require("./accordion.js");
          }
     };
 
-// if( $('.js-rotate-order-carousel').length ){
+// if( document.getElementsByClassName('js-rotate-order-carousel')[0] ){
 // 	if(typeof(Storage) !== "undefined") {
 // 	    // Set a unique index.
 // 	    var index_of_array = "bethel-carousel-counter_" + document.location.pathname;
@@ -29,7 +29,7 @@ var accordion = require("./accordion.js");
 // 	    if( localStorage.getItem(index_of_array) ){
 // 	        // grab the old value.
 // 	        var old_index = localStorage.getItem(index_of_array);
-// 	        var max_carousel_items = ($('.js-rotate-order-carousel').find('.flickity--cell').length);
+// 	        var max_carousel_items = (document.getElementsByClassName('.js-rotate-order-carousel').find('.flickity--cell').length);
 // 	        if( max_carousel_items ){
 // 	            var initial_load = (parseInt(old_index)+1) % max_carousel_items;
 // 	            try{
