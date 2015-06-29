@@ -1,67 +1,27 @@
-$(document).ready(function() {
-  var switched = false;
-  var updateTables = function() {
-    if (($(window).width() < 767) && !switched ){
-      switched = true;
-      $("table.responsive").each(function(i, element) {
-        splitTable($(element));
-      });
-      return true;
-    }
-    else if (switched && ($(window).width() > 767)) {
-      switched = false;
-      $("table.responsive").each(function(i, element) {
-        unsplitTable($(element));
-      });
-    }
-  };
-   
-  $(window).load(updateTables);
-  $(window).on("redraw",function(){switched=false;updateTables();}); // An event to listen for
-  $(window).on("resize", updateTables);
-   
-	
-	function splitTable(original)
-	{
-		original.wrap("<div class='table-wrapper' />");
-		
-		var copy = original.clone();
-		copy.find("td:not(:first-child), th:not(:first-child)").css("display", "none");
-		copy.removeClass("responsive");
-		
-		original.closest(".table-wrapper").append(copy);
-		copy.wrap("<div class='pinned' />");
-		original.wrap("<div class='scrollable' />");
-
-    setCellHeights(original, copy);
-	}
-	
-	function unsplitTable(original) {
-    original.closest(".table-wrapper").find(".pinned").remove();
-    original.unwrap();
-    original.unwrap();
-	}
-
-  function setCellHeights(original, copy) {
-    var tr = original.find('tr'),
-        tr_copy = copy.find('tr'),
-        heights = [];
-
-    tr.each(function (index) {
-      var self = $(this),
-          tx = self.find('th, td');
-
-      tx.each(function () {
-        var height = $(this).outerHeight(true);
-        heights[index] = heights[index] || 0;
-        if (height > heights[index]) heights[index] = height;
-      });
-
-    });
-
-    tr_copy.each(function (index) {
-      $(this).height(heights[index]);
-    });
+// forEach method, could be shipped as part of an Object Literal/Module
+var forEach = function (array, callback, scope) {
+  for (var i = 0; i < array.length; i++) {
+    callback.call(scope, i, array[i]); // passes back stuff we need
   }
+};
 
+var tableList = document.querySelectorAll("table.responsive");
+forEach(tableList, function (index, value) {
+  console.log(index, value); // passes index + value back!
+
+  var headertext = [],
+      headers = value.querySelectorAll("th"),
+      tablerows = value.querySelectorAll("th"),
+      tablebody = value.querySelector("tbody");
+
+  for(var i = 0; i < headers.length; i++) {
+    var current = headers[i];
+    headertext.push(current.textContent.replace(/\r?\n|\r/,""));
+  };
+
+  for (var k = 0, row; row = tablebody.rows[k]; k++) {
+    for (var j = 0, col; col = row.cells[j]; j++) {
+      col.setAttribute("data-th", headertext[j]);
+    } 
+  };
 });
