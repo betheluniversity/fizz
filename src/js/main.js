@@ -33,7 +33,7 @@ if( document.getElementsByClassName('js-rotate-order-carousel')[0] ){
 	    if( localStorage.getItem(index_of_array) ){
 	        // grab the old value.
 	        var old_index = localStorage.getItem(index_of_array);
-	        var max_carousel_items = (document.getElementsByClassName('.js-rotate-order-carousel').find('.flickity--cell').length);
+	        var max_carousel_items = document.getElementsByClassName("js-rotate-order-carousel")[0].children.length;
 	        if( max_carousel_items ){
 	            var initial_load = (parseInt(old_index)+1) % max_carousel_items;
 	            try{
