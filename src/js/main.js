@@ -9,9 +9,9 @@ var skrollr = require("./skrollr.min.js");
 var bu_animate = require("./bu_animate.js");
 var odometer = require("./odometer.min.js");
 var accordion = require("./accordion.js");
-// var responsiveTables = require("./responsive-tables.js");
-// var rotateText = require("./rotate-text.js");
+var responsiveTables = require("./responsive-tables.js");
 
+// Skrollr init
 
 var isiPad = navigator.userAgent.match(/iPad/i) != null;
 var isiPhone = navigator.userAgent.match(/iPhone/i) != null;
@@ -21,68 +21,45 @@ window.onload = function() {
      }
 };
 
-// // forEach method, could be shipped as part of an Object Literal/Module
-// var forEach = function (array, callback, scope) {
-//   for (var i = 0; i < array.length; i++) {
-//     callback.call(scope, i, array[i]); // passes back stuff we need
-//   }
-// };
 
-// var tableList = document.querySelectorAll("table.responsive");
-// forEach(tableList, function (index, value) {
-//   console.log(index, value); // passes index + value back!
+// Select a random image from the carousel to appear first
 
-//   var headertext = [],
-//       headers = value.querySelectorAll("th"),
-//       tablerows = value.querySelectorAll("th"),
-//       tablebody = value.querySelector("tbody");
+if( document.getElementsByClassName('js-rotate-order-carousel')[0] ){
+	if(typeof(Storage) !== "undefined") {
+	    // Set a unique index.
+	    var index_of_array = "bethel-carousel-counter_" + document.location.pathname;
 
-//   for(var i = 0; i < headers.length; i++) {
-//     var current = headers[i];
-//     headertext.push(current.textContent.replace(/\r?\n|\r/,""));
-//   };
+	    // if the storage value exists
+	    if( localStorage.getItem(index_of_array) ){
+	        // grab the old value.
+	        var old_index = localStorage.getItem(index_of_array);
+	        var max_carousel_items = (document.getElementsByClassName('.js-rotate-order-carousel').find('.flickity--cell').length);
+	        if( max_carousel_items ){
+	            var initial_load = (parseInt(old_index)+1) % max_carousel_items;
+	            try{
+	                localStorage.setItem(index_of_array, initial_load);
+	            }catch(error){
+	                var initial_load = 0;
+	            }
+	        }
+	    } else {
+	        try{
+        		// iOS Safari Prive mode reports having localStorage available but 
+        		// does not let you write to it.
+	            localStorage.setItem(index_of_array, 0);
+	        }catch(error){
+	            var initial_load = 0;
+	        }
+	    }
+	} else {
+	    // localStorage doesn't work on browser, so just use 0
+	    var initial_load = 0;
+	}
+}else{
+	initial_load = 0;
+}
 
-//   for (var k = 0, row; row = tablebody.rows[k]; k++) {
-//     for (var j = 0, col; col = row.cells[j]; j++) {
-//       col.setAttribute("data-th", headertext[j]);
-//     } 
-//   };
-// });
-
-// if( document.getElementsByClassName('js-rotate-order-carousel')[0] ){
-// 	if(typeof(Storage) !== "undefined") {
-// 	    // Set a unique index.
-// 	    var index_of_array = "bethel-carousel-counter_" + document.location.pathname;
-
-// 	    // if the storage value exists
-// 	    if( localStorage.getItem(index_of_array) ){
-// 	        // grab the old value.
-// 	        var old_index = localStorage.getItem(index_of_array);
-// 	        var max_carousel_items = (document.getElementsByClassName('.js-rotate-order-carousel').find('.flickity--cell').length);
-// 	        if( max_carousel_items ){
-// 	            var initial_load = (parseInt(old_index)+1) % max_carousel_items;
-// 	            try{
-// 	                localStorage.setItem(index_of_array, initial_load);
-// 	            }catch(error){
-// 	                var initial_load = 0;
-// 	            }
-// 	        }
-// 	    } else {
-// 	        try{
-//         		// iOS Safari Prive mode reports having localStorage available but 
-//         		// does not let you write to it.
-// 	            localStorage.setItem(index_of_array, 0);
-// 	        }catch(error){
-// 	            var initial_load = 0;
-// 	        }
-// 	    }
-// 	} else {
-// 	    // localStorage doesn't work on browser, so just use 0
-// 	    var initial_load = 0;
-// 	}
-// }else{
-// 	initial_load = 0;
-// }
+// Flickity customizations
 
 var carousels = document.getElementsByClassName('flickity');
 

@@ -2,62 +2,73 @@ table {
   width: 100%;
   font-size: 90%; 
   margin-bottom: 1em;
+  max-width: 100%;
+  table-layout: fixed;
 }
 
 table td, 
 table th {
   padding: .7em;
-  border: 1px solid #d8d8d8; 
+  border: 1px solid #d3d3d3; 
 }
 
 table th {
 	 font-weight: bold;
 	 text-align: left;
-	 background: #e8e8e8;
+	 background: #eee;
 }
 
+table td {
+	overflow: scroll;
+}
 
+table caption {
+	font-weight: 500;
+	font-size: 1.5em;
+	font-family: $gotham, helvetica, arial;
+	background-color: #e5e5e5;
+	padding: .5em;
+	border-top: 1px solid #cecece;
+	border-right: 1px solid #cecece;
+	border-left: 1px solid #cecece;
+
+}
 
 table.responsive { 
-  margin: 0 auto;
+  // margin: 0 auto;
   border-collapse: collapse;
-  // background: #333; 
-  // color: #fff;
-}
-table.responsive caption { 
-  // font-size: 2rem; color: #444;
-  // margin: 1rem;
-}
-table.responsive thead th { }
-table.responsive thead th, table.responsive tbody td { 
-  // padding: .8rem; font-size: 1.4rem;
-}
-table.responsive tbody td { 
-  // padding: .8rem; font-size: 1.4rem;
-  // color: #444; background: #eee; 
-}
-table.responsive tbody tr:not(:last-child) { 
-  // border-top: 1px solid #ddd;
-  // border-bottom: 1px solid #ddd;  
+  border-bottom: 1px solid #d3d3d3;
 }
 
 @media screen and (max-width: 600px) {
+
   table.responsive thead { 
   	display: none; 
   }
+
   table.responsive tbody td { 
-    display: block; padding: .6rem; 
+    display: flex; 
+    border-top: 0;
+    border-bottom: 0;
+    align-items: center;
   }
+
   table.responsive tbody tr td:first-child { 
-    background: #e8e8e8; 
-    // color: #fff; 
+    background: #eee; 
+    border-top: 1px solid #d3d3d3;
+    // display: flex;
+    align-items: center;
+    // flex-shrink: 0;
   }
-	table.responsive tbody td:before { 
-    content: attr(data-th); 
-    font-weight: bold;
-    display: inline-block;
-    width: 6rem;  
-  }
+
+	table.responsive tbody tr td:before { 
+	    content: attr(data-th); 
+	    font-weight: bold;
+	    // display: table;
+	    // min-width: 50%;  
+	    flex-basis: 8em;
+	    flex-shrink: 0;
+	}
 }
 
 
