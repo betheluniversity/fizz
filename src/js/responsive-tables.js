@@ -7,7 +7,7 @@ var forEach = function (array, callback, scope) {
 
 var tableList = document.querySelectorAll("table.responsive");
 forEach(tableList, function (index, value) {
-  console.log(index, value); // passes index + value back!
+  // console.log(index, value); // passes index + value back!
 
   var headertext = [],
       headers = value.querySelectorAll("th"),
