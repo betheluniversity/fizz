@@ -67,7 +67,7 @@ for (var i = 0, len = carousels.length; i < len; i++) {
     var fkty = new Flickity(carousels[i], {
         wrapAround: true,
         imagesLoaded: true,
-        // // initialIndex: initial_load,
+        initialIndex: initial_load,
         pageDots:false,
         percentPosition:false,
         cellAlign: 'left'
