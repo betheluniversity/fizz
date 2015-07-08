@@ -80,7 +80,5 @@ for (var i = 0, len = carousels.length; i < len; i++) {
 var el = document.querySelector('.odometer');
 
 od = new Odometer({
-    el: el,
-    value: 333555
-
+    el: el
 });
