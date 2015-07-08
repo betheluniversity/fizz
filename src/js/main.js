@@ -2,19 +2,22 @@
 // var	lazySizes = require("../../node_modules/lazysizes");
 // var domReady = require("../../node_modules/domready/src/ready.js");
 // var slick = require("../../node_modules/slick-carousel/slick/slick.js");
-var odometer = require("./odometer.min.js");
 var picturefill = require("../../node_modules/picturefill");
 var Flickity = require("../../node_modules/flickity-imagesloaded");
 var svg4everybody = require("../../node_modules/svg4everybody/svg4everybody.min.js");
 var skrollr = require("./skrollr.min.js");
 var accordion = require("./accordion.js");
 var responsiveTables = require("./responsive-tables.js");
-//setTimout(function() {
-    var bu_animate = require("./bu_animate.js");
-//})
+var odometer = require("./odometer.min.js");
+var bu_animate = require("./bu_animate.js");
+
+// Odometer init
+var el = document.querySelector('.odometer');
+od = new Odometer({
+    el: el
+});
 
 // Skrollr init
-
 var isiPad = navigator.userAgent.match(/iPad/i) != null;
 var isiPhone = navigator.userAgent.match(/iPhone/i) != null;
 window.onload = function() {
@@ -75,10 +78,3 @@ for (var i = 0, len = carousels.length; i < len; i++) {
         cellAlign: 'left'
     });
 }
-
-// Odometer init
-var el = document.querySelector('.odometer');
-
-od = new Odometer({
-    el: el
-});
