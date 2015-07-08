@@ -1,69 +1,73 @@
-   var didScroll = false;
-   var intervalID = '';
-   
-   function markScroll() {
-       didScroll = true;
-   }
+var didScroll = false;
+var intervalID = '';
 
-   function findProofPointCollectionParentNode(childObj){
-       var testObj = childObj;
-       var count = 1;
-       while(true) {
-           testObj = testObj.parentNode;
-           if(!testObj.classList) {
-               continue;
-           }
-           if(testObj.classList.contains('proof-point-collection')){
-               break;
-           }
-       }
-       // go up one more because we need to add to the section
-       return testObj.parentNode;
-   }
+function markScroll() {
+    didScroll = true;
+}
 
-   // Function which adds the 'animated' class to any '.animatable' in view
-   var doAnimations = function() {
-       // Calc current offset and get all animatables
-       var offset = (window.scrollY || window.pageYOffset),
-           odometers = document.getElementsByClassName('odometer');
-           done_odometers = document.getElementsByClassName('odometer_done');
-       // Unbind scroll handler if we have no animatables
+function findProofPointCollectionParentNode(childObj) {
+    var testObj = childObj;
+    var count = 1;
+    while (true) {
+        testObj = testObj.parentNode;
+        if (!testObj.classList) {
+            continue;
+        }
+        if (testObj.classList.contains('proof-point-collection')) {
+            break;
+        }
+    }
+    // go up one more because we need to add to the section
+    return testObj.parentNode;
+}
 
-       offset += window.innerHeight;
+//Function which adds the 'animated' class to any '.animatable' in view
+var doAnimations = function () {
+    // Calc current offset and get all animatables
+    var offset = (window.scrollY || window.pageYOffset),
+        odometers = document.getElementsByClassName('odometer');
+    done_odometers = document.getElementsByClassName('odometerdone');
+    // Unbind scroll handler if we have no animatables
 
-       if (odometers.length == done_odometers.length) {
-         window.onscroll = "";
-         clearInterval(intervalID);
-       }
-       for (index = 0; index < odometers.length; ++index) {
-            var odometer = odometers[index];
-            var scrollPos = odometer.getBoundingClientRect().top + document.body.scrollTop - document.body.clientTop + odometer.offsetHeight - 20;
+    offset += window.innerHeight;
 
-            if (scrollPos < offset){
-               var ppcParent = findProofPointCollectionParentNode(odometer);
-               // don't add twice
-               if(!ppcParent.classList){
-                   ppcParent.className = "js-animate"
-               }
-               else if(!ppcParent.classList.contains('js-animate')){
+    if (odometers.length == done_odometers.length) {
+        window.onscroll = "";
+        clearInterval(intervalID);
+    }
+    for (index = 0; index < odometers.length; ++index) {
+        var odometer = odometers[index];
+        var scrollPos = odometer.getBoundingClientRect().top + document.body.scrollTop - document.body.clientTop + odometer.offsetHeight - 20;
+
+        if (scrollPos < offset) {
+
+            var ppcParent = findProofPointCollectionParentNode(odometer);
+            // don't add twice
+            if (!ppcParent.classList) {
+                ppcParent.className = "js-animate"
+            }
+            else if (!ppcParent.classList.contains('js-animate')) {
                 ppcParent.className = ppcParent.className + " js-animate"
-               }
-               odometer.innerHTML = odometer.getAttribute('data-final-number');
-               odometer.className = odometer.className + " odometer_done"
-           }
-       }
-   };
+            }
 
-    (function(){
-       if(document.getElementsByClassName('odometer').length > 0){
-           intervalID = setInterval(function() {
-               if(didScroll) {
-                   doAnimations();
-                   didScroll = false;
-               }
-           }, 100);
-           window.onscroll = markScroll;
-           //trigger once if the odometers are in view on load
-           doAnimations();
-       }   
-   })();
+            //setTimeout(function() {odometer.innerHTML = odometer.getAttribute('data-final-number');
+            //    odometer.className = odometer.className + " odometerdone";}, 500);
+            odometer.innerHTML = odometer.getAttribute('data-final-number');
+            odometer.className = odometer.className + " odometerdone";
+        }
+    }
+};
+
+(function () {
+    if (document.getElementsByClassName('odometer').length > 0) {
+        intervalID = setInterval(function () {
+            if (didScroll) {
+                doAnimations();
+                didScroll = false;
+            }
+        }, 100);
+        window.onscroll = markScroll;
+        //trigger once if the odometers are in view on load
+        doAnimations();
+    }
+})();
