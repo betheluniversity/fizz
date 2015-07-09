@@ -2,7 +2,7 @@
 // var	lazySizes = require("../../node_modules/lazysizes");
 // var domReady = require("../../node_modules/domready/src/ready.js");
 // var slick = require("../../node_modules/slick-carousel/slick/slick.js");
-var odometer = require("./odometer.min.js");
+var Odometer = require("./odometer.min.js");
 var picturefill = require("../../node_modules/picturefill");
 var Flickity = require("../../node_modules/flickity-imagesloaded");
 var svg4everybody = require("../../node_modules/svg4everybody/svg4everybody.min.js");
@@ -19,10 +19,13 @@ window.onload = function() {
         var s = skrollr.init();
     }
     // Odometer init
-    var el = document.querySelector('.odometer');
-    od = new Odometer({
-        el: el
-    });
+    var odometers = document.getElementsByClassName('odometer');
+    for (var i = 0, len = odometers.length; i < len; i++) {
+        var el = odometers[i];
+        var od = new Odometer({
+            el: el
+        });
+    }
 };
 
 
