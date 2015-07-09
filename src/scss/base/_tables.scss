@@ -3,7 +3,6 @@ table {
   font-size: 90%; 
   margin-bottom: 1em;
   max-width: 100%;
-  table-layout: fixed;
 }
 
 table td, 
@@ -16,10 +15,6 @@ table th {
 	 font-weight: bold;
 	 text-align: left;
 	 background: #eee;
-}
-
-table td {
-	overflow: scroll;
 }
 
 table caption {
@@ -38,6 +33,12 @@ table.responsive {
   // margin: 0 auto;
   border-collapse: collapse;
   border-bottom: 1px solid #d3d3d3;
+  table-layout: fixed;
+}
+
+table.responsive td, 
+table.responsive th { 
+  overflow: scroll;
 }
 
 @media screen and (max-width: 600px) {
