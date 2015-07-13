@@ -1,0 +1,8 @@
+    .site__navigation,.burger,.site__title__button,
+    .accordion-list__button {visibility: visible !important;}
+
+@include respond-max($navToggle){
+    .inner--content {
+    	padding: 0 !important;
+    }
+}
