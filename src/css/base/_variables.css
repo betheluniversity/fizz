@@ -1,0 +1,25 @@
+$small: max-width 35em;
+$medium: 35em;
+$large: 52em;
+$x-large: 60em;
+
+$navToggle: 50em;
+
+$breakpoints: (
+    "small" "(max-width: 35em)",
+    "medium" "(min-width: 35em)",
+    "large" "(min-width: 52em)",
+    "x-large" "(min-width: 60em)"
+    );
+
+$bethel--blue: #0069aa;
+$bethel--navy: #0f2c52;
+$bethel--yellow: #ffc600;
+
+$gotham-ssm: "Gotham SSm A", "Gotham SSm B", Helvetica, Arial, sans;
+$gotham: "Gotham A", "Gotham B", Helvetica, Arial, sans;
+$sentinel: 'Sentinel A', 'Sentinel B', Georgia, serif;
+$sentinel-ssm: 'Sentinel SSm A', 'Sentinel SSm B', Georgia, serif;
+
+$baseLineHeight: 1.5;
+$baseFontSize: 16px;

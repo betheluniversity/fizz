@@ -1,0 +1,126 @@
+.big-global__navigation {
+    display: none;
+
+    @mixin respond-min $navToggle{
+        display: block;
+    }
+
+    li {
+        margin: 0;
+        font-size: .9em;
+
+        @mixin respond-min $navToggle{
+            font-family: $gotham;
+            display: inline-block;
+            font-weight: 500;
+            padding: 0;
+        }
+
+        @mixin respond-min $large{
+            font-size: 1em;
+        }
+    }
+
+    a {
+        color: #fff;
+        padding: .35em .5em;
+        position: relative;
+        margin-right: 0;
+        margin-left: 0;
+
+        @mixin respond-min 46em{
+            padding: .35em .75em;
+        }
+    }
+
+    a.active {
+        color: $bethel--yellow;
+    }
+
+    a.active:after {
+/*        // content: "";
+        // width: 1px; 
+        // height: 3em; 
+        // // border-left: 8px solid transparent;
+        // // border-right: 8px solid transparent;
+        // // border-top: 8px solid $bethel--yellow;
+        // border-left: 1px solid $bethel--yellow;
+        // // margin-top: 4px;
+        // // margin-bottom: -14px;
+        // position: absolute;
+        // bottom: -3em;
+        // left: 50%;*/
+    }
+}
+
+.global__navigation {
+    display: block;
+
+    @mixin respond-min $navToggle{
+        display: none;
+    }
+
+    ul {
+        list-style: none;
+        margin: 4em 0 0;
+        padding: 1em 0;
+    }
+
+    ul li {
+        font-size: .9rem;
+        font-weight: 500;
+        letter-spacing: .05em;
+        text-transform: uppercase;
+        padding: 0 0 .5em;
+    }
+
+    ul li a {
+        color: #fff;
+    }
+
+    a:hover {
+        background: lighten(#133868, 10%);
+        border-radius: .5em;
+    }
+
+    .svg-icon {
+        height: 1.05em;
+        width: 1.05em;
+        vertical-align: text-top;
+        fill: #fff;
+    }
+}
+
+.quick-links {
+
+    @mixin respond-min $navToggle{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.quick-links ul {
+    margin-bottom: 1em;
+    list-style: none;
+    font-size: .8rem;
+    margin-top: 0;
+    padding: 0;
+
+    @mixin respond-min $navToggle{
+        margin-bottom: 0;
+    }
+}
+
+.quick-links ul li {
+    padding: .2em 0em;
+
+    @mixin respond-min $navToggle{
+        display: inline-block;
+        padding: .2em .4em;
+    }
+}
+
+.quick-links li a {
+    color: #ccc;
+}

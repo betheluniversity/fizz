@@ -1,0 +1,6 @@
+@define-mixin respond-min $width {
+  @media only screen and (min-width: $width) {@content;}
+}
+@define-mixin respond-max $width {
+  @media only screen and (max-width: $width) {@content;}
+}

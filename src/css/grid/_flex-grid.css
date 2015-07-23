@@ -1,0 +1,174 @@
+
+/*------------------------------------*\
+    $GRID
+\*------------------------------------*/
+
+/*This is based on Philip Walton's flexbox grid system:
+https://github.com/philipwalton/solved-by-flexbox/blob/master/_sass/components/_grid.scss
+
+The build system for this project has Autoprefixer installed. Any property
+that needs a prefix will be handled at build time. So display: flex will be
+given the appropriate prefixes for -webkit and others. Autoprefixer can be
+customized (gruntfile.js) as to which browsers it supports.
+
+====================================
+
+Styles for the inline-block (legacy) version of the grid from PureCss:
+http://blog.purecss.io/post/60789414532/how-we-improved-grids-in-pure-0-3-0
+
+These are styles for browsers that don't support flexbox - IE8 and IE9
+Once we drop support for these browsers, these styles can be removed*/
+
+/*section*/.grid-section {
+  margin-top: 2em;
+}
+
+/* Removing top margin and padding from first child*/
+/*section*/.grid-section:first-child {
+    margin-top: 0;
+}
+
+/*section*/.grid-section:first-child [class*="pad"] {
+    padding-top: 0;
+}
+
+
+$add-legacy-support: false !default;
+
+@if $add-legacy-support == true{
+    .grid {
+        letter-spacing: -.31em;
+        text-rendering: optimizespeed;
+        font-family: FreeSans,Arimo,"Droid Sans",Helvetica,Arial,sans-serif;
+    }
+
+    /* Opera hack */
+    .opera:-o-prefocus,
+    .grid {
+        word-spacing:-0.43em;
+    }
+
+    .grid-cell {
+      display: inline-block; 
+      letter-spacing: normal;
+      word-spacing: normal;
+      vertical-align: top;
+      text-rendering: auto;
+    }
+}
+
+/* ====================================*/
+
+@if $add-legacy-support != true{
+
+/* 1. Creating a flexbox grid*/
+/* 2. Boxes wrap onto next row*/
+
+.grid {
+    /*display: flex;  [1]*/
+    /*flex-wrap: wrap;  [2]*/
+    list-style: none;
+    /* margin:0;*/
+    /* padding: 0;*/
+
+    @mixin respond-min $medium{
+      flex-wrap: nowrap;
+    }
+}
+
+/* Mobile grid is set to wrap, and set to nowrap at $medium.*/
+/* This is to allow us to set :first-child and :last-child negative*/
+/* margins on basic grids. If flex-wrap is required above medium*/
+/* use .grid--wrap*/
+
+.grid--wrap {
+  flex-wrap: wrap;
+}
+
+/* Setting width to 100% defaults to full-width on mobile*/
+
+.grid-cell {
+    width: 100%;
+    min-width: 1px;
+    /*margin-top: 0;  cancelling out OWL*/
+}
+
+@mixin respond-min $medium {
+    .grid-cell {
+        flex: 1;
+    }
+
+    .grid-cell:first-child {
+      margin-left: -1em;
+    }
+
+    .grid-cell:last-child {
+      margin-right: -1em;
+    }
+
+    /* removing negative margins on nested grids*/
+    .grid .grid .grid-cell:first-child {
+      margin-left:0;
+    }
+
+    .grid .grid .grid-cell:last-child {
+      margin-right: 0;
+    }
+}
+
+.grid--wrap .grid-cell:first-child {margin-left: 0;}
+.grid--wrap .grid-cell:last-child {margin-right: 0; flex-grow: 0}
+
+/* These rules remove the top margin of heading when it is the first in*/
+/* a grid-cell to make content top-aligned*/
+.grid-cell h2:first-of-type,
+.grid-cell h3:first-of-type,
+.grid-cell h4:first-of-type {
+  margin-top: 0;
+}
+
+
+
+/* Aligns all cells*/
+.grid--top {
+    align-items: flex-start;
+}
+
+.grid--center {
+    align-items: center;
+}
+
+.grid--bottom {
+    align-items: flex-end;
+}
+
+/* Reverse order of cells*/
+
+.grid--reverse {
+    flex-flow: row-reverse wrap;
+
+    .grid-cell:first-child {
+        margin-left: 0;
+    }
+
+    .grid-cell:last-child {
+        margin-right: 0;
+    }
+}
+
+
+/* Aligns individual cells*/
+.grid-cell--top {
+    align-self: flex-start;
+}
+
+.grid-cell--center {
+    align-self: center;
+}
+
+.grid-cell--bottom {
+    align-self: flex-end;
+}
+}
+
+

@@ -1,0 +1,133 @@
+table {
+  width: 100%;
+  font-size: 90%; 
+  margin-bottom: 1em;
+  max-width: 100%;
+}
+
+table td, 
+table th {
+  padding: .7em;
+  border: 1px solid #d3d3d3; 
+}
+
+table th {
+	 font-weight: bold;
+	 text-align: left;
+	 background: #eee;
+}
+
+table caption {
+	font-weight: 500;
+	font-size: 1.5em;
+	font-family: $gotham, helvetica, arial;
+	background-color: #e5e5e5;
+	padding: .5em;
+	border-top: 1px solid #cecece;
+	border-right: 1px solid #cecece;
+	border-left: 1px solid #cecece;
+
+}
+
+table.responsive { 
+  border-collapse: collapse;
+  border-bottom: 1px solid #d3d3d3;
+  table-layout: fixed;
+}
+
+table.responsive td, 
+table.responsive th { 
+  overflow: auto;
+}
+
+@media screen and (max-width: 600px) {
+
+  table.responsive thead { 
+  	display: none; 
+  }
+
+  table.responsive tbody td { 
+    display: flex; 
+    border-top: 0;
+    border-bottom: 0;
+    align-items: center;
+  }
+
+  table.responsive tbody tr td:first-child { 
+    background: #eee; 
+    border-top: 1px solid #d3d3d3;
+    align-items: center;
+  }
+
+	table.responsive tbody tr td:before { 
+	    content: attr(data-th); 
+	    font-weight: bold;
+	    flex-basis: 8em;
+	    flex-shrink: 0;
+	}
+}
+
+
+.majors-table {
+	font-family: $gotham;
+	font-size: .8rem;
+}
+
+.majors-table tr {
+    border-bottom: 1px solid #ddd;
+}
+
+.majors-table td {
+   border: none;
+}
+
+.majors-table__item {
+	display: flex;
+	border-bottom: 1px solid #ddd;
+	flex-wrap: wrap;
+	padding: 1em 0;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.majors-table__title {
+	flex-basis: 100%;
+	flex-basis: 35%;
+	flex-shrink:0;
+	font-weight: 500;
+
+	@mixin respond-min $medium{
+		flex-basis: 40%;
+	}
+
+	@mixin respond-min $large{
+		flex-basis: 60%;
+	}
+}
+
+.majors-table__type {
+	flex-basis: 20%;
+	flex-shrink: 0;
+	text-align: center;
+
+	@mixin respond-min $medium{
+		flex-basis: 15%;
+	}	
+
+	@mixin respond-min $large{
+		flex-basis: 10%;
+	}
+
+	a {
+		font-size: .7rem;
+		background: $bethel--blue;
+		color: #fff;
+		padding: .25em .5em;
+		border-radius: .3em;
+	}
+
+	a:hover {
+		text-decoration: none;
+
+	}
+}
