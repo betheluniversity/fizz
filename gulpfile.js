@@ -6,8 +6,13 @@ var gulp 		= require('gulp'),
 	reload		= browserSync.reload,
 	del 		= require('del'),
 	// svgSprite   = require("gulp-svg-sprites");
-	critical 	= require('critical');
-	vinylPaths 	= require('vinyl-paths');
+	critical 	= require('critical'),
+	vinylPaths 	= require('vinyl-paths'),
+
+	postcss 	= require('gulp-postcss'),
+	nano 	   	= require('gulp-cssnano'), 
+    precss		= require('precss'),
+    autoprefixer= require('autoprefixer-core');
 
 var $ = require('gulp-load-plugins')();
 
@@ -22,6 +27,27 @@ gulp.task('js', function(){
 		.pipe(gulp.dest(outputDir + '/js'));
 });
 
+gulp.task('css', function () {
+    // var processors = [
+    // 	autoprefixer({browsers: ['last 3 versions']}),
+    // 	// discardComments,
+    // 	precss(),
+    // 	nano()
+    // ];
+    return gulp.src('src/css/*.css')
+        .pipe(postcss([
+        	precss(),
+        	autoprefixer({browsers: ['last 5 versions']}),
+        	]))
+        .pipe(gulp.dest(outputDir));
+});
+
+gulp.task('nano', function () {
+    return gulp.src('src/css/*.css')
+        .pipe(nano())
+        .pipe(gulp.dest(outputDir));
+});
+
 // CSS styles task
 gulp.task('styles', function(){
 	return gulp.src('./src/scss/*.scss')
@@ -30,6 +56,7 @@ gulp.task('styles', function(){
 		.pipe(gulp.dest(outputDir + '/css')) // sending to output directory
 		.pipe(reload({stream:true})); // inject into browser using browserSync
 });
+
 
 gulp.task('images', function(){
 	gulp.src('./src/assets/images/*')
