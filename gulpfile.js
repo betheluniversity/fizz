@@ -28,25 +28,20 @@ gulp.task('js', function(){
 });
 
 gulp.task('css', function () {
-    // var processors = [
-    // 	autoprefixer({browsers: ['last 3 versions']}),
-    // 	// discardComments,
-    // 	precss(),
-    // 	nano()
-    // ];
     return gulp.src('src/css/*.css')
         .pipe(postcss([
         	precss(),
-        	autoprefixer({browsers: ['last 5 versions']}),
+        	autoprefixer({browsers: ['last 2 versions']}),
+        	// nano()
         	]))
         .pipe(gulp.dest(outputDir));
 });
 
-gulp.task('nano', function () {
-    return gulp.src('src/css/*.css')
-        .pipe(nano())
-        .pipe(gulp.dest(outputDir));
-});
+// gulp.task('nano', function () {
+//     return gulp.src('src/css/*.css')
+//         .pipe(nano())
+//         .pipe(gulp.dest(outputDir));
+// });
 
 // CSS styles task
 gulp.task('styles', function(){
