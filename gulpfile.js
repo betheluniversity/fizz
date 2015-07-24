@@ -12,6 +12,9 @@ var gulp 		= require('gulp'),
 	postcss 	= require('gulp-postcss'),
 	nano 	   	= require('gulp-cssnano'), 
     precss		= require('precss'),
+    mixins		= require('postcss-mixins'),
+    vars		= require('postcss-simple-vars'),
+    postcssImport	= require('postcss-import'),
     autoprefixer= require('autoprefixer-core');
 
 var $ = require('gulp-load-plugins')();
@@ -31,9 +34,12 @@ gulp.task('css', function () {
     return gulp.src('src/css/*.css')
         .pipe(postcss([
         	precss(),
+        	// postcssImport(),
+        	// mixins(),
+        	// vars(),
         	autoprefixer({browsers: ['last 2 versions']}),
-        	// nano()
         	]))
+        // .pipe(nano())
         .pipe(gulp.dest(outputDir));
 });
 

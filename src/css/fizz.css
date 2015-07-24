@@ -10,7 +10,7 @@
 
 @import "typography/_typography.css";
 
-@import "grid/_flex-grid.css";
+/*@import "grid/_flex-grid.css";*/
 @import "grid/_layout.css";
 
 @import "global/_header.css";
@@ -32,7 +32,6 @@
 @import "modules/_maps.css";
 @import "modules/_calendar.css";
 @import "modules/_news.css";
-@import "modules/_search.css";
 @import "modules/_social-media.css";
 @import "modules/_moving-picture.css";
 @import "modules/_section--home.css";

@@ -1,12 +1,6 @@
-
-@import 
-
-
-"base/_variables",
-"base/_mixins",
-
-"global/_header",
-"global/_toolbox",
-"global/_navigation",
-"enhance/_off-canvas--main"
-;
+@import "base/_variables";
+@import "base/_mixins";
+@import "global/_header";
+@import "global/_toolbox";
+@import "global/_navigation";
+@import "enhance/_off-canvas--main";
