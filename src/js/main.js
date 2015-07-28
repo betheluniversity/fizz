@@ -81,14 +81,17 @@ for (var i = 0, len = carousels.length; i < len; i++) {
     });
 }
 
-// Flickity customizations
-var datePickers = document.getElementsByClassName('date-picker');
+/* default Pikaday customizations
+ Some cases will want to manually change the format and/or disable days.
+ If the below needs to be modified, then we need to either:
+	1) Have each case be applied directly to each format (instead of here)
+	2) Have multiple cases here for each different date-picker
+*/
+var datePickers = document.getElementsByClassName('pikaday');
 for (var i = 0, len = datePickers.length; i < len; i++) {
     var picker = new Pikaday({
 	    field: datePickers[i],
+	    disabledDaysOfWeek: [0,2,4,6],
 	    format: 'MMMM D, YYYY',
-	    onSelect: function() {
-	        console.log(this.getMoment().format('MMMM D, YYYY'));
-	    }
 	});
 }
