@@ -83,12 +83,12 @@ for (var i = 0, len = carousels.length; i < len; i++) {
 
 // Flickity customizations
 var datePickers = document.getElementsByClassName('date-picker');
-for (var i = 0, len = carousels.length; i < len; i++) {
+for (var i = 0, len = datePickers.length; i < len; i++) {
     var picker = new Pikaday({
 	    field: datePickers[i],
-	    format: 'MMMM dd, YYYY',
+	    format: 'MMMM D, YYYY',
 	    onSelect: function() {
-	        console.log(this.getMoment().format('MMMM Do YYYY'));
+	        console.log(this.getMoment().format('MMMM D, YYYY'));
 	    }
 	});
 }
