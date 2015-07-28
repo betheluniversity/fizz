@@ -68,7 +68,6 @@ if( document.getElementsByClassName('js-rotate-order-carousel')[0] ){
 }
 
 // Flickity customizations
-
 var carousels = document.getElementsByClassName('flickity');
 
 for (var i = 0, len = carousels.length; i < len; i++) {
@@ -82,11 +81,14 @@ for (var i = 0, len = carousels.length; i < len; i++) {
     });
 }
 
-var picker = new Pikaday({
-    field: document.getElementById('date'),
-    format: 'D MMM YYYY',
-    onSelect: function() {
-        console.log(this.getMoment().format('Do MMMM YYYY'));
-    }
-});
-
+// Flickity customizations
+var datePickers = document.getElementsByClassName('date-picker');
+for (var i = 0, len = carousels.length; i < len; i++) {
+    var picker = new Pikaday({
+	    field: datePickers[i],
+	    format: 'MMMM dd, YYYY',
+	    onSelect: function() {
+	        console.log(this.getMoment().format('MMMM Do YYYY'));
+	    }
+	});
+}
