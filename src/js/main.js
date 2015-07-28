@@ -10,6 +10,7 @@ var skrollr = require("./skrollr.min.js");
 var accordion = require("./accordion.js");
 var responsiveTables = require("./responsive-tables.js");
 var bu_animate = require("./bu_animate.js");
+var pikaday = require("./pikaday.js");
 
 // Skrollr init
 var isiPad = navigator.userAgent.match(/iPad/i) != null;
