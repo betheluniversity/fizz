@@ -10,7 +10,7 @@ var skrollr = require("./skrollr.min.js");
 var accordion = require("./accordion.js");
 var responsiveTables = require("./responsive-tables.js");
 var bu_animate = require("./bu_animate.js");
-var pikaday = require("./pikaday.js");
+var Pikaday = require("./pikaday.js");
 
 // Skrollr init
 var isiPad = navigator.userAgent.match(/iPad/i) != null;
@@ -81,4 +81,12 @@ for (var i = 0, len = carousels.length; i < len; i++) {
         cellAlign: 'left'
     });
 }
+
+var picker = new Pikaday({
+    field: document.getElementById('date'),
+    format: 'D MMM YYYY',
+    onSelect: function() {
+        console.log(this.getMoment().format('Do MMMM YYYY'));
+    }
+});
 
