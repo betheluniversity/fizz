@@ -39,7 +39,7 @@ gulp.task('css', function () {
         	// vars(),
         	autoprefixer({browsers: ['last 2 versions']}),
         	]))
-        // .pipe(nano())
+        .pipe(nano())
         .pipe(gulp.dest(outputDir));
 });
 

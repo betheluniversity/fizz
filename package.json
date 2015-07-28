@@ -1,4 +1,5 @@
 {
+  "name": "crackle",
   "devDependencies": {
     "assemble": "^0.4.42",
     "assemble-mustache": "^0.2.1",
@@ -34,7 +35,7 @@
     "postcss-import": "^6.2.0",
     "postcss-mixins": "^0.4.0",
     "postcss-simple-vars": "^0.3.0",
-    "precss": "^0.2.2",
+    "precss": "^0.3.0",
     "reinstall": "^1.1.0",
     "svg-sprite": "^1.2.6",
     "svg4everybody": "0.0.2",
@@ -49,5 +50,10 @@
   },
   "browserify-shim": {
     "jquery": "global:$"
+  },
+  "scripts": {
+    "css": "postcss src/**.css",
+    "assemble": "autoprefixer ./builds/css/*.css"
+
   }
 }
