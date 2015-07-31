@@ -10,7 +10,7 @@
 
 @import "typography/_typography.css";
 
-/*@import "grid/_flex-grid.css";*/
+@import "grid/_flex-grid.css";
 @import "grid/_layout.css";
 
 @import "global/_header.css";

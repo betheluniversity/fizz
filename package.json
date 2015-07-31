@@ -10,6 +10,7 @@
     "browserify": "^11.0.0",
     "browserify-shim": "^3.8.10",
     "critical": "^0.6.0",
+    "cssnano": "^2.1.1",
     "del": "^1.2.0",
     "domready": "^1.0.8",
     "flickity-imagesloaded": "^1.0.1",
@@ -27,10 +28,12 @@
     "gulp-sourcemaps": "^1.5.2",
     "gulp-streamify": "0.0.5",
     "gulp-uglify": "^1.2.0",
+    "handlebars": "^3.0.3",
     "imager.js": "^0.5.0",
     "lazysizes": "^1.1.4",
     "picturefill": "^2.3.1",
     "postcss": "^4.1.16",
+    "postcss-cli": "^1.5.0",
     "postcss-discard-comments": "^1.2.0",
     "postcss-import": "^6.2.0",
     "postcss-mixins": "^0.4.0",
@@ -39,9 +42,12 @@
     "reinstall": "^1.1.0",
     "svg-sprite": "^1.2.6",
     "svg4everybody": "0.0.2",
+    "uglify-js": "^2.4.24",
     "vinyl": "^0.5.0",
     "vinyl-paths": "^1.0.0",
-    "vinyl-source-stream": "^1.1.0"
+    "vinyl-source-stream": "^1.1.0",
+    "watch": "^0.16.0",
+    "webpack": "^1.10.5"
   },
   "browserify": {
     "transform": [
@@ -52,8 +58,17 @@
     "jquery": "global:$"
   },
   "scripts": {
-    "css": "postcss src/**.css",
-    "assemble": "autoprefixer ./builds/css/*.css"
+    "env": "env",
+    "clean": "rm -r ./builds/*",
 
+    "css:build": "postcss -u precss -u autoprefixer -d ./builds ./src/css/*.css",
+    "postcss:build": "postcss -u cssnano ./builds/*.css --dir ./builds",
+    "css:watch": "watch 'npm run css:build' ./src/css/",
+
+    "build:js": "webpack",
+
+    "watch:js": "watch 'npm run build:js' ./src/js/",
+    "watch:html": "watch 'npm run build:html' ./src/templates/",
+    "watch": "'npm run css:watch' 'npm run watch:js'"
   }
 }

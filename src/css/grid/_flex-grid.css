@@ -61,114 +61,114 @@ $add-legacy-support: false !default;
 
 @if $add-legacy-support != true{
 
-/* 1. Creating a flexbox grid*/
-/* 2. Boxes wrap onto next row*/
+  /* 1. Creating a flexbox grid*/
+  /* 2. Boxes wrap onto next row*/
 
-.grid {
-    /*display: flex;  [1]*/
-    /*flex-wrap: wrap;  [2]*/
-    list-style: none;
-    /* margin:0;*/
-    /* padding: 0;*/
+  .grid {
+      /*display: flex;  [1]*/
+      /*flex-wrap: wrap;  [2]*/
+      list-style: none;
+      /* margin:0;*/
+      /* padding: 0;*/
 
-    @mixin respond-min $medium{
-      flex-wrap: nowrap;
-    }
-}
+      @mixin respond-min $medium{
+        flex-wrap: nowrap;
+      }
+  }
 
-/* Mobile grid is set to wrap, and set to nowrap at $medium.*/
-/* This is to allow us to set :first-child and :last-child negative*/
-/* margins on basic grids. If flex-wrap is required above medium*/
-/* use .grid--wrap*/
+  /* Mobile grid is set to wrap, and set to nowrap at $medium.*/
+  /* This is to allow us to set :first-child and :last-child negative*/
+  /* margins on basic grids. If flex-wrap is required above medium*/
+  /* use .grid--wrap*/
 
-.grid--wrap {
-  flex-wrap: wrap;
-}
+  .grid--wrap {
+    flex-wrap: wrap;
+  }
 
-/* Setting width to 100% defaults to full-width on mobile*/
+  /* Setting width to 100% defaults to full-width on mobile*/
 
-.grid-cell {
-    width: 100%;
-    min-width: 1px;
-    /*margin-top: 0;  cancelling out OWL*/
-}
+  .grid-cell {
+      width: 100%;
+      min-width: 1px;
+      /*margin-top: 0;  cancelling out OWL*/
+  }
 
-@mixin respond-min $medium {
-    .grid-cell {
-        flex: 1;
-    }
+  @mixin respond-min $medium {
+      .grid-cell {
+          flex: 1;
+      }
 
-    .grid-cell:first-child {
-      margin-left: -1em;
-    }
+      .grid-cell:first-child {
+        margin-left: -1em;
+      }
 
-    .grid-cell:last-child {
-      margin-right: -1em;
-    }
+      .grid-cell:last-child {
+        margin-right: -1em;
+      }
 
-    /* removing negative margins on nested grids*/
-    .grid .grid .grid-cell:first-child {
-      margin-left:0;
-    }
+      /* removing negative margins on nested grids*/
+      .grid .grid .grid-cell:first-child {
+        margin-left:0;
+      }
 
-    .grid .grid .grid-cell:last-child {
-      margin-right: 0;
-    }
-}
-
-.grid--wrap .grid-cell:first-child {margin-left: 0;}
-.grid--wrap .grid-cell:last-child {margin-right: 0; flex-grow: 0}
-
-/* These rules remove the top margin of heading when it is the first in*/
-/* a grid-cell to make content top-aligned*/
-.grid-cell h2:first-of-type,
-.grid-cell h3:first-of-type,
-.grid-cell h4:first-of-type {
-  margin-top: 0;
-}
-
-
-
-/* Aligns all cells*/
-.grid--top {
-    align-items: flex-start;
-}
-
-.grid--center {
-    align-items: center;
-}
-
-.grid--bottom {
-    align-items: flex-end;
-}
-
-/* Reverse order of cells*/
-
-.grid--reverse {
-    flex-flow: row-reverse wrap;
-
-    .grid-cell:first-child {
-        margin-left: 0;
-    }
-
-    .grid-cell:last-child {
+      .grid .grid .grid-cell:last-child {
         margin-right: 0;
-    }
-}
+      }
+  }
+
+  .grid--wrap .grid-cell:first-child {margin-left: 0;}
+  .grid--wrap .grid-cell:last-child {margin-right: 0; flex-grow: 0}
+
+  /* These rules remove the top margin of heading when it is the first in*/
+  /* a grid-cell to make content top-aligned*/
+  .grid-cell h2:first-of-type,
+  .grid-cell h3:first-of-type,
+  .grid-cell h4:first-of-type {
+    margin-top: 0;
+  }
 
 
-/* Aligns individual cells*/
-.grid-cell--top {
-    align-self: flex-start;
-}
 
-.grid-cell--center {
-    align-self: center;
-}
+  /* Aligns all cells*/
+  .grid--top {
+      align-items: flex-start;
+  }
 
-.grid-cell--bottom {
-    align-self: flex-end;
-}
+  .grid--center {
+      align-items: center;
+  }
+
+  .grid--bottom {
+      align-items: flex-end;
+  }
+
+  /* Reverse order of cells*/
+
+  .grid--reverse {
+      flex-flow: row-reverse wrap;
+
+      .grid-cell:first-child {
+          margin-left: 0;
+      }
+
+      .grid-cell:last-child {
+          margin-right: 0;
+      }
+  }
+
+
+  /* Aligns individual cells*/
+  .grid-cell--top {
+      align-self: flex-start;
+  }
+
+  .grid-cell--center {
+      align-self: center;
+  }
+
+  .grid-cell--bottom {
+      align-self: flex-end;
+  }
 }
 
 
@@ -201,7 +201,7 @@ $add-legacy-support: false !default;
 
 
 /* For Old IE*/
-@if $add-legacy-support {
+@if $add-legacy-support != true {
 .grid--full > .grid-cell {width: 100%}
 }
 
@@ -392,8 +392,7 @@ $add-legacy-support: false !default;
       .u-x-large-3-3,
       .u-x-large-2-2,
       .u-x-large-1-1   {flex-basis: 100%;flex-grow:0;}
-    };
-  }
+    }
 
     @if $add-legacy-support == true{
 
@@ -532,5 +531,4 @@ $add-legacy-support: false !default;
       .u-x-large-3-3,
       .u-x-large-2-2,
       .u-x-large-1-1   {width: 100%;}
-    };
-  }
+    }

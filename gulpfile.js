@@ -34,20 +34,12 @@ gulp.task('css', function () {
     return gulp.src('src/css/*.css')
         .pipe(postcss([
         	precss(),
-        	// postcssImport(),
-        	// mixins(),
-        	// vars(),
         	autoprefixer({browsers: ['last 2 versions']}),
         	]))
         .pipe(nano())
         .pipe(gulp.dest(outputDir));
 });
 
-// gulp.task('nano', function () {
-//     return gulp.src('src/css/*.css')
-//         .pipe(nano())
-//         .pipe(gulp.dest(outputDir));
-// });
 
 // CSS styles task
 gulp.task('styles', function(){
@@ -163,10 +155,10 @@ gulp.task('clean', function () {
     .pipe(vinylPaths(del));
 });
 
-gulp.task('build', ['js','styles','images','copyfiles','assemble']);
+gulp.task('build', ['js','css','images','copyfiles','assemble']);
 
-gulp.task('default', ['js','styles','images','copyfiles','assemble','browser-sync'], function() {
-	gulp.watch('./src/scss/**/*.scss', ['styles']);
+gulp.task('default', ['js','css','images','copyfiles','assemble','browser-sync'], function() {
+	gulp.watch('./src/scss/**/*.scss', ['css']);
 	gulp.watch('./src/templates/**/*.hbs', ['assemble']);
 	gulp.watch('./src/templates/**/*.json', ['assemble']);
 	gulp.watch('./src/assets/icon-sprite/*.svg', ['sprites']);
