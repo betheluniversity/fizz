@@ -36,19 +36,19 @@ gulp.task('css', function () {
         	precss(),
         	autoprefixer({browsers: ['last 2 versions']}),
         	]))
-        .pipe(nano())
-        .pipe(gulp.dest(outputDir));
+        // .pipe(nano())
+        .pipe(gulp.dest(outputDir + '/css'));
 });
 
 
 // CSS styles task
-gulp.task('styles', function(){
-	return gulp.src('./src/scss/*.scss')
-		.pipe($.sass({ outputStyle:'compressed', debug:true })) // compress styles
-		.pipe($.autoprefixer({browsers:['last 2 versions', 'IE 9']}))
-		.pipe(gulp.dest(outputDir + '/css')) // sending to output directory
-		.pipe(reload({stream:true})); // inject into browser using browserSync
-});
+// gulp.task('styles', function(){
+// 	return gulp.src('./src/scss/*.scss')
+// 		.pipe($.sass({ outputStyle:'compressed', debug:true })) // compress styles
+// 		.pipe($.autoprefixer({browsers:['last 2 versions', 'IE 9']}))
+// 		.pipe(gulp.dest(outputDir + '/css')) // sending to output directory
+// 		.pipe(reload({stream:true})); // inject into browser using browserSync
+// });
 
 
 gulp.task('images', function(){

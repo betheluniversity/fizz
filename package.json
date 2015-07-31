@@ -1,13 +1,13 @@
 {
   "name": "crackle",
   "devDependencies": {
-    "assemble": "^0.4.42",
+    "assemble": "^0.6.0-beta.5",
     "assemble-mustache": "^0.2.1",
     "autoprefixer": "^5.2.0",
     "autoprefixer-core": "^5.2.1",
     "bindpolyfill": "0.0.0",
-    "browser-sync": "^2.8.0",
-    "browserify": "^11.0.0",
+    "browser-sync": "^2.8.1",
+    "browserify": "^11.0.1",
     "browserify-shim": "^3.8.10",
     "critical": "^0.6.0",
     "cssnano": "^2.1.1",
@@ -40,8 +40,8 @@
     "postcss-simple-vars": "^0.3.0",
     "precss": "^0.3.0",
     "reinstall": "^1.1.0",
-    "svg-sprite": "^1.2.6",
-    "svg4everybody": "0.0.2",
+    "svg-sprite": "^1.2.7",
+    "svg4everybody": "1.0.0",
     "uglify-js": "^2.4.24",
     "vinyl": "^0.5.0",
     "vinyl-paths": "^1.0.0",
@@ -60,13 +60,10 @@
   "scripts": {
     "env": "env",
     "clean": "rm -r ./builds/*",
-
     "css:build": "postcss -u precss -u autoprefixer -d ./builds ./src/css/*.css",
     "postcss:build": "postcss -u cssnano ./builds/*.css --dir ./builds",
     "css:watch": "watch 'npm run css:build' ./src/css/",
-
     "build:js": "webpack",
-
     "watch:js": "watch 'npm run build:js' ./src/js/",
     "watch:html": "watch 'npm run build:html' ./src/templates/",
     "watch": "'npm run css:watch' 'npm run watch:js'"
