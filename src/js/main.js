@@ -10,6 +10,7 @@ var skrollr = require("./skrollr.min.js");
 var accordion = require("./accordion.js");
 var responsiveTables = require("./responsive-tables.js");
 var bu_animate = require("./bu_animate.js");
+var Pikaday = require("./pikaday.js");
 
 // Skrollr init
 var isiPad = navigator.userAgent.match(/iPad/i) != null;
@@ -67,7 +68,6 @@ if( document.getElementsByClassName('js-rotate-order-carousel')[0] ){
 }
 
 // Flickity customizations
-
 var carousels = document.getElementsByClassName('flickity');
 
 for (var i = 0, len = carousels.length; i < len; i++) {
@@ -81,3 +81,17 @@ for (var i = 0, len = carousels.length; i < len; i++) {
     });
 }
 
+/* default Pikaday customizations
+ Some cases will want to manually change the format and/or disable days.
+ If the below needs to be modified, then we need to either:
+	1) Have each case be applied directly to each format (instead of here)
+	2) Have multiple cases here for each different date-picker
+*/
+var datePickers = document.getElementsByClassName('pikaday');
+for (var i = 0, len = datePickers.length; i < len; i++) {
+    var picker = new Pikaday({
+	    field: datePickers[i],
+	    disabledDaysOfWeek: [0,2,4,6],
+	    format: 'MMMM D, YYYY',
+	});
+}
