@@ -1,18 +1,57 @@
+.flickity {
+  background: #FAFAFA;
+  width: 80%;
+  margin: auto;
+  min-width: 320px;
+  max-width: 1200px;
+  // height: 200px;
+}
+
+.lazyload {
+  opacity: 0;
+}
+
+.lazyloading {
+  opacity: 1;
+  transition: 600ms opacity;
+  background: #f7f7f7 url(https://afarkas.github.io/lazysizes/assets/imgs/loader.gif) no-repeat center;
+  min-height: 60px;
+}
+
+.lazyloaded {
+  opacity: 1;
+  transition: 100ms opacity;
+}
+
+.flickity--cell {
+  width: 55%;
+  // height: 200px;
+  margin-right: 10px;
+  background: #333;
+}
+
+.flickity--cell img {
+  display: block;
+  max-height: 100%;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
 
 
 .flickity--cell {
-    width: 100%;
-    overflow: hidden;
+    // width: 100%;
+    // overflow: hidden;
     // background-color: tomato;
 }
 
-.flickity .flickity--cell {
-    visibility: hidden;
-}
+// .flickity .flickity--cell {
+//     visibility: hidden;
+// }
 
-.flickity-enabled .flickity--cell {
-    visibility: visible;
-}
+// .flickity-enabled .flickity--cell {
+//     visibility: visible;
+// }
 
 /* buttons, no circle */
 .flickity-prev-next-button {

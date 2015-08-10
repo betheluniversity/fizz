@@ -1,6 +1,6 @@
 // var $ = require("jquery");
 // var	lazySizes = require("../../node_modules/lazysizes");
-// var domReady = require("../../node_modules/domready/src/ready.js");
+var domReady = require("../../node_modules/domready");
 var offCanvas = require("./off-canvas.js");
 var picturefill = require("../../node_modules/picturefill");
 var Flickity = require("../../node_modules/flickity-imagesloaded");
@@ -70,16 +70,38 @@ if( document.getElementsByClassName('js-rotate-order-carousel')[0] ){
 // Flickity customizations
 var carousels = document.getElementsByClassName('flickity');
 
-for (var i = 0, len = carousels.length; i < len; i++) {
-    var fkty = new Flickity(carousels[i], {
-        wrapAround: true,
-        imagesLoaded: true,
-        initialIndex: initial_load,
-        pageDots:false,
-        percentPosition:false,
-        cellAlign: 'left'
-    });
-}
+// for (var i = 0, len = carousels.length; i < len; i++) {
+//     var fkty = new Flickity(carousels[i], {
+//         wrapAround: true,
+//         imagesLoaded: true,
+//         initialIndex: initial_load,
+//         pageDots:false,
+//         percentPosition:false,
+//         cellAlign: 'left'
+//     });
+// };
+
+// external js: flickity.pkgd.js
+window.lazySizesConfig = window.lazySizesConfig || {};
+//set expand to a lower value (just to demo) in reality I would keep it much higher
+window.lazySizesConfig.expand = 1000;
+
+(function(){
+  var oldFlickityCreate = window.Flickity.prototype._create;
+  
+  window.Flickity.prototype._create = function(){
+    var that = this;
+    if(this.element.addEventListener){
+      this.element.addEventListener('load', function(){
+        that.onresize();
+        console.log("yes");
+      }, true);
+    }
+    this._create = oldFlickityCreate;
+    return oldFlickityCreate.apply(this, arguments);
+    console.log("yo");
+  };
+})();
 
 /* default Pikaday customizations
  Some cases will want to manually change the format and/or disable days.

@@ -1,4 +1,6 @@
-<div class="flickity js-rotate-order-carousel">
+<div class="flickity js-flickity js-rotate-order-carousel">
+
+
 
 {{#each movingPic}}
 
@@ -11,12 +13,12 @@
                     <source data-srcset="{{ this.mobileImg }}" />
                     <!--[if IE 9]></video><![endif]-->
                     <img
-                            {{!-- src="{{ this.baseImg }}" --}}
                             class="lazyload"
                             alt="image with artdirection"
-                            data-sizes="auto"
+                            {{!-- data-sizes="auto" --}}
                     />
                 </picture>
+
             </div>
 
             <div class="moving-picture__overlay">
