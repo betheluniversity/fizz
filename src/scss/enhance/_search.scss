@@ -1,91 +1,84 @@
 .gs-snippet {
-   padding-left: 8px;
+    padding-left: 8px;
 }
-
 
 .gsc-cursor-box.gs-bidi-start-align {
-   padding-top: 20px;
+    padding-top: 20px;
 }
-
 
 .gsc-result {
-   padding-bottom: 0px !important;
-   padding-top: 0px !important;
+    padding-bottom: 0px;
+    padding-top: 0px;
 }
-
 
 .gsc-selected-option-container.gsc-inline-block {
-   width: 90px !important;
+    width: 90px ;
 }
-
 
 .gsc-tabsArea {
-   border-bottom: none ;
+    margin-bottom: 10px !important;
+    padding-bottom: 29px !important;
 }
-
 
 .gsc-tabsArea>.gsc-tabHeader {
-   height: 30px;
-   width: 70px;
+    height: 30px !important;
+    width: 70px;
 }
-
 
 .gsib_a {
-   padding-left: 5px;
+    padding-left: 5px;
 }
 
-
-#___gcse_0 {
-   margin-bottom: 50px;
+div#___gcse_0 {
+    margin-bottom: 50px;
 }
 
-
-#gsc-iw-id1 {
-   height: 28px;
+div#gsc-iw-id1 {
+    height: 28px;
 }
 
-
-.gs-fileFormat {
-   padding-left: 8px;
+div.gs-fileFormat {
+    padding-left: 4px;
 }
-
 
 .gs-image-box>a>img.gs-image {
-   height: 100% !important;
+    height: 100%;
 }
-
 
 input#gsc-i-id1 {
-   box-shadow: none;
-   margin-top: 2px;
+    box-shadow: none;
+    margin-top: 2px !important;
 }
 
-
-input.gsc-search-button-v2 {
-   height: 28px;
-   width: 70px;
+input.gsc-search-button-v2.gsc-search-button {
+    height: 28px;
+    width: 70px;
 }
-
 
 span#gs_cb50 {
-   margin-top: 5px;
+    margin-top: 5px;
 }
-
 
 div#___gcse_0 table td {
-   border: none;
-   padding-top: 0px;
-   padding-bottom: 0px;
+    border: none;
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
-
 
 div.gsc-cursor-page.gsc-cursor-current-page {
-   text-decoration: none !important;
+    text-decoration: none ;
 }
 
-.gsc-thumbnail-inside {
-   font-size: 22px;
-   line-height: 22px;
+.gsc-tabHeader.gsc-tabhInactive {
+    border-bottom: 1px solid #ccc;
+}
+
+.gsc-refinementsArea {
+    display: none;
+}
+
+.gsc-above-wrapper-area {
+    border-bottom: 1px solid #ccc !important;
 }
 
 .search {
