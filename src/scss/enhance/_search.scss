@@ -81,6 +81,14 @@ div.gsc-cursor-page.gsc-cursor-current-page {
     border-bottom: 1px solid #ccc !important;
 }
 
+form.gsc-search-box.gsc-search-box-tools {
+    display: block !important;
+}
+
+form#cse-search-box {
+    display: none;
+}
+
 .search {
 	// background: tomato;
 
