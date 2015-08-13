@@ -93,6 +93,10 @@ form#cse-search-box {
     visibility: visible !important;
 }
 
+.gsc-tabHeader.gsc-tabhInactive.gsc-inline-block {
+    display: none;
+}
+
 .search {
 	// background: tomato;
 
