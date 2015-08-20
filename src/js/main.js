@@ -1,16 +1,15 @@
 // var $ = require("jquery");
 // var	lazySizes = require("../../node_modules/lazysizes");
-var domReady = require("../../node_modules/domready");
+// var domReady = require("../../node_modules/domready");
 var offCanvas = require("./off-canvas.js");
-var picturefill = require("../../node_modules/picturefill");
-var Flickity = require("../../node_modules/flickity-imagesloaded");
+// var picturefill = require("../../node_modules/picturefill");
+var Flickity = require("../../node_modules/flickity");
 var skrollr = require("./skrollr.min.js");
 var bu_animate = require("./bu_animate.js");
 var accordion = require("./accordion.js");
 var responsiveTables = require("./responsive-tables.js");
 var Odometer = require("./odometer.min.js");
-var svg4everybody = require("../../node_modules/svg4everybody/svg4everybody.min.js");
-var Pikaday = require("./pikaday.js");
+var svg4everybody = require("../../node_modules/svg4everybody");
 
 // Skrollr init
 var isiPad = navigator.userAgent.match(/iPad/i) != null;
@@ -70,50 +69,41 @@ if( document.getElementsByClassName('js-rotate-order-carousel')[0] ){
 // Flickity customizations
 var carousels = document.getElementsByClassName('flickity');
 
-// for (var i = 0, len = carousels.length; i < len; i++) {
-//     var fkty = new Flickity(carousels[i], {
-//         wrapAround: true,
-//         imagesLoaded: true,
-//         initialIndex: initial_load,
-//         pageDots:false,
-//         percentPosition:false,
-//         cellAlign: 'left'
-//     });
-// };
+for (var i = 0, len = carousels.length; i < len; i++) {
+    var flkty = new Flickity(carousels[i], {
+        wrapAround: true,
+        // imagesLoaded: true,
+        initialIndex: initial_load,
+        // pageDots:false,
+        // percentPosition:false,
+        cellAlign: 'left'
+    });
+    flkty.on('cellSelect', function(){
+        this.selectedElement.querySelector('img').classList.toggle('lazyload');
+    })
+};
 
-// external js: flickity.pkgd.js
-window.lazySizesConfig = window.lazySizesConfig || {};
-//set expand to a lower value (just to demo) in reality I would keep it much higher
-window.lazySizesConfig.expand = 1000;
-
-(function(){
-  var oldFlickityCreate = window.Flickity.prototype._create;
-  
-  window.Flickity.prototype._create = function(){
-    var that = this;
-    if(this.element.addEventListener){
-      this.element.addEventListener('load', function(){
-        that.onresize();
-        console.log("yes");
-      }, true);
-    }
-    this._create = oldFlickityCreate;
-    return oldFlickityCreate.apply(this, arguments);
-    console.log("yo");
+addEvent(window, 'load', function() {
+  var fc = document.querySelectorAll('.flickity--cell');
+  for (var i = 0; i < fc.length; i++) {
+    isSelected(fc[i]);
   };
-})();
+});
 
-/* default Pikaday customizations
- Some cases will want to manually change the format and/or disable days.
- If the below needs to be modified, then we need to either:
-	1) Have each case be applied directly to each format (instead of here)
-	2) Have multiple cases here for each different date-picker
-*/
-var datePickers = document.getElementsByClassName('pikaday');
-for (var i = 0, len = datePickers.length; i < len; i++) {
-    var picker = new Pikaday({
-	    field: datePickers[i],
-	    disabledDaysOfWeek: [0,2,4,6],
-	    format: 'MMMM D, YYYY',
-	});
+function isSelected(e) {
+  if (e.classList.contains('is-selected')) {
+    e.querySelector('img').classList.toggle('lazyload');
+  };
+}
+
+function addEvent(obj, type, fn) {
+  if (obj.addEventListener)
+    obj.addEventListener(type, fn, false);
+  else if (obj.attachEvent) {
+    obj["e" + type + fn] = fn;
+    obj[type + fn] = function() {
+      obj["e" + type + fn](window.event);
+    }
+    obj.attachEvent("on" + type, obj[type + fn]);
+  }
 }
