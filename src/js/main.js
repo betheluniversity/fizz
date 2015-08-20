@@ -3,7 +3,7 @@
 // var domReady = require("../../node_modules/domready");
 var offCanvas = require("./off-canvas.js");
 // var picturefill = require("../../node_modules/picturefill");
-var Flickity = require("../../node_modules/flickity");
+var Flickity = require("../../node_modules/flickity-imagesloaded");
 var skrollr = require("./skrollr.min.js");
 var bu_animate = require("./bu_animate.js");
 var accordion = require("./accordion.js");
@@ -72,10 +72,10 @@ var carousels = document.getElementsByClassName('flickity');
 for (var i = 0, len = carousels.length; i < len; i++) {
     var flkty = new Flickity(carousels[i], {
         wrapAround: true,
-        // imagesLoaded: true,
+        imagesLoaded: true,
         initialIndex: initial_load,
         // pageDots:false,
-        // percentPosition:false,
+        percentPosition:false,
         cellAlign: 'left'
     });
     flkty.on('cellSelect', function(){
@@ -87,12 +87,14 @@ addEvent(window, 'load', function() {
   var fc = document.querySelectorAll('.flickity--cell');
   for (var i = 0; i < fc.length; i++) {
     isSelected(fc[i]);
+    console.log("butt:");
   };
 });
 
 function isSelected(e) {
   if (e.classList.contains('is-selected')) {
     e.querySelector('img').classList.toggle('lazyload');
+    console.log("toot");
   };
 }
 
