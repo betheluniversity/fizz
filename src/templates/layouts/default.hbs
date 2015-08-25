@@ -42,37 +42,32 @@ layout:default
 	</div>
 
 	<script>
-	    //load picturefill, if no respimage support
-	    function loadJS(u) {
-	        var r = document.getElementsByTagName("script")[0],
-	            s = document.createElement("script");
-	        s.src = u;
-	        r.parentNode.insertBefore(s, r);
-	    }
-
+	    function loadJS(u) {var r = document.getElementsByTagName("script")[0], s = document.createElement("script"); s.src = u; r.parentNode.insertBefore(s, r); }
 	    if (!window.HTMLPictureElement) {
 	        document.createElement('picture');
-	        //generating the config array
 	        window.picturefillCFG = window.picturefillCFG || [];
 	        picturefillCFG.push(["algorithm", "saveData"]);
-
 	        loadJS("https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.0-beta1/picturefill.min.js");
 	    }
 	</script>
 
 	<script>
-	      var cb = function() {
-	        var l = document.createElement('link'); l.rel = 'stylesheet';
-	        l.href = '/css/fizz.css';
-	        var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
-	      };
-	      var raf = requestAnimationFrame || mozRequestAnimationFrame ||
-	          webkitRequestAnimationFrame || msRequestAnimationFrame;
-	      if (raf) raf(cb);
-	      else window.addEventListener('load', cb);
+	      // var cb = function() {
+	      //   var l = document.createElement('link'); l.rel = 'stylesheet';
+	      //   l.href = '/css/fizz.css';
+	      //   var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
+	      // };
+	      // var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+	      //     webkitRequestAnimationFrame || msRequestAnimationFrame;
+	      // if (raf) raf(cb);
+	      // else window.addEventListener('load', cb);
+
+	      loadCSS( "/css/fizz.css" , document.getElementById("loadcss") );
 	</script>
 
-	<script src="http://mfzy.co/flickity.pkgd.js"></script>
+	{{!-- <link href="/css/fizz.css" rel="stylesheet"> --}}
+
+	{{!-- // <script src="http://mfzy.co/flickity.pkgd.min.js"></script> --}}
 	<script src="/js/bundle.js" type="text/javascript" async=""></script>
 
 	<script>

@@ -41,6 +41,7 @@ if( document.getElementsByClassName('js-rotate-order-carousel')[0] ){
             // grab the old value.
             var old_index = localStorage.getItem(index_of_array);
             var max_carousel_items = document.getElementsByClassName("js-rotate-order-carousel")[0].children.length;
+
             if( max_carousel_items ){
                 var initial_load = (parseInt(old_index)+1) % max_carousel_items;
                 try{
@@ -50,6 +51,7 @@ if( document.getElementsByClassName('js-rotate-order-carousel')[0] ){
                 }
             }
         } else {
+
             try{
                 // iOS Safari Prive mode reports having localStorage available but
                 // does not let you write to it.
@@ -70,34 +72,54 @@ if( document.getElementsByClassName('js-rotate-order-carousel')[0] ){
 var carousels = document.getElementsByClassName('flickity');
 
 for (var i = 0, len = carousels.length; i < len; i++) {
+    var carousel = carousels[i];
+
+    // Checking if carousel has rotate class. If this is not set
+    // and there is more than one carousel on the page, Flickity can't 
+    // set the proper target
+    if (carousel.classList.contains("js-rotate-order-carousel")){
+        local_initial_load = initial_load;
+    }
+    else {
+        local_initial_load = 0;
+    }
+
     var flkty = new Flickity(carousels[i], {
         wrapAround: true,
         imagesLoaded: true,
-        initialIndex: initial_load,
-        // pageDots:false,
+        initialIndex: local_initial_load,
+        pageDots:false,
         percentPosition:false,
+        draggable: false,
         cellAlign: 'left'
     });
     flkty.on('cellSelect', function(){
-        this.selectedElement.querySelector('img').classList.toggle('lazyload');
+        isSelected();
     })
 };
 
+// Checking for 'is-selected on loa'
 addEvent(window, 'load', function() {
-  var fc = document.querySelectorAll('.flickity--cell');
-  for (var i = 0; i < fc.length; i++) {
-    isSelected(fc[i]);
-    console.log("butt:");
-  };
+    isSelected();
 });
 
-function isSelected(e) {
-  if (e.classList.contains('is-selected')) {
-    e.querySelector('img').classList.toggle('lazyload');
-    console.log("toot");
-  };
+// THis function needs
+
+function isSelected() {
+    var fc = document.querySelectorAll('.flickity--cell');
+    for (var i = 0; i < fc.length; i++) {
+      if (fc[i].classList.contains('is-selected')) {
+        if (fc[i].querySelector('img').classList.contains('lazyload')){
+            console.log("adding");
+        } else {
+            fc[i].querySelector('img').classList.add('lazyload');
+            console.log("already here!");
+        }
+      };
+    };
 }
 
+// Generic addEvent function
 function addEvent(obj, type, fn) {
   if (obj.addEventListener)
     obj.addEventListener(type, fn, false);

@@ -104,20 +104,20 @@
       color: $bethel--blue;
     }
 
-    .slick-next,.slick-prev {
-        background: $bethel--blue;
-        border: 0;
-        position: absolute;
-        top: 50%;
-    }
+    // .slick-next,.slick-prev {
+    //     background: $bethel--blue;
+    //     border: 0;
+    //     position: absolute;
+    //     top: 50%;
+    // }
 
-    .slick-prev {
-        left: 0;
-    }
+    // .slick-prev {
+    //     left: 0;
+    // }
 
-    .slick-next {
-        right: 0;
-    }
+    // .slick-next {
+    //     right: 0;
+    // }
 }
 
 
@@ -208,34 +208,34 @@
     //     color: #fff
     // }
 
-    .slick-next,
-    .slick-prev {
-        position: absolute;
-        top: 50%;
-        border-radius: 50%;
-        font-size: 1.5em;
-    }
+    // .slick-next,
+    // .slick-prev {
+    //     position: absolute;
+    //     top: 50%;
+    //     border-radius: 50%;
+    //     font-size: 1.5em;
+    // }
 
-    .slick-next:hover,
-    .slick-prev:hover {
-        background: transparent;
-    }
+    // .slick-next:hover,
+    // .slick-prev:hover {
+    //     background: transparent;
+    // }
 
-    .slick-next {
-        right: 0;
+    // .slick-next {
+    //     right: 0;
 
-        @include respond-min($medium){
-            right: 3%;
-        }
-    }
+    //     @include respond-min($medium){
+    //         right: 3%;
+    //     }
+    // }
 
-    .slick-prev {
-        left: 0%;
+    // .slick-prev {
+    //     left: 0%;
 
-        @include respond-min($medium){
-            left: 3%;
-        }
-    }
+    //     @include respond-min($medium){
+    //         left: 3%;
+    //     }
+    // }
 }
 
 .carousel-constrain {

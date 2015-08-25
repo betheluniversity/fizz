@@ -1,22 +1,42 @@
 .flickity {
-  background: #FAFAFA;
-  // width: 80%;
-  margin: auto;
-  min-width: 320px;
-  // max-width: 1200px;
-  // height: 200px;
+    margin: auto;
+    background: transparent url(../assets/images/load.gif) no-repeat center;
 }
 
-.flickity--cell {
-    visibility: hidden;
+.flickity.flickity-enabled {
+    background: none;
 }
 
 .flickity-enabled .flickity--cell {
     visibility: visible;
+    background: none;
+
 }
 
 .is-selected {
     z-index: 1;
+}
+
+.flickity--cell {
+    visibility: hidden;
+    width: 100%;
+    background:#333;  
+    overflow: hidden;
+}
+
+.flickity--cell img {
+    display: block;
+    max-height: 100%;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.flickity--cell img {
+    visibility: hidden;
+}
+
+.flickity--cell img.lazyloaded {
+    visibility: visible;
 }
 
 .ratio-box {
@@ -24,7 +44,6 @@
     height: 0;
     display: block;
     width: 100%;
-    /* padding-bottom is calculated and rendered in to HTML */
     padding-bottom: 50%;
 
     @include respond-min(830px){
@@ -41,58 +60,82 @@
 }
 
 .lazyload {
-  opacity: 0;
+    opacity: 0;
 }
 
 .lazyloading {
-  opacity: 1;
-  transition: 600ms opacity;
-  background: #f7f7f7 url(https://afarkas.github.io/lazysizes/assets/imgs/loader.gif) no-repeat center;
-  min-height: 60px;
+    opacity: 1;
+    transition: 600ms opacity;
+    min-height: 60px;
 }
 
 .lazyloaded {
-  opacity: 1;
-  transition: 100ms opacity;
+    opacity: 1;
+    transition: 100ms opacity;
 }
 
-.flickity--cell {
-  width: 100%;
-  // height: 200px;
-  background: #333;
-  overflow: hidden;
-}
 
-.flickity--cell img {
-  display: block;
-  max-height: 100%;
-  margin: 0 auto;
-  max-width: 100%;
-}
+/* =====================
+Styles for the big carousel on bethel.edu 
+======================== */
 
+.flickity--home {
+    height: 415px;
+    max-height: 80vh;
+
+    @include respond-min(830px){
+        height: 100%;
+    }
+
+    .flickity-viewport {
+
+        @include respond-max(829px){
+           height: 100% !important;
+       }
+   }
+
+   .flickity--cell {
+        // background: transparent url(../assets/images/load.gif) no-repeat center;
+   }
+}
 
 /* buttons, no circle */
 .flickity-prev-next-button {
-  width: 40px;
-  height: 40px;
-  background: transparent;
-  opacity: 0.6;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    opacity: 0.6;
 }
+
 .flickity-prev-next-button:hover {
-  background: transparent;
-  opacity: 1;
+    background: transparent;
+    opacity: 1;
 }
+
 /* arrow color */
 .flickity-prev-next-button .arrow {
-  fill: white;
+    fill: white;
 }
+
 .flickity-prev-next-button.no-svg {
-  color: white;
+    color: white;
 }
-/* closer to edge */
-.flickity-prev-next-button.previous { left: 0; }
-.flickity-prev-next-button.next { right: 0; }
-/* hide disabled button */
+
+.flickity-prev-next-button.previous { 
+    left: 0em; 
+
+    @include respond-min(830px){
+        left: 1em;
+    }
+}
+.flickity-prev-next-button.next { 
+    right: 1em; 
+
+    @include respond-min(830px){
+        right: 1em;
+    }
+}
+
 .flickity-prev-next-button:disabled {
-  display: none;
+    display: none;
 }
