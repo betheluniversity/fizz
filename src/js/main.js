@@ -11,23 +11,6 @@ var responsiveTables = require("./responsive-tables.js");
 var Odometer = require("./odometer.min.js");
 var svg4everybody = require("../../node_modules/svg4everybody");
 
-// Skrollr init
-var isiPad = navigator.userAgent.match(/iPad/i) != null;
-var isiPhone = navigator.userAgent.match(/iPhone/i) != null;
-window.onload = function() {
-    if(window.innerWidth > 1024 && !(isiPhone || isiPad)){
-        var s = skrollr.init();
-    }
-    // Odometer init
-    var odometers = document.getElementsByClassName('odometer');
-    for (var i = 0, len = odometers.length; i < len; i++) {
-        var el = odometers[i];
-        var od = new Odometer({
-            el: el
-        });
-    }
-};
-
 
 // Select a random image from the carousel to appear first
 
@@ -69,14 +52,16 @@ if( document.getElementsByClassName('js-rotate-order-carousel')[0] ){
 }
 
 // Flickity customizations
+
 var carousels = document.getElementsByClassName('flickity');
 
 for (var i = 0, len = carousels.length; i < len; i++) {
     var carousel = carousels[i];
 
-    // Checking if carousel has rotate class. If this is not set
-    // and there is more than one carousel on the page, Flickity can't 
-    // set the proper target
+// Checking if carousel has rotate class. If this is not set
+// and there is more than one carousel on the page, Flickity can't 
+// set the proper target
+
     if (carousel.classList.contains("js-rotate-order-carousel")){
         local_initial_load = initial_load;
     }
@@ -93,33 +78,36 @@ for (var i = 0, len = carousels.length; i < len; i++) {
         draggable: false,
         cellAlign: 'left'
     });
+    
     flkty.on('cellSelect', function(){
         isSelected();
     })
 };
 
-// Checking for 'is-selected on loa'
+// Checking for 'is-selected' on load
+
 addEvent(window, 'load', function() {
     isSelected();
 });
 
-// THis function needs
+// This function needs a double test because some carousels
+// may not have the .lazyload class applied on load. If it already
+// has the class, we don't want to remove it
 
 function isSelected() {
     var fc = document.querySelectorAll('.flickity--cell');
     for (var i = 0; i < fc.length; i++) {
       if (fc[i].classList.contains('is-selected')) {
         if (fc[i].querySelector('img').classList.contains('lazyload')){
-            console.log("adding");
         } else {
             fc[i].querySelector('img').classList.add('lazyload');
-            console.log("already here!");
         }
       };
     };
 }
 
 // Generic addEvent function
+
 function addEvent(obj, type, fn) {
   if (obj.addEventListener)
     obj.addEventListener(type, fn, false);
@@ -131,3 +119,20 @@ function addEvent(obj, type, fn) {
     obj.attachEvent("on" + type, obj[type + fn]);
   }
 }
+
+// Skrollr init
+var isiPad = navigator.userAgent.match(/iPad/i) != null;
+var isiPhone = navigator.userAgent.match(/iPhone/i) != null;
+window.onload = function() {
+    if(window.innerWidth > 1024 && !(isiPhone || isiPad)){
+        var s = skrollr.init();
+    }
+    // Odometer init
+    var odometers = document.getElementsByClassName('odometer');
+    for (var i = 0, len = odometers.length; i < len; i++) {
+        var el = odometers[i];
+        var od = new Odometer({
+            el: el
+        });
+    }
+};

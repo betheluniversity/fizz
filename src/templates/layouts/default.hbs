@@ -48,41 +48,11 @@ layout:default
 	        window.picturefillCFG = window.picturefillCFG || [];
 	        picturefillCFG.push(["algorithm", "saveData"]);
 	        loadJS("https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.0-beta1/picturefill.min.js");
-	    }
+	    };
+		// loadCSS("/css/fizz.css", document.getElementById("loadcss"));
+		loadJS("/js/bundle.js");
+		// loadCSS("https://cloud.typography.com/6664852/762926/css/fonts.css", document.getElementById("loadcss"));
 	</script>
-
-	<script>
-	      // var cb = function() {
-	      //   var l = document.createElement('link'); l.rel = 'stylesheet';
-	      //   l.href = '/css/fizz.css';
-	      //   var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
-	      // };
-	      // var raf = requestAnimationFrame || mozRequestAnimationFrame ||
-	      //     webkitRequestAnimationFrame || msRequestAnimationFrame;
-	      // if (raf) raf(cb);
-	      // else window.addEventListener('load', cb);
-
-	      loadCSS( "/css/fizz.css" , document.getElementById("loadcss") );
-	</script>
-
-	{{!-- <link href="/css/fizz.css" rel="stylesheet"> --}}
-
-	{{!-- // <script src="http://mfzy.co/flickity.pkgd.min.js"></script> --}}
-	<script src="/js/bundle.js" type="text/javascript" async=""></script>
-
-	<script>
-		  // var cb = function() {
-		  //   var l = document.createElement('link'); l.rel = 'stylesheet';
-		  //   l.href = 'https://cloud.typography.com/6664852/762926xxxx/css/fonts.css';
-		  //   var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
-		  // };
-		  // var raf = requestAnimationFrame || mozRequestAnimationFrame ||
-		  //     webkitRequestAnimationFrame || msRequestAnimationFrame;
-		  // if (raf) raf(cb);
-		  // else window.addEventListener('load', cb);
-	</script>
-
 	<noscript><link href="https://cdn2.bethel.edu/css/fizz.css" rel="stylesheet" /></noscript>
-	
 </body>
 </html>
