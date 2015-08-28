@@ -5,18 +5,20 @@
     <div class="flickity--cell">
         <div class="moving-picture">
             <div class="moving-picture__media">
-                <picture>
+                <video autoplay="autoplay" style="min-width:100%">
+                    <source src="{{ this.video }}" type="video/mp4">
+                </video>
+{{!--                 <picture>
                     <!--[if IE 9]><video style="display: none"><![endif]-->
                     <source data-srcset="{{ this.bigImg }}" media="(min-width: 830px)" />
                     <source data-srcset="{{ this.mobileImg }}" />
                     <!--[if IE 9]></video><![endif]-->
                     <img
-                            {{!-- src="{{ this.baseImg }}" --}}
                             class="lazyload"
                             alt="image with artdirection"
                             data-sizes="auto"
                     />
-                </picture>
+                </picture> --}}
             </div>
 
             <div class="moving-picture__overlay">
