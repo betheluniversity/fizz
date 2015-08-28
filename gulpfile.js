@@ -17,7 +17,7 @@ var outputDir = './builds/';
 gulp.task('js', function(){
 	return browserify('./src/js/main')
 		.bundle()
-		.pipe(source('bundle.js'))
+		.pipe(source('shorts.js'))
 		.pipe($.streamify($.uglify())) // compress on output
 		.pipe(gulp.dest(outputDir + '/js'));
 });

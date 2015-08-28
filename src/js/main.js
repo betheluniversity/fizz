@@ -1,8 +1,6 @@
 // var $ = require("jquery");
-// var	lazySizes = require("../../node_modules/lazysizes");
 // var domReady = require("../../node_modules/domready");
 var offCanvas = require("./off-canvas.js");
-// var picturefill = require("../../node_modules/picturefill");
 var Flickity = require("../../node_modules/flickity-imagesloaded");
 var skrollr = require("./skrollr.min.js");
 var bu_animate = require("./bu_animate.js");
