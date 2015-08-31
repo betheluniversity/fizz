@@ -8,17 +8,17 @@
                 <video autoplay="autoplay" style="min-width:100%">
                     <source src="{{ this.video }}" type="video/mp4">
                 </video>
-{{!--                 <picture>
+                <picture>
                     <!--[if IE 9]><video style="display: none"><![endif]-->
                     <source data-srcset="{{ this.bigImg }}" media="(min-width: 830px)" />
                     <source data-srcset="{{ this.mobileImg }}" />
                     <!--[if IE 9]></video><![endif]-->
                     <img
-                            class="lazyload"
+                            {{!-- class="lazyload" --}}
                             alt="image with artdirection"
                             data-sizes="auto"
                     />
-                </picture> --}}
+                </picture>
             </div>
 
             <div class="moving-picture__overlay">
