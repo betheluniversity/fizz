@@ -82,6 +82,20 @@ for (var i = 0, len = carousels.length; i < len; i++) {
     })
 };
 
+function onLoadeddata( event ) {
+    var cell = fkty.getParentCell( event.target );
+    fkty.cellSizeChange( cell && cell.element );
+}
+
+var videos = fkty.selectedElement.querySelectorAll('video');
+
+for ( var i=0, len = videos.length; i < len; i++ ) {
+    var video = videos[i];
+    // resume autoplay for WebKit
+    video.play();
+    addEvent( video, 'loadeddata', onLoadeddata );
+}
+
 // Checking for 'is-selected' on load
 
 addEvent(window, 'load', function() {
