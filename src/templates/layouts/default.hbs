@@ -17,7 +17,7 @@ layout:default
 
 		{{> global__header }}
 
-		{{!-- {{> school__navigation }} --}}
+		{{> school__navigation }}
 
 		{{!-- {{> carousel }} --}}
 		{{> moving-picture }}
@@ -28,7 +28,7 @@ layout:default
 		<div class="inner--content">
 		    <div class="inner-wrap--site__navigation" id="js-inner-wrap--site__navigation">
 
-		    	{{!-- {{> site__navigation }} --}}
+		    	{{> site__navigation }}
 
 		        {{> page__title }}
 
@@ -49,9 +49,21 @@ layout:default
 	        picturefillCFG.push(["algorithm", "saveData"]);
 	        loadJS("https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.0-beta1/picturefill.min.js");
 	    };
-		loadCSS("/css/bottom.css", document.getElementById("loadcss"));
+		loadCSS("/css/boots.css", document.getElementById("loadcss"));
 		loadJS("/js/shorts.js");
 		// loadCSS("https://cloud.typography.com/6664852/762926/css/fonts.css", document.getElementById("loadcss"));
+	</script>
+
+	<script>
+		var cb = function() {
+			var l = document.createElement('link'); l.rel = 'stylesheet';
+			l.href = 'css/boots.css';
+			var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
+		};
+		var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+		webkitRequestAnimationFrame || msRequestAnimationFrame;
+		if (raf) raf(cb);
+		else window.addEventListener('load', cb);
 	</script>
 	<noscript><link href="https://cdn2.bethel.edu/css/bottom.css" rel="stylesheet" /></noscript>
 </body>
