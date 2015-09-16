@@ -148,7 +148,7 @@ gulp.task('clean', function () {
 
 gulp.task('build', ['js','styles','images','copyfiles','assemble']);
 
-gulp.task('default', ['js','styles','images','copyfiles','assemble','browser-sync'], function() {
+gulp.task('default', ['js','styles','copyfiles','assemble','browser-sync'], function() {
 	gulp.watch('./src/scss/**/*.scss', ['styles']);
 	gulp.watch('./src/templates/**/*.hbs', ['assemble']);
 	gulp.watch('./src/templates/**/*.json', ['assemble']);

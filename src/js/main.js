@@ -83,11 +83,11 @@ for (var i = 0, len = carousels.length; i < len; i++) {
 };
 
 function onLoadeddata( event ) {
-    var cell = fkty.getParentCell( event.target );
+    var cell = flkty.getParentCell( event.target );
     fkty.cellSizeChange( cell && cell.element );
 }
 
-var videos = fkty.selectedElement.querySelectorAll('video');
+var videos = flkty.selectedElement.querySelectorAll('video');
 
 for ( var i=0, len = videos.length; i < len; i++ ) {
     var video = videos[i];
