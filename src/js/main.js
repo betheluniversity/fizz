@@ -107,7 +107,7 @@ addEvent(window, 'load', function() {
 // has the class, we don't want to remove it
 
 function isSelected() {
-    var fc = document.querySelectorAll('.flickity--cell');
+    var fc = document.querySelectorAll('.js-load-on-demand .flickity--cell');
     for (var i = 0; i < fc.length; i++) {
       if (fc[i].classList.contains('is-selected')) {
         if (fc[i].querySelector('img').classList.contains('lazyload')){

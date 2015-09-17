@@ -1,6 +1,26 @@
+.carousel-constrain {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    @include respond-min($medium){
+        padding: 0 1em;
+    }
+
+    @include respond-min($large){
+        padding: 0 3em;
+    }
+
+    .moving-picture {
+        @include respond-min(1200px){
+            height: 639px;
+        }
+    }
+}
+
+
 .flickity {
     margin: auto;
-    background: transparent url(https://cdn4.bethel.edu/assets/images/load.gif) no-repeat center;
+    background: transparent url(https://cdn4.bethel.edu/images/load.gif) no-repeat center;
 }
 
 .flickity.flickity-enabled {
@@ -39,25 +59,40 @@
     visibility: visible;
 }
 
-.ratio-box {
-    position: relative;
-    height: 0;
-    display: block;
+// .ratio-box {
+//     position: relative;
+//     height: 0;
+//     display: block;
+// }
+// .ratio-box > * {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     display: block;
+// }
+
+.carousel--image-bank .ratio-box {
+    padding-bottom: 33.2361516%;
     width: 100%;
+}
+
+.carousel--text-over-media .ratio-box{
     padding-bottom: 50%;
+    width: 100%;
+    height: 415px !important;
 
     @include respond-min(830px){
         padding-bottom: 56.25%;
     }
 }
-.ratio-box > * {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: block;
-}
+
+// .carousel--employee .ratio-box,
+// .carousel--quote .ratio-box {
+//     padding-bottom: 150px;
+// }
+
 
 .lazyload {
     opacity: 0;
