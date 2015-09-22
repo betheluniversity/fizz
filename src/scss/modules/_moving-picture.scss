@@ -1,12 +1,12 @@
-// .ratio-box {
-// 	height: 415px !important;
-// }
+.ratio-box {
+	// height: 415px !important;
+}
 
 .moving-picture {
 	position: relative;
 
 	@include respond-min(830px){
-		max-height: 75vh;
+		// max-height: 75vh;
 		overflow: hidden;
 	}
 }
@@ -31,7 +31,7 @@
 	@include respond-min(830px){
 		position: relative;
 
-		padding-bottom: 76%;
+		// padding-bottom: 76%;
 		height: auto;
 	}
 }

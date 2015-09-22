@@ -1,14 +1,13 @@
 // var $ = require("jquery");
 // var domReady = require("../../node_modules/domready");
 var offCanvas = require("./off-canvas.js");
-var Flickity = require("../../node_modules/flickity-imagesloaded");
+var Flickity = require("../../node_modules/flickity");
 var skrollr = require("./skrollr.min.js");
 var bu_animate = require("./bu_animate.js");
 var accordion = require("./accordion.js");
 var responsiveTables = require("./responsive-tables.js");
 var Odometer = require("./odometer.min.js");
 var svg4everybody = require("../../node_modules/svg4everybody");
-
 
 // Select a random image from the carousel to appear first
 
@@ -69,7 +68,7 @@ for (var i = 0, len = carousels.length; i < len; i++) {
 
     var flkty = new Flickity(carousels[i], {
         wrapAround: true,
-        imagesLoaded: true,
+        // imagesLoaded: true,
         initialIndex: local_initial_load,
         pageDots:false,
         percentPosition:false,
@@ -84,16 +83,19 @@ for (var i = 0, len = carousels.length; i < len; i++) {
 
 function onLoadeddata( event ) {
     var cell = flkty.getParentCell( event.target );
-    fkty.cellSizeChange( cell && cell.element );
+    flkty.cellSizeChange( cell && cell.element );
 }
 
-var videos = flkty.selectedElement.querySelectorAll('video');
 
-for ( var i=0, len = videos.length; i < len; i++ ) {
-    var video = videos[i];
-    // resume autoplay for WebKit
-    video.play();
-    addEvent( video, 'loadeddata', onLoadeddata );
+if( typeof flkty !== 'undefined' ) {
+    var videos = flkty.selectedElement.querySelectorAll('video');
+
+    for ( var i=0, len = videos.length; i < len; i++ ) {
+        var video = videos[i];
+        // resume autoplay for WebKit
+        video.play();
+        addEvent( video, 'loadeddata', onLoadeddata );
+    }
 }
 
 // Checking for 'is-selected' on load
@@ -118,6 +120,23 @@ function isSelected() {
     };
 }
 
+  // var gallery = document.querySelector('.flickity');
+  // var flkty = new Flickity( carousels[i] );
+  
+  function onLoadeddata( event ) {
+    var cell = flkty.getParentCell( event.target );
+    flkty.cellSizeChange( cell && cell.element );
+  }
+
+  var videos = flkty.selectedElement.querySelectorAll('video');
+
+  for ( var i=0, len = videos.length; i < len; i++ ) {
+    var video = videos[i];
+    // resume autoplay for WebKit
+    video.play();
+    addEvent( video, 'loadeddata', onLoadeddata );
+  }
+
 // Generic addEvent function
 
 function addEvent(obj, type, fn) {
@@ -131,6 +150,7 @@ function addEvent(obj, type, fn) {
     obj.attachEvent("on" + type, obj[type + fn]);
   }
 }
+
 
 // Skrollr init
 var isiPad = navigator.userAgent.match(/iPad/i) != null;

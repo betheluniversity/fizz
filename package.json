@@ -12,7 +12,6 @@
     "del": "^2.0.2",
     "domready": "^1.0.8",
     "flickity-imagesloaded": "^1.0.1",
-    "grunt": "^0.4.5",
     "gulp": "^3.9.0",
     "gulp-assemble": "^0.3.2",
     "gulp-autoprefixer": "^3.0.1",

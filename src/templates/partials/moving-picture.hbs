@@ -1,4 +1,4 @@
-<div class="flickity  js-rotate-order-carousel  js-load-on-demand  flickity--home">
+<div class="flickity  js-rotate-order-carousel  js-load-on-demand  carousel--text-over-media">
 
 {{#each movingPic}}
 
@@ -6,6 +6,9 @@
         <div class="ratio-box">
             <div class="moving-picture">
                 <div class="moving-picture__media">
+    {{!--                 <video autoplay="autoplay" style="min-width:100%">
+                        <source src="{{ this.video }}" type="video/mp4">
+                    </video> --}}
                     <picture>
                         <!--[if IE 9]><video style="display: none"><![endif]-->
                         <source data-srcset="{{ this.bigImg }}" media="(min-width: 830px)" />
@@ -17,8 +20,8 @@
                                 data-sizes="auto"
                         />
                     </picture>
-
                 </div>
+
 
                 <div class="moving-picture__overlay">
                     <h2 class="moving-picture__overlay__headline">{{  this.headline }}</h2>
