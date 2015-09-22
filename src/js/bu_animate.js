@@ -70,4 +70,5 @@ var doAnimations = function () {
         //trigger once if the odometers are in view on load
         doAnimations();
     }
+    doAnimations();
 })();
