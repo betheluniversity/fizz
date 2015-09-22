@@ -1,8 +1,6 @@
 .global__header {
     background: lighten(#0f2c52,2%);
-    // background: $bethel--blue;
     position: relative;
-    // margin-top: 0;
     padding: 0;
     width: 100%;
 }
@@ -33,7 +31,9 @@
     display: block; 
 }
 
-
+.global__logo img {
+    border: none;
+}
 
 .burger {
     background: #17437d;
@@ -48,12 +48,14 @@
       display: none;
     }
 }
+
 .burger-icon {
     content: "";
     display: block;
     width: 1em;
     box-shadow: 0 6px 0 1px #fff,0 12px 0 1px #fff,0 18px 0 1px #fff;
 }
+
 .burger-text {
     margin-left: 1.5em;
     color: #fff;

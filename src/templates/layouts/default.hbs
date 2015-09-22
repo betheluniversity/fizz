@@ -17,10 +17,12 @@ layout:default
 
 		{{> global__header }}
 
-		{{!-- {{> school__navigation }} --}}
+		{{> school__navigation }}
 
 		{{!-- {{> carousel }} --}}
+		<div class="grid-section mt0" >
 		{{> moving-picture }}
+		</div>
 
 
 		<p class="site__title__button" id="js-site__title__button"><a href="#siteNav">☰ In This Section</a></p>
@@ -42,32 +44,37 @@ layout:default
 	</div>
 
 	<script>
-	      var cb = function() {
-	        var l = document.createElement('link'); l.rel = 'stylesheet';
-	        l.href = '/css/fizz.css';
-	        var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
-	      };
-	      var raf = requestAnimationFrame || mozRequestAnimationFrame ||
-	          webkitRequestAnimationFrame || msRequestAnimationFrame;
-	      if (raf) raf(cb);
-	      else window.addEventListener('load', cb);
+	    function loadJS(u) {var r = document.getElementsByTagName("script")[0], s = document.createElement("script"); s.src = u; r.parentNode.insertBefore(s, r); }
+	    if (!window.HTMLPictureElement) {
+	        document.createElement('picture');
+	        window.picturefillCFG = window.picturefillCFG || [];
+	        picturefillCFG.push(["algorithm", "saveData"]);
+	        loadJS("https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.0-beta1/picturefill.min.js");
+	    };
+		loadCSS("/css/boots.css", document.getElementById("loadcss"));
+		loadJS("/js/boots.js");
+		// loadCSS("https://cloud.typography.com/6664852/762926/css/fonts.css", document.getElementById("loadcss"));
 	</script>
-
-	<script src="/js/bundle.js" type="text/javascript" async=""></script>
 
 	<script>
-		  // var cb = function() {
-		  //   var l = document.createElement('link'); l.rel = 'stylesheet';
-		  //   l.href = 'https://cloud.typography.com/6664852/762926xxxx/css/fonts.css';
-		  //   var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
-		  // };
-		  // var raf = requestAnimationFrame || mozRequestAnimationFrame ||
-		  //     webkitRequestAnimationFrame || msRequestAnimationFrame;
-		  // if (raf) raf(cb);
-		  // else window.addEventListener('load', cb);
-	</script>
+		var cb = function() {
+			var l = document.createElement('link'); l.rel = 'stylesheet';
+			l.href = 'css/boots.css';
+			var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
+		};
+		var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+		webkitRequestAnimationFrame || msRequestAnimationFrame;
+		if (raf) raf(cb);
+		else window.addEventListener('load', cb);
 
-	<noscript><link href="https://cdn2.bethel.edu/css/fizz.css" rel="stylesheet" /></noscript>
-	
+		var cb2 = function() {
+			var m = document.createElement('link'); m.rel = 'stylesheet';
+			m.href = 'https://cloud.typography.com/6664852/762926/css/fonts.css';
+			var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(m, h);
+		};
+		if (raf) raf(cb2);
+		else window.addEventListener('load', cb2);
+	</script>
+	<noscript><link href="https://cdn2.bethel.edu/css/boots.css" rel="stylesheet" /></noscript>
 </body>
 </html>

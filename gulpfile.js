@@ -6,7 +6,7 @@ var gulp 		= require('gulp'),
 	reload		= browserSync.reload,
 	del 		= require('del'),
 	// svgSprite   = require("gulp-svg-sprites");
-	critical 	= require('critical');
+	critical 	= require('critical').stream;
 	vinylPaths 	= require('vinyl-paths');
 
 var $ = require('gulp-load-plugins')();
@@ -17,7 +17,7 @@ var outputDir = './builds/';
 gulp.task('js', function(){
 	return browserify('./src/js/main')
 		.bundle()
-		.pipe(source('bundle.js'))
+		.pipe(source('boots.js'))
 		.pipe($.streamify($.uglify())) // compress on output
 		.pipe(gulp.dest(outputDir + '/js'));
 });
@@ -98,18 +98,29 @@ gulp.task('copystyles', function () {
         .pipe(gulp.dest(outputDir + 'css'));
 });
 
+// gulp.task('critical', function () {
+// 	return gulp.src([outputDir + '*.html'])
+// 		.pipe(
+// 			critical({
+// 				base: outputDir,
+// 				inline: true,
+// 				css: ['css/fizz.css'],
+// 				// width: 414,
+// 				// height: 736,
+// 			})
+// 		)
+// 		.pipe(gulp.dest(outputDir));
+// });
+
+// Generate & Inline Critical-path CSS
 gulp.task('critical', function () {
-	return gulp.src([outputDir + '*.html'])
-		.pipe(
-			critical({
-				base: outputDir,
-				inline: true,
-				css: ['css/fizz.css'],
-				// width: 414,
-				// height: 736,
-			})
-		)
-		.pipe(gulp.dest(outputDir));
+    return gulp.src(outputDir + '*.html')
+        .pipe(critical({
+        	base: outputDir, 
+        	// inline: true, 
+        	css: [outputDir + '/css/fizz.css']
+        }))
+        .pipe(gulp.dest(outputDir));
 });
 
 // browser-sync task for starting the server
@@ -137,7 +148,7 @@ gulp.task('clean', function () {
 
 gulp.task('build', ['js','styles','images','copyfiles','assemble']);
 
-gulp.task('default', ['js','styles','images','copyfiles','assemble','browser-sync'], function() {
+gulp.task('default', ['js','styles','copyfiles','assemble','browser-sync'], function() {
 	gulp.watch('./src/scss/**/*.scss', ['styles']);
 	gulp.watch('./src/templates/**/*.hbs', ['assemble']);
 	gulp.watch('./src/templates/**/*.json', ['assemble']);

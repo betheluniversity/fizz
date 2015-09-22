@@ -4,31 +4,33 @@
 "variables",
 "mixins",
 
-"base/normalize",
-"base/base",
+// "base/normalize",
+// "base/base",
 "base/fluidity",
 "base/space",
 "base/tables",
 "base/forms",
 
-"typography/typography",
+// "typography/typography",
 
 "grid/flex-grid",
-"grid/layout",
+// "grid/layout",
 
-"global/header",
+// "global/header",
 "global/toolbox",
-"global/navigation",
-"global/breadcrumb",
+// "global/off-canvas--global",
+// "global/navigation",
+// "global/breadcrumb",
 "global/footer",
 
-"school/school__navigation",
+// "school/school__navigation",
 
+"site/off-canvas--site",
 "site/site__title",
 "site/site__features",
 "site/site__image-bank",
 
-"page/page__title",
+// "page/page__title",
 "page/page--home",
 
 "modules/section--apply",
@@ -36,13 +38,13 @@
 "modules/calendar",
 "modules/news",
 "modules/social-media",
-"modules/moving-picture",
+// "modules/moving-picture",
 "modules/section--home",
 
 "enhance/carousel",
 
-"modules/flickity",
-"modules/flickity-custom",
+// "modules/flickity",
+// "modules/flickity-custom",
 
 "enhance/search",
 "enhance/accordion",
@@ -50,10 +52,9 @@
 "enhance/big-steps",
 "enhance/buttons",
 "enhance/date-tag",
-"enhance/off-canvas--global",
-"enhance/off-canvas--site",
 "enhance/parallax",
 "enhance/proof-points",
+"enhance/search",
 "enhance/quotes",
 "enhance/svg-icons",
 "enhance/image-hover",
@@ -61,5 +62,6 @@
 "enhance/odometer",
 "enhance/alerts",
 
+"enhance/clean-up",
 "base/utils"
 ;
