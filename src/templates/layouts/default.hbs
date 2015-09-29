@@ -19,10 +19,10 @@ layout:default
 
 		{{> school__navigation }}
 
-		{{!-- {{> carousel }} --}}
-		<div class="grid-section mt0" >
+
+{{!-- 		<div class="grid-section mt0" >
 		{{> moving-picture }}
-		</div>
+		</div> --}}
 
 
 		<p class="site__title__button" id="js-site__title__button"><a href="#siteNav">☰ In This Section</a></p>
@@ -39,6 +39,8 @@ layout:default
 		    </div>
 		</div>
 
+				{{> section--home__academics }}
+
 		{{> global__footer }}
 
 	</div>
@@ -51,7 +53,7 @@ layout:default
 	        picturefillCFG.push(["algorithm", "saveData"]);
 	        loadJS("https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.0-beta1/picturefill.min.js");
 	    };
-		loadCSS("/css/boots.css", document.getElementById("loadcss"));
+		// loadCSS("/css/boots.css", document.getElementById("loadcss"));
 		loadJS("/js/boots.js");
 		// loadCSS("https://cloud.typography.com/6664852/762926/css/fonts.css", document.getElementById("loadcss"));
 	</script>
@@ -69,7 +71,7 @@ layout:default
 
 		var cb2 = function() {
 			var m = document.createElement('link'); m.rel = 'stylesheet';
-			m.href = 'https://cloud.typography.com/6664852/762926/css/fonts.css';
+			// m.href = 'https://cloud.typography.com/6664852/762926/css/fonts.css';
 			var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(m, h);
 		};
 		if (raf) raf(cb2);
