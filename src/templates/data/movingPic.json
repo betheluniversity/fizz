@@ -7,5 +7,14 @@
 	  "headline" : "Making your Bethel education more affordable.",
 	  "teaser" : "We're committed to not letting cost stand in the way of your life-changing education, so we doubled the amount of Bethel funded scholarships and grants over the last few years to $32 million and reset tuition and aid at the seminary. Talk to your enrollment counselor to find out how financial aid can work for you.",
 	  "button" : "Learn More"
+	},
+	{
+	  "video": "https://www.bethel.edu/_shared-content/videos/Welcome Week 15 BKG Homepage Feature-HD.mp4",
+	  "baseImg": "https://cdn2.bethel.edu/resize/unsafe/375x0/smart/https://www.bethel.edu/_homepages/www/images/feature/affordability-student-2x1.jpg",
+	  "mobileImg" : "https://cdn2.bethel.edu/resize/unsafe/830x0/smart/https://www.bethel.edu/_homepages/www/images/feature/affordability-student-2x1.jpg",
+	  "bigImg" : "https://cdn2.bethel.edu/resize/unsafe/900x0/smart/https://www.bethel.edu/_homepages/www/images/feature/affordability-student-16x9.jpg",
+	  "headline" : "Making your Bethel education more affordable.",
+	  "teaser" : "We're committed to not letting cost stand in the way of your life-changing education, so we doubled the amount of Bethel funded scholarships and grants over the last few years to $32 million and reset tuition and aid at the seminary. Talk to your enrollment counselor to find out how financial aid can work for you.",
+	  "button" : "Learn More"
 	}
 ]
