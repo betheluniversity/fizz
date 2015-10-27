@@ -17,15 +17,9 @@ h1, h2, h3, h4 {
   line-height: 1.2;
 }
 
-h1 {
-  // margin-top: 0;
-  font-size: 1.602em;
-}
-
+h1 {font-size: 1.602em;}
 h2 {font-size: 1.424em;}
-
 h3 {font-size: 1.266em;}
-
 h4 {font-size: 1.125em;}
 
 h1 + p,
@@ -57,12 +51,8 @@ h6, .h6 {
 	// color: $bethel--blue;
 }
 
-h1,
-h2,
-h3 {
-	// line-height: 1.2;
-	// margin-bottom: 0;
-}
+.alpha {font-size: 2rem;}
+.beta {font-size: 3rem;}
 
 // Removes top margin from first header in .main
 .main h2:first-child,
@@ -85,6 +75,13 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+.teaser {
+  font-family: $gotham;
+  font-size: 1.2em;
+  color: #C5A144;
+  font-weight: 400;
 }
 
 .unstyled {

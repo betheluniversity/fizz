@@ -39,7 +39,7 @@ layout:default
 		    </div>
 		</div>
 
-				{{> section--home__academics }}
+				{{!-- {{> section--home__academics }} --}}
 
 		{{> global__footer }}
 
@@ -71,7 +71,7 @@ layout:default
 
 		var cb2 = function() {
 			var m = document.createElement('link'); m.rel = 'stylesheet';
-			// m.href = 'https://cloud.typography.com/6664852/762926/css/fonts.css';
+			m.href = 'https://cloud.typography.com/6664852/762926/css/fonts.css';
 			var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(m, h);
 		};
 		if (raf) raf(cb2);

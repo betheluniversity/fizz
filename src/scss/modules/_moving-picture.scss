@@ -27,9 +27,11 @@
 
 .moving-picture__media {
 	height: 415px;
+	// display: flex;
+	// justify-content: center;
 
 	@include respond-min(830px){
-		position: relative;
+		// position: relative;
 
 		// padding-bottom: 76%;
 		height: auto;
@@ -37,14 +39,32 @@
 	}
 }
 
-.moving-picture__media picture,
+.moving-picture__media picture {
+	width: auto;
+	max-width: none;
+	height: 415px;
+	// display: flex;
+	// justify-content: center;
+	position: absolute;
+	left: -100%;
+	right: -100%;
+
+	@include respond-min(830px){
+		height: auto;
+		position: relative;
+		max-width: 100%;
+		width: 100%;
+		display: block;
+		left: 0;
+		right: 0;
+	}
+}
+
 .moving-picture__media picture img {
 	width: auto;
-	position: absolute;
 	max-width: none;
-	top: 0;
-	right: 0;
 	height: 415px;
+	// flex-shrink: 0;
 
 	@include respond-min(830px){
 		height: auto;

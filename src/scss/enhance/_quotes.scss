@@ -8,12 +8,7 @@
     }
 }
 
-// .carousel--quote .flickity-viewport {
-//     overflow: visible !important;
-// }
-
 .carousel--quote .flickity--cell {
-    // padding: 2em;
     margin-right: 1em;
 }
 
@@ -76,4 +71,21 @@
     @include respond-min($x-large){
         float: left;
     }
+}
+
+.t-marketing-quote {
+
+    .quote__avatar img {
+        border-radius: 50%;
+    }
+
+    .quote__text {
+        font-family: $gotham;
+        color: #777;
+    }
+
+    .quote__text p {
+        font-size: 1.2em;
+    }
+
 }
