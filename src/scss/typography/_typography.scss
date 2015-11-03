@@ -1,15 +1,8 @@
 body {
-  // background-color: white;
-  // font-family: 'Lato', serif;
-  // font-weight: 300;
   line-height: 1.5;
   color: #555;
-  // font-family: $gotham;
-  // font-family: $sentinel;
-  // font-size: 90%;
 }
 
-// p {margin-bottom: 1.3em;}
 
 h1, h2, h3, h4 {
   margin: 1.414em 0 0.5em;
@@ -26,7 +19,6 @@ h1 + p,
 h2 + p,
 h3 + p,
 h4 + p {
-	// background: red;
 	margin-top: 0;
 }
 
@@ -34,9 +26,7 @@ small, .font_small {font-size: 0.889em;}
 
 
 body {
-	// line-height: 1.7;
 	font-family: georgia, serif;
-	// font-weight: 300;
 }
 
 h1, .h1,
@@ -47,14 +37,11 @@ h5, .h5,
 h6, .h6 {
 	font-family: $gotham;
 	font-weight: 500;
-	// color: #666;
-	// color: $bethel--blue;
 }
 
 .alpha {font-size: 2rem;}
 .beta {font-size: 3rem;}
 
-// Removes top margin from first header in .main
 .main h2:first-child,
 .main h3:first-child  {
   margin-top: 0;
