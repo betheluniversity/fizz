@@ -76,15 +76,15 @@ for (var i = 0, len = carousels.length; i < len; i++) {
         cellAlign: 'left'
     });
     
-    flkty.on('cellSelect', function(){
-        isSelected();
-    })
+    // flkty.on('cellSelect', function(){
+    //     isSelected();
+    // })
 };
 
-function onLoadeddata( event ) {
-    var cell = flkty.getParentCell( event.target );
-    flkty.cellSizeChange( cell && cell.element );
-}
+// function onLoadeddata( event ) {
+//     var cell = flkty.getParentCell( event.target );
+//     flkty.cellSizeChange( cell && cell.element );
+// }
 
 
 if( typeof flkty !== 'undefined' ) {
@@ -100,9 +100,9 @@ if( typeof flkty !== 'undefined' ) {
 
 // Checking for 'is-selected' on load
 
-addEvent(window, 'load', function() {
-    isSelected();
-});
+// addEvent(window, 'load', function() {
+//     isSelected();
+// });
 
 // This function needs a double test because some carousels
 // may not have the .lazyload class applied on load. If it already
@@ -130,12 +130,12 @@ function isSelected() {
 
   var videos = flkty.selectedElement.querySelectorAll('video');
 
-  for ( var i=0, len = videos.length; i < len; i++ ) {
-    var video = videos[i];
-    // resume autoplay for WebKit
-    video.play();
-    addEvent( video, 'loadeddata', onLoadeddata );
-  }
+  // for ( var i=0, len = videos.length; i < len; i++ ) {
+  //   var video = videos[i];
+  //   // resume autoplay for WebKit
+  //   video.play();
+  //   addEvent( video, 'loadeddata', onLoadeddata );
+  // }
 
 // Generic addEvent function
 
@@ -157,7 +157,7 @@ var isiPad = navigator.userAgent.match(/iPad/i) != null;
 var isiPhone = navigator.userAgent.match(/iPhone/i) != null;
 window.onload = function() {
     if(window.innerWidth > 1024 && !(isiPhone || isiPad)){
-        var s = skrollr.init();
+        var s = skrollr.init({forceHeight:false});
     }
     // Odometer init
     var odometers = document.getElementsByClassName('odometer');
