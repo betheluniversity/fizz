@@ -16,5 +16,23 @@
 	  "headline" : "Lead with confidence.",
 	  "teaser" : "When you graduate from Bethel, you’ll be prepared to lead with confidence and make a difference in your workplace and community.",
 	  "button" : "Learn More"
+	},
+	{
+	  "video": "https://www.bethel.edu/_shared-content/videos/Welcome Week 15 BKG Homepage Feature-HD.mp4",
+	  "baseImg": "https://cdn2.bethel.edu/resize/unsafe/375x0/smart/https://www.bethel.edu/_homepages/www/images/feature/homecoming-pride-2x1.jpg",
+	  "mobileImg" : "https://cdn3.bethel.edu/resize/unsafe/830x0/smart/https://www.bethel.edu/_homepages/www/images/feature/homecoming-pride-2x1.jpg",
+	  "bigImg" : "https://cdn2.bethel.edu/resize/unsafe/900x0/smart/https://www.bethel.edu/_homepages/www/images/feature/homecoming-pride-16x9.jpg",
+	  "headline" : "Show your pride.",
+	  "teaser" : "We’re proud to be Royals, and we show it in a lot of ways. We cheer loudly, we get decked out for gamedays, and we make homecoming a big deal.",
+	  "button" : "Learn More"
+	},
+	{
+	  "video": "https://www.bethel.edu/_shared-content/videos/Welcome Week 15 BKG Homepage Feature-HD.mp4",
+	  "baseImg": "https://cdn2.bethel.edu/resize/unsafe/375x0/smart/https://www.bethel.edu/_homepages/www/images/feature/seminary-program-changes-2x1.jpg",
+	  "mobileImg" : "https://cdn3.bethel.edu/resize/unsafe/830x0/smart/https://www.bethel.edu/_homepages/www/images/feature/seminary-program-changes-2x1.jpg",
+	  "bigImg" : "https://cdn2.bethel.edu/resize/unsafe/900x0/smart/https://www.bethel.edu/_homepages/www/images/feature/seminary-program-changes-16x9.jpg",
+	  "headline" : "Making Bethel Seminary even more affordable for you.",
+	  "teaser" : "Here, we lead with service to our students, and that’s why we’ve redesigned many of our programs—reducing program time and cost. We promise an excellent educational experience and it's now more affordable and achievable for you.",
+	  "button" : "Learn More"
 	}
 ]

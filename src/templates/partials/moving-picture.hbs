@@ -1,85 +1,37 @@
-<div class="flickity  js-flickity">
-    <div class="flickity--cell">
-        <div class="ratio-box" style="padding-bottom: 42.85% /* calc(75 / 175 * 100%)*/;">
-            <img
-                    src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                    data-srcset="http://lorempixel.com/700/300/sports/cell-1a/ 700w"
-                    data-sizes="auto"
-                    class="lazyload"
-                    />
-        </div>
-    </div>
-    <div class="flickity--cell">
-        <div class="ratio-box" style="padding-bottom: 42.85% /* calc(75 / 175 * 100%)*/;">
-            <img
-                    src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                    data-sizes="auto"
-                    data-srcset="http://lorempixel.com/700/300/sports/cell-1b/ 700w"
-                    class="lazyload" />
-        </div>
-    </div>
-    <div class="flickity--cell">
-        <div class="ratio-box" style="padding-bottom: 42.85% /* calc(75 / 175 * 100%)*/;">
-            <img
-                    src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                    data-sizes="auto"
-                    data-srcset="http://lorempixel.com/700/300/sports/cell-1c/ 700w"
-                    class="lazyload" />
-        </div>
-    </div>
-    <div class="flickity--cell">
-        <div class="ratio-box" style="padding-bottom: 42.85% /* calc(75 / 175 * 100%)*/;">
-            <img
-                    src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                    data-sizes="auto"
-                    data-srcset="http://lorempixel.com/700/300/sports/cell-1d/ 700w"
-                    class="lazyload" />
-        </div>
-    </div>
-    <div class="flickity--cell">
-        <div class="ratio-box" style="padding-bottom: 42.85% /* calc(75 / 175 * 100%)*/;">
-            <img
-                    src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                    data-sizes="auto"
-                    data-srcset="http://lorempixel.com/700/300/sports/cell-1e/ 700w"
-                    class="lazyload" />
-        </div>
-    </div>
-    <div class="flickity--cell">
-        <div class="ratio-box" style="padding-bottom: 42.85% /* calc(75 / 175 * 100%)*/;">
-            <img
-                    src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                    data-sizes="auto"
-                    data-srcset="http://lorempixel.com/700/300/sports/cell-1f/ 700w"
-                    class="lazyload" />
-        </div>
-    </div>
-    <div class="flickity--cell">
-        <div class="ratio-box" style="padding-bottom: 42.85% /* calc(75 / 175 * 100%)*/;">
-            <img
-                    src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                    data-sizes="auto"
-                    data-srcset="http://lorempixel.com/700/300/sports/cell-1g/ 700w"
-                    class="lazyload" />
-        </div>
-    </div>
-    <div class="flickity--cell">
-        <div class="ratio-box" style="padding-bottom: 42.85% /* calc(75 / 175 * 100%)*/;">
-            <img
-                    src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                    data-sizes="auto"
-                    data-srcset="http://lorempixel.com/700/300/sports/cell-1h/ 700w"
-                    class="lazyload" />
-        </div>
-    </div>
-    <div class="flickity--cell">
-        <div class="ratio-box" style="padding-bottom: 42.85% /* calc(75 / 175 * 100%)*/;">
-            <img
-                    src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                    data-sizes="auto"
-                    data-srcset="http://lorempixel.com/700/300/sports/cell-1i/ 700w"
-                    class="lazyload" />
-        </div>
-    </div>
-</div>
+<div class="js-flickity  xjs-rotate-order-carousel  js-load-on-demand  carousel--text-over-media">
 
+{{#each movingPic}}
+
+    <div class="flickity--cell">
+        <div class="ratio-box">
+            <div class="moving-picture">
+                <div class="moving-picture__media">
+{{!--                     <video autoplay="autoplay" style="min-width:100%">
+                        <source src="{{ this.video }}" type="video/mp4">
+                    </video> --}}
+                    <picture>
+                        <!--[if IE 9]><video style="display: none"><![endif]-->
+                        <source srcset="{{ this.bigImg }}" media="(min-width: 830px)" />
+                        <source srcset="{{ this.mobileImg }}" />
+                        <!--[if IE 9]></video><![endif]-->
+                        <img
+                                {{!-- src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" --}}
+                                class="lazyload"
+                                alt="image with artdirection"
+                                data-sizes="auto"
+                        />
+                    </picture>
+                </div>
+
+                <div class="moving-picture__overlay">
+                    <h2 class="moving-picture__overlay__headline">{{  this.headline }}</h2>
+                    <p class="moving-picture__overlay__teaser">{{  this.teaser }}</p> 
+                    <p><a class="moving-picture__overlay__button" href="admissions/index.php">{{ this.button }}</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{{/each}}
+
+</div>

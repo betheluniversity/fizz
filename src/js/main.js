@@ -1,7 +1,7 @@
 // var $ = require("jquery");
 // var domReady = require("../../node_modules/domready");
 var offCanvas = require("./off-canvas.js");
-var Flickity = require("../../node_modules/flickity");
+// var Flickity = require("../../node_modules/flickity");
 var skrollr = require("./skrollr.min.js");
 var bu_animate = require("./bu_animate.js");
 var accordion = require("./accordion.js");
@@ -76,33 +76,28 @@ for (var i = 0, len = carousels.length; i < len; i++) {
         cellAlign: 'left'
     });
     
-    // flkty.on('cellSelect', function(){
-    //     isSelected();
-    // })
+    flkty.on('cellSelect', function(){
+        isSelected();
+    })
 };
 
-// function onLoadeddata( event ) {
-//     var cell = flkty.getParentCell( event.target );
-//     flkty.cellSizeChange( cell && cell.element );
+
+// if( typeof flkty !== 'undefined' ) {
+//     var videos = flkty.selectedElement.querySelectorAll('video');
+
+//     for ( var i=0, len = videos.length; i < len; i++ ) {
+//         var video = videos[i];
+//         // resume autoplay for WebKit
+//         video.play();
+//         addEvent( video, 'loadeddata', onLoadeddata );
+//     }
 // }
-
-
-if( typeof flkty !== 'undefined' ) {
-    var videos = flkty.selectedElement.querySelectorAll('video');
-
-    for ( var i=0, len = videos.length; i < len; i++ ) {
-        var video = videos[i];
-        // resume autoplay for WebKit
-        video.play();
-        addEvent( video, 'loadeddata', onLoadeddata );
-    }
-}
 
 // Checking for 'is-selected' on load
 
-// addEvent(window, 'load', function() {
-//     isSelected();
-// });
+addEvent(window, 'load', function() {
+    isSelected();
+});
 
 // This function needs a double test because some carousels
 // may not have the .lazyload class applied on load. If it already
@@ -111,31 +106,40 @@ if( typeof flkty !== 'undefined' ) {
 function isSelected() {
     var fc = document.querySelectorAll('.js-load-on-demand .flickity--cell');
     for (var i = 0; i < fc.length; i++) {
-      if (fc[i].classList.contains('is-selected')) {
-        if (fc[i].querySelector('img').classList.contains('lazyload')){
-        } else {
-            fc[i].querySelector('img').classList.add('lazyload');
+        if (fc[i].classList.contains('is-selected')) {
+            if (fc[i].querySelector('img').classList.contains('lazyload')){
+                fc[i].querySelector('img').classList.toggle('lazyload');
+                
+
+            } 
+            else {
+                fc[i].querySelector('img').classList.add('lazyload');
+            }
         }
-      };
+        else {
+            var sourceSrcset = fc[i].querySelector('source').setAttribute('data-srcset','');
+            
+            if (sourceSrcset) {};
+        };
     };
 }
 
-  // var gallery = document.querySelector('.flickity');
-  // var flkty = new Flickity( carousels[i] );
-  
-  function onLoadeddata( event ) {
+// var gallery = document.querySelector('.flickity');
+// var flkty = new Flickity( carousels[i] );
+
+function onLoadeddata( event ) {
     var cell = flkty.getParentCell( event.target );
     flkty.cellSizeChange( cell && cell.element );
-  }
+}
 
-  var videos = flkty.selectedElement.querySelectorAll('video');
+// var videos = flkty.selectedElement.querySelectorAll('video');
 
-  // for ( var i=0, len = videos.length; i < len; i++ ) {
-  //   var video = videos[i];
-  //   // resume autoplay for WebKit
-  //   video.play();
-  //   addEvent( video, 'loadeddata', onLoadeddata );
-  // }
+// for ( var i=0, len = videos.length; i < len; i++ ) {
+//     var video = videos[i];
+//     // resume autoplay for WebKit
+//     video.play();
+//     addEvent( video, 'loadeddata', onLoadeddata );
+// }
 
 // Generic addEvent function
 
@@ -157,7 +161,7 @@ var isiPad = navigator.userAgent.match(/iPad/i) != null;
 var isiPhone = navigator.userAgent.match(/iPhone/i) != null;
 window.onload = function() {
     if(window.innerWidth > 1024 && !(isiPhone || isiPad)){
-        var s = skrollr.init({forceHeight:false});
+        var s = skrollr.init();
     }
     // Odometer init
     var odometers = document.getElementsByClassName('odometer');
