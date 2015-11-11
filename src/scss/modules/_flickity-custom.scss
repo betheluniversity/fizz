@@ -19,10 +19,13 @@
 
 .flickity {
     margin: auto;
-    background: transparent url(https://www.bethel.edu/cdn/images/load.gif) no-repeat center;
+    // background-color: #000;
+    // background: transparent url(https://www.bethel.edu/cdn/images/load.gif) no-repeat center;
 }
 
 .flickity-viewport {
+    background-color: #000;
+
     @include respond-min(830px){
         max-height: 75vh;
     }
