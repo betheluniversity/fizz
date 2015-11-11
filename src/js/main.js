@@ -117,9 +117,11 @@ function isSelected() {
             }
         }
         else {
-            var sourceSrcset = fc[i].querySelector('source').setAttribute('data-srcset','');
+            var sourceSrcset = fc[i].querySelector('source');
             
             if (sourceSrcset) {};
+
+            console.log(sourceSrcset.innerHTML);
         };
     };
 }
