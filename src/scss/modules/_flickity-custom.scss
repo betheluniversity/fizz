@@ -24,7 +24,6 @@
 }
 
 .flickity-viewport {
-    background-color: #000;
 
     @include respond-min(830px){
         max-height: 75vh;
