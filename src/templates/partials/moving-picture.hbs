@@ -1,4 +1,4 @@
-<div class="js-flickity  xjs-rotate-order-carousel  js-load-on-demand  carousel--text-over-media">
+<div class="js-flickity  xjs-rotate-order-carousel  xjs-load-on-demand  carousel--text-over-media">
 
 {{#each movingPic}}
 
@@ -11,14 +11,14 @@
                     </video> --}}
                     <picture>
                         <!--[if IE 9]><video style="display: none"><![endif]-->
-                        <source srcset="{{ this.bigImg }}" media="(min-width: 830px)" />
-                        <source srcset="{{ this.mobileImg }}" />
+                        <source data-srcset="{{ this.bigImg }}" media="(min-width: 830px)" />
+                        <source data-srcset="{{ this.mobileImg }}" />
                         <!--[if IE 9]></video><![endif]-->
                         <img
-                                {{!-- src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" --}}
-                                class="lazyload"
-                                alt="image with artdirection"
-                                data-sizes="auto"
+                            src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                            class="lazyload"
+                            alt="image with artdirection"
+                            data-sizes="auto"
                         />
                     </picture>
                 </div>

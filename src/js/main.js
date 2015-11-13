@@ -108,7 +108,6 @@ function isSelected() {
     for (var i = 0; i < fc.length; i++) {
         if (fc[i].classList.contains('is-selected')) {
             if (fc[i].querySelector('img').classList.contains('lazyload')){
-                fc[i].querySelector('img').classList.toggle('lazyload');
                 
 
             } 
@@ -117,11 +116,13 @@ function isSelected() {
             }
         }
         else {
-            var sourceSrcset = fc[i].querySelector('source');
-            
-            if (sourceSrcset) {};
-
-            console.log(sourceSrcset.innerHTML);
+            //     fc[i].querySelector('img').classList.toggle('lazyload');
+            // var sourceSrcset = fc[i].querySelector('source');
+            // // var img = sourceSrcset[i];
+            // var wut = sourceSrcset.getAttribute('srcset');
+            // sourceSrcset.setAttribute('data-srcset',wut);
+            // // sourceSrcset.srcset ='data-'+sourceSrcset;
+            // console.log(sourceSrcset);
         };
     };
 }
