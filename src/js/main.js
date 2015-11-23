@@ -4,10 +4,13 @@ var offCanvas = require("./off-canvas.js");
 // var Flickity = require("../../node_modules/flickity");
 var skrollr = require("./skrollr.min.js");
 var bu_animate = require("./bu_animate.js");
+var Odometer = require("./odometer.min.js");
 var accordion = require("./accordion.js");
 var responsiveTables = require("./responsive-tables.js");
-var Odometer = require("./odometer.min.js");
 var svg4everybody = require("../../node_modules/svg4everybody");
+var lazysizesParentFit = require("./lazysizesParentFit.js");
+var lazysizesBgset = require("./lazysizesBgset.js");
+
 
 // Select a random image from the carousel to appear first
 
@@ -71,93 +74,30 @@ for (var i = 0, len = carousels.length; i < len; i++) {
         // imagesLoaded: true,
         initialIndex: local_initial_load,
         pageDots:false,
-        percentPosition:false,
+        // percentPosition:false,
         draggable: false,
         cellAlign: 'left'
     });
-    
-    flkty.on('cellSelect', function(){
-        isSelected();
-    })
 };
-
-
-// if( typeof flkty !== 'undefined' ) {
-//     var videos = flkty.selectedElement.querySelectorAll('video');
-
-//     for ( var i=0, len = videos.length; i < len; i++ ) {
-//         var video = videos[i];
-//         // resume autoplay for WebKit
-//         video.play();
-//         addEvent( video, 'loadeddata', onLoadeddata );
-//     }
-// }
-
-// Checking for 'is-selected' on load
-
-addEvent(window, 'load', function() {
-    isSelected();
-});
-
-// This function needs a double test because some carousels
-// may not have the .lazyload class applied on load. If it already
-// has the class, we don't want to remove it
-
-function isSelected() {
-    var fc = document.querySelectorAll('.js-load-on-demand .flickity--cell');
-    for (var i = 0; i < fc.length; i++) {
-        if (fc[i].classList.contains('is-selected')) {
-            if (fc[i].querySelector('img').classList.contains('lazyload')){
-                
-
-            } 
-            else {
-                fc[i].querySelector('img').classList.add('lazyload');
-            }
-        }
-        else {
-            //     fc[i].querySelector('img').classList.toggle('lazyload');
-            // var sourceSrcset = fc[i].querySelector('source');
-            // // var img = sourceSrcset[i];
-            // var wut = sourceSrcset.getAttribute('srcset');
-            // sourceSrcset.setAttribute('data-srcset',wut);
-            // // sourceSrcset.srcset ='data-'+sourceSrcset;
-            // console.log(sourceSrcset);
-        };
-    };
-}
-
-// var gallery = document.querySelector('.flickity');
-// var flkty = new Flickity( carousels[i] );
 
 function onLoadeddata( event ) {
     var cell = flkty.getParentCell( event.target );
     flkty.cellSizeChange( cell && cell.element );
 }
 
-// var videos = flkty.selectedElement.querySelectorAll('video');
+  // var gallery = document.querySelector('.flickity');
+  // var flkty = new Flickity( carousels[i] );
 
-// for ( var i=0, len = videos.length; i < len; i++ ) {
-//     var video = videos[i];
-//     // resume autoplay for WebKit
-//     video.play();
-//     addEvent( video, 'loadeddata', onLoadeddata );
-// }
+if( typeof flkty !== 'undefined' ) {
+  var videos = flkty.selectedElement.querySelectorAll('video');
 
-// Generic addEvent function
-
-function addEvent(obj, type, fn) {
-  if (obj.addEventListener)
-    obj.addEventListener(type, fn, false);
-  else if (obj.attachEvent) {
-    obj["e" + type + fn] = fn;
-    obj[type + fn] = function() {
-      obj["e" + type + fn](window.event);
-    }
-    obj.attachEvent("on" + type, obj[type + fn]);
+  for ( var i=0, len = videos.length; i < len; i++ ) {
+    var video = videos[i];
+    // resume autoplay for WebKit
+    video.play();
+    addEvent( video, 'loadeddata', onLoadeddata );
   }
 }
-
 
 // Skrollr init
 var isiPad = navigator.userAgent.match(/iPad/i) != null;

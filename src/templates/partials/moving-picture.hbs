@@ -1,4 +1,4 @@
-<div class="js-flickity  xjs-rotate-order-carousel  xjs-load-on-demand  carousel--text-over-media">
+<div class="flickity  js-rotate-order-carousel  carousel--text-over-media">
 
 {{#each movingPic}}
 
@@ -15,14 +15,15 @@
                         <source data-srcset="{{ this.mobileImg }}" />
                         <!--[if IE 9]></video><![endif]-->
                         <img
-                            src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                            {{!-- src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" --}}
+                            {{!-- src="{{ this.mobileImg }}" --}}
                             class="lazyload"
                             alt="image with artdirection"
                             data-sizes="auto"
                         />
                     </picture>
                 </div>
-
+ 
                 <div class="moving-picture__overlay">
                     <h2 class="moving-picture__overlay__headline">{{  this.headline }}</h2>
                     <p class="moving-picture__overlay__teaser">{{  this.teaser }}</p> 
