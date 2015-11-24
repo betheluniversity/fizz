@@ -1,7 +1,7 @@
 // var $ = require("jquery");
 // var domReady = require("../../node_modules/domready");
 var offCanvas = require("./off-canvas.js");
-var Flickity = require("../../node_modules/flickity");
+// var Flickity = require("../../node_modules/flickity");
 var skrollr = require("./skrollr.min.js");
 var bu_animate = require("./bu_animate.js");
 var accordion = require("./accordion.js");
