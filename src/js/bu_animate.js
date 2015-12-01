@@ -84,7 +84,10 @@ var fadeIn = function(documentObject){
         }, 100);
         window.onscroll = function(){markScroll()};
         //trigger once if the odometers are in view on load
-        doAnimations();
+        //set on a delay so page has time to fully load before animation starts
+        setTimeout(function(){
+            doAnimations();
+        },1000);
     }
 
     })();
