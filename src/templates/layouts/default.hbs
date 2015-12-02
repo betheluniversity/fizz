@@ -49,6 +49,7 @@ layout:default
 
 	<script>
 	    function loadJS(u) {var r = document.getElementsByTagName("script")[0], s = document.createElement("script"); s.src = u; r.parentNode.insertBefore(s, r); }
+		loadJS("/js/boots.js");
 	    if (!window.HTMLPictureElement) {
 	        document.createElement('picture');
 	        window.picturefillCFG = window.picturefillCFG || [];
@@ -56,7 +57,6 @@ layout:default
 	        loadJS("https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.1/picturefill.min.js");
 	    };
 		// loadCSS("/css/boots.css", document.getElementById("loadcss"));
-		loadJS("/js/boots.js");
 		// loadCSS("https://cloud.typography.com/6664852/762926/css/fonts.css", document.getElementById("loadcss"));
 	</script>
 

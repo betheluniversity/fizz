@@ -1,27 +1,29 @@
 .carousel--quote,
 .carousel--employee {
-    // padding: 0 3em;
-    height: 100%;
+    padding: 2em;
+    // height: 100%;
+    background-color: #fff;
 
     @include respond-min($medium){
-        // padding: 0 4em;
+        padding: 3em;
     }
 }
 
-.carousel--quote .flickity--cell {
-    margin-right: 1em;
-}
+// .carousel--quote .flickity--cell,
+// .carousel--employee .flickity--cell {
+//     margin-right: 1em;
+// }
 
 .carousel--quote,
 .carousel--employee {
-    background: #fff;
-    margin-bottom: 2em;
-    padding: 2em 3em;
-    position: relative;
+    // background: #fff;
+//     margin-bottom: 2em;
+//     padding: 2em 3em;
+//     position: relative;
 
-    @include respond-min($large){
-        padding: 3em 4em;
-    }
+//     @include respond-min($large){
+//         padding: 3em 4em;
+//     }
 
     /* arrow color */
     .flickity-prev-next-button .arrow {
@@ -30,62 +32,50 @@
     .flickity-prev-next-button.no-svg {
       color: $bethel--blue;
     }
+}
 
-    // .slick-next,.slick-prev {
-    //     background: $bethel--blue;
-    //     border: 0;
-    //     position: absolute;
-    //     top: 50%;
-    // }
+.quote {
+    margin: 0 1em;
 
-    // .slick-prev {
-    //     left: 0;
-    // }
-
-    // .slick-next {
-    //     right: 0;
-    // }
+    @include respond-min($medium){
+        display: flex;
+        flex: 1;
+        flex-shrink: 0;
+        flex-direction: row;
+    }
 }
 
 .quote__text {
     // font-family: "Gotham A", "Gotham B";
-    font-weight: 400;
-    font-style:normal;
+    // font-weight: 400;
+    // font-style:normal;
+    flex: 1;
 }
 
-.quote__avatar + .quote__text {
-    @include respond-min($x-large){
-        margin-left: 10em;
-    }
-}
+// .quote__avatar + .quote__text {
+//     @include respond-min($x-large){
+//         margin-left: 10em;
+//     }
+// }
 
 .quote__avatar {
     // border-radius: 50%;
-    overflow:hidden;
-    line-height:0;
+    // overflow:hidden;
+    // line-height:0;
     width: 8em;
     height: 8em;
-    margin: 0 auto 1em;
-    // background: #777;can 
+    margin: 0 auto 2em;
+    // background: #777;
 
-    @include respond-min($x-large){
-        float: left;
+    @include respond-min($medium){
+        flex-basis: 8em;
+        // float: left;
+        // flex-shrink: 0;
+        padding-right: 2em;
+        margin-bottom: 0;
     }
 }
 
-.t-marketing-quote {
-
-    .quote__avatar img {
-        border-radius: 50%;
-    }
-
-    .quote__text {
-        font-family: $gotham;
-        color: #777;
-    }
-
-    .quote__text p {
-        font-size: 1.2em;
-    }
-
+.quote__avatar img {
+    border-radius: 50%;
 }
