@@ -87,7 +87,7 @@ var fadeIn = function(documentObject){
         //set on a delay so page has time to fully load before animation starts
         setTimeout(function(){
             doAnimations();
-        },1000);
+        },1500);
     }
 
     })();
