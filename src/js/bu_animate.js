@@ -93,6 +93,7 @@ function checkForSkrollr(){
                 didScroll = false;
             }
         }, 100);
+        window.onscroll = function(){markScroll()};
         //trigger once if the odometers are in view on load
         checkForSkrollr();
     }
