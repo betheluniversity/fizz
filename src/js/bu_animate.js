@@ -72,6 +72,17 @@ var fadeIn = function(documentObject){
     }
 };
 
+function checkForSkrollr(){
+    if(document.readyState === "complete"){
+        doAnimations();
+    }else{
+        setTimeout(function(){
+            checkForSkrollr();
+        },500);
+    }
+    
+}
+
 (function () {
     //noAnimation proofs still need to fade in when scrolled to
     if (document.getElementsByClassName('odometer').length > 0 || document.getElementsByClassName('noAnimationProof').length > 0) {
@@ -82,12 +93,8 @@ var fadeIn = function(documentObject){
                 didScroll = false;
             }
         }, 100);
-        window.onscroll = function(){markScroll()};
         //trigger once if the odometers are in view on load
-        //set on a delay so page has time to fully load before animation starts
-        setTimeout(function(){
-            doAnimations();
-        },1500);
+        checkForSkrollr();
     }
 
-    })();
+})();
