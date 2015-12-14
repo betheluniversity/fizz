@@ -20,9 +20,9 @@ layout:default
 		{{!-- {{> school__navigation }} --}}
 
 
-		<div class="grid-section mt0" >
+{{!-- 		<div class="grid-section mt0" >
 		{{> moving-picture }}
-		</div>
+		</div> --}}
 
 
 		<p class="site__title__button" id="js-site__title__button"><a href="#siteNav">☰ In This Section</a></p>
@@ -45,7 +45,7 @@ layout:default
 
 	</div>
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.1.0/flickity.pkgd.min.js"></script>	
+	{{!-- // <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.1.0/flickity.pkgd.min.js"></script>	 --}}
 
 	<script>
 	    function loadJS(u) {var r = document.getElementsByTagName("script")[0], s = document.createElement("script"); s.src = u; r.parentNode.insertBefore(s, r); }
@@ -63,7 +63,7 @@ layout:default
 	<script>
 		var cb = function() {
 			var l = document.createElement('link'); l.rel = 'stylesheet';
-			l.href = 'css/boots.css';
+			// l.href = 'css/boots.css';
 			var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
 		};
 		var raf = requestAnimationFrame || mozRequestAnimationFrame ||
