@@ -37,7 +37,7 @@
 .quote {
     margin: 0 1em;
 
-    @include respond-min($medium){
+    @include respond-min($x-large){
         display: flex;
         flex: 1;
         flex-shrink: 0;
@@ -67,7 +67,7 @@
     margin: 0 auto 2em;
     // background: #777;
 
-    @include respond-min($medium){
+    @include respond-min($x-large){
         flex-basis: 8em;
         // float: left;
         // flex-shrink: 0;
