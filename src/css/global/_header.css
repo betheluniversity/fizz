@@ -45,12 +45,14 @@
       display: none;
     }
 }
+
 .burger-icon {
     content: "";
     display: block;
     width: 1em;
     box-shadow: 0 6px 0 1px #fff,0 12px 0 1px #fff,0 18px 0 1px #fff;
 }
+
 .burger-text {
     margin-left: 1.5em;
     color: #fff;

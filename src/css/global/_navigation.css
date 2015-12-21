@@ -125,3 +125,11 @@
 .quick-links li a {
     color: #ccc;
 }
+
+.quick-links--search {
+    margin-top: 1em;
+
+    @include respond-min($navToggle){
+        margin-top: 0;
+    }
+}

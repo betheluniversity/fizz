@@ -25,7 +25,7 @@ var outputDir = './builds/';
 gulp.task('js', function(){
 	return browserify('./src/js/main')
 		.bundle()
-		.pipe(source('bundle.js'))
+		.pipe(source('boots.js'))
 		.pipe($.streamify($.uglify())) // compress on output
 		.pipe(gulp.dest(outputDir + '/js'));
 });
@@ -118,18 +118,29 @@ gulp.task('copystyles', function () {
         .pipe(gulp.dest(outputDir + 'css'));
 });
 
+// gulp.task('critical', function () {
+// 	return gulp.src([outputDir + '*.html'])
+// 		.pipe(
+// 			critical({
+// 				base: outputDir,
+// 				inline: true,
+// 				css: ['css/fizz.css'],
+// 				// width: 414,
+// 				// height: 736,
+// 			})
+// 		)
+// 		.pipe(gulp.dest(outputDir));
+// });
+
+// Generate & Inline Critical-path CSS
 gulp.task('critical', function () {
-	return gulp.src([outputDir + '*.html'])
-		.pipe(
-			critical({
-				base: outputDir,
-				inline: true,
-				css: ['css/fizz.css'],
-				// width: 414,
-				// height: 736,
-			})
-		)
-		.pipe(gulp.dest(outputDir));
+    return gulp.src(outputDir + '*.html')
+        .pipe(critical({
+        	base: outputDir, 
+        	// inline: true, 
+        	css: [outputDir + '/css/fizz.css']
+        }))
+        .pipe(gulp.dest(outputDir));
 });
 
 // browser-sync task for starting the server

@@ -1,4 +1,8 @@
 
+.u-w100 {
+	width: 100% !important;
+}
+
 .bkg--white {
 	background-color: #fff;
 }

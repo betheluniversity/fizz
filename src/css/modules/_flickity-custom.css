@@ -1,40 +1,187 @@
+.carousel-constrain {
+    max-width: 1200px;
+    margin: 0 auto;
 
+    @include respond-min($medium){
+        padding: 0 1em;
+    }
 
-.flickity--cell {
-    width: 100%;
-    overflow: hidden;
+    @include respond-min($large){
+        padding: 0 3em;
+    }
+
+    .moving-picture {
+        @include respond-min(1200px){
+            height: 639px;
+        }
+    }
 }
 
-.flickity .flickity--cell {
-    visibility: hidden;
+.flickity {
+    margin: auto;
+    // background-color: #000;
+    // background: transparent url(https://www.bethel.edu/cdn/images/load.gif) no-repeat center;
 }
+
+.flickity-viewport {
+
+    @include respond-min(830px){
+        max-height: 75vh;
+    }
+}
+
+.flickity.flickity-enabled {
+    // background: none;
+}
+
+
 
 .flickity-enabled .flickity--cell {
     visibility: visible;
+    // background: none;
+
+}
+
+.is-selected {
+    z-index: 2;
+}
+
+.flickity--cell {
+    visibility: hidden;
+    width: 100%;
+    // background:#333;  
+    overflow: hidden;
+}
+
+.flickity--cell img {
+    display: block;
+    max-height: 100%;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+// .carousel--employee .flickity--cell img {
+//     visibility: hidden;
+// }
+
+// .carousel--employee .flickity--cell img.lazyloaded {
+//     visibility: visible;
+// }
+
+.carousel--text-over-media .ratio-box
+ {
+    position: relative;
+    height: 415px;
+    display: block;
+    width: 100%;
+}
+
+.carousel--image-bank .ratio-box
+ {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.carousel--text-over-media .ratio-box > *,
+.carousel--image-bank .ratio-box > *  {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+
+    @include respond-min(830px){
+        max-height: 75vh;
+    }
+}
+
+.carousel--text-over-media .ratio-box{
+    padding-bottom: 50%;
+
+    @include respond-min(830px){
+        padding-bottom: 56.25%;
+    }
+}
+
+.carousel--image-bank .ratio-box {
+    padding-bottom: 33.2361516%;
+}
+
+.lazyload {
+    opacity: 0;
+}
+
+.lazyloading {
+    opacity: 1;
+    transition: 600ms opacity;
+    min-height: 60px;
+}
+
+.lazyloaded {
+    opacity: 1;
+    transition: 100ms opacity;
+}
+
+
+/* =====================
+Styles for the big carousel on bethel.edu 
+======================== */
+
+.flickity--home {
+    height: 415px;
+    // max-height: 80vh;
+
+    @include respond-min(830px){
+        height: 100%;
+    }
+
+    .flickity-viewport {
+
+        @include respond-max(829px){
+           height: 100% !important;
+       }
+   }
 }
 
 /* buttons, no circle */
 .flickity-prev-next-button {
-  width: 40px;
-  height: 40px;
-  background: transparent;
-  opacity: 0.6;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    opacity: 0.6;
 }
+
 .flickity-prev-next-button:hover {
-  background: transparent;
-  opacity: 1;
+    background: transparent;
+    opacity: 1;
 }
+
 /* arrow color */
 .flickity-prev-next-button .arrow {
-  fill: white;
+    fill: white;
 }
+
 .flickity-prev-next-button.no-svg {
-  color: white;
+    color: white;
 }
-/* closer to edge */
-.flickity-prev-next-button.previous { left: 0; }
-.flickity-prev-next-button.next { right: 0; }
-/* hide disabled button */
+
+.flickity-prev-next-button.previous { 
+    left: 0em; 
+
+    @include respond-min(830px){
+        left: 1em;
+    }
+}
+.flickity-prev-next-button.next { 
+    right: 0em; 
+
+    @include respond-min(830px){
+        right: 1em;
+    }
+}
+
 .flickity-prev-next-button:disabled {
-  display: none;
+    display: none;
 }

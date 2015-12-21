@@ -1,37 +1,38 @@
 [
 	{
-	  "baseImg": "https://cdn2.bethel.edu/resize/unsafe/375x0/smart/https://www.bethel.edu/_homepages/www/images/feature/affordability-student-2x1.jpg",
-	  "mobileImg" : "https://cdn2.bethel.edu/resize/unsafe/830x0/smart/https://www.bethel.edu/_homepages/www/images/feature/affordability-student-2x1.jpg",
-	  "bigImg" : "https://cdn2.bethel.edu/resize/unsafe/900x0/smart/https://www.bethel.edu/_homepages/www/images/feature/affordability-student-16x9.jpg",
-	  "headline" : "Making your Bethel education more affordable.",
-	  "teaser" : "We're committed to not letting cost stand in the way of your life-changing education, so we doubled the amount of Bethel funded scholarships and grants over the last few years to $32 million and reset tuition and aid at the seminary. Talk to your enrollment counselor to find out how financial aid can work for you.",
+	  "video": "https://www.bethel.edu/_shared-content/videos/Welcome Week 15 BKG Homepage Feature-HD.mp4",
+	  "baseImg": "https://cdn2.bethel.edu/resize/unsafe/375x0/smart/https://www.bethel.edu/_homepages/www/images/feature/find-calling-2x1.jpg",
+	  "mobileImg" : "https://cdn2.bethel.edu/resize/unsafe/830x0/smart/https://www.bethel.edu/_homepages/www/images/feature/find-calling-2x1.jpg",
+	  "bigImg" : "https://cdn2.bethel.edu/resize/unsafe/900x0/smart/https://www.bethel.edu/_homepages/www/images/feature/find-calling-16x9.jpg 900w, https://cdn2.bethel.edu/resize/unsafe/1300x0/smart/https://www.bethel.edu/_homepages/www/images/feature/find-calling-16x9.jpg 1300w ",
+	  "headline" : "Find your calling.",
+	  "teaser" : "People come to Bethel with many different career goals—engineer, scientist, doctor, teacher, marketer, philosopher. Whatever career path God calls you to follow, we have top rated programs to help you reach your goals.",
+	  "button" : "Apply Now"
+	},
+	{
+	  "video": "https://www.bethel.edu/_shared-content/videos/Welcome Week 15 BKG Homepage Feature-HD.mp4",
+	  "baseImg": "https://cdn2.bethel.edu/resize/unsafe/375x0/smart/https://www.bethel.edu/_homepages/www/images/feature/lead-confidence-2x1.jpg",
+	  "mobileImg" : "https://cdn3.bethel.edu/resize/unsafe/830x0/smart/https://www.bethel.edu/_homepages/www/images/feature/lead-confidence-2x1.jpg",
+	  "bigImg" : "https://cdn2.bethel.edu/resize/unsafe/900x0/smart/https://www.bethel.edu/_homepages/www/images/feature/lead-confidence-16x9.jpg, https://cdn2.bethel.edu/resize/unsafe/1300x0/smart/https://www.bethel.edu/_homepages/www/images/feature/lead-confidence-16x9.jpg",
+	  "headline" : "Lead with confidence.",
+	  "teaser" : "When you graduate from Bethel, you’ll be prepared to lead with confidence and make a difference in your workplace and community.",
 	  "button" : "Learn More"
 	},
-
 	{
-	  "baseImg": "https://cdn2.bethel.edu/resize/unsafe/375x0/smart/https://www.bethel.edu/_homepages/www/images/feature/best-professors-2x1.jpg",
-	  "mobileImg" : "https://cdn2.bethel.edu/resize/unsafe/830x0/smart/https://www.bethel.edu/_homepages/www/images/feature/best-professors-2x1.jpg",
-	  "bigImg" : "https://cdn2.bethel.edu/resize/unsafe/900x0/smart/https://www.bethel.edu/_homepages/www/images/feature/best-professors-16x9.jpg",
-	  "headline" : "Really Making your Bethel education more affordable.",
-	  "teaser" : "We're committed to not letting cost stand in the way of your life-changing education, so we doubled the amount of Bethel funded scholarships and grants over the last few years to $32 million and reset tuition and aid at the seminary. Talk to your enrollment counselor to find out how financial aid can work for you.",
+	  "video": "https://www.bethel.edu/_shared-content/videos/Welcome Week 15 BKG Homepage Feature-HD.mp4",
+	  "baseImg": "https://cdn2.bethel.edu/resize/unsafe/375x0/smart/https://www.bethel.edu/_homepages/www/images/feature/homecoming-pride-2x1.jpg",
+	  "mobileImg" : "https://cdn3.bethel.edu/resize/unsafe/830x0/smart/https://www.bethel.edu/_homepages/www/images/feature/homecoming-pride-2x1.jpg",
+	  "bigImg" : "https://cdn2.bethel.edu/resize/unsafe/900x0/smart/https://www.bethel.edu/_homepages/www/images/feature/homecoming-pride-16x9.jpg",
+	  "headline" : "Show your pride.",
+	  "teaser" : "We’re proud to be Royals, and we show it in a lot of ways. We cheer loudly, we get decked out for gamedays, and we make homecoming a big deal.",
 	  "button" : "Learn More"
 	},
-
 	{
-	  "baseImg": "https://cdn2.bethel.edu/resize/unsafe/375x0/smart/https://www.bethel.edu/_homepages/www/images/feature/seminary-theology-2x1.jpg",
-	  "mobileImg" : "https://cdn2.bethel.edu/resize/unsafe/830x0/smart/https://www.bethel.edu/_homepages/www/images/feature/seminary-theology-2x1.jpg",
-	  "bigImg" : "https://cdn2.bethel.edu/resize/unsafe/900x0/smart/https://www.bethel.edu/_homepages/www/images/feature/seminary-theology-16x9.jpg",
-	  "headline" : "We live our beliefs inside and outside the classroom.",
-	  "teaser" : "Join a community of people who love to ask important questions, talk about their faith, and learn from each other’s perspectives.",
-	  "button" : "Learn More about Bethel Seminary"
-	},
-
-	{
-	  "baseImg": "https://cdn2.bethel.edu/resize/unsafe/375x0/smart/https://www.bethel.edu/_homepages/www/images/feature/practice-passion-2x1.jpg",
-	  "mobileImg" : "https://cdn2.bethel.edu/resize/unsafe/830x0/smart/https://www.bethel.edu/_homepages/www/images/feature/practice-passion-2x1.jpg",
-	  "bigImg" : "https://cdn2.bethel.edu/resize/unsafe/900x0/smart/https://www.bethel.edu/_homepages/www/images/feature/practice-passion-16x9.jpg",
-	  "headline" : "Practice because you love to.",
-	  "teaser" : "At Bethel, we make the extra effort to be great. Because when you love what you do, it’s not work.",
-	  "button" : "Follow your passion"
+	  "video": "https://www.bethel.edu/_shared-content/videos/Welcome Week 15 BKG Homepage Feature-HD.mp4",
+	  "baseImg": "https://cdn2.bethel.edu/resize/unsafe/375x0/smart/https://www.bethel.edu/_homepages/www/images/feature/physician-assistant-exam-2x1.jpg",
+	  "mobileImg" : "https://cdn3.bethel.edu/resize/unsafe/830x0/smart/https://www.bethel.edu/_homepages/www/images/feature/physician-assistant-exam-2x1.jpg",
+	  "bigImg" : "https://cdn1.bethel.edu/resize/unsafe/800x0/smart/https://www.bethel.edu/_homepages/www/images/feature/physician-assistant-exam-16x9.jpg 800w, https://cdn3.bethel.edu/resize/unsafe/900x0/smart/https://www.bethel.edu/_homepages/www/images/feature/physician-assistant-exam-16x9.jpg 900w, https://cdn2.bethel.edu/resize/unsafe/1000x0/smart/https://www.bethel.edu/_homepages/www/images/feature/physician-assistant-exam-16x9.jpg 1000w, https://cdn3.bethel.edu/resize/unsafe/1100x0/smart/https://www.bethel.edu/_homepages/www/images/feature/physician-assistant-exam-16x9.jpg 1100w, https://cdn3.bethel.edu/resize/unsafe/1200x0/smart/https://www.bethel.edu/_homepages/www/images/feature/physician-assistant-exam-16x9.jpg 1200w, https://cdn1.bethel.edu/resize/unsafe/1300x0/smart/https://www.bethel.edu/_homepages/www/images/feature/physician-assistant-exam-16x9.jpg 1300w, https://cdn1.bethel.edu/resize/unsafe/1400x0/smart/https://www.bethel.edu/_homepages/www/images/feature/physician-assistant-exam-16x9.jpg 1400w, https://cdn1.bethel.edu/resize/unsafe/1500x0/smart/https://www.bethel.edu/_homepages/www/images/feature/physician-assistant-exam-16x9.jpg 1500w, https://cdn2.bethel.edu/resize/unsafe/1600x0/smart/https://www.bethel.edu/_homepages/www/images/feature/physician-assistant-exam-16x9.jpg 1600w,         ",
+	  "headline" : "Preparing students for excellence.",
+	  "teaser" : "Here, we lead with service to our students, and that’s why we’ve redesigned many of our programs—reducing program time and cost. We promise an excellent educational experience and it's now more affordable and achievable for you.",
+	  "button" : "Learn More"
 	}
 ]
