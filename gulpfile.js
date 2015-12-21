@@ -15,7 +15,7 @@ var gulp 		= require('gulp'),
     mixins		= require('postcss-mixins'),
     vars		= require('postcss-simple-vars'),
     postcssImport	= require('postcss-import'),
-    autoprefixer= require('autoprefixer-core');
+    autoprefixer= require('autoprefixer');
 
 var $ = require('gulp-load-plugins')();
 
