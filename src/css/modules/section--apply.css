@@ -1,0 +1,36 @@
+.section--apply {
+	background: $bethel--yellow;
+	background: #fff;
+}
+
+.section--apply__unit {
+
+	a {
+		padding: 1.5em 1em 1em;
+		display: block;
+
+		@include respond-min($medium){
+			padding-bottom: 2.5em 1em 2em;
+		}
+
+		@include respond-min($large){
+			padding: 2.5em 1em 2em;
+		}
+	}
+
+	a:hover {
+		background: #f9f9f9;
+	}
+}
+
+	svg {
+		width:2.5em;
+		height:2.5em;
+		fill:#0069aa;
+		margin-bottom:1em;
+
+		@include respond-min($medium){
+			width: 3em;
+			height: 3em;
+		}
+	}

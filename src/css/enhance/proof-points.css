@@ -1,0 +1,51 @@
+.proof-points {
+    color: #fff;
+
+    .grid-cell {
+        background: $bethel--navy;
+        padding: 1em;
+        border-radius: 5px;
+        margin: 1em;
+
+        @include respond-min($medium){
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 1;
+        }
+
+    }
+
+    @include respond-min($medium){
+        [class*='grid-pad'] {
+            flex: 1;
+        }
+    }
+}
+
+.proof-point__text {
+    margin-bottom: .75em;
+    color: rgba(#fff, .8);
+    font-family: "Helvetica Neue",Helvetica,Arial,sans;
+    text-align: center;
+}
+
+.proof-point__number {
+    font-size: 2.5rem;
+    line-height: 1;
+    color: #fff;
+    /* font-family: Georgia, serif;*/
+    display: inline-block;
+    margin-bottom: .25em;
+    white-space: nowrap;
+
+    @include respond-min($medium){
+    	font-size: 3rem;
+    }
+
+}
+
+.proof-point__cite {
+    font-size: .8rem;
+    color: rgba(#fff, .8);
+}

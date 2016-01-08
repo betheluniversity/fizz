@@ -1,0 +1,26 @@
+#map_canvas {
+	height: auto;
+	width: auto;
+	min-height: 300px;
+	min-width: 290px;
+	margin: 2em 0;
+
+	@include respond-min($medium){
+		min-height: 350px;
+	}
+
+	@include respond-min($large){
+		min-height: 400px;
+	}
+
+	@include respond-min($x-large){
+		min-height: 500px;
+	}
+}
+
+#map_select,
+#loc_select,
+#office_select,
+#parking_select {
+	margin-bottom: .25em;
+}

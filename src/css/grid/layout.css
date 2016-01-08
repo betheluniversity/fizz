@@ -1,0 +1,36 @@
+.inner {
+  max-width: 75em;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden; /* added to hide title in mobile when off canvas is activated */
+
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  @include respond-min($navToggle){
+      padding-left: 2rem;
+      padding-right: 2rem;
+  }
+
+  @include respond-min(60em){
+      padding-left: 3rem;
+      padding-right: 3rem;
+  }  
+}
+
+.inner--content {
+  max-width: 75em;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+
+  @include respond-min($navToggle){
+      padding-left: 2rem;
+      padding-right: 2rem;
+  }
+
+  @include respond-min(60em){
+      padding-left: 3rem;
+      padding-right: 3rem;
+  }
+}

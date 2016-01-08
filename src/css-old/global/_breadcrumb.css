@@ -1,0 +1,36 @@
+.breadcrumb {
+  font-family: $gotham;
+  font-size: .7em;
+  font-weight: 400;
+  margin-top: 1em;
+  padding-top: 0;
+}
+
+.breadcrumb a, .breadcrumb span {
+  display: inline-block;
+  color: #aaa;
+}
+  
+.breadcrumb a:first-child {
+    padding-left: 0; 
+  }
+
+.breadcrumb a:after {
+  content: "›";
+  padding-left: .7em;
+  padding-right: .45em; 
+}
+
+.breadcrumb a:last-child:after {
+  content: "";
+  padding: 0; 
+}
+
+.breadcrumb .svg-icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: text-top;
+  fill: $bethel--blue;
+  fill: #bbb;
+  margin-bottom: 0;
+}

@@ -1,0 +1,43 @@
+.collapsible {
+}
+
+.collapsible-heading {
+	position: relative;
+	cursor: pointer;
+}
+
+.collapsible-block {
+	display: none;
+}
+
+.collapsible-block.open-block {
+	display: block;
+}
+
+
+
+.collapsible--generic {
+	padding-left: 2em;
+
+	.collapsible-heading {
+		padding-left: 1em;
+		margin-left: -1em;
+
+		&:before {
+			position: absolute;
+			content: "+";
+			left: 0;
+			transition: all 200ms;
+			color: #0069aa;
+			font-size: 75%;
+			line-height: 2;
+		}
+	}
+
+	.collapsible-heading.open-block {
+
+		&:before {
+			transform: rotate(-45deg);
+		}
+	}
+}

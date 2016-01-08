@@ -1,0 +1,31 @@
+.social-media {
+	font-family: $gotham;
+
+	display: flex;
+	flex-direction: column;
+	justify-content:center;
+
+	@mixin respond-min $medium{
+		flex-direction: row;
+		align-items: center;
+	}
+
+	a {
+		white-space: nowrap;
+		margin-right: 1em;
+		margin-bottom: .25em;
+	}
+
+	.svg-icon {
+		fill: $bethel--blue;
+		vertical-align: text-top;
+		margin-bottom: 0;
+		margin-right: 6px;
+	}
+}
+
+.social-media__title {
+	margin-bottom: .25em;
+	font-weight: 500;
+	margin-right: 1em;
+}

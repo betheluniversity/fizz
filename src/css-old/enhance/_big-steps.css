@@ -1,0 +1,44 @@
+.big-steps {
+	border-left: 6px solid #e5e5e5;
+	margin: 0 0 0 20px;
+	counter-reset:li; /* Initiate a counter */
+	padding-left:0; /* Remove the default left padding */
+
+	> p {
+		padding-left: 30px;
+		}
+
+	> li {
+		position: relative;
+		display: block;
+		padding-left: 30px;
+		text-decoration: none;
+	}
+
+	> li:before {
+		border-radius:2em;
+		background-color: lighten($bethel--blue,.7);
+		content: counter(li);
+		counter-increment: li;
+		position: absolute;
+		left: -20px;
+		height: 1.8em;
+		width: 1.8em;
+		border: 1px solid #555;
+		text-align: center;
+		color: #fff;
+		text-shadow: 0px 1px 1px #333;
+		font: 700 18px/1.8em Arial,sans-serif;
+	}
+
+	li ul li {
+		list-style: circle;
+		padding-left: 0;
+		margin-left: 0;
+	}
+
+	li ol li {
+		padding-left: 0;
+		margin: 0;
+	}
+}
