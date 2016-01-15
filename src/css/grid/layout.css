@@ -7,12 +7,12 @@
   padding-left: 1rem;
   padding-right: 1rem;
 
-  @include respond-min($navToggle){
+  @mixin respond-min $navToggle {
       padding-left: 2rem;
       padding-right: 2rem;
   }
 
-  @include respond-min(60em){
+  @mixin respond-min $x-large{
       padding-left: 3rem;
       padding-right: 3rem;
   }  
@@ -24,12 +24,12 @@
   margin-right: auto;
   position: relative;
 
-  @include respond-min($navToggle){
+  @mixin respond-min $navToggle {
       padding-left: 2rem;
       padding-right: 2rem;
   }
 
-  @include respond-min(60em){
+  @mixin respond-min $x-large{
       padding-left: 3rem;
       padding-right: 3rem;
   }

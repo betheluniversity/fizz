@@ -99,7 +99,7 @@
     /*     overflow: hidden;*/
     /*     margin: 0 auto;*/
 
-    /*     @include respond-min(50em){*/
+    /*     @mixin respond-min(50em){*/
     /*         height: auto;*/
     /*     }*/
     /* }*/
@@ -107,7 +107,7 @@
     /* .feature__img {*/
     /*     width: 100%;*/
 
-    /*     @include respond-max(49.999em){*/
+    /*     @mixin respond-max(49.999em){*/
     /*         margin: 0;*/
     /*         position: absolute;*/
     /*         top: 50%;*/
@@ -153,11 +153,11 @@
     /*     font-size: 25.63px;*/
     /*     font-size: 1.3rem;*/
 
-    /*     @include respond-min($medium){*/
+    /*     @mixin respond-min $medium {*/
     /*         font-size: 2rem;*/
     /*     }*/
 
-    /*     @include respond-min($x-large){*/
+    /*     @mixin respond-min $x-large{*/
     /*         font-size: 2.5rem;*/
     /*     }*/
     /* }*/
@@ -189,7 +189,7 @@
     /* .slick-next {*/
     /*     right: 0;*/
 
-    /*     @include respond-min($medium){*/
+    /*     @mixin respond-min $medium {*/
     /*         right: 3%;*/
     /*     }*/
     /* }*/
@@ -197,7 +197,7 @@
     /* .slick-prev {*/
     /*     left: 0%;*/
 
-    /*     @include respond-min($medium){*/
+    /*     @mixin respond-min $medium {*/
     /*         left: 3%;*/
     /*     }*/
     /* }*/

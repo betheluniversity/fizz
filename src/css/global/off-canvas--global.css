@@ -11,12 +11,12 @@
   top: 0;
   overflow-y: auto;
 
-  @include respond-min($navToggle){
+  @mixin respond-min $navToggle {
     position: relative;
   }
 }
 
-@include respond-max($navToggle){
+@mixin respond-max $navToggle {
 
   .no-js {
       .global__toolbox:not(:target) {
@@ -76,13 +76,13 @@
     margin-top: 1em;
     color: #fff;
 
-    @include respond-min($navToggle){
+    @mixin respond-min $navToggle {
         display: none;
     }
 }
 
 .no-js .close-btn {
-    @include respond-max($navToggle){
+    @mixin respond-max $navToggle {
       display: block;
     }
 }

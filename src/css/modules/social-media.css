@@ -5,7 +5,7 @@
 	flex-direction: column;
 	justify-content:center;
 
-	@include respond-min($medium){
+	@mixin respond-min $medium {
 		flex-direction: row;
 		align-items: center;
 	}

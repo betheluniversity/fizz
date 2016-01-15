@@ -84,7 +84,7 @@
 .view-mode--list {
 	display: none;
 
-	@include respond-min(800px){
+	@mixin respond-min 800px {
 		display: block;
 	}
 }

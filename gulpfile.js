@@ -6,20 +6,26 @@ var gulp 		= require('gulp'),
 	reload		= browserSync.reload,
 	del 		= require('del'),
 	// svgSprite   = require("gulp-svg-sprites");
-	critical 	= require('critical'),
 	vinylPaths 	= require('vinyl-paths'),
 
 	postcss 	= require('gulp-postcss'),
 	nano 	   	= require('gulp-cssnano'), 
     precss		= require('precss'),
-    // mixins		= require('postcss-mixins'),
-    // vars		= require('postcss-simple-vars'),
-    // postcssImport	= require('postcss-import'),
     autoprefixer= require('autoprefixer');
 
 var $ = require('gulp-load-plugins')();
-
 var outputDir = './builds/';
+
+gulp.task('css', function () {
+    return gulp.src('src/css/*.css')
+        .pipe(postcss([
+        	precss({prefix:''}),
+        	autoprefixer({browsers: ['last 2 versions']})
+        	]))
+        .pipe(nano())
+        .pipe(gulp.dest(outputDir + '/css'))
+        .pipe(reload({stream:true}));
+});
 
 // JS task
 gulp.task('js', function(){
@@ -27,19 +33,9 @@ gulp.task('js', function(){
 		.bundle()
 		.pipe(source('boots.js'))
 		.pipe($.streamify($.uglify())) // compress on output
-		.pipe(gulp.dest(outputDir + '/js'));
+		.pipe(gulp.dest(outputDir + '/js'))
+		.pipe(reload({stream:true}));
 });
-
-gulp.task('css', function () {
-    return gulp.src('src/css/*.css')
-        .pipe(postcss([
-        	precss(),
-        	autoprefixer({browsers: ['last 2 versions']})
-        	]))
-        // .pipe(nano())
-        .pipe(gulp.dest(outputDir + '/css'));
-});
-
 
 // CSS styles task
 // gulp.task('styles', function(){
@@ -51,11 +47,11 @@ gulp.task('css', function () {
 // });
 
 
-gulp.task('images', function(){
-	gulp.src('./src/assets/images/*')
-		.pipe($.imagemin())
-		.pipe(gulp.dest(outputDir + '/assets/images'));
-});
+// gulp.task('images', function(){
+// 	gulp.src('./src/assets/images/*')
+// 		.pipe($.imagemin())
+// 		.pipe(gulp.dest(outputDir + '/assets/images'));
+// });
 
 // ==========================
 // Using Assemble (assemble.io) to compile handlebars templates
@@ -110,38 +106,25 @@ gulp.task('copyfiles', function(){
 		.pipe(reload({stream:true}));
 });
 
-gulp.task('copystyles', function () {
-    return gulp.src([outputDir + 'css/fizz.css'])
-        .pipe($.rename({
-            basename: "site"
-        }))
-        .pipe(gulp.dest(outputDir + 'css'));
-});
-
-// gulp.task('critical', function () {
-// 	return gulp.src([outputDir + '*.html'])
-// 		.pipe(
-// 			critical({
-// 				base: outputDir,
-// 				inline: true,
-// 				css: ['css/fizz.css'],
-// 				// width: 414,
-// 				// height: 736,
-// 			})
-// 		)
-// 		.pipe(gulp.dest(outputDir));
+// gulp.task('copystyles', function () {
+//     return gulp.src([outputDir + 'css/fizz.css'])
+//         .pipe($.rename({
+//             basename: "site"
+//         }))
+//         .pipe(gulp.dest(outputDir + 'css'));
 // });
 
+
 // Generate & Inline Critical-path CSS
-gulp.task('critical', function () {
-    return gulp.src(outputDir + '*.html')
-        .pipe(critical({
-        	base: outputDir, 
-        	// inline: true, 
-        	css: [outputDir + '/css/fizz.css']
-        }))
-        .pipe(gulp.dest(outputDir));
-});
+// gulp.task('critical', function () {
+//     return gulp.src(outputDir + '*.html')
+//         .pipe(critical({
+//         	base: outputDir, 
+//         	// inline: true, 
+//         	css: [outputDir + '/css/fizz.css']
+//         }))
+//         .pipe(gulp.dest(outputDir));
+// });
 
 // browser-sync task for starting the server
 gulp.task('browser-sync', function() {
@@ -166,13 +149,13 @@ gulp.task('clean', function () {
     .pipe(vinylPaths(del));
 });
 
-gulp.task('build', ['js','css','images','copyfiles','assemble']);
+gulp.task('build', ['js','css','copyfiles','assemble']);
 
-gulp.task('default', ['js','css','images','copyfiles','assemble','browser-sync'], function() {
+gulp.task('default', ['js','css','copyfiles','assemble','browser-sync'], function() {
 	gulp.watch('./src/css/**/*.css', ['css']);
 	gulp.watch('./src/templates/**/*.hbs', ['assemble']);
 	gulp.watch('./src/templates/**/*.json', ['assemble']);
 	gulp.watch('./src/assets/icon-sprite/*.svg', ['sprites']);
 	gulp.watch('./src/assets/filters/*.svg', ['copyfiles']);
-	gulp.watch('./src/js/*.js', ['js', browserSync.reload]);
+	gulp.watch('./src/js/*.js', ['js']);
 });

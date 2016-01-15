@@ -11,11 +11,11 @@
 	padding: 5em 0;
 	color: #fff;
 
-	@include respond-min($medium){
+	@mixin respond-min $medium {
 		padding-bottom: 10em 5em;
 	}
 
-	@include respond-min($large){
+	@mixin respond-min $large {
 		padding: 15em 10em;
 	}
 

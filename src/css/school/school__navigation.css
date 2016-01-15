@@ -14,7 +14,7 @@
     font-family: $gotham;
     /* border-top: .3em solid $bethel--yellow;*/
 
-    @include respond-min(60em){
+    @mixin respond-min $x-large{
         padding: 1em;
     }
 }
@@ -34,12 +34,12 @@
     /* text-transform: uppercase;*/
     /* margin-bottom: .5em;*/
 
-    @include respond-min($medium){
+    @mixin respond-min $medium {
         font-size: 1.25em;
         line-height: 2;
     }    
 
-    @include respond-min($large){
+    @mixin respond-min $large {
         font-size: 1.5em;
         line-height: 2;
     }
@@ -48,7 +48,7 @@
 .school__navigation__button {
     margin: 0;
 
-    @include respond-min(60em){
+    @mixin respond-min $x-large{
         display: none;
     }
 }
@@ -65,7 +65,7 @@
 /*     text-transform: uppercase;*/
 /*     // margin-bottom: .5em;*/
 
-/*     @include respond-min(60em){*/
+/*     @mixin respond-min $x-large{*/
 /*         font-size: 1.5em;*/
 /*         line-height: 2;*/
 /*     }*/
@@ -106,7 +106,7 @@
     /* display: flex;*/
     /* justify-content: space-between;*/
 
-    @include respond-min($navToggle){
+    @mixin respond-min $navToggle {
         font-size: 1rem;
     }
 }
@@ -117,7 +117,7 @@
     /* color: #aaa;*/
     /* opacity: .6;*/
 
-    @include respond-min($large){
+    @mixin respond-min $large {
         padding: .35em .75em;
     }
 }

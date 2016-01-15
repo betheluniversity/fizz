@@ -5,7 +5,7 @@
 	visibility: visible !important;
 }
 
-@include respond-max($navToggle){
+@mixin respond-max $navToggle {
     .inner--content {
     	padding: 0 !important;
     }

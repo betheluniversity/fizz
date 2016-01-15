@@ -104,11 +104,11 @@ table.responsive th {
 	flex-shrink:0;
 	font-weight: 500;
 
-	@include respond-min($medium){
+	@mixin respond-min $medium {
 		flex-basis: 40%;
 	}
 
-	@include respond-min($large){
+	@mixin respond-min $large {
 		flex-basis: 60%;
 	}
 }
@@ -120,11 +120,11 @@ table.responsive th {
 	/* border-radius: .3em;*/
 	text-align: center;
 
-	@include respond-min($medium){
+	@mixin respond-min $medium {
 		flex-basis: 15%;
 	}	
 
-	@include respond-min($large){
+	@mixin respond-min $large {
 		flex-basis: 10%;
 	}
 

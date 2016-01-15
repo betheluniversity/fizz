@@ -1,7 +1,7 @@
 .big-global__navigation {
     display: none;
 
-    @include respond-min($navToggle){
+    @mixin respond-min $navToggle {
         display: block;
     }
 
@@ -9,14 +9,14 @@
         margin: 0;
         font-size: .9em;
 
-        @include respond-min($navToggle){
+        @mixin respond-min $navToggle {
             font-family: $gotham;
             display: inline-block;
             font-weight: 500;
             padding: 0;
         }
 
-        @include respond-min($large){
+        @mixin respond-min $large {
             font-size: 1em;
         }
     }
@@ -28,7 +28,7 @@
         margin-right: 0;
         margin-left: 0;
 
-        @include respond-min(46em){
+        @mixin respond-min 46em {
             padding: .35em .75em;
         }
     }
@@ -41,7 +41,7 @@
 .global__navigation {
     display: block;
 
-    @include respond-min($navToggle){
+    @mixin respond-min $navToggle {
         display: none;
     }
 
@@ -78,7 +78,7 @@
 
 .quick-links {
 
-    @include respond-min($navToggle){
+    @mixin respond-min $navToggle {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -92,7 +92,7 @@
     margin-top: 0;
     padding: 0;
 
-    @include respond-min($navToggle){
+    @mixin respond-min $navToggle {
         margin-bottom: 0;
     }
 }
@@ -100,7 +100,7 @@
 .quick-links ul li {
     padding: .2em 0em;
 
-    @include respond-min($navToggle){
+    @mixin respond-min $navToggle {
         display: inline-block;
         padding: .2em .4em;
     }
@@ -113,7 +113,7 @@
 .quick-links--search {
     margin-top: 1em;
 
-    @include respond-min($navToggle){
+    @mixin respond-min $navToggle {
         margin-top: 0;
     }
 }

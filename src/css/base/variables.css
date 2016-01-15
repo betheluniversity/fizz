@@ -13,8 +13,11 @@ $breakpoints: (
     );
 
 $bethel--blue: #0069aa;
+$bethel--blue--rgb: 0, 105, 170;
 $bethel--navy: #0f2c52;
+$bethel--navy--rgb: 15, 44, 82;
 $bethel--yellow: #ffc600;
+$bethel--yellow--rgb: 255, 198, 0;
 
 $gotham-ssm: "Gotham SSm A", "Gotham SSm B", Helvetica, Arial, sans;
 $gotham: "Gotham A", "Gotham B", Helvetica, Arial, sans;

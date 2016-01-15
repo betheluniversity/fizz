@@ -18,7 +18,7 @@
 	padding: 7%;
 	backface-visibility: hidden;
 
-	@include respond-min($large) {
+	@mixin respond-min $large  {
 		padding: 10%;
 	}
 }

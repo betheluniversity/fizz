@@ -9,7 +9,7 @@
 /*     display: none;*/
 /*     background: $bethel--navy;*/
 
-/*     @include respond-min(60em){*/
+/*     @mixin respond-min $x-large{*/
 /*         display: block;*/
 /*     }*/
 /* }*/
@@ -31,7 +31,7 @@
 
 /* .no-js {*/
 
-/*     @include respond-max(60em) {*/
+/*     @mixin respond-max(60em) {*/
 /*         .global__toolbox {*/
 /*             position: absolute;*/
 /*             top: 0;*/
@@ -63,7 +63,7 @@
 /*         // float: right;*/
 /*     }*/
 
-/*     @include respond-min(60em) { */
+/*     @mixin respond-min $x-large { */
 /*         .global__toolbox__close-btn { display: none }*/
 /*     }*/
 /* }*/
@@ -73,7 +73,7 @@
 /*     // display: none;*/
 /*     position: relative;*/
 
-/*     @include respond-min(40em){*/
+/*     @mixin respond-min(40em){*/
 /*         // display: flex;*/
 /*         // align-items: center;*/
 /*     }*/

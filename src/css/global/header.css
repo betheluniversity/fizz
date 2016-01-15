@@ -1,5 +1,5 @@
 .global__header {
-    background: lighten(#0f2c52,2%);
+    background: color(#0f2c52 lightness(23%));
     position: relative;
     padding: 0;
     width: 100%;
@@ -8,7 +8,7 @@
 .global__header .inner {
     position: relative;
 
-    @include respond-min($navToggle ){
+    @mixin respond-min $navToggle {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -20,7 +20,7 @@
     padding: .5em 0;
     float: left;
     
-    @include respond-min($navToggle){ 
+    @mixin respond-min $navToggle { 
         padding: 1.5em 0;
         width: 11em;
         float: none;
@@ -44,7 +44,7 @@
     font-size: .9rem;
     float: right;
 
-    @include respond-min($navToggle){
+    @mixin respond-min $navToggle {
       display: none;
     }
 }

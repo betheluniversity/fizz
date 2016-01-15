@@ -16,7 +16,7 @@
     margin-bottom: 2em;
     font-family: $gotham;
 
-    @include respond-min($navToggle){
+    @mixin respond-min $navToggle {
         position: relative;
         left: 0;
         margin-right: 5%;
@@ -30,7 +30,7 @@
     }
 
     .site__navigation__title {
-        background: rgba($bethel--navy, 1);
+        background: $bethel--navy;
         margin: 0;
         padding: 1em;
         font-size: 1em;
@@ -55,7 +55,7 @@
     order: 3;
     min-width: 1%;
 
-    @include respond-min($navToggle) {
+    @mixin respond-min $navToggle {
         padding-left: 0;
         padding-right: 0;
         flex-basis: 65%;
@@ -76,7 +76,7 @@ section + h4 {
     margin-top: 0;
 }
 
-@include respond-max($navToggle - .01em){
+@mixin respond-max ($navToggle - .01em){
 
     .site__navigation:not(:target) {
         z-index: -1;
@@ -138,7 +138,7 @@ section + h4 {
 }
 
 .no-js .close-btn {
-    @include respond-max($navToggle - .01em){
+    @mixin respond-max ($navToggle - .01em){
       display: block;
   }
 }

@@ -8,13 +8,13 @@
 /* 	min-width: 100%;*/
 /* 	width: 100%;*/
 	
-/* 	@include respond-min(830px){*/
+/* 	@mixin respond-min(830px){*/
 /* 		height: auto;*/
 /* 		display: table;*/
 /* 		display: block;*/
 /* 	// }*/
 
-	@include respond-min(830px){
+	@mixin respond-min(830px){
 		max-height: 75vh;
 	}
 
@@ -22,13 +22,11 @@
 /* 		display: block;*/
 /* 	}*/
 
-/* 	@include respond-min(1600px){*/
-/* 		display: block;*/
-/* 	}*/
+
 }
 
 .moving-picture:before {
-	@include respond-min(0){
+	@mixin respond-min(0){
         content: '';
         position: absolute;
         top: 0;
@@ -52,7 +50,7 @@
 	/* width: 100%;*/
 		height: 415px;
 
-	@include respond-min(830px){
+	@mixin respond-min(830px){
 		position: relative;
 		/* display: inline-block;*/
 		/* height: auto;*/
@@ -62,13 +60,13 @@
 		height: 0;
 	}
 
-		/* @include respond-min(830px){*/
+		/* @mixin respond-min(830px){*/
 		/* 	height: auto;*/
 		/* 	// display: table;*/
 		/* 	// display: block;*/
 		/* // }*/
 
-		/* // @include respond-min(1200px){*/
+		/* // @mixin respond-min(1200px){*/
 		/* 	max-height: 75vh;*/
 		/* }*/
 
@@ -76,14 +74,12 @@
 		/* 	display: block;*/
 		/* }*/
 
-		/* @include respond-min(1600px){*/
-		/* 	display: block;*/
-		/* }*/
+
 }
 
 
 /* .intrinsic {*/
-/* 	@include respond-min(830px){*/
+/* 	@mixin respond-min(830px){*/
 /* 		position: relative;*/
 /* 		padding-bottom: 56%;*/
 /* 		height: 0;*/
@@ -102,7 +98,7 @@
 	right: 0;
 	height: 415px;
 
-	@include respond-min(830px){
+	@mixin respond-min(830px){
 		height: auto;
 		position: relative;
 		max-width: 100%;
@@ -119,7 +115,7 @@
 	z-index: 1;
 	padding: 1em 2.5em;
 
-	@include respond-min($medium){
+	@mixin respond-min $medium {
 		position: absolute;
 		left: 0;
 		bottom: 0;
@@ -127,7 +123,7 @@
 		padding: 5% 8%;
 	}
 
-	@include respond-min($x-large){
+	@mixin respond-min $x-large{
 		/* margin-left: 3rem;*/
 		/* width: 50%;*/
 	}
@@ -140,11 +136,11 @@
 	letter-spacing: .02em;
 	/* text-transform: uppercase;*/
 
-	@include respond-min($medium){
+	@mixin respond-min $medium {
 		font-size: 2em;
 	}
 
-	@include respond-min($x-large){
+	@mixin respond-min $x-large{
 		font-size: 3em;
 	}
 }
@@ -153,7 +149,7 @@
 	/* text-rendering: geometricPrecision;*/
 	margin-top: .75em;
 
-	@include respond-min($large){
+	@mixin respond-min $large {
 		display: block;
 	}
 }
@@ -170,7 +166,7 @@
 	margin-top: 0;
 	display: inline-block;
 
-	@include respond-min($medium){
+	@mixin respond-min $medium {
 		margin-top: .5em;
 	}
 }

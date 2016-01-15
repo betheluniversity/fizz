@@ -5,7 +5,7 @@
 	background-repeat: no-repeat;
 	background-position: center center;
 
-	@include respond-min(1025px){
+	@mixin respond-min 1025px {
 		background-attachment: fixed;
 	}
 }
@@ -20,7 +20,7 @@
 }
 
 .parallax__box {
-	background: rgba($bethel--navy,.6);
+	background: rgba($bethel--navy--rgb,.6);
 }
 
 .parallax .image__caption {
@@ -43,7 +43,7 @@
 .lazyloading {
     /* /* opacity: 1; */*/
     /* /* transition: 600ms opacity; */*/
-    background: #f7f7f7 url("https://cdn4.bethel.edu/images/load.gif") no-repeat center;
+    /*background: #f7f7f7 url("https://cdn4.bethel.edu/images/load.gif") no-repeat center;*/
     min-height: 60px;
 }
 .lazyloaded {

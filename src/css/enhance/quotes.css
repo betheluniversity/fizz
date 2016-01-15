@@ -4,7 +4,7 @@
     /* height: 100%;*/
     background-color: #fff;
 
-    @include respond-min($medium){
+    @mixin respond-min $medium {
         padding: 3em;
     }
 }
@@ -21,7 +21,7 @@
 /*     padding: 2em 3em;*/
 /*     position: relative;*/
 
-/*     @include respond-min($large){*/
+/*     @mixin respond-min $large {*/
 /*         padding: 3em 4em;*/
 /*     }*/
 
@@ -37,7 +37,7 @@
 .quote {
     margin: 0 1em;
 
-    @include respond-min($x-large){
+    @mixin respond-min $x-large{
         display: flex;
         flex: 1;
         flex-shrink: 0;
@@ -53,7 +53,7 @@
 }
 
 /* .quote__avatar + .quote__text {*/
-/*     @include respond-min($x-large){*/
+/*     @mixin respond-min $x-large{*/
 /*         margin-left: 10em;*/
 /*     }*/
 /* }*/
@@ -67,7 +67,7 @@
     margin: 0 auto 2em;
     /* background: #777;*/
 
-    @include respond-min($x-large){
+    @mixin respond-min $x-large{
         flex-basis: 8em;
         /* float: left;*/
         /* flex-shrink: 0;*/

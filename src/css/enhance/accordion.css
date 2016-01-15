@@ -15,7 +15,7 @@
 
     margin-left: .75em;
 
-    @include respond-min(60em){
+    @mixin respond-min $x-large{
         margin-left: .375em;
     }
 }

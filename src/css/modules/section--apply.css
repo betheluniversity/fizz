@@ -9,11 +9,11 @@
 		padding: 1.5em 1em 1em;
 		display: block;
 
-		@include respond-min($medium){
+		@mixin respond-min $medium {
 			padding-bottom: 2.5em 1em 2em;
 		}
 
-		@include respond-min($large){
+		@mixin respond-min $large {
 			padding: 2.5em 1em 2em;
 		}
 	}
@@ -29,7 +29,7 @@
 		fill:#0069aa;
 		margin-bottom:1em;
 
-		@include respond-min($medium){
+		@mixin respond-min $medium {
 			width: 3em;
 			height: 3em;
 		}

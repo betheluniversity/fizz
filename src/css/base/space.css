@@ -68,7 +68,7 @@ a,t,r,b,l,h,v = all,top,right,bottom,left,horizontal,vertical
 .ml5, .mh5, .ma5 {margin-left: 5em !important; }
 .ml6, .mh6, .ma6 {margin-left: 6em !important; }
 
-@include respond-min($navToggle){
+@mixin respond-min $navToggle {
 .pt0\@medium, .pv0\@medium, .pa0\@medium {padding-top: 0 !important; }
 .pt1\@medium, .pv1\@medium, .pa1\@medium {padding-top: 1em !important; }
 .pt2\@medium, .pv2\@medium, .pa2\@medium {padding-top: 2em !important; }

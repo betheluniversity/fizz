@@ -1,10 +1,7 @@
 .global__footer {
     margin-top: 0;
-    background: #0069aa;
     background: $bethel--navy;
-    /* background: #ddd;*/
     padding-top: 3em;
-    /* padding-bottom: 2em;*/
 
     ul {
         padding-left: 1.25em;
@@ -13,12 +10,11 @@
     p, li {
         color: #77cbff; 
         font-family: $gotham;
-        /* font-weight: 300;*/
     }
 
 
     a, a i {
-        color: rgba(#fff, .5); 
+        color: rgba(255,255,255, .5); 
     }
 
     a:hover {

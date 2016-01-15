@@ -114,11 +114,10 @@ form#cse-search-box {
 		margin: 0 auto;
 		padding: 0;
 
-		/* @include respond-min(50em) {width: 50%;}*/
 	}
 
 	input {
-		/* @include font-size(.702);*/
+		/* @mixin font-size(.702);*/
 		font-family: $gotham;
 		font-size: .7rem;
 		text-transform: uppercase;
@@ -131,15 +130,13 @@ form#cse-search-box {
 		height: 2.25rem;
 		/* font-weight: 700;*/
 
-		@include respond-min(30em) {
-			/* @include font-size(1);*/
-		}
+
 	}
 
 	.search-input {
-		/* @include border-radius(.3em 0 0 .3em);*/
+		/* @mixin border-radius(.3em 0 0 .3em);*/
 		border-radius: .3em 0 0 .3em;
-		/* @include single-box-shadow(#aaa, inset, 0, 0, 7px);*/
+		/* @mixin single-box-shadow(#aaa, inset, 0, 0, 7px);*/
 		/* box-shadow: #aaa inset 0 0 7px;*/
 		/* width: 70%;*/
 		padding: 9px 1em 8px;
@@ -155,7 +152,7 @@ form#cse-search-box {
 
 	.search-go {
 		/* width: 25%;*/
-		/* @include border-radius(0 .3em .3em 0);*/
+		/* @mixin border-radius(0 .3em .3em 0);*/
 		border-radius: 0 .3em .3em 0;
 		/* padding: 0;*/
 	}

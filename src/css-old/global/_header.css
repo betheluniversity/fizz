@@ -8,7 +8,7 @@
 .global__header .inner {
     position: relative;
 
-    @mixin respond-min $navToggle {
+    @mixin-content respond-min $navToggle {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -20,7 +20,7 @@
     padding: .5em 0;
     float: left;
     
-    @mixin respond-min $navToggle { 
+    @mixin-content respond-min $navToggle { 
         padding: 1.5em 0;
         width: 11em;
         float: none;
@@ -41,7 +41,7 @@
     font-size: .9rem;
     float: right;
 
-    @mixin respond-min $navToggle {
+    @mixin-content respond-min $navToggle {
       display: none;
     }
 }
