@@ -6,7 +6,7 @@ var gulp 		= require('gulp'),
 	reload		= browserSync.reload,
 	del 		= require('del'),
 	// svgSprite   = require("gulp-svg-sprites");
-	critical 	= require('critical').stream;
+	// critical 	= require('critical').stream;
 	vinylPaths 	= require('vinyl-paths');
 
 var $ = require('gulp-load-plugins')();
@@ -113,15 +113,15 @@ gulp.task('copystyles', function () {
 // });
 
 // Generate & Inline Critical-path CSS
-gulp.task('critical', function () {
-    return gulp.src(outputDir + '*.html')
-        .pipe(critical({
-        	base: outputDir, 
-        	// inline: true, 
-        	css: [outputDir + '/css/fizz.css']
-        }))
-        .pipe(gulp.dest(outputDir));
-});
+// gulp.task('critical', function () {
+//     return gulp.src(outputDir + '*.html')
+//         .pipe(critical({
+//         	base: outputDir, 
+//         	// inline: true, 
+//         	css: [outputDir + '/css/fizz.css']
+//         }))
+//         .pipe(gulp.dest(outputDir));
+// });
 
 // browser-sync task for starting the server
 gulp.task('browser-sync', function() {

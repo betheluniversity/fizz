@@ -76,9 +76,9 @@ for (var i = 0, len = carousels.length; i < len; i++) {
         cellAlign: 'left'
     });
     
-    // flkty.on('cellSelect', function(){
-    //     isSelected();
-    // })
+    flkty.on('cellSelect', function(){
+        isSelected();
+    })
 };
 
 function onLoadeddata( event ) {
@@ -100,9 +100,9 @@ if( typeof flkty !== 'undefined' ) {
 
 // Checking for 'is-selected' on load
 
-// addEvent(window, 'load', function() {
-//     isSelected();
-// });
+addEvent(window, 'load', function() {
+    isSelected();
+});
 
 // This function needs a double test because some carousels
 // may not have the .lazyload class applied on load. If it already
@@ -157,7 +157,7 @@ var isiPad = navigator.userAgent.match(/iPad/i) != null;
 var isiPhone = navigator.userAgent.match(/iPhone/i) != null;
 window.onload = function() {
     if(window.innerWidth > 1024 && !(isiPhone || isiPad)){
-        var s = skrollr.init();
+        var s = skrollr.init({forceHeight:false});
     }
     // Odometer init
     var odometers = document.getElementsByClassName('odometer');
