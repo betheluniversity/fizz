@@ -1,0 +1,87 @@
+
+.inner-wrap--global__navigation {
+    position: relative;
+    background: #f5f5f5;
+    overflow: hidden;
+}
+
+.global__toolbox {
+    background: $bethel--navy;
+    font-family: $gotham;
+    top: 0;
+    overflow-y: auto;
+
+    @mixin respond-min $navToggle {
+        position: relative;
+    }
+}
+
+@mixin respond-max($navToggle - .01em){
+
+    .no-js {
+
+        .global__toolbox:not(:target) {
+            z-index: -1;
+            height: 0;
+        }
+
+        .global__toolbox:target {
+            z-index: 1;
+        }
+
+        .global__toolbox:target .close-btn {
+            display: block;
+        }
+
+        .global__toolbox {
+            background: #333;
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .js .global__toolbox {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 18em;
+        height: 100%;
+        min-height: 100%;
+        overflow: hidden;
+        text-transform: translate3d(0,0,0);
+        backface-visibility: hidden;
+    }
+
+    .js-openGlobalNav .global__toolbox{
+        position: fixed;
+        top: 0;
+        overflow-y: auto;
+    }
+
+    .js .inner-wrap--global__navigation {
+        transform: translate3d(0, 0, 0);
+        transition: transform 500ms ease;
+        backface-visibility: hidden;
+    }
+
+    .js.js-openGlobalNav .inner-wrap--global__navigation {
+        transform: translate3d(-18em, 0, 0);
+    }
+}
+
+/* Close buttons */
+
+.global__toolbox__close-btn {
+    float: right;
+    margin-top: 1em;
+
+    @mixin respond-min $navToggle {
+        display: none;
+    }
+}
+
+.no-js .close-btn {
+    @mixin respond-max($navToggle - .01em){
+        display: block;
+    }
+}

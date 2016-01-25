@@ -1,0 +1,12 @@
+.site__navigation,
+.burger,
+.site__title__button,
+.accordion-list__button {
+	visibility: visible !important;
+}
+
+@mixin respond-max $navToggle {
+    .inner--content {
+    	padding: 0 !important;
+    }
+}

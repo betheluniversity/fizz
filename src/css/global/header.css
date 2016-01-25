@@ -1,0 +1,62 @@
+.global__header {
+    background: color(#0f2c52 lightness(23%));
+    position: relative;
+    padding: 0;
+    width: 100%;
+}
+
+.global__header .inner {
+    position: relative;
+
+    @mixin respond-min $navToggle {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.global__logo {
+    width: 9em;
+    padding: .5em 0;
+    float: left;
+    
+    @mixin respond-min $navToggle { 
+        padding: 1.5em 0;
+        width: 11em;
+        float: none;
+    }
+}
+
+.global__logo a { 
+    display: block; 
+}
+
+.global__logo img {
+    border: none;
+}
+
+.burger {
+    background: #17437d;
+    padding: .25em .6em;
+    margin-right: 1em;
+    margin-top: 1em;
+    font-family: $gotham;
+    font-size: .9rem;
+    float: right;
+
+    @mixin respond-min $navToggle {
+      display: none;
+    }
+}
+
+.burger-icon {
+    content: "";
+    display: block;
+    width: 1em;
+    box-shadow: 0 6px 0 1px #fff,0 12px 0 1px #fff,0 18px 0 1px #fff;
+}
+
+.burger-text {
+    margin-left: 1.5em;
+    color: #fff;
+}

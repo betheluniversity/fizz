@@ -1,0 +1,451 @@
+
+/*------------------------------------*\
+    $GRID
+\*------------------------------------*/
+
+/* This is based on Philip Walton's flexbox grid system:*/
+/* https://github.com/philipwalton/solved-by-flexbox/blob/master/_sass/components/_grid.scss*/
+
+/* The build system for this project has Autoprefixer installed. Any property*/
+/* that needs a prefix will be handled at build time. So display: flex will be*/
+/* given the appropriate prefixes for -webkit and others. Autoprefixer can be*/
+/* customized (gruntfile.js) as to which browsers it supports.*/
+
+/* ====================================*/
+
+/* Styles for the inline-block (legacy) version of the grid from PureCss:*/
+/* http://blog.purecss.io/post/60789414532/how-we-improved-grids-in-pure-0-3-0*/
+
+/* These are styles for browsers that don't support flexbox - IE8 and IE9*/
+/* Once we drop support for these browsers, these styles can be removed*/
+
+/*section*/.grid-section {
+  margin-top: 2em;
+}
+
+/* Removing top margin and padding from first child*/
+/*section*/.grid-section:first-child {
+    margin-top: 0;
+}
+
+/*section*/.grid-section:first-child [class*="pad"] {
+    padding-top: 0;
+}
+
+
+/*$add-legacy-support: false !default;
+
+@if $add-legacy-support == true{
+    .grid {
+        letter-spacing: -.31em;
+        text-rendering: optimizespeed;
+        font-family: FreeSans,Arimo,"Droid Sans",Helvetica,Arial,sans-serif;
+    }
+    .opera:-o-prefocus,
+    .grid {
+        word-spacing:-0.43em;
+    }
+
+    .grid-cell {
+      display: inline-block; 
+      letter-spacing: normal;
+      word-spacing: normal;
+      vertical-align: top;
+      text-rendering: auto;
+    }
+}*/
+
+/* ====================================*/
+/* Mobile grid is set to wrap, and set to nowrap at $medium.*/
+/* This is to allow us to set :first-child and :last-child negative*/
+/* margins on basic grids. If flex-wrap is required above medium*/
+/* use .grid--wrap*/
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+
+    @mixin respond-min $medium {
+      flex-wrap: nowrap;
+    }
+}
+
+
+.grid--wrap {
+  flex-wrap: wrap;
+}
+
+/* Setting width to 100% defaults to full-width on mobile*/
+
+.grid-cell {
+    width: 100%;
+    min-width: 1px;
+    margin-top: 0;
+}
+
+@mixin respond-min $medium  {
+    .grid-cell {
+        flex: 1;
+    }
+
+    .grid-cell:first-child {
+      margin-left: -1em;
+    }
+
+    .grid-cell:last-child {
+      margin-right: -1em;
+    }
+
+    /* removing negative margins on nested grids*/
+    .grid .grid .grid-cell:first-child {
+      margin-left:0;
+    }
+
+    .grid .grid .grid-cell:last-child {
+      margin-right: 0;
+    }
+}
+
+.grid--wrap .grid-cell:first-child {margin-left: 0;}
+.grid--wrap .grid-cell:last-child {margin-right: 0; flex-grow: 0}
+
+/* These rules remove the top margin of heading when it is the first in*/
+/* a grid-cell to make content top-aligned*/
+.grid-cell h2:first-of-type,
+.grid-cell h3:first-of-type,
+.grid-cell h4:first-of-type {
+  margin-top: 0;
+}
+
+/* Aligns all cells*/
+.grid--top {
+    align-items: flex-start;
+}
+
+.grid--center {
+    align-items: center;
+    justify-content: center;
+}
+
+.grid--bottom {
+    align-items: flex-end;
+}
+
+/* Reverse order of cells*/
+
+.grid--reverse {
+    flex-flow: row-reverse wrap;
+
+    .grid-cell:first-child {
+        margin-left: 0;
+    }
+
+    .grid-cell:last-child {
+        margin-right: 0;
+    }
+}
+
+
+/* Aligns individual cells*/
+.grid-cell--top {
+    align-self: flex-start;
+}
+
+.grid-cell--center {
+    align-self: center;
+}
+
+.grid-cell--bottom {
+    align-self: flex-end;
+}
+
+
+/* Build the grid system*/
+
+.grid--fit>.grid-cell {flex-basis: 1;}
+.grid--full>.grid-cell {flex-basis: 100%;}
+.grid--1-2>.grid-cell {flex-basis: 50%;}
+.grid--1-3>.grid-cell {flex-basis: 33.3333%;}
+.grid--1-4>.grid-cell {flex-basis: 25%;}
+
+@mixin respond-max $small {
+    .small-grid--fit > .grid-cell {flex-basis: 1;}
+    .small-grid--full > .grid-cell {flex-basis: 100%;}
+    .small-grid--1-2 > .grid-cell {flex-basis: 50%;}
+    .small-grid--1-3 > .grid-cell {flex-basis: 33.3333%;}
+    .small-grid--1-4 > .grid-cell {flex-basis: 25%;}
+}
+
+@mixin respond-min $medium {
+    .medium-grid--fit > .grid-cell {flex-basis: 1;}
+    .medium-grid--full > .grid-cell {flex-basis: 100%;}
+    .medium-grid--1-2 > .grid-cell {flex-basis: 50%;}
+    .medium-grid--1-3 > .grid-cell {flex-basis: 33.3333%;}
+    .medium-grid--1-4 > .grid-cell {flex-basis: 25%;}
+}
+
+@mixin respond-min $large {
+    .large-grid--fit > .grid-cell {flex-basis: 1;}
+    .large-grid--full > .grid-cell {flex-basis: 100%;}
+    .large-grid--1-2 > .grid-cell {flex-basis: 50%;}
+    .large-grid--1-3 > .grid-cell {flex-basis: 33.3333%;}
+    .large-grid--1-4 > .grid-cell {flex-basis: 25%;}
+}
+
+@mixin respond-min $x-large {
+    .x-large-grid--fit > .grid-cell {flex-basis: 1;}
+    .x-large-grid--full > .grid-cell {flex-basis: 100%;}
+    .x-large-grid--1-2 > .grid-cell {flex-basis: 50%;}
+    .x-large-grid--1-3 > .grid-cell {flex-basis: 33.3333%;}
+    .x-large-grid--1-4 > .grid-cell {flex-basis: 25%;}
+}
+
+.u-1-12  {flex-basis: 8.33333%;flex-grow:0;}
+.u-2-12,
+.u-1-6  {flex-basis: 16.66667%;flex-grow:0;}
+.u-1-5   {flex-basis: 20%;flex-grow:0;}
+.u-3-12,
+.u-1-4  {flex-basis: 25%;flex-grow:0;}
+.u-4-12,
+.u-2-6,
+.u-1-3  {flex-basis: 33.33333%;flex-grow:0;}
+.u-2-5   {flex-basis: 40%;flex-grow:0;}
+.u-5-12  {flex-basis: 41.66667%;flex-grow:0;}
+.u-6-12,
+.u-3-6
+.u-2-4,
+.u-1-2  {flex-basis: 50%;flex-grow:0;}
+.u-7-12  {flex-basis: 58.33333%;flex-grow:0;}
+.u-3-5   {flex-basis: 60%;flex-grow:0;}
+.u-8-12,
+.u-2-3,
+.u-4-6  {flex-basis: 66.66667%;flex-grow:0;}
+.u-9-12,
+.u-3-4  {flex-basis: 75%;flex-grow:0;}
+.u-4-5   {flex-basis: 80%;flex-grow:0;}
+.u-10-12,
+.u-5-6 {flex-basis: 83.33333%;flex-grow:0;}
+.u-11-12 {flex-basis: 91.66667%;flex-grow:0;}
+.u-12-12,
+.u-6-6,
+.u-5-5,
+.u-4-4,
+.u-3-3,
+.u-2-2,
+.u-1-1   {flex-basis: 100%;flex-grow:0;}
+
+@mixin respond-max $small {
+    .u-small-1-12  {flex-basis: 8.33333%;flex-grow:0;}
+    .u-small-2-12,
+    .u-small-1-6  {flex-basis: 16.66667%;flex-grow:0;}
+    .u-small-1-5   {flex-basis: 20%;flex-grow:0;}
+    .u-small-3-12,
+    .u-small-1-4  {flex-basis: 25%;flex-grow:0;}
+    .u-small-4-12,
+    .u-small-2-6,
+    .u-small-1-3  {flex-basis: 33.33333%;flex-grow:0;}
+    .u-small-2-5   {flex-basis: 40%;flex-grow:0;}
+    .u-small-5-12  {flex-basis: 41.66667%;flex-grow:0;}
+    .u-small-6-12,
+    .u-small-3-6
+    .u-small-2-4,
+    .u-small-1-2  {flex-basis: 50%;flex-grow:0;}
+    .u-small-7-12  {flex-basis: 58.33333%;flex-grow:0;}
+    .u-small-3-5   {flex-basis: 60%;flex-grow:0;}
+    .u-small-8-12,
+    .u-small-2-3,
+    .u-small-4-6  {flex-basis: 66.66667%;flex-grow:0;}
+    .u-small-9-12,
+    .u-small-3-4  {flex-basis: 75%;flex-grow:0;}
+    .u-small-4-5   {flex-basis: 80%;flex-grow:0;}
+    .u-small-10-12,
+    .u-small-5-6 {flex-basis: 83.33333%;flex-grow:0;}
+    .u-small-11-12 {flex-basis: 91.66667%;flex-grow:0;}
+    .u-small-12-12,
+    .u-small-6-6,
+    .u-small-5-5,
+    .u-small-4-4,
+    .u-small-3-3,
+    .u-small-2-2,
+    .u-small-1-1   {flex-basis: 100%;flex-grow:0;}
+}
+
+@mixin respond-min $medium {
+    .u-medium-1-12  {flex-basis: 8.33333%;flex-grow:0;}
+    .u-medium-2-12,
+    .u-medium-1-6  {flex-basis: 16.66667%;flex-grow:0;}
+    .u-medium-1-5   {flex-basis: 20%;flex-grow:0;}
+    .u-medium-3-12,
+    .u-medium-1-4  {flex-basis: 25%;flex-grow:0;}
+    .u-medium-4-12,
+    .u-medium-2-6,
+    .u-medium-1-3  {flex-basis: 33.33333%;flex-grow:0;}
+    .u-medium-2-5   {flex-basis: 40%;flex-grow:0;}
+    .u-medium-5-12  {flex-basis: 41.66667%;flex-grow:0;}
+    .u-medium-6-12,
+    .u-medium-3-6
+    .u-medium-2-4,
+    .u-medium-1-2  {flex-basis: 50%;flex-grow:0;}
+    .u-medium-7-12  {flex-basis: 58.33333%;flex-grow:0;}
+    .u-medium-3-5   {flex-basis: 60%;flex-grow:0;}
+    .u-medium-8-12,
+    .u-medium-2-3,
+    .u-medium-4-6  {flex-basis: 66.66667%;flex-grow:0;}
+    .u-medium-9-12,
+    .u-medium-3-4  {flex-basis: 75%;flex-grow:0;}
+    .u-medium-4-5   {flex-basis: 80%;flex-grow:0;}
+    .u-medium-10-12,
+    .u-medium-5-6 {flex-basis: 83.33333%;flex-grow:0;}
+    .u-medium-11-12 {flex-basis: 91.66667%;flex-grow:0;}
+    .u-medium-12-12,
+    .u-medium-6-6,
+    .u-medium-5-5,
+    .u-medium-4-4,
+    .u-medium-3-3,
+    .u-medium-2-2,
+    .u-medium-1-1   {flex-basis: 100%;flex-grow:0;}
+}
+
+@mixin respond-min $large {
+    .u-large-1-12  {flex-basis: 8.33333%;flex-grow:0;}
+    .u-large-2-12,
+    .u-large-1-6  {flex-basis: 16.66667%;flex-grow:0;}
+    .u-large-1-5   {flex-basis: 20%;flex-grow:0;}
+    .u-large-3-12,
+    .u-large-1-4  {flex-basis: 25%;flex-grow:0;}
+    .u-large-4-12,
+    .u-large-2-6,
+    .u-large-1-3  {flex-basis: 33.33333%;flex-grow:0;}
+    .u-large-2-5   {flex-basis: 40%;flex-grow:0;}
+    .u-large-5-12  {flex-basis: 41.66667%;flex-grow:0;}
+    .u-large-6-12,
+    .u-large-3-6
+    .u-large-2-4,
+    .u-large-1-2  {flex-basis: 50%;flex-grow:0;}
+    .u-large-7-12  {flex-basis: 58.33333%;flex-grow:0;}
+    .u-large-3-5   {flex-basis: 60%;flex-grow:0;}
+    .u-large-8-12,
+    .u-large-2-3,
+    .u-large-4-6  {flex-basis: 66.66667%;flex-grow:0;}
+    .u-large-9-12,
+    .u-large-3-4  {flex-basis: 75%;flex-grow:0;}
+    .u-large-4-5   {flex-basis: 80%;flex-grow:0;}
+    .u-large-10-12,
+    .u-large-5-6 {flex-basis: 83.33333%;flex-grow:0;}
+    .u-large-11-12 {flex-basis: 91.66667%;flex-grow:0;}
+    .u-large-12-12,
+    .u-large-6-6,
+    .u-large-5-5,
+    .u-large-4-4,
+    .u-large-3-3,
+    .u-large-2-2,
+    .u-large-1-1   {flex-basis: 100%;flex-grow:0;}
+}
+
+@mixin respond-min $x-large {
+    .u-x-large-1-12  {flex-basis: 8.33333%;flex-grow:0;}
+    .u-x-large-2-12,
+    .u-x-large-1-6  {flex-basis: 16.66667%;flex-grow:0;}
+    .u-x-large-1-5   {flex-basis: 20%;flex-grow:0;}
+    .u-x-large-3-12,
+    .u-x-large-1-4  {flex-basis: 25%;flex-grow:0;}
+    .u-x-large-4-12,
+    .u-x-large-2-6,
+    .u-x-large-1-3  {flex-basis: 33.33333%;flex-grow:0;}
+    .u-x-large-2-5   {flex-basis: 40%;flex-grow:0;}
+    .u-x-large-5-12  {flex-basis: 41.66667%;flex-grow:0;}
+    .u-x-large-6-12,
+    .u-x-large-3-6
+    .u-x-large-2-4,
+    .u-x-large-1-2  {flex-basis: 50%;flex-grow:0;}
+    .u-x-large-7-12  {flex-basis: 58.33333%;flex-grow:0;}
+    .u-x-large-3-5   {flex-basis: 60%;flex-grow:0;}
+    .u-x-large-8-12,
+    .u-x-large-2-3,
+    .u-x-large-4-6  {flex-basis: 66.66667%;flex-grow:0;}
+    .u-x-large-9-12,
+    .u-x-large-3-4  {flex-basis: 75%;flex-grow:0;}
+    .u-x-large-4-5   {flex-basis: 80%;flex-grow:0;}
+    .u-x-large-10-12,
+    .u-x-large-5-6 {flex-basis: 83.33333%;flex-grow:0;}
+    .u-x-large-11-12 {flex-basis: 91.66667%;flex-grow:0;}
+    .u-x-large-12-12,
+    .u-x-large-6-6,
+    .u-x-large-5-5,
+    .u-x-large-4-4,
+    .u-x-large-3-3,
+    .u-x-large-2-2,
+    .u-x-large-1-1   {flex-basis: 100%;flex-grow:0;}
+}
+
+.grid-pad-\.5x {padding: .5em}
+.grid-pad-1x {padding: 1em}
+.grid-pad-1\.5x {padding: 1.5em}
+.grid-pad-2x {padding: 2em}
+.grid-pad-3x {padding: 3em}
+
+.grid--full .grid-pad-\.5x {padding: 0 .5em}
+.grid--full .grid-pad-1x {padding: 0 1em}
+.grid--full .grid-pad-1\.5x {padding: 0 1.5em}
+.grid--full .grid-pad-2x {padding: 0 2em}
+.grid--full .grid-pad-3x {padding: 0 3em}
+
+.grid--full > .grid-cell {width: 100%;}
+
+@mixin respond-max $small {
+    .small-grid-pad-\.5x {padding: .5em;}
+    .small-grid-pad-1x {padding: 1em;}
+    .small-grid-pad-1\.5x {padding: 1.5em;}
+    .small-grid-pad-2x {padding: 2em;}
+    .small-grid-pad-3x {padding: 3em;}
+
+    /* IF .grid--full is applied, remove the vertical padding between the stacked cells*/
+    .grid--full .small-grid-pad-\.5x {padding: 0 .5em;}
+    .grid--full .small-grid-pad-1x {padding: 0 1em;}
+    .grid--full .small-grid-pad-1\.5x {padding: 0 1.5em;}
+    .grid--full .small-grid-pad-2x {padding: 0 2em;}
+    .grid--full .small-grid-pad-3x {padding: 0 3em;}
+}
+
+@mixin respond-min $medium {
+    .medium-grid-pad-\.5x {padding: .5em;}
+    .medium-grid-pad-1x {padding: 1em;}
+    .medium-grid-pad-1\.5x {padding: 1.5em;}
+    .medium-grid-pad-2x {padding: 2em;}
+    .medium-grid-pad-3x {padding: 3em;}
+
+    .grid--full .medium-grid-pad-\.5x {padding: 0 .5em;}
+    .grid--full .medium-grid-pad-1x {padding: 0 1em;}
+    .grid--full .medium-grid-pad-1\.5x {padding: 0 1.5em;}
+    .grid--full .medium-grid-pad-2x {padding: 0 2em;}
+    .grid--full .medium-grid-pad-3x {padding: 0 3em;}
+}
+
+@mixin respond-min $large {
+    .large-grid-pad-\.5x {padding: .5em;}
+    .large-grid-pad-1x {padding: 1em;}
+    .large-grid-pad-1\.5x {padding: 1.5em;}
+    .large-grid-pad-2x {padding: 2em;}
+    .large-grid-pad-3x {padding: 3em;}
+
+    .grid--full .large-grid-pad-\.5x {padding: 0 .5em;}
+    .grid--full .large-grid-pad-1x {padding: 0 1em;}
+    .grid--full .large-grid-pad-1\.5x {padding: 0 1.5em;}
+    .grid--full .large-grid-pad-2x {padding: 0 2em;}
+    .grid--full .large-grid-pad-3x {padding: 0 3em;}
+}
+
+@mixin respond-min $x-large {
+    .x-large-grid-pad-\.5x {padding: .5em;}
+    .x-large-grid-pad-1x {padding: 1em;}
+    .x-large-grid-pad-1\.5x {padding: 1.5em;}
+    .x-large-grid-pad-2x {padding: 2em;}
+    .x-large-grid-pad-3x {padding: 3em;}
+
+    .grid--full .x-large-grid-pad-\.5x {padding: 0 .5em;}
+    .grid--full .x-large-grid-pad-1x {padding: 0 1em;}
+    .grid--full .x-large-grid-pad-1\.5x {padding: 0 1.5em;}
+    .grid--full .x-large-grid-pad-2x {padding: 0 2em;}
+    .grid--full .x-large-grid-pad-3x {padding: 0 3em;}
+}

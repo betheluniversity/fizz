@@ -1,0 +1,144 @@
+
+.inner-wrap--site__navigation {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    background: #f5f5f5;
+}
+
+.site__navigation {
+    background: #fff;
+    position: absolute;
+    margin-top: 3em;
+    margin-top: 0;
+    margin-bottom: 2em;
+    font-family: $gotham;
+
+    @mixin respond-min $navToggle {
+        position: relative;
+        left: 0;
+        margin-right: 5%;
+        order: 2;
+        flex-basis:30%;
+        margin-top: 3em;
+    }
+
+    a {
+        color: #777;
+    }
+
+    .site__navigation__title {
+        background: $bethel--navy;
+        margin: 0;
+        padding: 1em;
+        font-size: 1em;
+        font-weight: 300;
+        color: #fff;
+
+        a {
+            color: $bethel--blue;
+            color: #fff;
+        }
+    }
+}
+
+
+.main {
+    margin-top: 3em;
+    margin-bottom: 2em;
+    margin-top: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+    flex-basis: 100%;
+    order: 3;
+    min-width: 1%;
+
+    @mixin respond-min $navToggle {
+        padding-left: 0;
+        padding-right: 0;
+        flex-basis: 65%;
+        flex-grow:1;
+        margin-top: 3em;
+    }
+}
+
+.main + h2,
+.main + h3,
+.main + h4 {
+    margin-top: 0;
+}
+
+section + h2,
+section + h3,
+section + h4 {
+    margin-top: 0;
+}
+
+@mixin respond-max ($navToggle - .01em){
+
+    .site__navigation:not(:target) {
+        z-index: -1;
+        height: 0;
+    }
+
+    .site__navigation:target .close-btn {
+        display: block;
+    }
+
+
+    .no-js .site__navigation {
+        background: #333;
+    }
+
+    .js .site__navigation {
+        height: auto;
+        width: 18em;
+    }
+
+    .js .site__navigation {
+        left: -18em
+    }
+    .js .inner-wrap--site__navigation {
+        left: 0;
+    }
+
+    .js-openSiteNav .inner-wrap--site__navigation {
+        left: 18em;
+    }
+
+    /*.csstransforms3d.csstransitions*/.js .inner-wrap--site__navigation {
+        left: 0 !important;
+        transform: translate3d(0, 0, 0);
+        transition: transform 500ms ease;
+        backface-visibility: hidden;
+    }
+
+    /*.csstransforms3d.csstransitions*/.js .site__navigation {
+        transition: transform 500ms ease;
+        transform: translate3d(0, 0, 0);
+        backface-visibility: hidden;
+    }
+
+    /*.csstransforms3d.csstransitions*/.js-openSiteNav .inner-wrap--site__navigation {
+        transform: translate3d(18em, 0, 0);
+    }
+
+    /*.csstransforms3d.csstransitions*/.js-openSiteNav .site__navigation{
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+/* Close button */
+
+.close-btn,
+.js .close-btn {
+    display: none;
+}
+
+.no-js .close-btn {
+    @mixin respond-max ($navToggle - .01em){
+      display: block;
+  }
+}

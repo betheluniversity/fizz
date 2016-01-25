@@ -1,0 +1,151 @@
+.school__navigation {
+    background: #fff;
+    /* background: $bethel--yellow;*/
+    /* background: #eee;*/
+    /* background: rgba($bethel--blue, 1);*/
+    /* background: $bethel--navy;*/
+    margin: 0;
+    padding: 1em .5em;
+    /* box-shadow: 0 4px 4px 0 rgba(210, 210, 210, 0.8);*/
+    /* overflow-x: scroll;*/
+    /* -webkit-overflow-scrolling: touch;*/
+    border-bottom: 1px solid #ccc;
+    /* border-top: 1px solid #ccc;*/
+    font-family: $gotham;
+    /* border-top: .3em solid $bethel--yellow;*/
+
+    @mixin respond-min $x-large{
+        padding: 1em;
+    }
+}
+
+.school__navigation__head {
+    padding: 0;
+    margin: 0;
+    /* display: table-cell;*/
+    font-size: 1em;
+    /* font-family: $sentinel;*/
+    font-weight: 700;
+    white-space: nowrap;
+    line-height: 1.5;
+    /* padding: 0 .5em;*/
+    /* color: #333;*/
+    text-align: center;
+    /* text-transform: uppercase;*/
+    /* margin-bottom: .5em;*/
+
+    @mixin respond-min $medium {
+        font-size: 1.25em;
+        line-height: 2;
+    }    
+
+    @mixin respond-min $large {
+        font-size: 1.5em;
+        line-height: 2;
+    }
+}
+
+.school__navigation__button {
+    margin: 0;
+
+    @mixin respond-min $x-large{
+        display: none;
+    }
+}
+
+/* .school__navigation h1 {*/
+/*     font-size: 1em;*/
+/*     // font-family: $sentinel-ssm;*/
+/*     // font-weight: 500;*/
+/*     white-space: nowrap;*/
+/*     line-height: 1.5;*/
+/*     // padding: 0 .5em;*/
+/*     // color: #fff;*/
+/*     text-align: center;*/
+/*     text-transform: uppercase;*/
+/*     // margin-bottom: .5em;*/
+
+/*     @mixin respond-min $x-large{*/
+/*         font-size: 1.5em;*/
+/*         line-height: 2;*/
+/*     }*/
+/* }*/
+
+@keyframes scrollIn {
+    from {
+        transform: translate3d(5em,0,0);
+        /* opacity: 0;*/
+    }
+    to {
+        transform: translate3d(0,0,0);
+        /* opacity: 1;*/
+    }
+}
+
+.school__navigation ul {
+    padding: 0;
+    margin: 0;
+    line-height: 1.4;
+    vertical-align: middle;
+    text-align: center;
+    /* animation: scrollIn 750ms;*/
+    /* position: relative;*/
+    /* display: table-cell;*/
+}
+
+.school__navigation ul li {
+    display: inline-block;
+    padding: .25em;
+    margin: 0 .35em;
+    font-size: .8rem;
+    /* font-weight: 500;*/
+    /* font-family: $gotham;*/
+    white-space: nowrap;
+    /* display: table-cell;*/
+    /* letter-spacing: .05em;*/
+    /* display: flex;*/
+    /* justify-content: space-between;*/
+
+    @mixin respond-min $navToggle {
+        font-size: 1rem;
+    }
+}
+
+.school__navigation a {
+    padding: .15em .35em;
+    /* color: #fff;*/
+    /* color: #aaa;*/
+    /* opacity: .6;*/
+
+    @mixin respond-min $large {
+        padding: .35em .75em;
+    }
+}
+
+.school__navigation .active {
+    /* background: rgba($bethel--blue, .1);*/
+    /* background: tomato;*/
+    /* background: rgba(#fff, .25);*/
+    /* background: $bethel--navy;*/
+    background: $bethel--yellow;
+    border-radius: 3px;
+    /* color: #fff;*/
+    /* opacity: 1;*/
+    font-weight: 500;
+    /* border-bottom: 3px solid $bethel--yellow;*/
+    /* color: $bethel--yellow;*/
+}
+
+.school__navigation__menu {
+    background: $bethel--yellow;
+    margin-top: 0;
+}
+
+.school__navigation .svg-icon {
+        width: 1em;
+        height: 1em;
+        /* margin-right: .5em;*/
+        vertical-align: text-top;
+        fill: $bethel--blue;
+        /* fill-opacity: .5;*/
+    }

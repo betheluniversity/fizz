@@ -1,0 +1,43 @@
+.quote {
+}
+
+.quote__text {
+    font-weight: 400;
+    font-style:normal;
+}
+
+.quote__avatar + .quote__text {
+    @mixin respond-min $x-large {
+        margin-left: 10em;
+    }
+}
+
+.quote__text {
+    // font-family: "Gotham A", "Gotham B";
+    // font-weight: 400;
+    // font-style:normal;
+    flex: 1;
+}
+
+// .quote__avatar + .quote__text {
+//     @include respond-min($x-large){
+//         margin-left: 10em;
+//     }
+// }
+
+.quote__avatar {
+    // border-radius: 50%;
+    // overflow:hidden;
+    // line-height:0;
+    width: 8em;
+    height: 8em;
+    margin: 0 auto 1em;
+
+    @mixin respond-min $x-large {
+        float: left;
+    }
+}
+
+.quote__avatar img {
+    border-radius: 50%;
+}
