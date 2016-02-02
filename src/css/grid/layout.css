@@ -4,10 +4,10 @@
   margin-right: auto;
   overflow: hidden; /* added to hide title in mobile when off canvas is activated */
 
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 
-  @mixin respond-min $navToggle {
+  @mixin respond-min $large {
       padding-left: 2rem;
       padding-right: 2rem;
   }
@@ -24,7 +24,7 @@
   margin-right: auto;
   position: relative;
 
-  @mixin respond-min $navToggle {
+  @mixin respond-min $large {
       padding-left: 2rem;
       padding-right: 2rem;
   }

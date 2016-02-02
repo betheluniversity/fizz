@@ -1,9 +1,21 @@
 .section--apply {
-	background: $bethel--yellow;
-	background: #fff;
+	background-color: #fff; /* need bkg color here, if words break on two lines it creates different heights */
+	max-width: 75em;
+	margin: 0 auto;
+
+	@mixin respond-min $large {
+		padding: 0 3em;
+		background: none;
+	}
+
+	@mixin respond-min 75em {
+		padding: 0 2em;
+	}
 }
 
 .section--apply__unit {
+
+	background-color: #fff;
 
 	a {
 		padding: 1.5em 1em 1em;

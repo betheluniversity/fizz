@@ -15,7 +15,7 @@
     margin-bottom: 2em;
     font-family: $gotham;
 
-    @mixin respond-min $navToggle {
+    @mixin respond-min $large {
         position: relative;
         left: 0;
         margin-right: 5%;
@@ -44,21 +44,28 @@
 }
 
 .main {
-    margin-top: 3em;
+    /*margin-top: 3em;*/
     margin-bottom: 2em;
     margin-top: 1em;
-    padding-left: 1em;
-    padding-right: 1em;
+    padding-left: 2em;
+    padding-right: 2em;
     flex-basis: 100%;
     order: 3;
     min-width: 1%;
 
-    @mixin respond-min $navToggle  {
+    @mixin respond-min $large  {
         padding-left: 0;
         padding-right: 0;
         flex-basis: 65%;
         flex-grow:1;
         margin-top: 3em;
+    }
+}
+
+@media (max-width: 51.99em){
+    .main div[class*='grid-pad']{
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 
@@ -74,7 +81,7 @@ section + h4 {
     margin-top: 0;
 }
 
-@mixin respond-max $navToggle {
+@media (max-width: 51.99em) {
 
     .site__navigation:not(:target) {
         z-index: -1;
@@ -134,8 +141,8 @@ section + h4 {
     display: none;
 }
 
-.no-js .close-btn {
-    @mixin respond-max $navToggle {
+@media screen (max-width: 51.99em) {
+    .no-js .close-btn  {
         display: block;
     }
 }

@@ -88,7 +88,9 @@ function onLoadeddata( event ) {
 
 
 if( typeof flkty !== 'undefined' ) {
-    var videos = flkty.selectedElement.querySelectorAll('video');
+    if (flkty.selectedElement.querySelectorAll('video')){
+        var videos = flkty.selectedElement.querySelectorAll('video');
+    }
 
     for ( var i=0, len = videos.length; i < len; i++ ) {
         var video = videos[i];

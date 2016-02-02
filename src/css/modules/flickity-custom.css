@@ -1,22 +1,3 @@
-.carousel-constrain {
-    max-width: 1200px;
-    margin: 0 auto;
-
-    @mixin respond-min $medium {
-        padding: 0 1em;
-    }
-
-    @mixin respond-min $large {
-        padding: 0 3em;
-    }
-
-    .moving-picture {
-        @mixin respond-min 1200px {
-            height: 639px;
-        }
-    }
-}
-
 .flickity {
     margin: auto;
     /* background-color: #000;*/
@@ -34,12 +15,9 @@
     /* background: none;*/
 }
 
-
-
 .flickity-enabled .flickity--cell {
     visibility: visible;
     /* background: none;*/
-
 }
 
 .is-selected {
@@ -49,7 +27,6 @@
 .flickity--cell {
     visibility: hidden;
     width: 100%;
-    /* background:#333;  */
     overflow: hidden;
 }
 
@@ -68,16 +45,14 @@
 /*     visibility: visible;*/
 /* }*/
 
-.carousel--text-over-media .ratio-box
- {
+.carousel--text-over-media .ratio-box {
     position: relative;
     height: 415px;
     display: block;
     width: 100%;
 }
 
-.carousel--image-bank .ratio-box
- {
+.carousel--image-bank .ratio-box {
     position: relative;
     display: block;
     width: 100%;

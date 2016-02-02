@@ -61,7 +61,7 @@ a:hover {
 
 .teaser {
   font-family: $gotham;
-  color: #999;
+  color: $bethel--navy;
   font-weight: 400;
 }
 

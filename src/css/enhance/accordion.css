@@ -46,6 +46,7 @@ a.accordion-list__link {
     font-weight: 500;
     padding: .25em .5em;
     background: $bethel--yellow;
+    margin-left: -.5em;
 }
 
 .accordion-list__button {

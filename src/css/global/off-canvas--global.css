@@ -11,12 +11,12 @@
   top: 0;
   overflow-y: auto;
 
-  @mixin respond-min $navToggle {
+  @mixin respond-min $large {
     position: relative;
   }
 }
 
-@mixin respond-max $navToggle {
+@media screen and (max-width: 51.99em) {
 
   .no-js {
       .global__toolbox:not(:target) {
@@ -73,16 +73,16 @@
 
 .global__toolbox__close-btn {
     float: right;
-    margin-top: 1em;
+    margin-top: 1em !important; /* need !important to overide .btn styles */ 
     color: #fff;
 
-    @mixin respond-min $navToggle {
-        display: none;
+    @mixin respond-min $large {
+        display: none !important; /* need !important to overide .btn styles */
     }
 }
 
-.no-js .close-btn {
-    @mixin respond-max $navToggle {
-      display: block;
+@media screen (max-width: 51.99em){
+    .no-js .close-btn {
+        display: block;
     }
 }

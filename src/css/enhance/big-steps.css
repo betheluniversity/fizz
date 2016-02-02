@@ -17,7 +17,7 @@
 
 	> li:before {
 		border-radius:2em;
-		background-color: lighten($bethel--blue,.7);
+		background: color($bethel--blue lightness(70%));
 		content: counter(li);
 		counter-increment: li;
 		position: absolute;
@@ -30,10 +30,6 @@
 		text-shadow: 0px 1px 1px #333;
 		font: 700 18px/1.8em Arial,sans-serif;
 	}
-
-	/* li ol,*/
-	/* li ul {margin-bottom:1.5em;}*/
-	/*ol ol li:last-child {margin-bottom:0;}*/
 
 	li ul li {
 		list-style: circle;

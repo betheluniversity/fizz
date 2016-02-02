@@ -1,11 +1,18 @@
-.site__navigation,
+/*.site__navigation,
+.burger,
+.site__title__button,
+.accordion-list__button {
+	visibility: hidden;
+}*/
+
+/*.site__navigation,
 .burger,
 .site__title__button,
 .accordion-list__button {
 	visibility: visible !important;
-}
+}*/
 
-@mixin respond-max $navToggle {
+@media (max-width: 49.99em) {
     .inner--content {
     	padding: 0 !important;
     }
