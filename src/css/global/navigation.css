@@ -109,10 +109,12 @@
     color: #ccc;
 }
 
-.quick-links--search {
-    margin-top: 1em !important;
+.quick-links__search {
+    margin-top: 1em !important; /* overriding .btn styles */
+    font-weight: 500;
+    color: #fff !important;
 
     @mixin respond-min $large {
-        margin-top: 0 !important;
+        margin-top: .5em 0 !important;
     }
 }

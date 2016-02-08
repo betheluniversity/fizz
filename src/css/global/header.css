@@ -7,12 +7,13 @@
 
 .global__header .inner {
     position: relative;
-    padding: 0 .5em;
-
-    @mixin respond-min $large {
+    padding: 0 1em;
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+    @mixin respond-min $large {
+        padding: 0 3em;
     }
 }
 
@@ -37,13 +38,15 @@
 }
 
 .burger {
-    background: #17437d;
-    padding: .25em .6em;
-    /*margin-right: 1em;*/
-    margin-top: 1em;
+    background: #0069aa;
+    padding: .5em 1em;
+    /*margin-top: 1em;*/
     font-family: $gotham;
-    font-size: .9rem;
-    float: right;
+    font-size: 1rem;
+    /*float: right;*/
+    display: flex;
+    border-radius: 3px;
+    align-items: center;
 
     @mixin respond-min $large {
       display: none;
@@ -54,10 +57,10 @@
     content: "";
     display: block;
     width: 1em;
-    box-shadow: 0 6px 0 1px #fff,0 12px 0 1px #fff,0 18px 0 1px #fff;
+    box-shadow: 0 -5px 0 1px #fff,0 0px 0 1px #fff,0 5px 0 1px #fff;
 }
 
 .burger-text {
-    margin-left: 1.5em;
+    margin-left: .75em;
     color: #fff;
 }

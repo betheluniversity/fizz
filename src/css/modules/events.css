@@ -1,3 +1,9 @@
+/*
+
+Module to style items in an event feed
+
+*/
+
 .events__item {
 	margin: 2em 0;
 	display: flex;
@@ -6,16 +12,25 @@
 
 .events__content {
 	padding-left: 1em;
-
-	p {
-		margin-bottom: 0;
-		margin-top: 0;
-	}
 }
 
 .events__headline {
 	font-weight: 500;
 	font-family: $gotham;
+	margin-bottom: 0;
+	font-size: 120%;
+}
+
+.events__location {
+	margin-bottom: 0;
+	font-family: $gotham;
+	color: #999;
+	margin: .5em 0;
+	font-size: 90%;
+}
+
+.events__description {
+	margin-top: 0;
 }
 
 .events__date-tile {
@@ -28,11 +43,9 @@
 	border: 1px solid #ccc;
 	border-radius: .3em;
 	font-size: .889em;
-	/*min-width: 1px;*/
 }
 
 .events__date-tile span {
-	/*display: block;*/
 	font-size: 2.2em;
 	line-height: 1;
 }

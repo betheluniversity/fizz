@@ -6,18 +6,7 @@
 /* This is based on Philip Walton's flexbox grid system:*/
 /* https://github.com/philipwalton/solved-by-flexbox/blob/master/_sass/components/_grid.scss*/
 
-/* The build system for this project has Autoprefixer installed. Any property*/
-/* that needs a prefix will be handled at build time. So display: flex will be*/
-/* given the appropriate prefixes for -webkit and others. Autoprefixer can be*/
-/* customized (gruntfile.js) as to which browsers it supports.*/
-
 /* ====================================*/
-
-/* Styles for the inline-block (legacy) version of the grid from PureCss:*/
-/* http://blog.purecss.io/post/60789414532/how-we-improved-grids-in-pure-0-3-0*/
-
-/* These are styles for browsers that don't support flexbox - IE8 and IE9*/
-/* Once we drop support for these browsers, these styles can be removed*/
 
 /*section*/.grid-section {
   margin-top: 2em;
@@ -31,29 +20,6 @@
 /*section*/.grid-section:first-child [class*="pad"] {
     padding-top: 0;
 }
-
-
-/*$add-legacy-support: false !default;
-
-@if $add-legacy-support == true{
-    .grid {
-        letter-spacing: -.31em;
-        text-rendering: optimizespeed;
-        font-family: FreeSans,Arimo,"Droid Sans",Helvetica,Arial,sans-serif;
-    }
-    .opera:-o-prefocus,
-    .grid {
-        word-spacing:-0.43em;
-    }
-
-    .grid-cell {
-      display: inline-block; 
-      letter-spacing: normal;
-      word-spacing: normal;
-      vertical-align: top;
-      text-rendering: auto;
-    }
-}*/
 
 /* ====================================*/
 /* Mobile grid is set to wrap, and set to nowrap at $medium.*/
@@ -70,7 +36,6 @@
       flex-wrap: nowrap;
     }
 }
-
 
 .grid--wrap {
   flex-wrap: wrap;
@@ -385,11 +350,11 @@
 .grid-pad-2x {padding: 2em}
 .grid-pad-3x {padding: 3em}
 
-.grid--full .grid-pad-\.5x {padding: 0 .5em}
+/*.grid--full .grid-pad-\.5x {padding: 0 .5em}
 .grid--full .grid-pad-1x {padding: 0 1em}
 .grid--full .grid-pad-1\.5x {padding: 0 1.5em}
 .grid--full .grid-pad-2x {padding: 0 2em}
-.grid--full .grid-pad-3x {padding: 0 3em}
+.grid--full .grid-pad-3x {padding: 0 3em}*/
 
 .grid--full > .grid-cell {width: 100%;}
 
@@ -401,11 +366,11 @@
     .small-grid-pad-3x {padding: 3em;}
 
     /* IF .grid--full is applied, remove the vertical padding between the stacked cells*/
-    .grid--full .small-grid-pad-\.5x {padding: 0 .5em;}
+/*    .grid--full .small-grid-pad-\.5x {padding: 0 .5em;}
     .grid--full .small-grid-pad-1x {padding: 0 1em;}
     .grid--full .small-grid-pad-1\.5x {padding: 0 1.5em;}
     .grid--full .small-grid-pad-2x {padding: 0 2em;}
-    .grid--full .small-grid-pad-3x {padding: 0 3em;}
+    .grid--full .small-grid-pad-3x {padding: 0 3em;}*/
 }
 
 @mixin respond-min $medium {
@@ -415,11 +380,11 @@
     .medium-grid-pad-2x {padding: 2em;}
     .medium-grid-pad-3x {padding: 3em;}
 
-    .grid--full .medium-grid-pad-\.5x {padding: 0 .5em;}
+/*    .grid--full .medium-grid-pad-\.5x {padding: 0 .5em;}
     .grid--full .medium-grid-pad-1x {padding: 0 1em;}
     .grid--full .medium-grid-pad-1\.5x {padding: 0 1.5em;}
     .grid--full .medium-grid-pad-2x {padding: 0 2em;}
-    .grid--full .medium-grid-pad-3x {padding: 0 3em;}
+    .grid--full .medium-grid-pad-3x {padding: 0 3em;}*/
 }
 
 @mixin respond-min $large {
@@ -429,11 +394,11 @@
     .large-grid-pad-2x {padding: 2em;}
     .large-grid-pad-3x {padding: 3em;}
 
-    .grid--full .large-grid-pad-\.5x {padding: 0 .5em;}
+/*    .grid--full .large-grid-pad-\.5x {padding: 0 .5em;}
     .grid--full .large-grid-pad-1x {padding: 0 1em;}
     .grid--full .large-grid-pad-1\.5x {padding: 0 1.5em;}
     .grid--full .large-grid-pad-2x {padding: 0 2em;}
-    .grid--full .large-grid-pad-3x {padding: 0 3em;}
+    .grid--full .large-grid-pad-3x {padding: 0 3em;}*/
 }
 
 @mixin respond-min $x-large {
@@ -443,9 +408,9 @@
     .x-large-grid-pad-2x {padding: 2em;}
     .x-large-grid-pad-3x {padding: 3em;}
 
-    .grid--full .x-large-grid-pad-\.5x {padding: 0 .5em;}
+/*    .grid--full .x-large-grid-pad-\.5x {padding: 0 .5em;}
     .grid--full .x-large-grid-pad-1x {padding: 0 1em;}
     .grid--full .x-large-grid-pad-1\.5x {padding: 0 1.5em;}
     .grid--full .x-large-grid-pad-2x {padding: 0 2em;}
-    .grid--full .x-large-grid-pad-3x {padding: 0 3em;}
+    .grid--full .x-large-grid-pad-3x {padding: 0 3em;}*/
 }

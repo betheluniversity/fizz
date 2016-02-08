@@ -16,6 +16,12 @@
   }
 }
 
+.global__toolbox .inner {
+    /* display: flex;*/
+    /* justify-content: space-between;*/
+    padding: 0 2em;
+}
+
 @media screen and (max-width: 51.99em) {
 
   .no-js {

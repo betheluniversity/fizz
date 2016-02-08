@@ -8,7 +8,6 @@ var gulp 		= require('gulp'),
 	// svgSprite   = require("gulp-svg-sprites");
 	vinylPaths 	= require('vinyl-paths'),
 
-
 	postcss 	= require('gulp-postcss'),
 	nano 	   	= require('gulp-cssnano'), 
     precss		= require('precss'),
@@ -22,11 +21,12 @@ gulp.task('css', function () {
         .pipe(postcss([
         	precss({prefix:''}),
         	autoprefixer({browsers: ['last 2 versions']})
-        	]))
+        ]))
         .pipe(nano())
         .pipe(gulp.dest(outputDir + '/css'))
         .pipe(reload({stream:true}));
 });
+
 
 // JS task
 gulp.task('js', function(){
