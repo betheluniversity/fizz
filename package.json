@@ -1,22 +1,25 @@
 {
   "devDependencies": {
-    "assemble": "^0.6.0-beta.5",
+    "assemble": "^0.9.1",
     "autoprefixer": "^6.3.1",
     "bindpolyfill": "0.0.0",
     "browser-sync": "^2.11.1",
     "browserify": "^13.0.0",
     "browserify-shim": "^3.8.12",
     "cssnano": "^3.4.0",
-    "del": "^2.0.2",
-    "flickity-imagesloaded": "^1.0.1",
-    "gulp": "^3.9.0",
+    "del": "^2.2.0",
+    "flickity-imagesloaded": "^1.0.2",
+    "gulp": "^3.9.1",
     "gulp-assemble": "^0.3.3",
-    "gulp-cssnano": "^2.1.0",
+    "gulp-cssnano": "^2.1.1",
+    "gulp-jshint": "^2.0.0",
     "gulp-load-plugins": "^1.2.0",
-    "gulp-postcss": "^6.0.1",
+    "gulp-postcss": "^6.1.0",
     "gulp-rename": "^1.2.2",
     "gulp-streamify": "^1.0.2",
-    "gulp-uglify": "^1.2.0",
+    "gulp-uglify": "^1.5.2",
+    "imports-loader": "^0.6.5",
+    "jshint": "^2.9.1",
     "postcss": "^5.0.14",
     "postcss-cli": "^2.5.0",
     "precss": "^1.4.0",
@@ -24,9 +27,10 @@
     "svg4everybody": "^2.0.3",
     "uglify-js": "^2.6.1",
     "vinyl": "^1.1.1",
-    "vinyl-paths": "^2.0.0",
+    "vinyl-paths": "^2.1.0",
     "vinyl-source-stream": "^1.1.0",
-    "watch": "^0.17.1"
+    "watch": "^0.17.1",
+    "webpack-stream": "^3.1.0"
   },
   "browserify": {
     "transform": [
@@ -35,16 +39,5 @@
   },
   "browserify-shim": {
     "jquery": "global:$"
-  },
-  "scripts": {
-    "env": "env",
-    "clean": "rm -r ./builds/*",
-    "css:build": "postcss -u precss -u autoprefixer -d ./builds ./src/css/*.css",
-    "postcss:build": "postcss -u cssnano ./builds/*.css --dir ./builds",
-    "css:watch": "watch 'npm run css:build' ./src/css/",
-    "build:js": "webpack",
-    "watch:js": "watch 'npm run build:js' ./src/js/",
-    "watch:html": "watch 'npm run build:html' ./src/templates/",
-    "watch": "'npm run css:watch' 'npm run watch:js'"
   }
 }
