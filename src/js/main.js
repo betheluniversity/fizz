@@ -170,3 +170,7 @@ window.onload = function() {
         });
     }
 };
+
+if( window.location.hostname.indexOf('staging') > -1 ){
+    var tota11y = require("./tota11y.min.js");
+}
