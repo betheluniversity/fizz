@@ -53,8 +53,8 @@ var doAnimations = function () {
     
     for (index = 0; index < noAnimation.length; ++index) {
         noAnimation = noAnimation[index];
-         var scrollPos = noAnimation.getBoundingClientRect().top + document.body.scrollTop - document.body.clientTop + noAnimation.offsetHeight - 20;
-         if (scrollPos < offset) {
+         var scrollPos1 = noAnimation.getBoundingClientRect().top + document.body.scrollTop - document.body.clientTop + noAnimation.offsetHeight - 20;
+         if (scrollPos1 < offset) {
             fadeIn(noAnimation);
             noAnimation.className = noAnimation.className + " noAnimationProofdone";  
          }
@@ -93,7 +93,7 @@ function checkForSkrollr(){
                 didScroll = false;
             }
         }, 100);
-        window.onscroll = function(){markScroll()};
+        window.onscroll = function(){markScroll();};
         //trigger once if the odometers are in view on load
         checkForSkrollr();
     }

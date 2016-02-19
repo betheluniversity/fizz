@@ -1,11 +1,11 @@
-var offCanvas = require("./off-canvas.js");
+require("./off-canvas.js");
 var Flickity = require("flickity");
 var skrollr = require("./skrollr.min.js");
-var bu_animate = require("./bu_animate.js");
-var accordion = require("./accordion.js");
-var responsiveTables = require("./responsive-tables.js");
+require("./bu_animate.js");
+require("./accordion.js");
+require("./responsive-tables.js");
 var Odometer = require("./odometer.min.js");
-var svg4everybody = require("svg4everybody");
+require("svg4everybody");
 
 // Select a random image from the carousel to appear first
 
@@ -76,8 +76,8 @@ for (var i = 0, len = carousels.length; i < len; i++) {
     
     flkty.on('cellSelect', function(){
         isSelected();
-    })
-};
+    });
+}
 
 function onLoadeddata( event ) {
     var cell = flkty.getParentCell( event.target );
@@ -116,8 +116,8 @@ function isSelected() {
         } else {
             fc[i].querySelector('img').classList.add('lazyload');
         }
-      };
-    };
+      }
+    }
 }
 
   // var gallery = document.querySelector('.flickity');
@@ -146,15 +146,14 @@ function addEvent(obj, type, fn) {
     obj["e" + type + fn] = fn;
     obj[type + fn] = function() {
       obj["e" + type + fn](window.event);
-    }
+    };
     obj.attachEvent("on" + type, obj[type + fn]);
   }
 }
 
-
 // Skrollr init
-var isiPad = navigator.userAgent.match(/iPad/i) != null;
-var isiPhone = navigator.userAgent.match(/iPhone/i) != null;
+var isiPad = navigator.userAgent.match(/iPad/i) !== null;
+var isiPhone = navigator.userAgent.match(/iPhone/i) !== null;
 window.onload = function() {
     if(window.innerWidth > 1024 && !(isiPhone || isiPad)){
         var s = skrollr.init({forceHeight:false});

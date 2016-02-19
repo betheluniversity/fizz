@@ -2,10 +2,7 @@
   "devDependencies": {
     "assemble": "^0.9.1",
     "autoprefixer": "^6.3.1",
-    "bindpolyfill": "0.0.0",
     "browser-sync": "^2.11.1",
-    "browserify": "^13.0.0",
-    "browserify-shim": "^3.8.12",
     "cssnano": "^3.4.0",
     "del": "^2.2.0",
     "flickity-imagesloaded": "^1.0.2",
@@ -23,21 +20,11 @@
     "postcss": "^5.0.14",
     "postcss-cli": "^2.5.0",
     "precss": "^1.4.0",
-    "reinstall": "^1.1.0",
     "svg4everybody": "^2.0.3",
     "uglify-js": "^2.6.1",
     "vinyl": "^1.1.1",
     "vinyl-paths": "^2.1.0",
     "vinyl-source-stream": "^1.1.0",
-    "watch": "^0.17.1",
     "webpack-stream": "^3.1.0"
-  },
-  "browserify": {
-    "transform": [
-      "browserify-shim"
-    ]
-  },
-  "browserify-shim": {
-    "jquery": "global:$"
   }
 }

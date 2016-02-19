@@ -29,9 +29,7 @@ gulp.task('css', function () {
 
 gulp.task('js', function(){
 	return gulp.src('./src/js/main.js')
-		// .pipe(webpack( require('./webpack.config.js') ))
 		.pipe(webpack({
-			watch: true,
 			output: {filename: 'webpack.js',},
 		  	module: {
 		  		noParse: [/.\/src\/js\/odometer.min.js/],
@@ -42,43 +40,36 @@ gulp.task('js', function(){
 		  	},
 		  	plugins: [new webpack.webpack.optimize.UglifyJsPlugin({ output: {comments:false}})]
 		}))
-		.pipe(gulp.dest(outputDir + '/js'))
-		.pipe(reload({stream:true}));
-
-	// return browserify('./src/js/main')
-	// 	.bundle()
-	// 	.pipe(source('boots.js'))
-	// 	.pipe($.streamify($.uglify())) // compress on output
-	// 	.pipe(gulp.dest(outputDir + '/js'))
+		.pipe(gulp.dest(outputDir + '/js'));
 });
 
+// excluding Odometer because it has lots of issues
 gulp.task('lint', function() {
-    return gulp.src('./src/js/*.js')
+    return gulp.src(['src/js/*.js','!src/js/odometer.min.js'])
       .pipe(jshint())
       .pipe(jshint.reporter('default'))
   });
 
-// gulp.task('images', function(){
-// 	gulp.src('./src/assets/images/*')
-// 		.pipe($.imagemin())
-// 		.pipe(gulp.dest(outputDir + '/assets/images'));
-// });
-
 // ==========================
-// Using Assemble (assemble.io) to compile handlebars templates
-	assemble.partials('./src/templates/partials/*.hbs');
-	assemble.layouts(['./src/templates/layouts/*.hbs']);
-	assemble.data(['./src/templates/data/*.json']);
 
-gulp.task('assemble', function(){
+var app = assemble();
 
-	gulp.src('./src/templates/pages/*.hbs')
-		.pipe($.assemble(assemble))
-		.pipe($.rename({
-			extname: ".html"
-		}))
-		.pipe(gulp.dest(outputDir + ''))
-		.pipe(reload({stream:true}));
+gulp.task('load', function(cb) {
+  app.partials('src/templates/partials/*.hbs');
+  app.layouts('src/templates/layouts/*.hbs');
+  app.pages('src/templates/pages/*.hbs');
+  app.data('src/templates/data/*json');
+  cb();
+});
+
+gulp.task('assemble', ['load'], function() {
+  return app.toStream('pages')
+    .pipe(app.renderFile())
+	.pipe($.rename({
+		extname: ".html"
+	}))
+    .pipe(app.dest(outputDir + ''))
+    .pipe(reload({stream:true}));
 });
 
 // ===========================
@@ -103,25 +94,6 @@ gulp.task('copyfiles', function(){
 		.pipe(gulp.dest(outputDir + '/assets/filters'))
 		.pipe(reload({stream:true}));
 });
-
-// gulp.task('copystyles', function () {
-//     return gulp.src([outputDir + 'css/fizz.css'])
-//         .pipe($.rename({
-//             basename: "site"
-//         }))
-//         .pipe(gulp.dest(outputDir + 'css'));
-// });
-
-// Generate & Inline Critical-path CSS
-// gulp.task('critical', function () {
-//     return gulp.src(outputDir + '*.html')
-//         .pipe(critical({
-//         	base: outputDir, 
-//         	// inline: true, 
-//         	css: [outputDir + '/css/fizz.css']
-//         }))
-//         .pipe(gulp.dest(outputDir));
-// });
 
 gulp.task('browser-sync', function() {
 	browserSync({
