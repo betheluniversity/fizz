@@ -4,13 +4,13 @@
     function SimpleDict() {
         this.count = function() {
             var count = 0;
-            for (key in this) {
+            for (var key in this) {
                 if (key !== undefined && typeof(this[key]) != 'function')
                     count += 1;
             }
             return count;
         };
-    };
+    }
 
     function queryToObject(query) {
         var params = query.split("&");
@@ -18,7 +18,7 @@
         for(var i=0; i < params.length; i++)
         {
             var keyVal = params[i].split("=");
-            if (keyVal[0] != '') {
+            if (keyVal[0] !== '') {
                 var key = keyVal[0];
                 var value = keyVal[1];
                 if (queryStringList[key] !== undefined) {
@@ -137,7 +137,7 @@
             var username = $.cookie('cal-user');
             var hide = true;
             for (var index = 0; index < categories.length; ++index) {
-                var category = $(categories[index]).data()['category'];
+                var category = $(categories[index]).data().category;
                 if (internalCategories.indexOf(category) > -1 && username != "null"){
                     hide = false;
                 }
@@ -157,7 +157,7 @@
 
     function objectToQuery(object) {
         var qs = [];
-        for (key in object) {
+        for (var key in object) {
             var value = object[key];
             if ('function' == typeof(value) || undefined === value) {
                 continue;
@@ -183,12 +183,12 @@
     }
 
     function getRemoteUser(){
-        if($.cookie('cal-user') && $.cookie('cal-user') != null && $.cookie('cal-user') != "null"){
+        if($.cookie('cal-user') && $.cookie('cal-user') !== null && $.cookie('cal-user') !== "null"){
             return $.cookie('cal-user');
         }else{
             var url = '/code/general-cascade/get_remote_user';
             $.getJSON(url, function(data){
-                var remote_user = data['remote_user'];
+                var remote_user = data.remote_user;
                 if( remote_user){
                     $.cookie('cal-user', remote_user);
                 }
@@ -199,7 +199,7 @@
 
     function updateWelcomeBar(){
         var remote_user = $.cookie('cal-user');
-        if (remote_user != null && remote_user != "null"){
+        if (remote_user !== null && remote_user !== "null"){
             $("#bu-topbar-welcome").html("Welcome " + remote_user);
         }else{
             var append = document.URL.replace("#", "?");
@@ -211,32 +211,32 @@
 
     CalendarController.prototype.update = function(data) {
         var loc = window.location.toString().replace(/#.*/, '');
-        this.title.text(data['month_title']);
+        this.title.text(data.month_title);
         getRemoteUser();
         updateWelcomeBar();
 
-        if (data['next_month_qs'] !== null) {
-            this.next_month_link.attr('href', loc + "#" + data['next_month_qs']);
-            this.next_month_link.html(data['next_title'] + ' &raquo;');
-            this.next_month_link.show()
+        if (data.next_month_qs !== null) {
+            this.next_month_link.attr('href', loc + "#" + data.next_month_qs);
+            this.next_month_link.html(data.next_title + ' &raquo;');
+            this.next_month_link.show();
         } else {
             this.next_month_link.hide();
             this.next_month_link.attr('href', '#');
         }
-        if (data['previous_month_qs'] !== null) {
+        if (data.previous_month_qs !== null) {
             this.previous_month_link.attr('href',
-                loc + "#" + data['previous_month_qs']);
-            this.previous_month_link.html('&laquo; ' + data['previous_title']);
+                loc + "#" + data.previous_month_qs);
+            this.previous_month_link.html('&laquo; ' + data.previous_title);
             this.previous_month_link.show();
         } else {
             this.previous_month_link.hide();
             this.previous_month_link.attr('href', '#');
         }
         $.each(this.buttons, function(index, button){
-            replaceQueryString($(button), '?' + data['current_month_qs']);
+            replaceQueryString($(button), '?' + data.current_month_qs);
         });
-        this.month_grid.html(data['grid']);
-    }
+        this.month_grid.html(data.grid);
+    };
 
     CalendarController.prototype.init = function() {
         var loc = window.location.toString().replace(/#.*/, '');
@@ -247,10 +247,10 @@
         }
         if (this.next_month_link.length > 0) {
             var nextHref = this.next_month_link.attr('href');
-            var qs = extractQueryParameters(nextHref);
-            this.next_month_link.attr('href', loc + "#" + objectToQuery(qs));
+            var qs1 = extractQueryParameters(nextHref);
+            this.next_month_link.attr('href', loc + "#" + objectToQuery(qs1));
         }
-    }
+    };
 
     function changeCalendarLocation(loc){
         var controller = new CalendarController('#main');
@@ -305,7 +305,7 @@
         h = "?month=" + month + "&day=" + day + "&year=" + year;
         var mode = $("#view-mode li .active").text();
         if (mode == "LIST"){
-            h += "&mode=list"
+            h += "&mode=list";
         }
         loc = '/events/calendar/code/calendar_rest' + h;
 
@@ -343,7 +343,7 @@
             var dd = $('#filter-dropdown'),
                 target = $(event.target);
             if (dd.css('display') != 'none') {
-                if (target.parents().filter(dd).length == 0) {
+                if (target.parents().filter(dd).length === 0) {
                     $('#filter .button').click();
                 }
             }
@@ -385,7 +385,7 @@
                     height = el.height() + Math.abs(cm.offset().top - el.offset().top);
                 if (el.css('display')=='none') {
                     //restore old cm height
-                    if (cm.data('container-height')!=null) {
+                    if (cm.data('container-height')!== null) {
                         cm.height(cm.data('container-height'));
                     }
                 } else {
@@ -405,11 +405,11 @@
         });
 
         $('#filter-content').bind('submit', function(){
-            var loc = window.location.toString()
+            var loc = window.location.toString();
             var hashParams = extractHashParameters(loc);
             var queryParams = extractQueryParameters(loc);
-            delete queryParams['subjects'];
-            delete hashParams['subjects'];
+            delete queryParams.subjects;
+            delete hashParams.subjects;
             if (hashParams.count() > 0) {
                 loc = loc.replace(/([?#].*)/, '?' + objectToQuery(hashParams));
             } else {
@@ -495,7 +495,7 @@
                         // get nearest following next sibling of nearest positioned parent
                         // we use this sibling to determine the height of the calendar.
                         var p = dt.offsetParent();
-                        while (p.next().size()==0) {
+                        while (p.next().size()===0) {
                             p = p.parent();
                         }
                         next_offset = p.next().offset().top,

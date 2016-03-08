@@ -1,13 +1,13 @@
 var gulp 		= require('gulp'),
 	assemble 	= require('assemble'),
-	browserify 	= require('browserify'), 
+	webpack 	= require('webpack-stream');
 	source 		= require('vinyl-source-stream'),
 	browserSync	= require('browser-sync'),  // http://www.browsersync.io/docs/gulp/
 	reload		= browserSync.reload,
 	del 		= require('del'),
 	// svgSprite   = require("gulp-svg-sprites");
 	vinylPaths 	= require('vinyl-paths'),
-
+	jshint		= require('gulp-jshint'),
 	postcss 	= require('gulp-postcss'),
 	nano 	   	= require('gulp-cssnano'), 
     precss		= require('precss'),
@@ -27,62 +27,50 @@ gulp.task('css', function () {
         .pipe(reload({stream:true}));
 });
 
-
-// JS task
 gulp.task('js', function(){
-	return browserify('./src/js/main')
-		.bundle()
-		.pipe(source('boots.js'))
-		.pipe($.streamify($.uglify())) // compress on output
-		.pipe(gulp.dest(outputDir + '/js'))
-		.pipe(reload({stream:true}));
+	return gulp.src('./src/js/main.js')
+		.pipe(webpack({
+			output: {filename: 'webpack.js',},
+		  	module: {
+		  		noParse: [/.\/src\/js\/odometer.min.js/],
+		  		loaders: [{
+		    			test: /(flickity|fizzy-ui-utils|get-size|unipointer)/,
+		    	        loader: 'imports?define=>false&this=>window'
+		  		}]
+		  	},
+		  	plugins: [new webpack.webpack.optimize.UglifyJsPlugin({ output: {comments:false}})]
+		}))
+		.pipe(gulp.dest(outputDir + '/js'));
 });
 
-// CSS styles task
-// gulp.task('styles', function(){
-// 	return gulp.src('./src/scss/*.scss')
-// 		.pipe($.sass({ outputStyle:'compressed', debug:true })) // compress styles
-// 		.pipe($.autoprefixer({browsers:['last 2 versions', 'IE 9']}))
-// 		.pipe(gulp.dest(outputDir + '/css')) // sending to output directory
-// 		.pipe(reload({stream:true})); // inject into browser using browserSync
-// });
-
-
-// gulp.task('images', function(){
-// 	gulp.src('./src/assets/images/*')
-// 		.pipe($.imagemin())
-// 		.pipe(gulp.dest(outputDir + '/assets/images'));
-// });
+// excluding Odometer because it has lots of issues
+gulp.task('lint', function() {
+    return gulp.src(['src/js/*.js','!src/js/odometer.min.js'])
+      .pipe(jshint())
+      .pipe(jshint.reporter('default'))
+  });
 
 // ==========================
-// Using Assemble (assemble.io) to compile handlebars templates
-// var options = {
-//     data: 'data/*.json',
-//     partials: './src/templates/partials/*.hbs',
-//     layoutdir: './src/templates/layouts/',
-//     helpers: './node_modules/handlebars-helpers'
-// };
 
-gulp.task('assemble', function(){
-	assemble.partials('./src/templates/partials/*.hbs');
-	assemble.layouts(['./src/templates/layouts/*.hbs']);
-	assemble.data(['./src/templates/data/*.json']);
+var app = assemble();
 
-	gulp.src('./src/templates/pages/*.hbs')
-		.pipe($.assemble(assemble))
-		.pipe($.rename({
-			extname: ".html"
-		}))
-		.pipe(gulp.dest(outputDir + ''))
-		.pipe(reload({stream:true}));
+gulp.task('load', function(cb) {
+  app.partials('src/templates/partials/*.hbs');
+  app.layouts('src/templates/layouts/*.hbs');
+  app.pages('src/templates/pages/*.hbs');
+  app.data('src/templates/data/*json');
+  cb();
 });
 
-// gulp.task('assemble', function(){
-// 	gulp.src('./src/templates/pages/*.hbs')
-// 		.pipe(gulpAssemble(options))
-// 		.pipe(gulp.dest(outputDir + ''))
-// 		.pipe(reload({stream:true}));
-// })
+gulp.task('assemble', ['load'], function() {
+  return app.toStream('pages')
+    .pipe(app.renderFile())
+	.pipe($.rename({
+		extname: ".html"
+	}))
+    .pipe(app.dest(outputDir + ''))
+    .pipe(reload({stream:true}));
+});
 
 // ===========================
 
@@ -107,27 +95,6 @@ gulp.task('copyfiles', function(){
 		.pipe(reload({stream:true}));
 });
 
-// gulp.task('copystyles', function () {
-//     return gulp.src([outputDir + 'css/fizz.css'])
-//         .pipe($.rename({
-//             basename: "site"
-//         }))
-//         .pipe(gulp.dest(outputDir + 'css'));
-// });
-
-
-// Generate & Inline Critical-path CSS
-// gulp.task('critical', function () {
-//     return gulp.src(outputDir + '*.html')
-//         .pipe(critical({
-//         	base: outputDir, 
-//         	// inline: true, 
-//         	css: [outputDir + '/css/fizz.css']
-//         }))
-//         .pipe(gulp.dest(outputDir));
-// });
-
-// browser-sync task for starting the server
 gulp.task('browser-sync', function() {
 	browserSync({
 		// tunnel: true,
@@ -136,13 +103,6 @@ gulp.task('browser-sync', function() {
 		}
 	});
 });
-
-// Clean output directory before saving new 
-// https://github.com/gulpjs/gulp/blob/master/docs/recipes/delete-files-folder.md
-// gulp.task('clean', function (cb) {
-// 	del([outputDir + '/*'], cb())
-// 	// .on('error', console.error.bind(console));
-// })
 
 gulp.task('clean', function () {
   return gulp.src(outputDir + '/*')
