@@ -130,11 +130,13 @@ function isSelected() {
 
   var videos = flkty.selectedElement.querySelectorAll('video');
 
-  for ( var i=0, len = videos.length; i < len; i++ ) {
-    var video = videos[i];
-    // resume autoplay for WebKit
-    video.play();
-    addEvent( video, 'loadeddata', onLoadeddata );
+  if ( videos.length != 0){
+      for ( var i=0, len = videos.length; i < len; i++ ) {
+        var video = videos[i];
+        // resume autoplay for WebKit
+        video.play();
+        addEvent( video, 'loadeddata', onLoadeddata );
+      }
   }
 
 // Generic addEvent function
