@@ -7,7 +7,7 @@ var gulp 		= require('gulp'),
 	del 		= require('del'),
 	// svgSprite   = require("gulp-svg-sprites");
 	vinylPaths 	= require('vinyl-paths'),
-	jshint		= require('gulp-jshint'),
+	eslint		= require('gulp-eslint'),
 	postcss 	= require('gulp-postcss'),
 	nano 	   	= require('gulp-cssnano'), 
     precss		= require('precss'),
@@ -44,11 +44,16 @@ gulp.task('js', function(){
 });
 
 // excluding Odometer because it has lots of issues
-gulp.task('lint', function() {
+gulp.task('jslint', function() {
     return gulp.src(['src/js/*.js','!src/js/odometer.min.js'])
-      .pipe(jshint())
-      .pipe(jshint.reporter('default'))
-  });
+	.pipe(eslint({
+		extends: 'eslint:recommended',
+		ecmaFeatures: {'modules': true},
+		globals: {'$':true},
+		envs: ['browser']
+	}))
+	.pipe(eslint.formatEach('compact', process.stderr));
+});
 
 // ==========================
 
