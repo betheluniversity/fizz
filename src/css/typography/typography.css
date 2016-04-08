@@ -59,6 +59,12 @@ a:hover {
   text-decoration: underline;
 }
 
+.degree-subtitle {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+
 .teaser {
   font-family: $gotham;
   color: $bethel--navy;
