@@ -13,7 +13,7 @@
         justify-content: space-between;
 
     @mixin respond-min $large {
-        padding: 0 3em;
+        padding: 0 2em;
     }
 }
 
