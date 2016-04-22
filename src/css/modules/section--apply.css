@@ -1,6 +1,7 @@
 .section--apply {
-	background-color: #fff; /* need bkg color here, if words break on two lines it creates different heights */
-	max-width: 75em;
+	/* background-color: #fff; need bkg color here, if words break on two lines it creates different heights */
+	/* background-color: blue; */
+	/* max-width: 75em; */
 	margin: 0 auto;
 
 	@mixin respond-min $large {
@@ -21,7 +22,7 @@
 
 .section--apply__unit {
 
-	background-color: #fff;
+	/* background-color: #fff; */
 
 	a {
 		padding: 1.5em 1em 1em;
@@ -41,14 +42,14 @@
 	}
 }
 
-	svg {
-		width:2.5em;
-		height:2.5em;
-		fill:#0069aa;
-		margin-bottom:1em;
+.section--apply svg {
+	width:2.5em;
+	height:2.5em;
+	fill:#0069aa;
+	margin-bottom:1em;
 
-		@mixin respond-min $medium {
-			width: 3em;
-			height: 3em;
-		}
+	@mixin respond-min $medium {
+		width: 3em;
+		height: 3em;
 	}
+}
