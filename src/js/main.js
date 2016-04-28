@@ -7,6 +7,19 @@ require("./responsive-tables.js");
 var Odometer = require("./odometer.min.js");
 require("svg4everybody");
 
+
+// document.getElementById("bachelors").addEventListener("click", function(){
+//     // sortPosts(".title > a")
+//     document.body.classList.toggle("WOOT");
+//     console.log("did it");
+// });
+
+var elem = document.getElementById('bachelors');
+elem.addEventListener('focus', function() {
+  alert('Selection changed!');
+  console.log("he")
+}, false);
+
 // Select a random image from the carousel to appear first
 
 if( document.getElementsByClassName('js-rotate-order-carousel')[0] ){

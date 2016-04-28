@@ -11,6 +11,14 @@
 	background-color: #eee;
 }
 
+.bkg--blue {
+	background-color: $bethel--blue;
+}
+
+.bkg--navy {
+	background-color: $bethel--navy;
+}
+
 
 .vh110 {
 	height: 110vh;
