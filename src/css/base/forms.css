@@ -196,6 +196,10 @@ input[type="checkbox"]:focus {
     padding: 1em;
     align-items: center;
     flex-direction: column;
+
+    @mixin respond-min $medium {
+        flex-direction: row;
+    }
 }
 
 .form--find-program fieldset {

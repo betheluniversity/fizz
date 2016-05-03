@@ -19,6 +19,10 @@
 	background-color: $bethel--navy;
 }
 
+.bkg--yellow {
+	background-color: $bethel--yellow;
+}
+
 
 .vh110 {
 	height: 110vh;
