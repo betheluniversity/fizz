@@ -37,6 +37,14 @@ h6, .h6 {
 .alpha {font-size: 2rem;}
 .beta {font-size: 3rem;}
 
+.fw300 {
+  font-weight: 300;
+}
+
+.fw400 {
+  font-weight: 400;
+}
+
 .main h2:first-child,
 .main h3:first-child  {
   margin-top: 0;
