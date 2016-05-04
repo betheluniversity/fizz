@@ -62,7 +62,7 @@
     }
 }
 
-@media (max-width: 51.99em){
+@media (max-width: 559px){
     .main div[class*='grid-pad']{
         padding-left: 0;
         padding-right: 0;
