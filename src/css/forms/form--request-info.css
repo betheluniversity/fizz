@@ -1,0 +1,51 @@
+.form--request-info fieldset {
+  font-family: $gotham;
+  font-size: 1.2rem;
+  line-height: 2em;
+  color: #ddd;
+
+  @mixin respond-min $medium {
+    font-size: 1.5rem;
+    line-height: 3em;
+  }
+}
+
+.form--request-info__label {
+  font-size: 1.2rem;
+  display: inline;
+  font-weight: 400;
+  color: #ddd;
+
+  @mixin respond-min $medium {
+    font-size: 1.5rem;
+  }
+}
+
+.form--request-info input {
+  background: transparent;
+  box-shadow: none;
+  border-radius: 0;
+  border: 0;
+  /* min-width: 12em; */
+  border-bottom: 1px solid #ccc;
+  font-size: 1.2rem;
+  color: $bethel--yellow;
+  text-align: center !important;
+
+  @mixin respond-min $medium {
+    font-size: 1.5rem;
+  }
+}
+
+.form--request-info select {
+  border-bottom: 0;
+  height: 2.5em;
+}
+
+.form--request-info #user_name {
+  width: 5em;
+}
+
+.form--request-info #user_email {
+  width: 12em;
+}

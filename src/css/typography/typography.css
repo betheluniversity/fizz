@@ -36,6 +36,7 @@ h6, .h6 {
 
 .alpha {font-size: 2rem;}
 .beta {font-size: 3rem;}
+.gamma {font-size: 4rem;}
 
 .fw300 {
   font-weight: 300;
@@ -43,6 +44,10 @@ h6, .h6 {
 
 .fw400 {
   font-weight: 400;
+}
+
+.fw500 {
+  font-weight: 500;
 }
 
 .main h2:first-child,

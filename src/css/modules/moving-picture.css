@@ -80,10 +80,11 @@
 	font-family: $gotham;
 	z-index: 1;
 	padding: 1em 2.5em;
+	/* text-align: center; */
 
 	@mixin respond-min $medium {
 		position: absolute;
-		left: 0;
+		/* left: 12.5%; */
 		bottom: 0;
 		width: 75%;
 		padding: 5% 8%;
@@ -95,8 +96,8 @@
 
 .moving-picture__overlay__headline {
 	font-size: 1.5em;
-	/* margin: 0;*/
-	font-weight: 300;
+	 margin: 0;
+	font-weight: 500;
 	letter-spacing: .02em;
 
 	@mixin respond-min $medium {
@@ -111,6 +112,7 @@
 .moving-picture__overlay__teaser {
 	display: none;
 	margin-top: .75em;
+	color: $bethel--yellow;
 
 	@mixin respond-min $large {
 		display: block;
