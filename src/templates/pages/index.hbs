@@ -4,14 +4,9 @@ layout: default
 pageTitle: Test title
 ---
 
-
     {{> section--find-program }}
-
     {{> section--apply }}
-
     {{> section--request-info }}
-
-    {{!-- {{> request-info }} --}}
 
     <section class="grid-section  pv6  ma0  bkg--white">
         <div class="inner">
@@ -52,6 +47,14 @@ pageTitle: Test title
 
         </div>
     </section>
+    
+
+    <section class="grid-section  mv6">
+        <div class="inner">
+            {{> proof-points }}
+        </div>
+    </section>
+
 
     <section class="grid-section  mv6">
         <div class="inner">
@@ -65,19 +68,4 @@ pageTitle: Test title
             </div>
         </div>
     </section>
-
-{{!--     <section class="grid-section  mv6">
-        <div class="inner">
-
-            <div class="grid">
-                <div class="grid-cell">
-                    <div class="medium-grid-pad-1x">{{> quotes }}</div>
-                </div>
-                <div class="grid-cell">
-                    <div class="medium-grid-pad-1x">{{> quotes }}</div>
-                </div>
-            </div>
-
-        </div>
-    </section> --}}
 

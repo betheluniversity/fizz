@@ -1,9 +1,9 @@
-<div class="js-rotate-order-carousel carousel--text-over-media">
+<div class="flickity  js-rotate-order-carousel carousel--text-over-media">
 
 {{#each movingPic}}
-    {{#if this.show}}
+    {{#if show}}
 
-    <div class="">
+    <div class="flickity--cell">
         <div class="ratio-box">
             <div class="moving-picture">
                 <div class="moving-picture__media">
@@ -31,6 +31,7 @@
             </div>
         </div>
     </div>
+
     {{/if}}
 {{/each}}
 

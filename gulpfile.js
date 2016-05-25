@@ -95,8 +95,8 @@ gulp.task('sprites', function(){
 
 
 gulp.task('copyfiles', function(){
-	gulp.src('./src/assets/filters/*.svg')
-		.pipe(gulp.dest(outputDir + '/assets/filters'))
+	gulp.src('./src/assets/**')
+		.pipe(gulp.dest(outputDir + 'assets'))
 		.pipe(reload({stream:true}));
 });
 

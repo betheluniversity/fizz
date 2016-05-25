@@ -1,11 +1,17 @@
+.section--find-program {
+    background: url("../assets/images/book-shelf.jpg") no-repeat;
+    background-size: contain;
+    background-position: 0 115%;
+}
+
 .form--find-program {
     font-family: $gotham;
-    color: #fff !important;
-p, 
+    /* color: #fff !important; */
+/* p, 
 label, 
 input, h1,h2,h3,h4 {
     color: #fff !important;
-}
+} */
 }
 
 .form--find-program fieldset {
@@ -25,11 +31,12 @@ input, h1,h2,h3,h4 {
 
 .form--find-program .search--program {
     padding: 1em;
-    /* background: linear-gradient(150deg, $bethel--blue, 60%, $bethel--yellow); */
+    background: linear-gradient(150deg, $bethel--blue, 60%, $bethel--yellow);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    flex-direction: column;
+    border-radius: .5em;
+    /* flex-direction: column; */
 
     @mixin respond-min $medium {
         padding: 1.5em;
@@ -38,12 +45,14 @@ input, h1,h2,h3,h4 {
 
 .form--find-program .search--program input {
     margin-bottom: .5em;
-    padding: .75em;
-    /* flex: 1; */
+    padding: .5em;
+    flex: 1;
     text-align: center;
 
     @mixin respond-min $medium {
         margin-right: 1em;
+        font-size: 1.25rem;
+        padding: 1em;
         /* flex: 1 0 0; */
         margin-bottom: 0;
     }

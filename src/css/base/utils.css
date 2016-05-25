@@ -27,6 +27,8 @@
 	background: linear-gradient(-150deg, $bethel--blue, 70%, $bethel--yellow);
 }
 
+$bkg--gradient-blue-yellow: linear-gradient(-150deg, $bethel--blue, 70%, $bethel--yellow);
+
 .bkg--gradient-navy-blue {
 	background: linear-gradient(-150deg, $bethel--navy, $bethel--blue);
 }
