@@ -1,17 +1,11 @@
 .section--find-program {
-    background: url("../assets/images/book-shelf.jpg") no-repeat;
+    /* background: url("../assets/images/book-shelf.jpg") no-repeat; */
     background-size: contain;
     background-position: 0 115%;
 }
 
 .form--find-program {
     font-family: $gotham;
-    /* color: #fff !important; */
-/* p, 
-label, 
-input, h1,h2,h3,h4 {
-    color: #fff !important;
-} */
 }
 
 .form--find-program fieldset {

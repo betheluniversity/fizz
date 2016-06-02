@@ -3,11 +3,11 @@
     font-family: $gotham;
 
     .grid-cell {
-        background-color: #fff;
+        /* background-color: #fff; */
         padding: 3em 1em;
         border-radius: .5em;
         margin: 1em 0;
-        border: 1px solid #ddd;
+        /* border: 1px solid #ddd; */
 
         @mixin respond-min $medium {
             margin: 1em;
@@ -31,10 +31,11 @@
     /* color: rgba(255,255,255, .8); */
     /*font-family: "Helvetica Neue",Helvetica,Arial,sans;*/
     text-align: center;
+    font-size: 1.25rem;
 }
 
 .proof-point__number {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     line-height: 1;
     /* color: #fff; */
     display: flex;
@@ -42,7 +43,7 @@
     align-items: center;
 
     @mixin respond-min $medium {
-    	font-size: 5rem;
+    	font-size: 7rem;
     }
 }
 
