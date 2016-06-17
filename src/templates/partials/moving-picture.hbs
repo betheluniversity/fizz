@@ -10,11 +10,11 @@
             </video> --}}
             <picture>
                 <!--[if IE 9]><video style="display: none"><![endif]-->
-                <source data-srcset="{{ this.bigImg }}" media="(min-width: 830px)" />
-                <source data-srcset="{{ this.mobileImg }}" />
+                <source srcset="{{ this.bigImg }}" media="(min-width: 830px)" />
+                <source srcset="{{ this.mobileImg }}" />
                 <!--[if IE 9]></video><![endif]-->
                 <img
-                        class="lazyload"
+                        {{!-- class="lazyload" --}}
                         alt="image with artdirection"
                         data-sizes="auto"
                 />

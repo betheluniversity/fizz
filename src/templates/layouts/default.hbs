@@ -66,5 +66,39 @@
     loadJS("https://www.bethel.edu/cdn/js/boots.js");
 </script>
 
+<script src="https://cdn.jsdelivr.net/scrollreveal.js/3.1.4/scrollreveal.min.js"></script>
+<script>
+	window.sr = ScrollReveal({reset:true});
+
+	var hero = {
+		origin   : "left",
+		distance : "9%",
+		duration : 1000,
+		scale    : 1,
+		easing	 : "ease-in-out"
+	};
+
+	var intro = {
+		origin   : "left",
+		distance : "2em",
+		duration : 900,
+		delay    : 200,
+		scale    : 1
+	};
+
+	var github = {
+		origin   : "bottom",
+		distance : "3em",
+		duration : 600,
+		delay    : 300,
+		scale    : 0
+	};
+
+	sr.reveal(".section--apply", hero);
+	sr.reveal(".search--program", { reset: true, viewOffset: { top: 64 } } );
+	sr.reveal(".section--contact-visit .grid-cell", github, 500)
+	sr.reveal(".moving-picture__overlay > *", intro, 500)
+</script>
+
 </body>
 </html>
