@@ -1,3 +1,41 @@
+
+// Customizations for Scroll Reveal
+// https://github.com/jlmakes/scrollreveal.js
+
+var ScrollReveal = require("scrollreveal");
+
+window.sr = ScrollReveal({reset:true});
+
+var slideRight = {
+    origin   : "left",
+    distance : "9%",
+    duration : 500,
+    delay    : 100,
+    easing   : "ease-in-out"
+};
+
+var intro = {
+    origin   : "left",
+    distance : "2em",
+    duration : 900,
+    delay    : 200,
+    scale    : 1
+};
+
+var github = {
+    origin   : "bottom",
+    distance : "3em",
+    duration : 600,
+    delay    : 300,
+    scale    : 0
+};
+
+sr.reveal(".section--apply", slideRight);
+sr.reveal(".search--program", { reset: true, viewOffset: { top: 64 } } );
+sr.reveal(".section--contact-visit .grid-cell", github, 500)
+sr.reveal(".moving-picture__overlay > *", intro, 500)
+
+
 var didScroll = false;
 var intervalID = '';
 

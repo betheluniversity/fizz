@@ -1,12 +1,11 @@
 require("./off-canvas.js");
-// var Flickity = require("flickity");
+var Flickity = require("flickity");
 var skrollr = require("./skrollr.min.js");
-require("./bu_animate.js");
 require("./accordion.js");
 require("./responsive-tables.js");
 var Odometer = require("./odometer.min.js");
 require("svg4everybody");
-
+require("./bu_animate.js");
 
 // document.getElementById("bachelors").addEventListener("click", function(){
 //     // sortPosts(".title > a")
@@ -61,41 +60,41 @@ if( document.getElementsByClassName('js-rotate-order-carousel')[0] ){
 
 // Flickity customizations
 
-// var carousels = document.getElementsByClassName('flickity');
+var carousels = document.getElementsByClassName('flickity');
 
-// for (var i = 0, len = carousels.length; i < len; i++) {
-//     var carousel = carousels[i];
+for (var i = 0, len = carousels.length; i < len; i++) {
+    var carousel = carousels[i];
 
-// // Checking if carousel has rotate class. If this is not set
-// // and there is more than one carousel on the page, Flickity can't 
-// // set the proper target
+// Checking if carousel has rotate class. If this is not set
+// and there is more than one carousel on the page, Flickity can't 
+// set the proper target
 
-//     if (carousel.classList.contains("js-rotate-order-carousel")){
-//         local_initial_load = initial_load;
-//     }
-//     else {
-//         local_initial_load = 0;
-//     }
+    if (carousel.classList.contains("js-rotate-order-carousel")){
+        local_initial_load = initial_load;
+    }
+    else {
+        local_initial_load = 0;
+    }
 
-//     var flkty = new Flickity(carousels[i], {
-//         wrapAround: true,
-//         imagesLoaded: true,
-//         initialIndex: local_initial_load,
-//         pageDots:false,
-//         percentPosition:false,
-//         draggable: false,
-//         cellAlign: 'left'
-//     });
+    var flkty = new Flickity(carousels[i], {
+        wrapAround: true,
+        imagesLoaded: true,
+        initialIndex: local_initial_load,
+        pageDots:false,
+        percentPosition:false,
+        draggable: false,
+        cellAlign: 'left'
+    });
     
-//     flkty.on('cellSelect', function(){
-//         isSelected();
-//     });
-// }
+    flkty.on('cellSelect', function(){
+        isSelected();
+    });
+}
 
-// function onLoadeddata( event ) {
-//     var cell = flkty.getParentCell( event.target );
-//     flkty.cellSizeChange( cell && cell.element );
-// }
+function onLoadeddata( event ) {
+    var cell = flkty.getParentCell( event.target );
+    flkty.cellSizeChange( cell && cell.element );
+}
 
 
 // if( typeof flkty !== 'undefined' ) {
@@ -111,35 +110,35 @@ if( document.getElementsByClassName('js-rotate-order-carousel')[0] ){
 //     }
 // }
 
-// // Checking for 'is-selected' on load
+// Checking for 'is-selected' on load
 
-// addEvent(window, 'load', function() {
-//     isSelected();
-// });
+addEvent(window, 'load', function() {
+    isSelected();
+});
 
 // This function needs a double test because some carousels
 // may not have the .lazyload class applied on load. If it already
 // has the class, we don't want to remove it
 
-// function isSelected() {
-//     var fc = document.querySelectorAll('.js-load-on-demand .flickity--cell');
-//     for (var i = 0; i < fc.length; i++) {
-//       if (fc[i].classList.contains('is-selected')) {
-//         if (fc[i].querySelector('img').classList.contains('lazyload')){
-//         } else {
-//             fc[i].querySelector('img').classList.add('lazyload');
-//         }
-//       }
-//     }
-// }
+function isSelected() {
+    var fc = document.querySelectorAll('.js-load-on-demand .flickity--cell');
+    for (var i = 0; i < fc.length; i++) {
+      if (fc[i].classList.contains('is-selected')) {
+        if (fc[i].querySelector('img').classList.contains('lazyload')){
+        } else {
+            fc[i].querySelector('img').classList.add('lazyload');
+        }
+      }
+    }
+}
 
-  // var gallery = document.querySelector('.flickity');
-  // var flkty = new Flickity( carousels[i] );
+  var gallery = document.querySelector('.flickity');
+  var flkty = new Flickity( carousels[i] );
   
-  // function onLoadeddata( event ) {
-  //   var cell = flkty.getParentCell( event.target );
-  //   flkty.cellSizeChange( cell && cell.element );
-  // }
+  function onLoadeddata( event ) {
+    var cell = flkty.getParentCell( event.target );
+    flkty.cellSizeChange( cell && cell.element );
+  }
 
   // var videos = flkty.selectedElement.querySelectorAll('video');
 
@@ -154,17 +153,17 @@ if( document.getElementsByClassName('js-rotate-order-carousel')[0] ){
 
 // Generic addEvent function
 
-// function addEvent(obj, type, fn) {
-//   if (obj.addEventListener)
-//     obj.addEventListener(type, fn, false);
-//   else if (obj.attachEvent) {
-//     obj["e" + type + fn] = fn;
-//     obj[type + fn] = function() {
-//       obj["e" + type + fn](window.event);
-//     };
-//     obj.attachEvent("on" + type, obj[type + fn]);
-//   }
-// }
+function addEvent(obj, type, fn) {
+  if (obj.addEventListener)
+    obj.addEventListener(type, fn, false);
+  else if (obj.attachEvent) {
+    obj["e" + type + fn] = fn;
+    obj[type + fn] = function() {
+      obj["e" + type + fn](window.event);
+    };
+    obj.attachEvent("on" + type, obj[type + fn]);
+  }
+}
 
 // Skrollr init
 var isiPad = navigator.userAgent.match(/iPad/i) !== null;

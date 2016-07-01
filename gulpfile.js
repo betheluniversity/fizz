@@ -40,7 +40,8 @@ gulp.task('js', function(){
 		  	},
 		  	plugins: [new webpack.webpack.optimize.UglifyJsPlugin({ output: {comments:false}})]
 		}))
-		.pipe(gulp.dest(outputDir + '/js'));
+		.pipe(gulp.dest(outputDir + '/js'))
+		.pipe(reload({stream:true}));
 });
 
 // excluding Odometer because it has lots of issues
@@ -105,7 +106,8 @@ gulp.task('browser-sync', function() {
 		// tunnel: true,
 		server: {
 			baseDir: outputDir
-		}
+		},
+		browser: "Google Chrome"
 	});
 });
 

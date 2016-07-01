@@ -23,6 +23,16 @@
     margin-bottom: 0;
 }
 
+.form--filter-option {
+    display: flex;
+    align-items: baseline;
+}
+
+.form--filter-option input[type=checkbox]{
+    width: 2em;
+    height: 2em;
+}
+
 .form--find-program .search--program {
     padding: 1em;
     background: linear-gradient(150deg, $bethel--blue, 60%, $bethel--yellow);
