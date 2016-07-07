@@ -29,8 +29,8 @@
 }
 
 .form--filter-option input[type=checkbox]{
-    width: 2em;
-    height: 2em;
+/*     width: 2em;
+    height: 2em; */
 }
 
 .form--find-program .search--program {
