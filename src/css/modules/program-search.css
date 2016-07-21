@@ -1,0 +1,124 @@
+.program-search {
+	font-family: $gotham;
+
+	.grid {
+		padding: .5em 0;
+		border-bottom: 1px solid #ddd;
+	}
+
+	.grid-cell {
+		font-size: 90%;
+
+		@mixin respond-min $medium {
+			padding-left: 1em;
+			padding-right: 1em;
+		}
+	}
+
+	.grid-cell:nth-child(1){
+		font-weight: 500;
+			flex: 3;
+		
+		@mixin respond-min $medium {
+		margin-left: .5em;
+		}
+	}
+
+	.grid-cell:nth-child(2) {
+			flex: 2;
+			align-self: center;
+			text-align: right;
+
+		@mixin respond-min $medium {
+			text-align: center;
+		}
+
+		@mixin respond-min $large {
+			text-align: left;
+		}
+	}
+
+	.grid-cell:nth-child(3) {
+		@mixin respond-min $medium {
+			flex: 2;
+		}
+		/* background: yellow; */
+	}
+
+	.grid-cell:nth-child(4){
+		/* background: green; */
+		display: none;
+		
+		@mixin respond-min $medium {
+		text-align: center;
+			flex: 1;
+		}
+
+		@mixin respond-min $large {
+			display: block;
+		}
+	}
+
+	.program-search__table-head {
+		background: #e5e5e5;
+		font-weight: 500 !important;
+		display: none;
+
+		@mixin respond-min $medium {
+			display: flex;
+			align-items: center;
+		}
+	}
+
+	.degree-level {
+		display: none;
+
+		@mixin respond-min $large {
+			display: flex;
+		}
+	}
+
+	.icon {
+		font-family: $gotham;
+		border-radius: 50%;
+		width: 1.65em;
+		height: 1.65em;
+		padding: .25em .1em;
+		font-size: 11px;
+		line-height: 1.2em;
+		/* font-weight: 500; */
+		display: inline-block;
+		text-align: center;
+		vertical-align: text-bottom;
+		color: #Fff;
+		margin-right: .5em;
+
+		@mixin respond-min $medium {
+			float: left;
+		}
+	}
+
+	.icon--major {
+		background: purple;
+	}
+
+	.icon--major:before {
+		content:"M";
+	}
+
+	.icon--minor {
+		background: green;
+	}
+
+	.icon--minor:before {
+		content:"m";
+	}
+
+	.icon--adult {
+		background: tomato;
+	}
+
+	.icon--adult:before {
+		content:"A";
+	}
+}
