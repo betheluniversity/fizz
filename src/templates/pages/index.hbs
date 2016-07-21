@@ -4,8 +4,12 @@ layout: default
 pageTitle: Test title
 ---
 
+<div class="grid-section mt0" >
+    {{> moving-picture }}
+</div>
+
+
     {{> section--find-program }}
-    {{> section--apply }}
     {{> section--contact-visit }}
     {{> section--request-info }}
 
@@ -13,7 +17,7 @@ pageTitle: Test title
         <div class="inner">
 
             <div class="grid">
-                <div class="grid-cell  mb4">
+                <div class="grid-cell  mb4  js-animateSlideRight">
                     <div class="medium-grid-pad-1x">
 
                             <div class="quote">
@@ -29,7 +33,7 @@ pageTitle: Test title
 
                     </div>
                 </div>
-                <div class="grid-cell">
+                <div class="grid-cell  js-animateSlideLeft">
                     <div class="medium-grid-pad-1x">
 
                         <div class="quote">
@@ -69,4 +73,6 @@ pageTitle: Test title
             </div>
         </div>
     </section>
+
+    {{> section--apply }}
 

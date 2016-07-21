@@ -1,33 +1,80 @@
 .program-search {
 	font-family: $gotham;
-	font-size: 90%;
 
 	.grid {
 		padding: .5em 0;
 		border-bottom: 1px solid #ddd;
 	}
 
-	.grid-cell:nth-child(1){
-		/* background: tomato; */
-		flex: 3;
-		margin-left: .5em;
+	.grid-cell {
+		font-size: 90%;
+
+		@mixin respond-min $medium {
+			padding-left: 1em;
+			padding-right: 1em;
+		}
 	}
 
-	.grid-cell:nth-child(2),
+	.grid-cell:nth-child(1){
+		font-weight: 500;
+			flex: 3;
+		
+		@mixin respond-min $medium {
+		margin-left: .5em;
+		}
+	}
+
+	.grid-cell:nth-child(2) {
+			flex: 2;
+			align-self: center;
+			text-align: right;
+
+		@mixin respond-min $medium {
+			text-align: center;
+		}
+
+		@mixin respond-min $large {
+			text-align: left;
+		}
+	}
+
 	.grid-cell:nth-child(3) {
-		flex: 2;
+		@mixin respond-min $medium {
+			flex: 2;
+		}
 		/* background: yellow; */
 	}
 
 	.grid-cell:nth-child(4){
 		/* background: green; */
-		flex: 1;
+		display: none;
+		
+		@mixin respond-min $medium {
 		text-align: center;
+			flex: 1;
+		}
+
+		@mixin respond-min $large {
+			display: block;
+		}
 	}
 
 	.program-search__table-head {
 		background: #e5e5e5;
 		font-weight: 500 !important;
+		display: none;
+
+		@mixin respond-min $medium {
+			display: flex;
+		}
+	}
+
+	.degree-level {
+		display: none;
+
+		@mixin respond-min $large {
+			display: flex;
+		}
 	}
 
 	.icon {
@@ -44,6 +91,7 @@
 		vertical-align: text-bottom;
 		color: #Fff;
 		margin-right: .5em;
+		float: left;
 	}
 
 	.icon--major {

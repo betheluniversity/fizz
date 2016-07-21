@@ -1,7 +1,8 @@
 .section--find-program {
-    /* background: url("../assets/images/book-shelf.jpg") no-repeat; */
-    background-size: contain;
-    background-position: 0 115%;
+    background: url("https://www.bethel.edu/_homepages/adult-undergrad/images/caps-students-class.jpg") no-repeat;
+    background-size: cover;
+    background-position: 0 100%;
+    color: #fff !important;
 }
 
 .form--find-program {

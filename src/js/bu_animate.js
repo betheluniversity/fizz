@@ -11,7 +11,13 @@ var slideRight = {
     distance : "9%",
     duration : 500,
     delay    : 100,
-    easing   : "ease-in-out"
+};
+
+var slideLeft = {
+    origin   : "right",
+    distance : "9%",
+    duration : 500,
+    delay    : 100,
 };
 
 var intro = {
@@ -22,7 +28,7 @@ var intro = {
     scale    : 1
 };
 
-var github = {
+var bottomUp = {
     origin   : "bottom",
     distance : "3em",
     duration : 600,
@@ -30,9 +36,11 @@ var github = {
     scale    : 0
 };
 
-sr.reveal(".section--apply", slideRight);
-sr.reveal(".search--program", { reset: true, viewOffset: { top: 64 } } );
-sr.reveal(".section--contact-visit .grid-cell", github, 500)
+sr.reveal(".js-animateSlideRight", slideRight);
+sr.reveal(".js-animateSlideLeft", slideLeft);
+
+sr.reveal(".search--program", { viewOffset: { top: 0 } } );
+sr.reveal(".section--contact-visit .grid-cell", bottomUp, 500)
 sr.reveal(".moving-picture__overlay > *", intro, 500)
 
 
