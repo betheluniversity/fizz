@@ -66,6 +66,7 @@
 
 		@mixin respond-min $medium {
 			display: flex;
+			align-items: center;
 		}
 	}
 
@@ -91,7 +92,10 @@
 		vertical-align: text-bottom;
 		color: #Fff;
 		margin-right: .5em;
-		float: left;
+
+		@mixin respond-min $medium {
+			float: left;
+		}
 	}
 
 	.icon--major {

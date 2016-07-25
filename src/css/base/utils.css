@@ -1,4 +1,13 @@
 
+.hide--small {
+	@mixin respond-max $medium {
+		display: none;
+	}
+	@mixin respond-min $medium {
+		/* display: n; */
+	}
+}
+
 .u-w100 {
 	width: 100% !important;
 }

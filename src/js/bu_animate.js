@@ -28,20 +28,12 @@ var intro = {
     scale    : 1
 };
 
-var bottomUp = {
-    origin   : "bottom",
-    distance : "3em",
-    duration : 600,
-    delay    : 300,
-    scale    : 0
-};
-
 sr.reveal(".js-animateSlideRight", slideRight);
 sr.reveal(".js-animateSlideLeft", slideLeft);
 
 sr.reveal(".search--program", { viewOffset: { top: 0 } } );
-sr.reveal(".section--contact-visit .grid-cell", bottomUp, 500)
-sr.reveal(".moving-picture__overlay > *", intro, 500)
+// sr.reveal(".section--contact-visit .grid-cell", bottomUp, 500)
+// sr.reveal(".moving-picture__overlay > *", intro, 500)
 
 
 var didScroll = false;
