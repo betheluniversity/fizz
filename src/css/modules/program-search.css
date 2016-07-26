@@ -98,27 +98,14 @@
 		}
 	}
 
-	.icon--major {
-		background: purple;
-	}
-
-	.icon--major:before {
-		content:"M";
-	}
-
-	.icon--minor {
-		background: green;
-	}
-
-	.icon--minor:before {
-		content:"m";
-	}
-
-	.icon--adult {
-		background: tomato;
-	}
-
-	.icon--adult:before {
-		content:"A";
-	}
+	.icon--major {background: #D38235;}
+	.icon--major:before {content:"M";}
+	.icon--minor {background: #6CAEDF;}
+	.icon--minor:before {content:"m";}
+	.icon--adult {background: #7A003C;}
+	.icon--adult:before {content:"A";}
+	.icon--graduate {background: #00788A;}
+	.icon--graduate:before {content:"G";}
+	.icon--seminary {background: #8F993E;}
+	.icon--seminary:before {content:"S";}
 }
