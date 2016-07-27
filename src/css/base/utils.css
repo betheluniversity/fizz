@@ -1,4 +1,13 @@
 
+.hide--small {
+	@mixin respond-max $medium {
+		display: none;
+	}
+	@mixin respond-min $medium {
+		/* display: n; */
+	}
+}
+
 .u-w100 {
 	width: 100% !important;
 }
@@ -10,6 +19,29 @@
 .bkg--light-gray {
 	background-color: #eee;
 }
+
+.bkg--blue {
+	background-color: $bethel--blue;
+}
+
+.bkg--navy {
+	background-color: $bethel--navy;
+}
+
+.bkg--yellow {
+	background-color: $bethel--yellow;
+}
+
+.bkg--gradient-blue-yellow {
+	background: linear-gradient(-150deg, $bethel--blue, 70%, $bethel--yellow);
+}
+
+$bkg--gradient-blue-yellow: linear-gradient(-150deg, $bethel--blue, 70%, $bethel--yellow);
+
+.bkg--gradient-navy-blue {
+	background: linear-gradient(-150deg, $bethel--navy, $bethel--blue);
+}
+
 
 
 .vh110 {

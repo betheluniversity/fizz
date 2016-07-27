@@ -55,6 +55,7 @@
     max-height:0;
     overflow:hidden; 
     transition: max-height .5s;
+    padding: 0 1em;
 }
 
 .form--search-filter__filters.open-filters{
@@ -63,6 +64,7 @@
     
      max-height:50em;
     transition:max-height .5s;   
+    padding-bottom: 1em;
 }
 
 .form--filter-option {
@@ -104,4 +106,15 @@
         /* flex: 1 0 0; */
         margin-bottom: 0;
     }
+}
+
+.form--find-program .search--program .btn {
+    @mixin respond-max $medium {
+        padding: 0 .5em;
+    }
+}
+
+.form--find-program .search--program svg {
+    fill: #fff;
+    margin: 0;
 }
