@@ -3,7 +3,6 @@
 // https://github.com/jlmakes/scrollreveal.js
 
 var ScrollReveal = require("scrollreveal");
-
 window.sr = ScrollReveal({reset:true});
 
 var slideRight = {
@@ -20,21 +19,12 @@ var slideLeft = {
     delay    : 100,
 };
 
-var intro = {
-    origin   : "left",
-    distance : "2em",
-    duration : 900,
-    delay    : 200,
-    scale    : 1
-};
-
-sr.reveal(".js-animateSlideRight", slideRight);
-sr.reveal(".js-animateSlideLeft", slideLeft);
-
-sr.reveal(".search--program", { viewOffset: { top: 0 } } );
-// sr.reveal(".section--contact-visit .grid-cell", bottomUp, 500)
-// sr.reveal(".moving-picture__overlay > *", intro, 500)
-
+if (document.getElementsByClassName('.js-animateSlideRight').length != 0){
+    sr.reveal(".js-animateSlideRight", slideRight);
+}
+if (document.getElementsByClassName('.js-animateSlideLeft').length != 0){
+    sr.reveal(".js-animateSlideLeft", slideLeft);
+}
 
 var didScroll = false;
 var intervalID = '';

@@ -52,3 +52,17 @@ collapsibleBlock = function(e) {
 [].forEach.call(document.querySelectorAll('.collapsible-heading'), function(el){
   el.addEventListener('click',collapsibleBlock);
 });
+
+
+showFilters = function(e) {
+  e.preventDefault();
+  // var subList = this.('.collapsible-block');
+  var filterList = document.querySelector('.form--search-filter__filters')
+  filterList.classList.toggle('open-filters');
+  // var next = nextByClass(this, 'form--search-filter__filters');
+  // next.classList.toggle('open-block');
+};
+
+[].forEach.call(document.querySelectorAll('.form--search-filter__button'), function(el){
+  el.addEventListener('click',showFilters);
+});

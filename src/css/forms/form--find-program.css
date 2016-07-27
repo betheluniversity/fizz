@@ -16,12 +16,53 @@
 }
 
 .form--find-program label {
-    font-size: .9rem;
+    font-size: .8rem;
     font-weight: 400;
 }
 
 .form--find-program input {
     margin-bottom: 0;
+}
+
+.form--search-filter {
+    background: #e5e5e5;
+    margin: 0 1em;
+    border-bottom-right-radius: .5em;
+    border-bottom-left-radius: .5em;
+
+    @mixin respond-min $large {
+        /* margin: 0 2em; */
+        padding: 0 2em;
+    }
+}
+
+.form--search-filter__button {
+    text-align: center;
+    padding: 1em;
+    margin: 0;
+    font-weight: 500;
+    font-size: 70%;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    @mixin respond-min $large {
+        padding: 1.5em 0;
+        font-size: 85%;
+    }
+}
+
+.form--search-filter__filters {
+    max-height:0;
+    overflow:hidden; 
+    transition: max-height .5s;
+}
+
+.form--search-filter__filters.open-filters{
+    height:auto;
+    /* //SHAME: magic number to allow the accordion to animate */
+    
+     max-height:50em;
+    transition:max-height .5s;   
 }
 
 .form--filter-option {
@@ -38,7 +79,7 @@
     padding: 1em;
     background: linear-gradient(150deg, $bethel--blue, 60%, $bethel--yellow);
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     justify-content: center;
     border-radius: .5em;
     /* flex-direction: column; */
@@ -49,10 +90,12 @@
 }
 
 .form--find-program .search--program input {
-    margin-bottom: .5em;
+    /* margin-bottom: .5em; */
     padding: .5em;
     flex: 1;
     text-align: center;
+    font-size: .9rem;
+    margin-right: .5em;
 
     @mixin respond-min $medium {
         margin-right: 1em;
