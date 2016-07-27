@@ -1,0 +1,107 @@
+.section--find-program {
+    background: url("https://www.bethel.edu/_homepages/adult-undergrad/images/caps-students-class.jpg") no-repeat;
+    background-size: cover;
+    background-position: 0 100%;
+    color: #fff !important;
+}
+
+.form--find-program {
+    font-family: $gotham;
+}
+
+.form--find-program fieldset {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 1em;
+}
+
+.form--find-program label {
+    font-size: .8rem;
+    font-weight: 400;
+}
+
+.form--find-program input {
+    margin-bottom: 0;
+}
+
+.form--search-filter {
+    background: #e5e5e5;
+    margin: 0 1em;
+    border-bottom-right-radius: .5em;
+    border-bottom-left-radius: .5em;
+
+    @mixin respond-min $large {
+        /* margin: 0 2em; */
+        padding: 0 2em;
+    }
+}
+
+.form--search-filter__button {
+    text-align: center;
+    padding: 1em;
+    margin: 0;
+    font-weight: 500;
+    font-size: 70%;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    @mixin respond-min $large {
+        padding: 1.5em 0;
+        font-size: 85%;
+    }
+}
+
+.form--search-filter__filters {
+    max-height:0;
+    overflow:hidden; 
+    transition: max-height .5s;
+}
+
+.form--search-filter__filters.open-filters{
+    height:auto;
+    /* //SHAME: magic number to allow the accordion to animate */
+    
+     max-height:50em;
+    transition:max-height .5s;   
+}
+
+.form--filter-option {
+    display: flex;
+    align-items: baseline;
+}
+
+.form--filter-option input[type=checkbox]{
+/*     width: 2em;
+    height: 2em; */
+}
+
+.form--find-program .search--program {
+    padding: 1em;
+    background: linear-gradient(150deg, $bethel--blue, 60%, $bethel--yellow);
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    border-radius: .5em;
+    /* flex-direction: column; */
+
+    @mixin respond-min $medium {
+        padding: 1.5em;
+    }
+}
+
+.form--find-program .search--program input {
+    /* margin-bottom: .5em; */
+    padding: .5em;
+    flex: 1;
+    text-align: center;
+    font-size: .9rem;
+    margin-right: .5em;
+
+    @mixin respond-min $medium {
+        margin-right: 1em;
+        font-size: 1.25rem;
+        padding: 1em;
+        /* flex: 1 0 0; */
+        margin-bottom: 0;
+    }
+}

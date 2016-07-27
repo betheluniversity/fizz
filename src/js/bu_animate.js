@@ -1,3 +1,31 @@
+
+// Customizations for Scroll Reveal
+// https://github.com/jlmakes/scrollreveal.js
+
+var ScrollReveal = require("scrollreveal");
+window.sr = ScrollReveal({reset:true});
+
+var slideRight = {
+    origin   : "left",
+    distance : "9%",
+    duration : 500,
+    delay    : 100,
+};
+
+var slideLeft = {
+    origin   : "right",
+    distance : "9%",
+    duration : 500,
+    delay    : 100,
+};
+
+if (document.getElementsByClassName('.js-animateSlideRight').length != 0){
+    sr.reveal(".js-animateSlideRight", slideRight);
+}
+if (document.getElementsByClassName('.js-animateSlideLeft').length != 0){
+    sr.reveal(".js-animateSlideLeft", slideLeft);
+}
+
 var didScroll = false;
 var intervalID = '';
 

@@ -6,7 +6,10 @@
 @import "base/fluidity.css";
 @import "base/space.css";
 @import "base/tables.css";
-@import "base/forms.css";
+
+@import "forms/forms.css";
+@import "forms/form--request-info.css";
+@import "forms/form--find-program.css";
 
 @import "typography/typography.css";
 
