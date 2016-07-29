@@ -1,0 +1,12 @@
+.dl--generic {
+	font-family: $gotham;
+
+	dt {
+		font-weight: 500;
+	}
+
+	dd {
+		margin-left: 0;
+		margin-bottom: 1em;
+	}	
+}
