@@ -3,8 +3,11 @@
 	@mixin respond-max $medium {
 		display: none;
 	}
-	@mixin respond-min $medium {
-		/* display: n; */
+}
+
+.hide--medium {
+	@mixin respond-max $large {
+		display: none;
 	}
 }
 

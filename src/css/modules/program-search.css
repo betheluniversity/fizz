@@ -15,16 +15,17 @@
 		}
 	}
 
-	.grid-cell:nth-child(1){
+	.results-one {
 		font-weight: 500;
-			flex: 3;
+		flex: 3 3 75%;
 		
 		@mixin respond-min $medium {
 		margin-left: .5em;
+		flex: 3;
 		}
 	}
 
-	.grid-cell:nth-child(2) {
+	.results-two {
 			flex: 2;
 			align-self: center;
 			text-align: right;
@@ -38,14 +39,14 @@
 		}
 	}
 
-	.grid-cell:nth-child(3) {
+	.results-three {
 		@mixin respond-min $medium {
 			flex: 2;
 		}
 		/* background: yellow; */
 	}
 
-	.grid-cell:nth-child(4){
+	.results-four {
 		/* background: green; */
 		display: none;
 		
@@ -93,7 +94,7 @@
 		color: #Fff;
 		margin-right: .5em;
 
-		@mixin respond-min $medium {
+		@mixin respond-min $large {
 			float: left;
 		}
 	}

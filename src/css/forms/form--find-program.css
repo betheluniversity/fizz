@@ -78,7 +78,7 @@
 }
 
 .form--find-program .search--program {
-    padding: 1em;
+    padding: .5em;
     background: linear-gradient(150deg, $bethel--blue, 60%, $bethel--yellow);
     display: flex;
     /* flex-wrap: wrap; */
@@ -87,22 +87,23 @@
     /* flex-direction: column; */
 
     @mixin respond-min $medium {
-        padding: 1.5em;
+        padding: 1em;
     }
 }
 
 .form--find-program .search--program input {
     /* margin-bottom: .5em; */
-    padding: .5em;
+    padding: .25em;
     flex: 1;
     text-align: center;
     font-size: .9rem;
     margin-right: .5em;
+    -webkit-appearance: none;
 
     @mixin respond-min $medium {
         margin-right: 1em;
         font-size: 1.25rem;
-        padding: 1em;
+        padding: .5em;
         /* flex: 1 0 0; */
         margin-bottom: 0;
     }

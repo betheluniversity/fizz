@@ -141,7 +141,7 @@ section + h4 {
     display: none;
 }
 
-@media screen (max-width: 51.99em) {
+@media screen and (max-width: 51.99em) {
     .no-js .close-btn  {
         display: block;
     }
