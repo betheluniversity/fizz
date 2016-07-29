@@ -12,6 +12,7 @@
 @import "forms/form--find-program.css";
 
 @import "typography/typography.css";
+@import "typography/dl.css";
 
 @import "grid/flex-grid.css";
 @import "grid/layout.css";

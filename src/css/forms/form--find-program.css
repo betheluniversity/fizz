@@ -1,4 +1,5 @@
 .section--find-program {
+
     background: url("../assets/images/study-smile-duotone.jpg") no-repeat;
     background-size: cover;
     background-position: 60% 0;
@@ -7,6 +8,7 @@
     @mixin respond-min $large {
         background-position: 20% 0;
     }
+
 }
 
 .form--find-program {
@@ -59,6 +61,8 @@
     max-height:0;
     overflow:hidden; 
     transition: max-height .5s;
+    padding: 0 1em;
+
 }
 
 .form--search-filter__filters.open-filters{
@@ -67,6 +71,9 @@
     
      max-height:50em;
     transition:max-height .5s;   
+
+    padding-bottom: 1em;
+
 }
 
 .form--filter-option {
@@ -80,7 +87,7 @@
 }
 
 .form--find-program .search--program {
-    padding: 1em;
+    padding: .5em;
     background: linear-gradient(150deg, $bethel--blue, 60%, $bethel--yellow);
     display: flex;
     /* flex-wrap: wrap; */
@@ -89,23 +96,40 @@
     /* flex-direction: column; */
 
     @mixin respond-min $medium {
-        padding: 1.5em;
+        padding: 1em;
     }
 }
 
 .form--find-program .search--program input {
     /* margin-bottom: .5em; */
-    padding: .5em;
+    padding: .25em;
     flex: 1;
     text-align: center;
-    font-size: .9rem;
+    font-size: 16px;
     margin-right: .5em;
+    -webkit-appearance: none;
 
     @mixin respond-min $medium {
         margin-right: 1em;
         font-size: 1.25rem;
-        padding: 1em;
+        padding: .5em;
         /* flex: 1 0 0; */
         margin-bottom: 0;
     }
+}
+
+.form--find-program .search--program input:focus,
+.form--find-program .search--program input:hover {
+    font-size: 16px;
+}
+
+.form--find-program .search--program .btn {
+    @mixin respond-max $medium {
+        padding: 0 .5em;
+    }
+}
+
+.form--find-program .search--program svg {
+    fill: #fff;
+    margin: 0;
 }

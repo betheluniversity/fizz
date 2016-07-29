@@ -62,7 +62,7 @@
     }
 }
 
-@media (max-width: 51.99em){
+@media (max-width: 559px){
     .main div[class*='grid-pad']{
         padding-left: 0;
         padding-right: 0;
@@ -141,7 +141,7 @@ section + h4 {
     display: none;
 }
 
-@media screen (max-width: 51.99em) {
+@media screen and (max-width: 51.99em) {
     .no-js .close-btn  {
         display: block;
     }

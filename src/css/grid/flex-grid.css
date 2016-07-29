@@ -41,6 +41,10 @@
   flex-wrap: wrap;
 }
 
+.grid--nowrap {
+    flex-wrap: nowrap;
+}
+
 /* Setting width to 100% defaults to full-width on mobile*/
 
 .grid-cell {
