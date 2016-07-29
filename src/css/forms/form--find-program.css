@@ -1,8 +1,12 @@
 .section--find-program {
-    background: url("https://www.bethel.edu/_homepages/adult-undergrad/images/caps-students-class.jpg") no-repeat;
+    background: url("../assets/images/study-smile-duotone.jpg") no-repeat;
     background-size: cover;
-    background-position: 0 100%;
+    background-position: 60% 0;
     color: #fff !important;
+
+    @mixin respond-min $large {
+        background-position: 20% 0;
+    }
 }
 
 .form--find-program {

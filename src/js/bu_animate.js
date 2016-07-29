@@ -3,27 +3,28 @@
 // https://github.com/jlmakes/scrollreveal.js
 
 var ScrollReveal = require("scrollreveal");
-window.sr = ScrollReveal({reset:true});
+window.sr = ScrollReveal({
+    reset:true,
+    mobile: false,
+    duration: 500,
+    delay: 200,
+    distance: '60px',
+    origin: 'left'
+});
 
-var slideRight = {
-    origin   : "left",
-    distance : "9%",
-    duration : 500,
-    delay    : 100,
-};
+var slideRight = {origin: "left",};
+var slideLeft = {origin: "right",};
 
-var slideLeft = {
-    origin   : "right",
-    distance : "9%",
-    duration : 500,
-    delay    : 100,
-};
-
-if (document.getElementsByClassName('.js-animateSlideRight').length != 0){
+if (document.querySelectorAll('.js-animateSlideRight').length != 0){
     sr.reveal(".js-animateSlideRight", slideRight);
 }
-if (document.getElementsByClassName('.js-animateSlideLeft').length != 0){
+
+if (document.querySelectorAll('.js-animateSlideLeft').length != 0){
     sr.reveal(".js-animateSlideLeft", slideLeft);
+}
+
+if (document.querySelectorAll('.js-animateSequence').length != 0){
+    sr.reveal(".seq", 200);
 }
 
 var didScroll = false;

@@ -88,7 +88,7 @@
 		left: 0;
 		bottom: 0;
 		width: 75%;
-		padding: 5% 8%;
+		padding: 2% 8%;
 	}
 
 	@mixin respond-min $x-large{
@@ -114,11 +114,11 @@
 .moving-picture__overlay__teaser {
 	display: none;
 	/* margin-top: .75em; */
-	color: #bbb;
+	color: $bethel--yellow;
 
 	@mixin respond-min $large {
 		display: block;
-		font-size: 1.1rem;
+		font-size: 1rem;
 	}
 }
 
