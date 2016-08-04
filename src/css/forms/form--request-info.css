@@ -41,11 +41,18 @@
   border-left: 0;
   border-right: 0;
   border-top: 0;
-  border-bottom: 0;
+  border-bottom: 1px solid #ccc;
+  border-radius: 0;
   background: transparent;
   color: $bethel--yellow;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   height: 2.5em;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+
+  @mixin respond-min $medium {
+    font-size: 1.5rem;
+  }
 }
 
 .form--request-info #user_name {
@@ -57,5 +64,5 @@
 }
 
 .form--request-info__select {
-  width: 12em;
+  width: 13em;
 }
