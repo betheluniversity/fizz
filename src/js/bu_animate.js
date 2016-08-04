@@ -12,6 +12,12 @@ window.sr = ScrollReveal({
     origin: 'left'
 });
 
+var revealUp = {origin: "bottom"};
+
+if (document.querySelectorAll('.js-animateRevealUp').length != 0){
+    sr.reveal(".js-animateRevealUp", revealUp);
+}
+
 var slideRight = {origin: "left",};
 var slideLeft = {origin: "right",};
 
