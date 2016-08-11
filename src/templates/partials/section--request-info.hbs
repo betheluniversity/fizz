@@ -4,7 +4,7 @@
 			<div class="grid-cell">
 				<div class="medium-grid-pad-1x">
 					<h3 class="beta  mb2  center  fw300" style="color: #fff">Request information</h3>
-					<form id="request-info-form" class="form--request-info  validate-form" action="" method="post" >
+					<form class="form--request-info  validate-form" action="" method="post" >
 					<blockquote class="center">
 						<fieldset>
 							Hello, my <label class="form--request-info__label" for="user_name">name</label> is <input required="" name="user[name]" id="user_name" value="" type="text" title="Name required">
@@ -13,7 +13,7 @@
 						<fieldset>
 							I'd like to learn more about Bethel's
 								<span style="white-space:nowrap">							
-								<select class="form--request-info__select" name="degree-type">
+								<select class="form--request-info__select" name="degree-type" required>
 								<option id="undergrad" value="undergrad">undergrad degrees</option>
 								<option value="adult-undergrad">adult undergrad degrees</option>
 								<option value="graduate">graduate degrees</option>
@@ -21,21 +21,22 @@
 							</select>.</span>
 						</fieldset>
 					</blockquote>
-					<button class="btn  btn-yellow  center  mt3" jtype="submit">Get info</button>
+					<div class="form--request-info__error"></div>
+					<button id="form--request-info__submit" class="btn  btn-yellow  center  mt3" jtype="submit">Get info</button>
 					</form>
-					<div id='request-info-sucess' style="display:none">
+					<div class='form--request-info--success' style="display:none">
 						<p style="color:#fff" class="center">Thanks for requesting information! Check your email, you should be hearing from us soon.</p>
 						<div class="checkmark">
-              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                   viewBox="0 0 161.2 161.2" enable-background="new 0 0 161.2 161.2" xml:space="preserve">
-                <path class="path" fill="none" stroke="#17aa1c" stroke-miterlimit="10" d="M425.9,52.1L425.9,52.1c-2.2-2.6-6-2.6-8.3-0.1l-42.7,46.2l-14.3-16.4
-                                                                                          c-2.3-2.7-6.2-2.7-8.6-0.1c-1.9,2.1-2,5.6-0.1,7.7l17.6,20.3c0.2,0.3,0.4,0.6,0.6,0.9c1.8,2,4.4,2.5,6.6,1.4c0.7-0.3,1.4-0.8,2-1.5
-                                                                                          c0.3-0.3,0.5-0.6,0.7-0.9l46.3-50.1C427.7,57.5,427.7,54.2,425.9,52.1z"/>
-                <circle class="circle path" fill="none" stroke="#17aa1c" stroke-width="4" stroke-miterlimit="10" cx="80.6" cy="80.6" r="62.1"/>
-                <polyline class="check" fill="none" stroke="#17aa1c" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" points="113,52.8 
-                                                                                                                                            74.1,108.4 48.2,86.4 "/>
-              </svg>
-            </div>
+							<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+								viewBox="0 0 161.2 161.2" enable-background="new 0 0 161.2 161.2" xml:space="preserve">
+								<path class="path" fill="none" stroke="#17aa1c" stroke-miterlimit="10" d="M425.9,52.1L425.9,52.1c-2.2-2.6-6-2.6-8.3-0.1l-42.7,46.2l-14.3-16.4
+								c-2.3-2.7-6.2-2.7-8.6-0.1c-1.9,2.1-2,5.6-0.1,7.7l17.6,20.3c0.2,0.3,0.4,0.6,0.6,0.9c1.8,2,4.4,2.5,6.6,1.4c0.7-0.3,1.4-0.8,2-1.5
+								c0.3-0.3,0.5-0.6,0.7-0.9l46.3-50.1C427.7,57.5,427.7,54.2,425.9,52.1z"/>
+								<circle class="circle path" fill="none" stroke="#17aa1c" stroke-width="4" stroke-miterlimit="10" cx="80.6" cy="80.6" r="62.1"/>
+								<polyline class="check" fill="none" stroke="#17aa1c" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" points="113,52.8 
+								74.1,108.4 48.2,86.4 "/>
+							</svg>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -44,50 +45,52 @@
 </section>
 
 <script type="text/javascript">
-	var form = document.getElementById('request-info-form');
+	var form = document.querySelector('.form--request-info');
+	
 	form.addEventListener('submit', function(event){
 		event.preventDefault();
-
 		var data = new FormData(form);
-
 		var request = new XMLHttpRequest();
 		request.open('POST', '/code/homepage-request-info.php', true);
 
-		request.onload = function() {
-		  if (request.status >= 200 && request.status < 400) {
-		    // Success!
-				document.getElementById('request-info-form').style.display = 'none';
-				document.getElementById('request-info-sucess').style.display = '';
-				
-		  } else {
-		    // We reached our target server, but it returned an error
-				alert('error');
-		  }
+		if (!this.checkValidity()) {
+			console.log("no checkValidity")
+			event.preventDefault();
+			form.classList.add('invalid');
+		  	throwError();
+		} else {
+			console.log("yes checkValidity");
+			form.classList.add('valid');
+		  // form.querySelector('#status').html('submitted');
+			request.onload = function() {
+				if (request.status >= 200 && request.status < 400) {
+			    // Success!
+					document.querySelector('.form--request-info').style.display = 'none';
+					document.querySelector('.form--request-info--success').style.display = '';	
+				} else {
+			    // We reached our target server, but it returned an error
+					alert('error');
+				}
+			};
+			request.send(data);
 		};
-		request.send(data);
 	});
 
 	function hasHtml5Validation () {
  		return typeof document.createElement('input').checkValidity === 'function';
 	}
 
-	var validForm = document.querySelector('.validate-form');
+	function throwError () { 
+	  var newDiv = document.createElement("p"); 
+	  newDiv.style.cssText = 'text-align:center;color:red;padding-top:1em;';
 
-	if (hasHtml5Validation()) {
-		console.log(validForm);
-		validForm.addEventListener('submit', (function (e) {
-			if (!this.checkValidity()) {
-			  e.preventDefault();
-			  validForm.classList.add('invalid');
-			  // validForm.querySelector('#status').html('invalid');
-			} else {
-				console.log("yes");
-			  validForm.classList.add('valid');
-			  // validForm.querySelector('#status').html('submitted');
-			}
-		}));
+	  var newContent = document.createTextNode("Oops looks like we need a little more information!"); 
+	  newDiv.appendChild(newContent); //add the text node to the newly created div. 
+
+	  // add the newly created element and its content into the DOM 
+	  var submitBtn = document.querySelector(".form--request-info__submit");
+	  var errorDiv = document.querySelector(".form--request-info__error")
+	  console.log(submitBtn); 
+	  errorDiv.insertBefore(newDiv, submitBtn); 
 	}
-
-
-
 </script>
