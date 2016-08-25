@@ -3,7 +3,8 @@ var webpack = require("webpack");
 module.exports = {
 	entry: './src/js/main.js',
 	output: {
-		filename: './builds/js/webpack.js'
+		filename: 'webpack.js'
+		// path: '/'
 	},
 	module: {
 		noParse: [
@@ -17,6 +18,6 @@ module.exports = {
 		]
 	},
 	plugins: [
-		new webpack.optimize.UglifyJsPlugin({ xoutput: {comments:false}})
+		new webpack.optimize.UglifyJsPlugin({ output: {comments:false}})
 	]
 }

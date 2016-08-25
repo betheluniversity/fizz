@@ -29,18 +29,8 @@ gulp.task('css', function () {
 
 gulp.task('js', function(){
 	return gulp.src('./src/js/main.js')
-		.pipe(webpack({
-			output: {filename: 'webpack.js',},
-		  	module: {
-		  		noParse: [/.\/src\/js\/odometer.min.js/],
-		  		loaders: [{
-		    			test: /(flickity|fizzy-ui-utils|get-size|unipointer)/,
-		    	        loader: 'imports?define=>false&this=>window'
-		  		}]
-		  	},
-		  	plugins: [new webpack.webpack.optimize.UglifyJsPlugin({ output: {comments:false}})]
-		}))
-		.pipe(gulp.dest(outputDir + '/js'));
+		.pipe(webpack( require('./webpack.config.js') ))
+		.pipe(gulp.dest(outputDir + '/js/'));
 });
 
 // excluding Odometer because it has lots of issues
