@@ -1,9 +1,10 @@
 var webpack = require("webpack");
+// require("scrollreveal");
 
 module.exports = {
 	entry: './src/js/main.js',
 	output: {
-		filename: './builds/js/webpack.js'
+		filename: 'webpack.js'
 	},
 	module: {
 		noParse: [
@@ -17,6 +18,9 @@ module.exports = {
 		]
 	},
 	plugins: [
-		new webpack.optimize.UglifyJsPlugin({ xoutput: {comments:false}})
+		// new webpack.optimize.UglifyJsPlugin({ xoutput: {comments:false}}),
+		new webpack.ProvidePlugin({
+		    ScrollReveal: "scrollreveal"
+		})
 	]
 }

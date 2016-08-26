@@ -1,8 +1,6 @@
-
 // Customizations for Scroll Reveal
 // https://github.com/jlmakes/scrollreveal.js
 
-var ScrollReveal = require("scrollreveal");
 window.sr = ScrollReveal({
     reset:true,
     mobile: false,
@@ -11,6 +9,8 @@ window.sr = ScrollReveal({
     distance: '60px',
     origin: 'left'
 });
+
+// sr.reveal(".proof-point-collection");
 
 var revealUp = {origin: "bottom"};
 
@@ -33,104 +33,128 @@ if (document.querySelectorAll('.js-animateSequence').length != 0){
     sr.reveal(".seq", 200);
 }
 
-var didScroll = false;
-var intervalID = '';
+// ======= ODOMETER
 
-function markScroll() {
-    didScroll = true;
+var Odometer = require("./odometer.min.js");
+var odometers = document.getElementsByClassName('odometer');
+
+console.log(odometers);
+
+for (var i = 0, len = odometers.length; i < len; i++) {
+    var el = odometers[i];
+    var od = new Odometer({
+        el: el
+    });
+    console.log(el);
+    sr.reveal(el, {
+        beforeReveal: function(){
+            el.innerHTML = el.getAttribute('data-final-number');
+            console.log(el);
+        }
+    });
+    console.log(i);
 }
 
-function findProofPointCollectionParentNode(childObj) {
-    var testObj = childObj;
-    var count = 1;
-    while (true) {
-        testObj = testObj.parentNode;
-        if (!testObj.classList) {
-            continue;
-        }
-        if (testObj.classList.contains('proof-point-collection')) {
-            break;
-        }
-    }
-    // go up one more because we need to add to the section
-    return testObj.parentNode;
-}
 
-//Function which adds the 'animated' class to any '.animatable' in view
-var doAnimations = function () {
 
-    // Calc current offset and get all animatables
-    var offset = (window.scrollY || window.pageYOffset) + window.innerHeight;
+// var didScroll = false;
+// var intervalID = '';
+
+// function markScroll() {
+//     didScroll = true;
+// }
+
+// function findProofPointCollectionParentNode(childObj) {
+//     var testObj = childObj;
+//     var count = 1;
+//     while (true) {
+//         testObj = testObj.parentNode;
+//         if (!testObj.classList) {
+//             continue;
+//         }
+//         if (testObj.classList.contains('proof-point-collection')) {
+//             break;
+//         }
+//     }
+//     // go up one more because we need to add to the section
+//     return testObj.parentNode;
+// }
+
+// //Function which adds the 'animated' class to any '.animatable' in view
+// var doAnimations = function () {
+
+//     // Calc current offset and get all animatables
+//     var offset = (window.scrollY || window.pageYOffset) + window.innerHeight;
     
-    var odometers = document.getElementsByClassName('odometer');
-    done_odometers = document.getElementsByClassName('odometerdone');
-    var noAnimation = document.getElementsByClassName("noAnimationProof");
-    done_noAnimation = document.getElementsByClassName('noAnimationProofdone');
+//     var odometers = document.getElementsByClassName('odometer');
+//     done_odometers = document.getElementsByClassName('odometerdone');
+//     var noAnimation = document.getElementsByClassName("noAnimationProof");
+//     done_noAnimation = document.getElementsByClassName('noAnimationProofdone');
 
-    //clears interval that runs doAnimations() everytime screen is scrolled
-    //once all proof points are faded in
-    if (odometers.length == done_odometers.length && noAnimation.length == done_noAnimation.length) {
-        window.onscroll = "";
-        clearInterval(intervalID);
-    }
-    for (index = 0; index < odometers.length; ++index) {
-        var odometer = odometers[index];
-        var scrollPos = odometer.getBoundingClientRect().top + document.body.scrollTop - document.body.clientTop + odometer.offsetHeight - 20;
+//     //clears interval that runs doAnimations() everytime screen is scrolled
+//     //once all proof points are faded in
+//     if (odometers.length == done_odometers.length && noAnimation.length == done_noAnimation.length) {
+//         window.onscroll = "";
+//         clearInterval(intervalID);
+//     }
+//     for (index = 0; index < odometers.length; ++index) {
+//         var odometer = odometers[index];
+//         var scrollPos = odometer.getBoundingClientRect().top + document.body.scrollTop - document.body.clientTop + odometer.offsetHeight - 20;
 
-        if (scrollPos < offset) {
-            fadeIn(odometer);
-            //setTimeout(function() {odometer.innerHTML = odometer.getAttribute('data-final-number');
-            //odometer.className = odometer.className + " odometerdone";}, 50);
-            odometer.innerHTML = odometer.getAttribute('data-final-number');
-            odometer.className = odometer.className + " odometerdone";          
-        }
-    }
+//         if (scrollPos < offset) {
+//             fadeIn(odometer);
+//             //setTimeout(function() {odometer.innerHTML = odometer.getAttribute('data-final-number');
+//             //odometer.className = odometer.className + " odometerdone";}, 50);
+//             odometer.innerHTML = odometer.getAttribute('data-final-number');
+//             odometer.className = odometer.className + " odometerdone";          
+//         }
+//     }
     
-    for (index = 0; index < noAnimation.length; ++index) {
-        noAnimation = noAnimation[index];
-         var scrollPos1 = noAnimation.getBoundingClientRect().top + document.body.scrollTop - document.body.clientTop + noAnimation.offsetHeight - 20;
-         if (scrollPos1 < offset) {
-            fadeIn(noAnimation);
-            noAnimation.className = noAnimation.className + " noAnimationProofdone";  
-         }
-    }
-};
+//     for (index = 0; index < noAnimation.length; ++index) {
+//         noAnimation = noAnimation[index];
+//          var scrollPos1 = noAnimation.getBoundingClientRect().top + document.body.scrollTop - document.body.clientTop + noAnimation.offsetHeight - 20;
+//          if (scrollPos1 < offset) {
+//             fadeIn(noAnimation);
+//             noAnimation.className = noAnimation.className + " noAnimationProofdone";  
+//          }
+//     }
+// };
 
-var fadeIn = function(documentObject){
-    var ppcParent = findProofPointCollectionParentNode(documentObject);
-    // don't add twice
-    if (!ppcParent.classList) {
-        ppcParent.className = "js-animate";
-    }
-    else if (!ppcParent.classList.contains('js-animate')) {
-        ppcParent.className = ppcParent.className + " js-animate";
-    }
-};
+// var fadeIn = function(documentObject){
+//     var ppcParent = findProofPointCollectionParentNode(documentObject);
+//     // don't add twice
+//     if (!ppcParent.classList) {
+//         ppcParent.className = "js-animate";
+//     }
+//     else if (!ppcParent.classList.contains('js-animate')) {
+//         ppcParent.className = ppcParent.className + " js-animate";
+//     }
+// };
 
-function checkForSkrollr(){
-    if(document.readyState === "complete"){
-        doAnimations();
-    }else{
-        setTimeout(function(){
-            checkForSkrollr();
-        },500);
-    }
+// function checkForSkrollr(){
+//     if(document.readyState === "complete"){
+//         doAnimations();
+//     }else{
+//         setTimeout(function(){
+//             checkForSkrollr();
+//         },500);
+//     }
     
-}
+// }
 
-(function () {
-    //noAnimation proofs still need to fade in when scrolled to
-    if (document.getElementsByClassName('odometer').length > 0 || document.getElementsByClassName('noAnimationProof').length > 0) {
+// (function () {
+//     //noAnimation proofs still need to fade in when scrolled to
+//     if (document.getElementsByClassName('odometer').length > 0 || document.getElementsByClassName('noAnimationProof').length > 0) {
 
-        intervalID = setInterval(function () {
-            if (didScroll) {
-                doAnimations();
-                didScroll = false;
-            }
-        }, 100);
-        window.onscroll = function(){markScroll();};
-        //trigger once if the odometers are in view on load
-        checkForSkrollr();
-    }
+//         intervalID = setInterval(function () {
+//             if (didScroll) {
+//                 doAnimations();
+//                 didScroll = false;
+//             }
+//         }, 100);
+//         window.onscroll = function(){markScroll();};
+//         //trigger once if the odometers are in view on load
+//         checkForSkrollr();
+//     }
 
-})();
+// })();

@@ -3,7 +3,11 @@ var Flickity = require("flickity");
 var skrollr = require("./skrollr.min.js");
 require("./accordion.js");
 require("./responsive-tables.js");
-var Odometer = require("./odometer.min.js");
+
+// var ScrollReveal = require("exports?ScrollReveal!scrollreveal");
+// require("imports?ScrollReveal=>undefined!exports?ScrollReveal!scrollreveal")
+
+// require("./odometer--custom.js");
 require("svg4everybody");
 require("./bu_animate.js");
 
@@ -166,20 +170,3 @@ function addEvent(obj, type, fn) {
     obj.attachEvent("on" + type, obj[type + fn]);
   }
 }
-
-// Skrollr init
-var isiPad = navigator.userAgent.match(/iPad/i) !== null;
-var isiPhone = navigator.userAgent.match(/iPhone/i) !== null;
-window.onload = function() {
-    if(window.innerWidth > 1024 && !(isiPhone || isiPad)){
-        var s = skrollr.init({forceHeight:false});
-    }
-    // Odometer init
-    var odometers = document.getElementsByClassName('odometer');
-    for (var i = 0, len = odometers.length; i < len; i++) {
-        var el = odometers[i];
-        var od = new Odometer({
-            el: el
-        });
-    }
-};
