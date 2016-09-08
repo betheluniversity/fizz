@@ -36,23 +36,25 @@ if (document.querySelectorAll('.js-animateSequence').length != 0){
 // ======= ODOMETER
 
 var Odometer = require("./odometer.min.js");
-var odometers = document.getElementsByClassName('odometer');
 
-console.log(odometers);
+var odometers = document.getElementsByClassName('odometer');
 
 for (var i = 0, len = odometers.length; i < len; i++) {
     var el = odometers[i];
     var od = new Odometer({
         el: el
     });
-    console.log(el);
+
     sr.reveal(el, {
-        beforeReveal: function(){
+        beforeReveal: function(el){
             el.innerHTML = el.getAttribute('data-final-number');
-            console.log(el);
-        }
+        },
+        afterReset: function(el){
+            el.innerHTML = 00;
+        },
+        distance: '0px',
+        scale: 1
     });
-    console.log(i);
 }
 
 

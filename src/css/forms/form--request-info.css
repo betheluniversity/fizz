@@ -55,8 +55,12 @@
   }
 }
 
-.form--request-info #user_name {
-  width: 6em;
+.form--request-info #user_firstName {
+  width: 5em;
+}
+
+.form--request-info #user_lastName {
+  width: 5em;
 }
 
 .form--request-info #user_email {
