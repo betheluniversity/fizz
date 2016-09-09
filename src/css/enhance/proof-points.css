@@ -1,14 +1,14 @@
 .proof-points {
     /* color: #fff; */
     font-family: $gotham;
-    align-items: baseline;
+    // align-items: baseline;
 
     .grid-cell {
-        /* background-color: #fff; */
+        background-color: #fff; 
         padding: 1em 1em;
         border-radius: .5em;
         margin: 1em 0;
-        /* border: 1px solid #ddd; */
+        border: 1px solid #e5e5e5; 
 
         @mixin respond-min $medium {
             margin: 1em;

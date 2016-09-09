@@ -1,27 +1,11 @@
 require("./off-canvas.js");
 var Flickity = require("flickity");
-var skrollr = require("./skrollr.min.js");
+// var skrollr = require("./skrollr.min.js");
 require("./accordion.js");
 require("./responsive-tables.js");
-
-// var ScrollReveal = require("exports?ScrollReveal!scrollreveal");
-// require("imports?ScrollReveal=>undefined!exports?ScrollReveal!scrollreveal")
-
 // require("./odometer--custom.js");
 require("svg4everybody");
 require("./bu_animate.js");
-
-// document.getElementById("bachelors").addEventListener("click", function(){
-//     // sortPosts(".title > a")
-//     document.body.classList.toggle("WOOT");
-//     console.log("did it");
-// });
-
-// var elem = document.getElementById('bachelors');
-// elem.addEventListener('focus', function() {
-//   alert('Selection changed!');
-//   console.log("he")
-// }, false);
 
 // Select a random image from the carousel to appear first
 
