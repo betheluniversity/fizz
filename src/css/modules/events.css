@@ -18,15 +18,16 @@ Module to style items in an event feed
 	font-weight: 500;
 	font-family: $gotham;
 	margin-bottom: 0;
-	font-size: 120%;
+	/* font-size: 120%; */
 }
 
 .events__location {
 	margin-bottom: 0;
-	font-family: $gotham;
+	/* font-family: $gotham; */
 	color: #999;
-	margin: .5em 0;
-	font-size: 90%;
+	color: rgba(0, 105, 170, 0.6);
+	margin: 0 0 1em;
+	/* font-size: 90%; */
 }
 
 .events__description {
@@ -36,6 +37,8 @@ Module to style items in an event feed
 .events__date-tile {
 	font-family: $gotham;
 	background: #fff;
+	display: flex;
+	flex-direction: column;
 	flex-basis: 5em;
 	flex-shrink: 0;
 	text-align: center;

@@ -2,7 +2,7 @@
 	position: relative;
 
 	@mixin respond-min 830px {
-		/* max-height: 75vh;*/
+		 max-height: 75vh;
 		overflow: hidden;
 	}
 }
@@ -62,6 +62,8 @@
 	height: 415px;
 	/* flex-shrink: 0;*/
 
+	margin: 0 auto;
+
 	@mixin respond-min 830px {
 		height: auto;
 		position: relative;
@@ -86,7 +88,7 @@
 		left: 0;
 		bottom: 0;
 		width: 75%;
-		padding: 5% 8%;
+		padding: 2% 8%;
 	}
 
 	@mixin respond-min $x-large{
@@ -94,34 +96,37 @@
 }
 
 .moving-picture__overlay__headline {
-	font-size: 1.5em;
+	font-size: 2.2rem;
 	/* margin: 0;*/
 	font-weight: 300;
 	letter-spacing: .02em;
+	margin-bottom: 0;
 
 	@mixin respond-min $medium {
-		font-size: 2em;
+		font-size: 2.8rem;
 	}
 
 	@mixin respond-min $x-large{
-		font-size: 3em;
+		font-size: 4rem;
 	}
 }
 
 .moving-picture__overlay__teaser {
 	display: none;
-	margin-top: .75em;
+	/* margin-top: .75em; */
+	color: $bethel--yellow;
 
 	@mixin respond-min $large {
 		display: block;
+		font-size: 1rem;
 	}
 }
 
 .moving-picture__overlay__button {
 	background-color: $bethel--blue;
-	padding: .75em;
+	padding: .75em 1em;
 	border-radius: .3em;
-	font-size: .8rem;
+	font-size: 1rem;
 	color: #fff;
 	text-transform: uppercase;
 	font-weight: 500;

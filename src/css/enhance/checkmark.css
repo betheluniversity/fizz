@@ -1,0 +1,28 @@
+.checkmark {
+  width: 100px;
+  height: 100px;
+  margin: 30px auto;
+}
+
+.path { 
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 1000ms ease-in-out forwards;
+  animation-delay: 500ms;
+}
+
+.check {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 1000ms ease-in-out forwards;
+  animation-delay: 800ms;
+} 
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: -1000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}

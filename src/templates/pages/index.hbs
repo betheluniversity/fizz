@@ -4,28 +4,106 @@ layout: default
 pageTitle: Test title
 ---
 
-<div class="main js-animate">
+<div class="grid-section mt0" >
+    {{> moving-picture }}
+</div>
 
-    {{!-- {{> proof-points }} --}}
 
-    {{!-- {{> collapsible }} --}}
-    {{!-- <img src="//fillmurray.com/800/350">    --}}
+    {{> section--find-program }}
+    {{> section--home }}
+    {{> section--visit }}
+    {{> section--request-info }}
 
-    {{> image-bank }}
+    <section class="grid-section  pv6  ma0  bkg--white">
+        <div class="inner">
 
-    {{> table }}
+            <div class="grid">
+                <div class="grid-cell  mb4  js-animateSlideRight">
+                    <div class="medium-grid-pad-1x">
 
-    <section class="grid-section">
-    <div class="grid">
-        <div class="grid-cell u-medium-1-2  pr4@medium">
-            <div class="medium-grid-pad-1x">{{> news }}</div>
+                            <div class="quote">
+                                <div class="quote__avatar">
+                                    <img  class="lazyload" data-src="https://cdn2.bethel.edu/resize/unsafe/200x0/smart/https://www.bethel.edu//_shared-content/quotes/images/cas__business_lin-chin-chin.jpg" style="opacity: 1;" title="">
+                                </div>
+
+                                <div class="quote__text">
+                                    <p>While interviewing with a Bethel alum for a position at UnitedHealth Group, the interviewer asked me to consider joining the International Audit department instead of the position for which I had applied.</p>
+                                    <cite class="quote__source">–Chin-Chin Lin</cite>
+                                </div>
+                            </div>
+
+                    </div>
+                </div>
+                <div class="grid-cell  js-animateSlideLeft">
+                    <div class="medium-grid-pad-1x">
+
+                        <div class="quote">
+                            <div class="quote__avatar">
+                                <img  class="lazyload" data-src="https://cdn1.bethel.edu/resize/unsafe/200x0/smart/https://www.bethel.edu//_shared-content/quotes/images/cas__business_nettleton-nicole.jpg" style="opacity: 1;">
+                            </div>
+                            <div class="quote__text">
+                                <p>Bethel really prepared me...having a liberal arts education was beneficial because it made me well rounded.[Businesses] look for people with all sorts of different backgrounds and leadership experience. Bethel encourages people to get involved.</p>
+                                <cite class="quote__source">–Nicole (Nettleton) Willenbring</cite>
+                            </div>
+                        </div>
+
+                        <div class="quote  mv2">
+                            <div class="quote__avatar">
+                                <img  class="lazyload" data-src="https://cdn2.bethel.edu/resize/unsafe/830x0/smart/https://www.bethel.edu/_shared-content/images/gls/carrie-rasmussen.jpg" title="">
+                            </div>
+
+                            <div class="quote__text">
+                                <p>"Bethel invites leaders to come together to gain understanding and put into practice what Jesus taught us: love one another. I have a true appreciation for Bethel's desire to come alongside the church."</p>
+                                <cite class="quote__source"><b>Carrie Rasmussen</b><br>
+                                    Campus Executive Pastor<br>
+                                    Eagle Brook Church
+                                </cite>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid">
+                <div class="grid-cell  mb4  js-animateSlideRight">
+                    <div class="medium-grid-pad-1x">
+
+                            <div class="quote">
+                                <div class="quote__avatar">
+                                    <img  class="lazyload" data-src="https://cdn2.bethel.edu/resize/unsafe/200x0/smart/https://www.bethel.edu//_shared-content/quotes/images/cas__business_lin-chin-chin.jpg" style="opacity: 1;" title="">
+                                </div>
+
+                                <div class="quote__text">
+                                    <p>While interviewing with a Bethel alum for a position at UnitedHealth Group, the interviewer asked me to consider joining the International Audit department instead of the position for which I had applied.</p>
+                                    <cite class="quote__source">–Chin-Chin Lin</cite>
+                                </div>
+                            </div>
+
+                    </div>
+                </div>
+                <div class="grid-cell  js-animateSlideLeft">
+                    <div class="medium-grid-pad-1x">
+
+                        <div class="quote">
+                            <div class="quote__avatar">
+                                <img  class="lazyload" data-src="https://cdn1.bethel.edu/resize/unsafe/200x0/smart/https://www.bethel.edu//_shared-content/quotes/images/cas__business_nettleton-nicole.jpg" style="opacity: 1;">
+                            </div>
+                            <div class="quote__text">
+                                <p>Bethel really prepared me...having a liberal arts education was beneficial because it made me well rounded.[Businesses] look for people with all sorts of different backgrounds and leadership experience. Bethel encourages people to get involved.</p>
+                                <cite class="quote__source">–Nicole (Nettleton) Willenbring</cite>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
         </div>
-        <div class="grid-cell">
-            <div class="medium-grid-pad-1x">{{> events }}</div>
-        </div>
-    </div>
     </section>
     
+
     <p>Bethel University is a top-ranked, evangelical Christian university based in St. Paul, Minnesota.</p>
     <h2>Our Students</h2>
     <p>With a total enrollment of 6,500 students, Bethel is the largest institution in the 13-member Christian College Consortium and among the top five in the 106-member Council for Christian Colleges and Universities. In recent years, our students have come from as many as 49 states and 23 countries, and have represented more than 65 Christian denominations.</p>
@@ -74,3 +152,28 @@ pageTitle: Test title
     <p>Additionally, the Twin Cities' arts community provides opportunities to experience culture firsthand or engage professionally with the arts through internships.</p>
         {{> quotes }}
 </div>
+
+
+    <section class="grid-section  mv6">
+        <div class="inner">
+            {{> proof-points }}
+        </div>
+    </section>
+
+
+    <section class="grid-section  pv6  bkg--white">
+        <div class="inner">
+            <div class="grid">
+                <div class="grid-cell u-medium-1-2  pr4@medium  mb4">
+                    <div class="medium-grid-pad-1x">{{> news }}</div>
+                </div>
+                <div class="grid-cell">
+                    <div class="medium-grid-pad-1x">{{> events }}</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{> section--apply }}
+
+

@@ -30,7 +30,8 @@ gulp.task('css', function () {
 gulp.task('js', function(){
 	return gulp.src('./src/js/main.js')
 		.pipe(webpack( require('./webpack.config.js') ))
-		.pipe(gulp.dest(outputDir + '/js/'));
+		.pipe(gulp.dest(outputDir + '/js/'))
+		.pipe(reload({stream:true}));
 });
 
 // excluding Odometer because it has lots of issues
@@ -95,7 +96,8 @@ gulp.task('browser-sync', function() {
 		// tunnel: true,
 		server: {
 			baseDir: outputDir
-		}
+		},
+		browser: "Google Chrome"
 	});
 });
 

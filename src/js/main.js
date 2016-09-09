@@ -1,11 +1,11 @@
 require("./off-canvas.js");
 var Flickity = require("flickity");
-var skrollr = require("./skrollr.min.js");
-require("./bu_animate.js");
+// var skrollr = require("./skrollr.min.js");
 require("./accordion.js");
 require("./responsive-tables.js");
-var Odometer = require("./odometer.min.js");
+// require("./odometer--custom.js");
 require("svg4everybody");
+require("./bu_animate.js");
 
 // Select a random image from the carousel to appear first
 
@@ -50,33 +50,35 @@ if( document.getElementsByClassName('js-rotate-order-carousel')[0] ){
 
 var carousels = document.getElementsByClassName('flickity');
 
-for (var i = 0, len = carousels.length; i < len; i++) {
-    var carousel = carousels[i];
+if (carousels.length != 0){
+    for (var i = 0, len = carousels.length; i < len; i++) {
+        var carousel = carousels[i];
 
-// Checking if carousel has rotate class. If this is not set
-// and there is more than one carousel on the page, Flickity can't 
-// set the proper target
+    // Checking if carousel has rotate class. If this is not set
+    // and there is more than one carousel on the page, Flickity can't 
+    // set the proper target
 
-    if (carousel.classList.contains("js-rotate-order-carousel")){
-        local_initial_load = initial_load;
+        if (carousel.classList.contains("js-rotate-order-carousel")){
+            local_initial_load = initial_load;
+        }
+        else {
+            local_initial_load = 0;
+        }
+
+        var flkty = new Flickity(carousels[i], {
+            wrapAround: true,
+            imagesLoaded: true,
+            initialIndex: local_initial_load,
+            pageDots:false,
+            percentPosition:false,
+            draggable: false,
+            cellAlign: 'left'
+        });
+        
+        flkty.on('cellSelect', function(){
+            isSelected();
+        });
     }
-    else {
-        local_initial_load = 0;
-    }
-
-    var flkty = new Flickity(carousels[i], {
-        wrapAround: true,
-        imagesLoaded: true,
-        initialIndex: local_initial_load,
-        pageDots:false,
-        percentPosition:false,
-        draggable: false,
-        cellAlign: 'left'
-    });
-    
-    flkty.on('cellSelect', function(){
-        isSelected();
-    });
 }
 
 function onLoadeddata( event ) {
@@ -85,18 +87,18 @@ function onLoadeddata( event ) {
 }
 
 
-if( typeof flkty !== 'undefined' ) {
-    if (flkty.selectedElement.querySelectorAll('video')){
-        var videos = flkty.selectedElement.querySelectorAll('video');
-    }
+// if( typeof flkty !== 'undefined' ) {
+//     if (flkty.selectedElement.querySelectorAll('video')){
+//         var videos = flkty.selectedElement.querySelectorAll('video');
+//     }
 
-    for ( var i=0, len = videos.length; i < len; i++ ) {
-        var video = videos[i];
-        // resume autoplay for WebKit
-        video.play();
-        addEvent( video, 'loadeddata', onLoadeddata );
-    }
-}
+//     for ( var i=0, len = videos.length; i < len; i++ ) {
+//         var video = videos[i];
+//         // resume autoplay for WebKit
+//         video.play();
+//         addEvent( video, 'loadeddata', onLoadeddata );
+//     }
+// }
 
 // Checking for 'is-selected' on load
 
@@ -120,24 +122,24 @@ function isSelected() {
     }
 }
 
-  // var gallery = document.querySelector('.flickity');
-  // var flkty = new Flickity( carousels[i] );
+  var gallery = document.querySelector('.flickity');
+  var flkty = new Flickity( carousels[i] );
   
   function onLoadeddata( event ) {
     var cell = flkty.getParentCell( event.target );
     flkty.cellSizeChange( cell && cell.element );
   }
 
-  var videos = flkty.selectedElement.querySelectorAll('video');
+  // var videos = flkty.selectedElement.querySelectorAll('video');
 
-  if ( videos.length != 0){
-      for ( var i=0, len = videos.length; i < len; i++ ) {
-        var video = videos[i];
-        // resume autoplay for WebKit
-        video.play();
-        addEvent( video, 'loadeddata', onLoadeddata );
-      }
-  }
+  // if ( videos.length != 0){
+  //     for ( var i=0, len = videos.length; i < len; i++ ) {
+  //       var video = videos[i];
+  //       // resume autoplay for WebKit
+  //       video.play();
+  //       addEvent( video, 'loadeddata', onLoadeddata );
+  //     }
+  // }
 
 // Generic addEvent function
 
@@ -152,20 +154,3 @@ function addEvent(obj, type, fn) {
     obj.attachEvent("on" + type, obj[type + fn]);
   }
 }
-
-// Skrollr init
-var isiPad = navigator.userAgent.match(/iPad/i) !== null;
-var isiPhone = navigator.userAgent.match(/iPhone/i) !== null;
-window.onload = function() {
-    if(window.innerWidth > 1024 && !(isiPhone || isiPad)){
-        var s = skrollr.init({forceHeight:false});
-    }
-    // Odometer init
-    var odometers = document.getElementsByClassName('odometer');
-    for (var i = 0, len = odometers.length; i < len; i++) {
-        var el = odometers[i];
-        var od = new Odometer({
-            el: el
-        });
-    }
-};

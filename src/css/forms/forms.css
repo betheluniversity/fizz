@@ -8,7 +8,7 @@
 
 /* Make all forms have space below them*/
 form {
-  margin: 0 0 1.5em;
+  margin: 0 0 $baseLineHeight + em;
 }
 
 fieldset {
@@ -22,16 +22,16 @@ legend {
   display: block;
   width: 100%;
   padding: 0;
-  margin-bottom: 1.5em;
-  font-size: calc(16px * 1.5);
-  line-height: calc(1.5em * 2);
+  margin-bottom: $baseLineHeight + em;
+  font-size: $baseFontSize * 1.5;
+  line-height: $baseLineHeight * 2;
   color: #333;
   border: 0;
   border-bottom: 1px solid #e5e5e5;
 
   /* Small*/
   small {
-    font-size: calc(1.5em * .75);
+    font-size: $baseLineHeight * .75;
     color: #aaa;
   }
 }
@@ -44,7 +44,7 @@ select,
 textarea { 
   font-size: 12px;
   font-weight: normal;
-  line-height: 1.5;
+  line-height: $baseLineHeight;
 }
 input,
 button,
@@ -60,7 +60,7 @@ label {
   color: #333; /* JJ*/
   font-size: 12px;
   font-weight: bold;
-  line-height: 1.5;
+  line-height: $baseLineHeight;
   font-family: $gotham;
 }
 
@@ -90,11 +90,11 @@ input[type="tel"],
 input[type="color"],
 .uneditable-input {
   display: inline-block;
-  /* height: 1.5 + em;*/
+  /* height: $baseLineHeight + em;*/
   padding: 4px 6px;
   margin-bottom: 9px;
-  font-size: 16px;
-  line-height: 1.5;
+  font-size: $baseFontSize;
+  line-height: $baseLineHeight;
   color: #777;
   border-radius: .3em;
 }
@@ -134,6 +134,7 @@ input[type="color"],
   &:focus {
     /*border-color: rgba(82,168,236,.8);*/
     outline: 0;
+    outline: thin dotted \9; /* IE6-9 */
     /*@mixin box-shadow(#{inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6)});*/
   }
 }
@@ -142,6 +143,8 @@ input[type="color"],
 input[type="radio"],
 input[type="checkbox"] {
   margin: 4px 0 0;
+  *margin-top: 0; /* IE7 */
+  margin-top: 1px \9; /* IE8-9 */
   line-height: normal;
   cursor: pointer;
 }
@@ -161,6 +164,7 @@ input[type="checkbox"] {
 select,
 input[type="file"] {
   height: 30px; /* In IE7, the height of the select element cannot be changed by height, only font-size */
+  *margin-top: 4px; /* For IE7, add top margin to align select with labels */
   line-height: 30px;
 }
 

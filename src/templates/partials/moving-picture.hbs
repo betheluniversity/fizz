@@ -1,36 +1,34 @@
-<div class="flickity  js-rotate-order-carousel carousel--text-over-media">
+<div class="js-rotate-order-carousel">
 
 {{#each movingPic}}
+    {{#if show}}
 
-    <div class="flickity--cell">
-        <div class="ratio-box">
-            <div class="moving-picture">
-                <div class="moving-picture__media">
-    {{!--                 <video autoplay="autoplay" style="min-width:100%">
-                        <source src="{{ this.video }}" type="video/mp4">
-                    </video> --}}
-                    <picture>
-                        <!--[if IE 9]><video style="display: none"><![endif]-->
-                        <source data-srcset="{{ this.bigImg }}" media="(min-width: 830px)" />
-                        <source data-srcset="{{ this.mobileImg }}" />
-                        <!--[if IE 9]></video><![endif]-->
-                        <img
-                                class="lazyload"
-                                alt="image with artdirection"
-                                data-sizes="auto"
-                        />
-                    </picture>
-                </div>
+    <div class="moving-picture">
+        <div class="moving-picture__media">
+{{!--                 <video autoplay="autoplay" style="min-width:100%">
+                <source src="{{ this.video }}" type="video/mp4">
+            </video> --}}
+            <picture>
+                <!--[if IE 9]><video style="display: none"><![endif]-->
+                <source srcset="{{ this.bigImg }}" media="(min-width: 830px)" />
+                <source srcset="{{ this.mobileImg }}" />
+                <!--[if IE 9]></video><![endif]-->
+                <img
+                        {{!-- class="lazyload" --}}
+                        alt="image with artdirection"
+                        data-sizes="auto"
+                />
+            </picture>
+        </div>
 
-                <div class="moving-picture__overlay">
-                    <h2 class="moving-picture__overlay__headline">{{  this.headline }}</h2>
-                    <p class="moving-picture__overlay__teaser">{{  this.teaser }}</p> 
-                    <p><a class="moving-picture__overlay__button" href="admissions/index.php">{{ this.button }}</a></p>
-                </div>
-            </div>
+        <div class="moving-picture__overlay  js-animateSequence">
+            <h2 class="moving-picture__overlay__headline seq">{{  this.headline }}</h2>
+            <p class="moving-picture__overlay__teaser seq">{{  this.teaser }}</p> 
+            <p class="seq"><a class="moving-picture__overlay__button " href="admissions/index.php">{{ this.button }}</a></p>
         </div>
     </div>
 
+    {{/if}}
 {{/each}}
 
 </div>

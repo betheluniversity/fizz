@@ -6,7 +6,8 @@
 	  "bigImg" : "https://cdn2.bethel.edu/resize/unsafe/900x0/smart/https://www.bethel.edu/_homepages/www/images/feature/find-calling-16x9.jpg 900w, https://cdn2.bethel.edu/resize/unsafe/1300x0/smart/https://www.bethel.edu/_homepages/www/images/feature/find-calling-16x9.jpg 1300w ",
 	  "headline" : "Find your calling.",
 	  "teaser" : "People come to Bethel with many different career goals—engineer, scientist, doctor, teacher, marketer, philosopher. Whatever career path God calls you to follow, we have top rated programs to help you reach your goals.",
-	  "button" : "Apply Now"
+	  "button" : "Apply Now",
+	  "show": true
 	},
 	{
 	  "video": "https://www.bethel.edu/_shared-content/videos/Welcome Week 15 BKG Homepage Feature-HD.mp4",

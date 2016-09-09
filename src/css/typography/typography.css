@@ -35,7 +35,33 @@ h6, .h6 {
 }
 
 .alpha {font-size: 2rem;}
-.beta {font-size: 3rem;}
+.beta {
+    font-size: 2rem;
+    
+    @mixin respond-min $medium {
+        font-size: 3rem;
+    }
+}
+
+.gamma {
+    font-size: 3rem;
+
+    @mixin respond-min $medium {
+        font-size: 4rem;
+    }
+}
+
+.fw300 {
+  font-weight: 300;
+}
+
+.fw400 {
+  font-weight: 400;
+}
+
+.fw500 {
+  font-weight: 500;
+}
 
 .fw300 {
   font-weight: 300;
