@@ -39,10 +39,11 @@
 @import "modules/calendar.css";
 @import "modules/news.css";
 @import "modules/events.css";
-@import "modules/program-search.css";
-@import "modules/social-media.css";
 @import "modules/moving-picture.css";
+@import "modules/program-search.css";
+@import "modules/routing.css";
 @import "modules/section--home.css";
+@import "modules/social-media.css";
 
 @import "enhance/carousel.css";
 
