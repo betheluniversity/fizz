@@ -160,3 +160,7 @@ Styles for the big carousel on bethel.edu
 .flickity-prev-next-button:disabled {
     display: none;
 }
+
+.flickity-page-dots {
+    left: 0;
+}
