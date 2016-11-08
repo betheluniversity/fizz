@@ -1,0 +1,30 @@
+.routing {
+	border-left: 1px solid #ccc
+}
+
+.routing__item {
+	background: #fff;
+	font-family: $gotham;
+	color: #777;
+	border-right:  1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	transition: all 100ms;
+}
+
+.routing__item:hover {
+	transition: all 100ms;
+	box-shadow: 1px .25em .5em rgba(150,150,150, 0.5);
+	transform: translateY(-1px);
+}
+
+.routing__item h2 {
+	margin-top: 0;
+}
+
+.routing__item ul {
+	padding-left: 1em;
+}
+
+.routing__item p {
+	font-size: 95%;
+}
