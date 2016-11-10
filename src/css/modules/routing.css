@@ -1,5 +1,7 @@
 .routing {
-	border-left: 1px solid #ccc
+	@mixin respond-min $medium {
+		border-left: 1px solid #ccc
+	}
 }
 
 .routing__item {
@@ -8,7 +10,12 @@
 	color: #777;
 	border-right:  1px solid #ccc;
 	border-bottom: 1px solid #ccc;
+	border-left: 1px solid #ccc;
 	transition: all 100ms;
+
+	@mixin respond-min $medium {
+		border-left: 0;
+	}
 }
 
 .routing__item:hover {
