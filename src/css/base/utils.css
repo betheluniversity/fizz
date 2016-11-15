@@ -46,11 +46,15 @@ $bkg--gradient-blue-yellow: linear-gradient(-150deg, $bethel--blue, 70%, $bethel
 }
 
 .vh100 {
-	height:  100vh;
+	@mixin respond-min $medium {
+		height:  100vh;
+	}
 }
 
 .vh110 {
-	height: 110vh;
+	@mixin respond-min $medium {
+		height: 110vh;
+	}
 }
 
 

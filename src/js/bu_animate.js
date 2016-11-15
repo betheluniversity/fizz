@@ -16,6 +16,16 @@ if (document.querySelectorAll('.js-animateRevealUp').length != 0){
     sr.reveal(".js-animateRevealUp", revealUp);
 }
 
+var fadeIn = {
+    distance: 0,
+    scale: 1,
+    duration: 1000
+}
+
+if (document.querySelectorAll('.js-animateFadeIn').length != 0){
+    sr.reveal(".js-animateFadeIn", fadeIn);
+}
+
 var slideRight = {origin: "left",};
 var slideLeft = {origin: "right",};
 if (document.querySelectorAll('.js-animateSlideRight').length != 0){
