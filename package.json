@@ -17,12 +17,16 @@
     "gulp-streamify": "^1.0.2",
     "gulp-uglify": "^2.0.0",
     "imports-loader": "^0.6.5",
-    "postcss": "^5.2.5",
+
+    "postcss": "^5.2.4",
+
     "postcss-cli": "^2.6.0",
     "precss": "^1.4.0",
-    "scrollreveal": "^3.3.1",
+    "scrollreveal": "^3.3.2",
     "svg4everybody": "^2.1.0",
-    "uglify-js": "^2.7.4",
+
+    "uglify-js": "^2.7.3",
+
     "vinyl": "^2.0.0",
     "vinyl-paths": "^2.1.0",
     "vinyl-source-stream": "^1.1.0",
