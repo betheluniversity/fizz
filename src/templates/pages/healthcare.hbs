@@ -6,76 +6,79 @@ pageTitle: Test title
 
 {{!-- <div class="grid-section mt0" >
     {{> moving-picture }}
-</div>
- --}}
+</div> --}}
 
-                        {{!-- <img src="https://c2.staticflickr.com/8/7233/7176281981_a966750235_o.jpg" alt="">   --}}
-    <section class="grid-section  ma0  pa0">
-        <div class="ixnner">
+<section class="grid-section  ma0  pa0">
 
-            <div class="grid">
-                <div class="grid-cell">     
 
-                    <style>
-                        .hero-head-holder {
-                        position:relative;
-                        }
-                        .hero-head-holder h1 {
-                        font-size: calc(3vw + 3vh + 3vmin);
-                        color: #fff;
-                        margin: 1em 0;
-                        }
-/*                         .hero-head-holder h1:before {
-                        position: absolute;
-                        top: 0;
-                        left: 24%;
-                        width: 52%;
-                        height: 2px;
-                        background-color: #fff;
-                        content: "";
-                        }
-                        .hero-head-holder h1:after {
-                        position: absolute;
-                        bottom:0;
-                        left: 24%;
-                        width: 52%;
-                        height: 2px;
-                        background-color: #fff;
-                        content: "";
-                        } */
-                    </style>
+        <div class="grid">
+            <div class="grid-cell">     
 
-                    <div class="mv0 lazyload" data-bgset="https://cdn1.bethel.edu/resize/unsafe/1800x0/smart/https://www.bethel.edu/academics/healthcare-excellence/images/collage.jpg" 
-                     style="background-position-y: 50%; 
-                     background-size: cover; 
-                     padding: 5em 2em 5em; 
-                     text-align: center;">
-                        <div class="hero-head-holder"> 
-                            <h1>Center for <br> Healthcare Excellence</h1>
+                <style>
+                    .hero-head-holder {
+                    position:absolute;
+                    color: #ffc600;
+                    top: 35%;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    z-index: 110;
+                    text-align: center;
+                    text-shadow: 0px 1px 1px #222;
+                    }
+                    .hero-head-holder h1 {
+                        font-size: calc(2vw + 2vh + 2vmin);
+                        /* font-weight: 400; */
+                        margin: 0;
+                    }
+                    .hero-head-holder h1 span {
+                    font-size: calc(5vw + 5vh + 4vmin);
+                    /* color: #fff; */
+                    font-weight: 500;
+                    }
+                </style>
+
+                <div class="mv0">
+                    <div class="aspect-ratio">
+                        <div class="aspect-ratio--object">
+                            <div id="vid-wrap"></div>
+                            <script type="text/javascript">
+                                if (window.matchMedia("(min-width: 1100px)").matches) {
+                                    var vidStr = '<video preload="auto" autoplay="autoplay" muted="true" loop="true" style="min-width: 100%" id="vid">';
+                                    vidStr += '<source src="https://www.bethel.edu/cdn/videos/pathways-in-healthcare.mp4" type="video/mp4" />';
+                                    vidStr += '<img src="https://cdn3.bethel.edu/resize/unsafe/800x0/smart/https://www.bethel.edu/_homepages/www/images/feature/welcome-week-2016-2x1.jpg" />';
+                                    vidStr += '</video>';
+
+                                    var vidWrap = document.getElementById('vid-wrap');
+                                    vidWrap.innerHTML += vidStr;
+                                    document.getElementById('vid').play();
+                                }
+                            </script>
+
                         </div>
-{{!--                     <picture style="display: none;">
-                        <source data-srcset=" https://c2.staticflickr.com/8/7233/7176281981_a966750235_o.jpg 400w
-                         https://c2.staticflickr.com/8/7233/7176281981_a966750235_o.jpg 600w" >
-                         <img alt="" data-parent-fit="cover" class="lazyload" data-sizes="auto">
-                     </picture> --}}
+                            <div class="hero-head-holder"> 
+                                <h1><span>Pathways</span><br>in Healthcare</h1>
+                            </div>
                      </div>
-                   
-                </div>
+                 </div>
+               
             </div>
-
         </div>
-    </section>
 
-    <section class="grid-section  mt0  vh110  pv0  pv6--medium  bkg--white">
+
+</section>
+
+    <section class="grid-section  mt0  pv0  pv6--medium  bkg--white" style="min-height:110vh">
         <div class="inner">
             <div class="grid  grid--center  pv0  pv6--medium">
 {{!--                 <div class="grid-cell">
                     <img src="https://placehold.it/600" alt="">            
                 </div> --}}
                 <div class="grid-cell  grid-cell--center  mt6  mb6  u-medium-2-3">
-                    <p class="alpha  js-animateFadeIn" style="color:#888">At Bethel University, we’re committed to preparing you for excellence in your career, community and the world. That’s why we’ve developed pathways that lead <span color="#444">from your major to the healthcare career you’re passionate about.</span></p>
+                    <p class="alpha  js-animateFadeIn" style="color:#888">
+At Bethel University, we’re committed to preparing you for excellence in your career, community, and the world. That’s why we’ve developed pathways that will connect your major—computer science, business, math, and anything else you choose—to the world-changing healthcare career you’ll be passionate about.</p>
                     <br>
-                    <p class="alpha  js-animateFadeIn">And that’s why we’ve created the Center for Healthcare Excellence.</p>
+                    <p class="alpha  pb6  js-animateFadeIn">And that’s why we’ve created the Center for Healthcare Excellence.</p>
                 </div>
             </div>
         </div>
@@ -100,7 +103,7 @@ pageTitle: Test title
     </div>
 
     <div    class="section--home__holder  section--home__faith  parallax  lazyload"
-            data-bgset="https://c2.staticflickr.com/8/7233/7176281981_a966750235_o.jpg"
+            data-bgset="https://c1.staticflickr.com/9/8010/7495172818_1894395060_o.jpg"
             data-sizes="auto">
         <div class="inner">
             <div class="grid">
@@ -140,7 +143,7 @@ pageTitle: Test title
                     <div class="grid-pad-1x">
                         <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
                         <div class="embed-container">
-                            <iframe allowfullscreen="true" class=" lazyload" data-src="https://player.vimeo.com/video/68786413?title=0&amp;byline=0&amp;portrait=0" frameborder="0" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                            <iframe src="https://player.vimeo.com/video/192530483" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                         </div>
                    </div>
                 </div>
@@ -148,7 +151,7 @@ pageTitle: Test title
                 <div class="grid-cell u-medium-1-2  pr4@medium">
                     <div class="grid-pad-1x">
 
-                        <h2>Advancing Tehcnology to Improve Patient Care</h2>
+                        <h2>Advancing Technology to Improve Patient Care</h2>
                         <p>John Brownlee cofounded a company that uses video and mobile technology to connect patients with their healthcare providers. Brownlee graduated from Bethel with a bachelor’s degree in economics.</p>
                     </div>
                 </div>
@@ -169,7 +172,7 @@ pageTitle: Test title
                 <div class="grid-cell u-medium-1-2  pr4@medium  mb4">
                     <div class="grid-pad-1x">
                         <div class="embed-container">
-                        <iframe allowfullscreen="true" class=" lazyload" data-src="https://player.vimeo.com/video/104712986?title=0&amp;byline=0&amp;portrait=0" frameborder="0" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                            <iframe src="https://player.vimeo.com/video/192676872" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                         </div>
                     </div>
                 </div>
