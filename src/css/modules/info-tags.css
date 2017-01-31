@@ -1,0 +1,29 @@
+.info-tags {
+	display: none;
+
+	@mixin respond-min $medium {
+		display: block;
+		position: fixed;
+		right: 0;
+		top: 50%;
+		z-index: 1000;
+	}
+}
+
+.info-tags ul {
+	display: flex;
+	list-style: none;
+	flex-direction: column;
+}
+
+.info-tags ul li {
+	margin: .15em 0;
+	background: $bethel--blue;
+	padding: .3em 1em;
+	font-family: $gotham;
+	font-size: .8rem;
+}
+
+.info-tags ul li a {
+	color: #fff;
+}
