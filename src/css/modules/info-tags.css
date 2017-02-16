@@ -2,21 +2,21 @@
 	display: none;
 
 	@mixin respond-min $medium {
-		display: block;
+		display: flex;
 		position: fixed;
-		right: 0;
-		top: 50%;
+		right:  0;
+		top:  50%;
 		z-index: 1000;
 	}
 }
 
-.info-tags ul {
+.info-tags__list {
 	display: flex;
 	list-style: none;
 	flex-direction: column;
 }
 
-.info-tags ul li {
+.info-tags__link {
 	margin: .15em 0;
 	background: $bethel--blue;
 	padding: .3em 1em;
@@ -26,4 +26,23 @@
 
 .info-tags ul li a {
 	color: #fff;
+}
+
+.info-tags__content {
+	width:  200px;
+	position: relative;
+	/* transform:  translateX(100%); */
+	/* z-index: 1000; */
+}
+
+.info-tags__content-panel {
+	position: absolute;
+	top: 0;
+	background: yellow;
+	/* display: none; */
+	padding: 0 1em;
+}
+
+.info-tags__content-panel.active {
+	display: block;	
 }

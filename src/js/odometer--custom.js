@@ -12,7 +12,4 @@ for (var i = 0, len = odometers.length; i < len; i++) {
 
 var proofPointCollection = document.querySelectorAll(".proof-point-collection")
 
-console.log("hi there");
-
-
 sr.reveal(".proof-point-collection");
