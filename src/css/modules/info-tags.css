@@ -68,6 +68,19 @@
 	z-index:100;
 }
 
+.info-tags__content-panel p:not(:last-of-type) {
+	margin: 0;
+}
+
+.info-tags__content-panel p:first-of-type {
+	margin-bottom: 1em;
+}
+
+.info-tags__content-panel p:last-of-type {
+	margin-top:0;
+}
+
+
 .info-tags__content-panel a {
 	color: $bethel--yellow;
 }

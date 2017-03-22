@@ -7,9 +7,6 @@ if(infoTags){
 
 	document.body.addEventListener('click', function(e) {
 	    if (infoTags.contains(event.target)) { 
-	        // toggleInfoTag(e);
-	        // infoTags.classList.add('active');
-	        // openTags();
 	        openPanel(e);
 	    } else {
 	        shutDown();
@@ -21,59 +18,29 @@ if(infoTags){
 	}
 
 	openPanel = function(e){
-		var panNum = e.path[0].id;
-		var panActive = document.querySelector(panNum).classList.contains('active');
+		var panelNumber = e.path[0].id;
+		var panelActive = document.querySelector(panelNumber).classList.contains('active');
 
-		if(panActive){
-			// shutDown();
+		if(panelActive){
+			shutDown();
 		} else {
 			openTags();
-			document.querySelector(panNum).classList.add('active');
+			removeActive(); // remove .active tag on an already open panel
+			document.querySelector(panelNumber).classList.add('active');
 		}
 	}
 
 	shutDown = function(i){
-		infoTags.classList.remove('active');
-		// infoTags.addEventListener("transitionend", function(event) {
-			for (var i=0;i<infoTagsContentPanel.length;i++){
-				infoTagsContentPanel[i].classList.remove('active');
-			}
-		// }, false);
+			infoTags.addEventListener("transitionend", function aB(event) {
+				removeActive();
+				infoTags.removeEventListener("transitionend", aB);
+			}, false);
+			infoTags.classList.remove('active');
 	}
 
-
-
-
-	// toggleInfoTag = function(e) {
-	// 	var panNum = e.path[1].id;
-	// 	var infoTagsActive = document.querySelector('.info-tags.active');
-		
-	// 	for (var i=0;i<infoTagsContentPanel.length;i++){
-
-	// 		var loopNum = i;
-
-	// 		if(infoTagsContentPanel[i].id == panNum){
-
-	// 			if(infoTagsContentPanel[i].classList.contains('active') && infoTagsActive){
-
-	// 				infoTagsActive.classList.remove('active');
-
-	// 				var erlement = infoTagsContentPanel[i];
-	// 				infoTagsActive.addEventListener("transitionend", function(event) {
-	// 					erlement.classList.remove('active');
-
-	// 				}, false);
-
-	// 				// infoTagsContentPanel[i].classList.remove('active');
-	// 			} else {
-	// 				infoTagsContentPanel[i].classList.add('active');
-	// 				infoTags.classList.add('active');
-	// 			}
-	// 		} else {
-	// 			infoTagsContentPanel[i].classList.remove('active');
-	// 		}
-	// 	}
-	// };
-
-
+	removeActive = function() {
+		for (var i=0;i<infoTagsContentPanel.length;i++){
+			infoTagsContentPanel[i].classList.remove('active');
+		}
+	}
 }
