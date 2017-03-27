@@ -5,11 +5,13 @@ if(actionNav){
 	var actionNavLink = actionNav.querySelectorAll('.action-nav__link');
 	var actionNavContentPanel = actionNav.querySelectorAll('.action-nav__content-panel');
 
-	document.body.addEventListener('click', function(e) {
+	document.body.addEventListener('click', function aA(event) {
 	    if (actionNav.contains(event.target)) { 
-	        openPanel(e);
+	        openPanel(event);
+	        console.log("TARGET");
 	    } else {
 	        shutDown();
+			console.log("NOT TARGET");
 	    }
 	});
 
@@ -31,11 +33,13 @@ if(actionNav){
 	}
 
 	shutDown = function(i){
-			actionNav.addEventListener("transitionend", function aB(event) {
+		if (actionNav.classList.contains('active')){
+			actionNav.addEventListener('transitionend', function aB(event) {
 				removeActive();
-				actionNav.removeEventListener("transitionend", aB);
+				actionNav.removeEventListener('transitionend', aB);
 			}, false);
 			actionNav.classList.remove('active');
+		}
 	}
 
 	removeActive = function() {
