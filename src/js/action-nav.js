@@ -1,12 +1,12 @@
-var infoTags = document.querySelector('.info-tags');
+var actionNav = document.querySelector('.action-nav');
 
-if(infoTags){
+if(actionNav){
 
-	var infoTagsLink = infoTags.querySelectorAll('.info-tags__link');
-	var infoTagsContentPanel = infoTags.querySelectorAll('.info-tags__content-panel');
+	var actionNavLink = actionNav.querySelectorAll('.action-nav__link');
+	var actionNavContentPanel = actionNav.querySelectorAll('.action-nav__content-panel');
 
 	document.body.addEventListener('click', function(e) {
-	    if (infoTags.contains(event.target)) { 
+	    if (actionNav.contains(event.target)) { 
 	        openPanel(e);
 	    } else {
 	        shutDown();
@@ -14,7 +14,7 @@ if(infoTags){
 	});
 
 	openTags = function() {
-		infoTags.classList.add('active');
+		actionNav.classList.add('active');
 	}
 
 	openPanel = function(e){
@@ -31,16 +31,16 @@ if(infoTags){
 	}
 
 	shutDown = function(i){
-			infoTags.addEventListener("transitionend", function aB(event) {
+			actionNav.addEventListener("transitionend", function aB(event) {
 				removeActive();
-				infoTags.removeEventListener("transitionend", aB);
+				actionNav.removeEventListener("transitionend", aB);
 			}, false);
-			infoTags.classList.remove('active');
+			actionNav.classList.remove('active');
 	}
 
 	removeActive = function() {
-		for (var i=0;i<infoTagsContentPanel.length;i++){
-			infoTagsContentPanel[i].classList.remove('active');
+		for (var i=0;i<actionNavContentPanel.length;i++){
+			actionNavContentPanel[i].classList.remove('active');
 		}
 	}
 }

@@ -6,7 +6,7 @@ require("./responsive-tables.js");
 // require("./odometer--custom.js");
 require("svg4everybody");
 require("./bu_animate.js");
-require("./info-tags.js");
+require("./action-nav.js");
 
 // Select a random image from the carousel to appear first
 
