@@ -20,7 +20,7 @@ if(actionNav){
 	}
 
 	openPanel = function(e){
-		var panelNumber = e.path[0].id;
+		var panelNumber = e.target.id;
 		var panelActive = document.querySelector(panelNumber).classList.contains('active');
 
 		if(panelActive){
