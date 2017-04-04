@@ -1,7 +1,5 @@
 .proof-points {
-    /* color: #fff; */
     font-family: $gotham;
-    // align-items: baseline;
 
     .grid-cell {
         background-color: #fff; 
@@ -17,7 +15,6 @@
             align-items: center;
             flex: 1;
         }
-
     }
 
     @mixin respond-min $medium {
@@ -29,8 +26,6 @@
 
 .proof-point__text {
     margin-bottom: .75em;
-    /* color: rgba(255,255,255, .8); */
-    /*font-family: "Helvetica Neue",Helvetica,Arial,sans;*/
     text-align: center;
     font-size: 1.25rem;
 }
@@ -38,7 +33,6 @@
 .proof-point__number {
     font-size: 3.5rem;
     line-height: 1;
-    /* color: #fff; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -58,5 +52,4 @@
 
 .proof-point__cite {
     font-size: .8rem;
-    /* color: rgba(255,255,255, .8); */
 }

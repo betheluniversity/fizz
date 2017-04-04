@@ -8,10 +8,8 @@ if(actionNav){
 	document.body.addEventListener('click', function aA(event) {
 	    if (actionNav.contains(event.target)) { 
 	        openPanel(event);
-	        console.log("TARGET");
 	    } else {
 	        shutDown();
-			console.log("NOT TARGET");
 	    }
 	});
 

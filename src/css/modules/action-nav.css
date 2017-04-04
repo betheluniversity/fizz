@@ -1,7 +1,7 @@
 .action-nav {
 	display: none;
 	font-family: $gotham;
-		font-size: .9rem;
+	font-size: .9rem;
 
 	@mixin respond-min $medium {
 		display: flex;
@@ -80,7 +80,6 @@
 	margin-top:0;
 }
 
-
 .action-nav__content-panel a {
 	color: $bethel--yellow;
 }
@@ -89,4 +88,3 @@
 	content: "»";
 	padding-left: .35em;
 }
-
