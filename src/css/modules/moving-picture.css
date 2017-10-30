@@ -21,6 +21,10 @@
       }
  }
 
+ .moving-picture.no-gradient:before {
+ 	background-image: none;
+ }
+
 .moving-picture__media {
 	height: 415px;
 	/* display: flex;*/
