@@ -73,3 +73,7 @@ $bkg--gradient-blue-yellow: linear-gradient(-150deg, $bethel--blue, 70%, $bethel
 	display: table-cell;
 	vertical-align: bottom;
 }
+
+.display-table {
+	display: table;
+}
