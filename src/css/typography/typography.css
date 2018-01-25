@@ -84,10 +84,6 @@ p:first-child {
 	margin-top: 0;
 }
 
-p, li {
-
-}
-
 a {
 	color: $bethel--blue;
 	text-decoration: none;
@@ -101,6 +97,10 @@ a:hover {
   font-family: $gotham;
   color: $bethel--navy;
   font-weight: 400;
+}
+
+.ta--center {
+  text-align: center;
 }
 
 .unstyled {
