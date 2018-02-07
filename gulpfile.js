@@ -1,28 +1,33 @@
 var gulp 		= require('gulp'),
+	fs			= require('fs'),
 	assemble 	= require('assemble'),
 	webpack 	= require('webpack-stream');
 	source 		= require('vinyl-source-stream'),
-	browserSync	= require('browser-sync'),  // http://www.browsersync.io/docs/gulp/
+	browserSync	= require('browser-sync'),
 	reload		= browserSync.reload,
 	del 		= require('del'),
 	// svgSprite   = require("gulp-svg-sprites");
 	vinylPaths 	= require('vinyl-paths'),
 	eslint		= require('gulp-eslint'),
 	postcss 	= require('gulp-postcss'),
-	nano 	   	= require('gulp-cssnano'), 
-    precss		= require('precss'),
+	cssnano  	= require('gulp-cssnano'), // minimize css
+    // precss		= require('precss'),
     autoprefixer= require('autoprefixer');
 
 var $ = require('gulp-load-plugins')();
 var outputDir = './builds/';
 
 gulp.task('css', function () {
+	var plugins = [
+		require('postcss-easy-import'),
+		require('postcss-mixins'),
+		require('postcss-nested'),
+		require('postcss-simple-vars'),
+		// precss({prefix:''}),
+		autoprefixer({browsers: ['last 2 versions']})
+	];
     return gulp.src('src/css/*.css')
-        .pipe(postcss([
-        	precss({prefix:''}),
-        	autoprefixer({browsers: ['last 2 versions']})
-        ]))
-        .pipe(nano())
+        .pipe(postcss(plugins))
         .pipe(gulp.dest(outputDir + '/css'))
         .pipe(reload({stream:true}));
 });
@@ -109,7 +114,7 @@ gulp.task('clean', function () {
 
 gulp.task('build', ['js','css','copyfiles','assemble']);
 
-gulp.task('default', ['js','css','copyfiles','assemble','browser-sync'], function() {
+gulp.task('serve', ['js','css','copyfiles','assemble','browser-sync'], function() {
 	gulp.watch('./src/css/**/*.css', ['css']);
 	gulp.watch('./src/templates/**/*.hbs', ['assemble']);
 	gulp.watch('./src/templates/**/*.json', ['assemble']);

@@ -1,13 +1,16 @@
 .moving-picture {
 	position: relative;
+	margin-bottom: 8.9em;
+	max-width: 125em;
+	display: flex;
 
 	@mixin respond-min 830px {
 		 max-height: 75vh;
-		overflow: hidden;
+		/* overflow: hidden; */
 	}
 }
 
-.moving-picture:before {
+/* .moving-picture:before {
 	@mixin respond-min 0 {
         content: '';
         position: absolute;
@@ -23,7 +26,7 @@
 
  .moving-picture.no-gradient:before {
  	background-image: none;
- }
+ } */
 
 .moving-picture__media {
 	height: 415px;
@@ -80,19 +83,28 @@
 
 .moving-picture__overlay {
 	position: absolute;
-	left: 0;
-	bottom: 0;
-	color: #fff;
+	/* left: 2em; */
+	/* bottom: 0; */
+
+	// color: #555;
 	font-family: $gotham;
-	z-index: 1;
-	padding: 1em 2.5em;
+	/* z-index: 1; */
+	// padding: 2em;
+	// text-align: center;
+	// background: rgba(100,100,100,.4);
+	/* overflow: visible; */
+	/* display: inline; */
 
 	@mixin respond-min $medium {
-		position: absolute;
-		left: 0;
-		bottom: 0;
-		width: 75%;
-		padding: 2% 8%;
+		// position: absolute;
+		left: 15%;
+		/* bottom: -200px; */
+		
+		width: 40%;
+		// padding: 3em;
+		/* box-shadow: 1px 5px 20px #777; */
+		align-self: center;
+		text-shadow: 0px 1px 1px #333;
 	}
 
 	@mixin respond-min $x-large{
@@ -102,26 +114,29 @@
 .moving-picture__overlay__headline {
 	font-size: 2.2rem;
 	/* margin: 0;*/
-	font-weight: 300;
-	letter-spacing: .02em;
+	font-weight: 500;
+	/* letter-spacing: .02em; */
 	margin-bottom: 0;
+	margin-top: 0;
+	color: white;
+	line-height: 1.1;
 
 	@mixin respond-min $medium {
-		font-size: 2.8rem;
+		font-size: 2.4rem;
 	}
 
 	@mixin respond-min $x-large{
-		font-size: 4rem;
+		font-size: 6rem;
 	}
 }
 
 .moving-picture__overlay__teaser {
 	display: none;
 	/* margin-top: .75em; */
-	color: $bethel--yellow;
+	/* color: $bethel--yellow; */
 
 	@mixin respond-min $large {
-		display: block;
+		/* display: block; */
 		font-size: 1rem;
 	}
 }

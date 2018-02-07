@@ -16,7 +16,8 @@
 	  "bigImg" : "https://cdn2.bethel.edu/resize/unsafe/900x0/smart/https://www.bethel.edu/_homepages/www/images/feature/lead-confidence-16x9.jpg, https://cdn2.bethel.edu/resize/unsafe/1300x0/smart/https://www.bethel.edu/_homepages/www/images/feature/lead-confidence-16x9.jpg",
 	  "headline" : "Lead with confidence.",
 	  "teaser" : "When you graduate from Bethel, you’ll be prepared to lead with confidence and make a difference in your workplace and community.",
-	  "button" : "Learn More"
+		"button" : "Learn More",
+		"show": false
 	},
 	{
 	  "video": "https://www.bethel.edu/_shared-content/videos/Welcome Week 15 BKG Homepage Feature-HD.mp4",
@@ -25,7 +26,8 @@
 	  "bigImg" : "https://cdn2.bethel.edu/resize/unsafe/900x0/smart/https://www.bethel.edu/_homepages/www/images/feature/homecoming-pride-16x9.jpg",
 	  "headline" : "Show your pride.",
 	  "teaser" : "We’re proud to be Royals, and we show it in a lot of ways. We cheer loudly, we get decked out for gamedays, and we make homecoming a big deal.",
-	  "button" : "Learn More"
+		"button" : "Learn More",
+		"show": false
 	},
 	{
 	  "video": "https://www.bethel.edu/_shared-content/videos/Welcome Week 15 BKG Homepage Feature-HD.mp4",
@@ -34,6 +36,7 @@
 	  "bigImg" : "https://cdn1.bethel.edu/resize/unsafe/800x0/smart/https://www.bethel.edu/_homepages/www/images/feature/physician-assistant-exam-16x9.jpg 800w, https://cdn3.bethel.edu/resize/unsafe/900x0/smart/https://www.bethel.edu/_homepages/www/images/feature/physician-assistant-exam-16x9.jpg 900w, https://cdn2.bethel.edu/resize/unsafe/1000x0/smart/https://www.bethel.edu/_homepages/www/images/feature/physician-assistant-exam-16x9.jpg 1000w, https://cdn3.bethel.edu/resize/unsafe/1100x0/smart/https://www.bethel.edu/_homepages/www/images/feature/physician-assistant-exam-16x9.jpg 1100w, https://cdn3.bethel.edu/resize/unsafe/1200x0/smart/https://www.bethel.edu/_homepages/www/images/feature/physician-assistant-exam-16x9.jpg 1200w, https://cdn1.bethel.edu/resize/unsafe/1300x0/smart/https://www.bethel.edu/_homepages/www/images/feature/physician-assistant-exam-16x9.jpg 1300w, https://cdn1.bethel.edu/resize/unsafe/1400x0/smart/https://www.bethel.edu/_homepages/www/images/feature/physician-assistant-exam-16x9.jpg 1400w, https://cdn1.bethel.edu/resize/unsafe/1500x0/smart/https://www.bethel.edu/_homepages/www/images/feature/physician-assistant-exam-16x9.jpg 1500w, https://cdn2.bethel.edu/resize/unsafe/1600x0/smart/https://www.bethel.edu/_homepages/www/images/feature/physician-assistant-exam-16x9.jpg 1600w,         ",
 	  "headline" : "Preparing students for excellence.",
 	  "teaser" : "Here, we lead with service to our students, and that’s why we’ve redesigned many of our programs—reducing program time and cost. We promise an excellent educational experience and it's now more affordable and achievable for you.",
-	  "button" : "Learn More"
+		"button" : "Learn More",
+		"show": false
 	}
 ]

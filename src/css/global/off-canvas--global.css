@@ -2,7 +2,7 @@
 .inner-wrap--global__navigation {
   position: relative;
   background: #f5f5f5;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .global__toolbox {

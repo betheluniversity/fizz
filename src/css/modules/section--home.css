@@ -1,15 +1,57 @@
+html,
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.animationHolder,
+.animationHolder2 {
+	position: relative;
+	top: 0;
+}
+
+.blur {
+	position: sticky;
+	top: 0;
+}
+
+.blur img {
+	min-height: 105vh;
+	min-width: 105vw;
+	width: 105vw;
+	margin: -2em;
+	overflow: hidden;
+}
+
+.sploot {
+	/* background: gold; */
+	color: #fff;
+	width: 60vh;
+	margin: 15em auto;
+	z-index: 100;
+	position: inherit;
+	font-family: $gotham;
+	font-size: 120%;
+	font-weight: 400;
+}
+
+.sploot h2 {
+	font-size: 200%;
+}
+
 .section--home .grid-cell {
 		margin: 0;
 }
 
 .section--home__holder:before {
-	background-image: linear-gradient(180deg, transparent 50%, #333);
+	/* background-image: linear-gradient(180deg, transparent 50%, #333);
 	position: absolute;
 	top: 0;
 	bottom: 0;
 	left: 0;
 	right: 0;
-	content: '';
+	content: ''; */
 }
 
 .section--home__holder {
@@ -23,6 +65,7 @@
 	color: #ddd;
 	position: relative;
 	display: table;
+	z-index: 10;
 
 	@mixin respond-min $medium {
 		padding: 10em 0;
