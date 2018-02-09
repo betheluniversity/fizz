@@ -1,43 +1,60 @@
-html,
+/* html,
 body {
 	height: 100%;
 	margin: 0;
 	padding: 0;
-}
+} */
 
-.animationHolder,
-.animationHolder2 {
+.sectionBlur {
 	position: relative;
 	top: 0;
+	z-index: 1;
 }
 
-.blur {
+.sectionBlurImg {
+	overflow: hidden;
 	position: sticky;
 	top: 0;
-}
-
-.blur img {
-	min-height: 105vh;
-	min-width: 105vw;
+	height: 100vh;
 	width: 105vw;
-	margin: -2em;
-	overflow: hidden;
 }
 
-.sploot {
-	/* background: gold; */
+.sectionBlurImg img {
+	object-fit: cover;
+	margin: -2vh;
+	height: 100%;
+	}
+
+.sectionBlurBody {
 	color: #fff;
-	width: 60vh;
-	margin: 15em auto;
-	z-index: 100;
+	/* width: 60vh; */
+	margin: 0 auto;
+	z-index: 200;
 	position: inherit;
 	font-family: $gotham;
-	font-size: 120%;
+	font-size: 100%;
 	font-weight: 400;
 }
 
-.sploot h2 {
-	font-size: 200%;
+.sectionBlurBody:last-child {
+	padding-bottom: 50vh;
+}
+
+.sectionBlurTitle {
+	width: 70%;
+	position: inherit;
+	font-size: 350%;
+	font-weight: 300;
+	text-align: center;
+	color: #fff;
+	border-bottom: 1px dotted white;
+	padding-bottom: 1em;
+	margin: 0 auto 1em;
+}
+
+.sectionBlur .proof-points .grid-cell {
+	background: rgba(0,0,0,.3);
+	border: 0;
 }
 
 .section--home .grid-cell {
@@ -91,6 +108,21 @@ body {
 	a:not(.btn) {
 		color: $bethel--yellow;
 	}
+}
+
+.linkBlock {
+	list-style-type:none;
+	margin: 0;
+	padding: 0;
+}
+
+.linkBlock li a {
+	/* color: #fff; */
+	background: white;
+	display: block;
+	width: 100%;
+	padding: .5em 1em;
+	margin-bottom: 4px;
 }
 
 

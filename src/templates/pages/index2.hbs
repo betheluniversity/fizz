@@ -9,30 +9,144 @@ pageTitle: Test title
 
     {{> moving-picture }}
 
-    <div class="animationHolder">
-        <div class="trigger1">Trigger 1</div>
-        <div class="blur">
+    <div class="sectionBlur">
+        <div class="sectionBlurImg">
             <img class="lazyload" data-src="https://cdn1.bethel.edu/resize/unsafe/2600x0/smart/https://www.bethel.edu/_homepages/www/images/chemistry-lab.jpg" alt="">
         </div>
-        <div class="sploot">
-            <h2>Academics</h2>
-            Lorem iptiae odio debitis at voluptates quaerat obcaecati dolorum distinctio expedita quod harum quia. Odio molestias labore beatae dicta ipsam earum pariatur dolores cupiditate optio quod soluta quibusdam impedit totam, eaque nobis quasi? Veniam similique, impedit accusamus ducimus, praesentium voluptatum modi tempora, facilis vero deserunt laboriosam odio aperiam minus suscipit in. Modi laborum consequatur quas maiores asperiores nemo, praesentium aut voluptates soluta et ab, esse neque eos! Tempore, pariatur! Excepturi?
+        <div class="inner u-z200" style="position:inherit">
+        <h2 class="sectionBlurTitle">Academic Excellence</h2>
+        <div class="sectionBlurBody">
+            <div class="grid  grid--center  mb6">
+                <div class="grid-cell u-medium-1-2">
+                    <div class="grid-pad-1x">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, enim rerum. Quas aut aspernatur aperiam quisquam laboriosam, excepturi molestias dolore doloremque fuga suscipit quibusdam.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mb6">
+                
+            </div>
+
+            <div class="grid  mb6">
+                <div class="grid-cell">
+                    <div class="grid-pad-1x">
+                        <div class="quote">
+                            <div class="quote__avatar">
+                                <img src="https://cdn1.bethel.edu/resize/unsafe/200x0/smart/https://www.bethel.edu//_shared-content/quotes/images/cas__business_nettleton-nicole.jpg">
+                            </div>
+                            <div class="quote__text">
+                                <p>Bethel really prepared me...having a liberal arts education was beneficial because it made me well rounded.[Businesses]
+                                    look for people with all sorts of different backgrounds and leadership experience. Bethel encourages people to
+                                    get involved.</p>
+                                <cite class="quote__source">–Nicole (Nettleton) Willenbring</cite>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-cell">
+                    <div class="grid-pad-1x">
+                        <div class="quote">
+                            <div class="quote__avatar">
+                                <img class="lazyload" data-src="https://cdn2.bethel.edu/resize/unsafe/200x0/smart/https://www.bethel.edu//_shared-content/quotes/images/cas__business_lin-chin-chin.jpg"
+                                    title="">
+                            </div>
+                        
+                            <div class="quote__text">
+                                <p>While interviewing with a Bethel alum for a position at UnitedHealth Group, the interviewer asked me to consider
+                                    joining the International Audit department instead of the position for which I had applied. So, it’s safe to say that my career path was undeniably influenced
+                                    by Bethel and this wonderful alum who decided to take a chance on me – not just once, but twice.</p>
+                                <cite class="quote__source">–Chin-Chin Lin</cite>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid  grid--center  mt3  mb6--medium  pt3  pb3 pb6--medium" style="background: rgba(0,0,0,.2)">
+                <div class="grid-cell  u-large-4-5">
+                    <div class="medium-grid-pad-1x">
+            
+                        <div class="grid  grid--center">
+                            <div class="grid-cell u-medium-1-1">
+                                <div class="medium-grid-pad-1x">
+                                    <h2 class="beta  mb1  center  fw300">Find your major or program</h2>
+                                    <p class="h4  mb2  mb3--medium  fw400">We offer more than 100 areas of study for undergrads, as well as programs for adult undergrad, graduate,
+                                        and seminary students. Enter a career or area of interest to find and compare majors, programs,
+                                        certificates, and licenses.</p>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <form id="find-program-form" class="form--find-program  js-animateRevealUp" action="https://www.bethel.edu/academics/program-search"
+                            method="GET">
+                            <div class="search--program">
+                                <input required name="search" id="find-program-txt" type="search" placeholder="Search for your program">
+                                <button id="find-program-btn" class="btn" type="submit">
+                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 32 32">
+                                        <title>Search</title>
+                                        <desc>Search icon</desc>
+                                        <path d="M31.008 27.231l-7.58-6.447c-0.784-0.705-1.622-1.029-2.299-0.998 1.789-2.096 2.87-4.815 2.87-7.787 0-6.627-5.373-12-12-12s-12 5.373-12 12c0 6.627 5.373 12 12 12 2.972 0 5.691-1.081 7.787-2.87-0.031 0.677 0.293 1.515 0.998 2.299l6.447 7.58c1.104 1.226 2.907 1.33 4.007 0.23s0.997-2.903-0.23-4.007zM12 20c-4.418 0-8-3.582-8-8s3.582-8 8-8 8 3.582 8 8-3.582 8-8 8z"></path>
+                                    </svg>
+                                    <span class="hide--small">Find programs</span>
+                                </button>
+                            </div>
+                        </form>
+            
+                    </div>
+                </div>
+            </div>
+
+            {{!-- {{> quotes }} --}}
+            <div class="grid  ph6">
+                <div class="grid-cell">
+                    <div class="grid-pad-2x">
+                        <h3>Find by degree</h3>
+                        <ul class="linkBlock">
+                            <li><a href="#">Doctorate</a></li>
+                            <li><a href="#">Masters</a></li>
+                            <li><a href="#">Bachelors</a></li>
+                            <li><a href="#">Other</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="grid-cell">
+                    <div class="grid-pad-2x">
+                        <h3>Find by school</h3>
+                        <ul class="linkBlock">
+                            <li><a href="#">Undergrad</a></li>
+                            <li><a href="#">Graduate</a></li>
+                            <li><a href="#">Adult Undergrad</a></li>
+                            <li><a href="#">Bethel Seminary</a></li>
+                            <li><a href="#">Online</a></li>
+                            <li><a href="#">BUILD</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
         </div>
     </div>
 
-    <div class="animationHolder">
-        <div class="trigger1">Trigger 1</div>
-        <div class="blur">
-            <img class="lazyload" data-src="https://cdn1.bethel.edu/resize/unsafe/2600x0/smart/https://www.bethel.edu/_homepages/www/images/chemistry-lab.jpg"
+    <div class="sectionBlur">
+        <div class="sectionBlurImg">
+            <img class="lazyload" data-src="https://cdn1.bethel.edu/resize/unsafe/2600x0/smart/https://www.bethel.edu/_homepages/www/images/girl-laughing.jpg"
                 alt="">
         </div>
-        <div class="sploot">
-            <h2>Academics</h2>
-            Lorem iptiae odio debitis at voluptates quaerat obcaecati dolorum distinctio expedita quod harum quia. Odio molestias labore
-            beatae dicta ipsam earum pariatur dolores cupiditate optio quod soluta quibusdam impedit totam, eaque nobis quasi?
-            Veniam similique, impedit accusamus ducimus, praesentium voluptatum modi tempora, facilis vero deserunt laboriosam
-            odio aperiam minus suscipit in. Modi laborum consequatur quas maiores asperiores nemo, praesentium aut voluptates
-            soluta et ab, esse neque eos! Tempore, pariatur! Excepturi?
+        <div class="inner u-z200" style="position:inherit">
+            <h2 class="sectionBlurTitle">Faith Community</h2>
+            <div class="sectionBlurBody">
+                <div class="grid  grid--center">
+                    <div class="grid-cell u-medium-1-2">
+                        <div class="grid-pad-1x">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, enim rerum. Quas aut aspernatur aperiam
+                                quisquam laboriosam, excepturi molestias dolore doloremque fuga suscipit quibusdam.</p>
+                        </div>
+                    </div>
+                </div>
+                {{> proof-points }}
+                {{!-- {{> quotes }} --}}
+            </div>
         </div>
     </div>
 

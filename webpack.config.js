@@ -9,7 +9,7 @@ module.exports = {
     filename: 'webpack.js'
   },
   module: {
-    noParse: [/.\/src\/js\/odometer.min.js/]
+    noParse: [/.\/src\/js\/vendor\/odometer.min.js/]
     // loaders: [
     //   {
     // 	test: /(flickity|fizzy-ui-utils|get-size|unipointer)/,

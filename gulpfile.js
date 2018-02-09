@@ -41,7 +41,7 @@ gulp.task('js', function(){
 
 // excluding Odometer because it has lots of issues
 gulp.task('jslint', function() {
-    return gulp.src(['src/js/*.js','!src/js/odometer.min.js'])
+    return gulp.src(['src/js/*.js','!src/js/vendor/odometer.min.js'])
 	.pipe(eslint({
 		extends: 'eslint:recommended',
 		ecmaFeatures: {'modules': true},

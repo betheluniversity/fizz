@@ -1,4 +1,4 @@
-var Odometer = require("./odometer.min.js");
+var Odometer = require("./vendor/odometer.min.js");
 // var ScrollReveal = require("scrollreveal");
 
 var odometers = document.getElementsByClassName('odometer');

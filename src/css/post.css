@@ -48,8 +48,7 @@
 
 @import "enhance/carousel.css";
 
-@import "modules/flickity.css";
-@import "modules/flickity-custom.css";
+@import "modules/lory.css";
 
 @import "enhance/search.css";
 @import "enhance/accordion.css";

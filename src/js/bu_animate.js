@@ -43,7 +43,7 @@ if (document.querySelectorAll('.js-animateSequence').length != 0){
 
 // ======= ODOMETER
 
-var Odometer = require("./odometer.min.js");
+var Odometer = require("./vendor/odometer.min.js");
 
 var odometers = document.getElementsByClassName('odometer');
 
