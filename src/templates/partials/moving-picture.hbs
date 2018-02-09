@@ -5,9 +5,9 @@
             {{#each movingPic}} 
                 {{#if show}}
                 <li class="js_slide">
-                    <div class="xmoving-picture">
+                    <div class="moving-picture">
                         <div class="xmoving-picture__media">
-                            <div id="xvid-wrap"></div>
+                            <div id="vid-wrap"></div>
                             {{!-- <script type="text/javascript">
                                     // if (window.matchMedia("(min-width: 1100px)").matches) {
                                     //     var vidStr = '<video preload="auto" autoplay="autoplay" muted="true" loop="true" style="min-width: 100%" id="vid">';
@@ -27,13 +27,13 @@
                             </picture>
                         </div>
 
-                        {{!-- <div class="moving-picture__overlay  js-animateSequence">
+                        <div class="moving-picture__overlay  js-animateSequence">
                             <h2 class="moving-picture__overlay__headline seq">{{ this.headline }}</h2>
-                            <p class="moving-picture__overlay__teaser seq">{{ this.teaser }}</p>
+                            {{!-- <p class="moving-picture__overlay__teaser seq">{{ this.teaser }}</p> --}}
                             <p class="seq">
-                                <a class="moving-picture__overlay__button " href="admissions/index.php">{{ this.button }}</a>
+                                <a class="xmoving-picture__overlay__button btn" href="admissions/index.php">{{ this.button }}</a>
                             </p>
-                        </div> --}}
+                        </div>
                     </div>
                 </li>
 

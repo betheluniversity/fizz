@@ -30,7 +30,11 @@ function checkScroll () {
     const c = holder.querySelector('.sectionBlurImg img')
 
     if (aPos > 500 && b > 0) {
-      c.style.filter = `blur(${b}px)`
+      if (b < 15) {
+        c.style.filter = `blur(${b}px)`
+      } else {
+        c.style.filter = `blur(15px)`
+      }
     } else {
       c.style.filter = `blur(0)`
     }
