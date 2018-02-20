@@ -1,29 +1,75 @@
-/* html,
-body {
-	height: 100%;
-	margin: 0;
-	padding: 0;
-} */
+
+.stickyBar {
+	position: sticky;
+	top: 0;
+	display: flex;
+	padding: 1.5em;
+	background: white;
+	z-index: 1000;
+	justify-content: space-around;
+	font-size: 1.2rem;
+	font-family: $gotham;
+	margin-top: -105px;
+}
+
+.stickyBar a {
+	padding: .5em 1em;
+	border-radius: 4px;
+}
+
+.stickyBar .active {
+	background: $bethel--yellow;
+}
 
 .sectionBlur {
 	position: relative;
 	top: 0;
 	z-index: 1;
+	transform: translate3d(0,0,0);
+	will-change: auto;
+}
+
+.sectionBlur svg {
+	display: none;
+	width: 0; 
+	height: 0 ;
+	overflow: hidden ;
+	visibility: hidden;
+}
+
+.hideSvgSoThatItSupportsFirefox {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
 }
 
 .sectionBlurImg {
 	overflow: hidden;
-	position: sticky;
-	top: 0;
-	height: 100vh;
-	width: 105vw;
+	/* position: sticky; */
+	/* top: 0; */
+	height: 100%;
+	width: 100vw;
+	background-attachment: fixed;
+	background-size: cover;
+	position: absolute;
+	/* filter: url('#sharpBlur') */
 }
 
-.sectionBlurImg img {
+/* .sectionBlurImg img {
 	object-fit: cover;
 	margin: -2vh;
 	height: 100%;
-	}
+	} */
+
+.sectionBlurContent {
+	position: inherit;
+	padding-top:5em;
+}
 
 .sectionBlurBody {
 	color: #fff;
@@ -37,19 +83,63 @@ body {
 }
 
 .sectionBlurBody:last-child {
-	padding-bottom: 50vh;
+	padding-bottom: 10vh;
 }
 
 .sectionBlurTitle {
 	width: 70%;
 	position: inherit;
-	font-size: 350%;
-	font-weight: 300;
+	/* font-size: 7em; */
+	/* font-weight: 300; */
 	text-align: center;
 	color: #fff;
-	border-bottom: 1px dotted white;
-	padding-bottom: 1em;
-	margin: 0 auto 1em;
+	/* border: 20px solid white; */
+	padding: 1em .5em;
+	margin: 0 auto 2em;
+
+	h2 {
+		font-size: 5em;
+		padding: 1em .5em;
+		margin: 0;
+	}
+}
+
+.sectionBlurTitle {
+	.topBorder,
+	.bottomBorder {
+		background: white;
+		position: absolute;
+		/* width: 0; */
+		height: 10px;
+	}
+
+	.topBorder {
+		top: 0;
+		left: 0;
+	}
+
+	.bottomBorder {
+		bottom: 0;
+		right: 0;
+	}
+
+	.leftBorder,
+	.rightBorder {
+		background: white;
+		position: absolute;
+		/* height: 0; */
+		width: 10px;
+	}
+
+	.leftBorder {
+		top: 0;
+		left: 0;
+	}
+
+	.rightBorder {
+		bottom: 0;
+		right: 0;
+	}
 }
 
 .sectionBlur .proof-points .grid-cell {

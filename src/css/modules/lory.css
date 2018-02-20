@@ -4,6 +4,8 @@
  */
 
 .lory {
+    will-change: auto;
+    max-height: calc(100vh - 150px);
 
 /**
  * Slider specific styles
@@ -12,7 +14,7 @@
 .slider {
     position: relative;
     /* width: 320px; */
-    margin: 0 auto 40px;
+    margin: 0 auto;
     user-select: none;
 }
 
@@ -137,7 +139,7 @@
 
 .next svg,
 .prev svg {
-    width: 25px;
+    width: 50px;
     transition: .4s;
 }
 

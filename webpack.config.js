@@ -23,6 +23,7 @@ module.exports = {
       TweenMax: path.resolve('node_modules', 'gsap/src/minified/TweenMax.min.js'),
       TimelineLite: path.resolve('node_modules', 'gsap/src/minified/TimelineLite.min.js'),
       TimelineMax: path.resolve('node_modules', 'gsap/src/minified/TimelineMax.min.js'),
+      ScrollTo: path.resolve('node_modules', 'gsap/src/minified/plugins/ScrollToPlugin.min.js'),
       // ScrollMagic: path.resolve('node_modules', 'scrollmagic/scrollmagic/minified/ScrollMagic.js'),
       'animation.gsap': path.resolve('node_modules', 'scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js'),
       'debug.addIndicators': path.resolve('node_modules', 'scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js'

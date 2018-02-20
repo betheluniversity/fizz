@@ -1,20 +1,20 @@
-import { lory } from 'lory.js'
-
 const hasSliders = document.querySelectorAll('.slider')
-const percentage = document.querySelector('.js_percentage')
+// const percentage = document.querySelector('.js_percentage')
 
-if (hasSliders !== '') {
+if (hasSliders.length > 0) {
+  const lory = require('lory.js').lory
+
   Array.prototype.slice
-    .call(document.querySelectorAll('.slider'))
+    .call(hasSliders)
     .forEach(function (element, index) {
-      if (percentage !== '') {
+      const isPercentage = element.classList.contains('js_percentage')
+      if (isPercentage) {
         lory(element, {
           rewind: true
         })
-        console.log('yes perc')
       } else {
+        console.log('wahtup')
         lory(element, {})
-        console.log('no perc')
       }
     })
 }

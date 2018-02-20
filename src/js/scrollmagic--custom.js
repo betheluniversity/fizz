@@ -1,27 +1,37 @@
+
+// =====================
+// Adding a new plugin requires updating the webpack.config file!!
+// =====================
 const ScrollMagic = require('ScrollMagic')
 require('animation.gsap')
 require('debug.addIndicators')
 // const TimelineMax = require("TimelineMax");
 const TweenMax = require('TweenMax')
+require('ScrollTo')
+// const anime = require('animejs')
+// ====================
 
 const controller = new ScrollMagic.Controller()
 
-// const tween = TweenMax.from('.sectionBlurBody', 1, {x: '-100%'})
+const scene = new ScrollMagic.Scene({
+  triggerElement: '.sectionBlurContent .sectionBlurTitle'
+})
+  .addIndicators() // add indicators (requires plugin)
+  .addTo(controller)
 
-// const scene = new ScrollMagic.Scene({
-//   triggerElement: '.sectionBlurTitle',
-//   //   duration: '100%',
-//   offset: -400
-// }).setTween(tween).addIndicators().addTo(controller)
+controller.scrollTo(function (newpos) {
+  TweenMax.to(window, 0.5, {scrollTo: {y: newpos}})
+})
 
-// scene.setClassToggle('.sectionBlurBody', 'myclass')
+const anchorLinks = document.querySelectorAll('.stickyBar a[href^="#"]')
+anchorLinks.forEach(link => {
+  link.addEventListener('click', function (e) {
+    e.preventDefault()
+    const id = link.getAttribute('href')
+    controller.scrollTo(id)
 
-// const tween2 = TweenMax.from(".sploot2", 1, { x: "100%" });
-// const scene2 = new ScrollMagic.Scene({
-//   triggerElement: ".trigger2",
-//   duration: "100%",
-//   offset: -400
-// })
-//   .setTween(tween2)
-//   .addIndicators()
-//   .addTo(controller);
+    // if (window.history && window.history.pushState) {
+    //   history.pushState('', document.title, id)
+    // }
+  })
+})

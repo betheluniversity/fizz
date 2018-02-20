@@ -1,3 +1,5 @@
+import { aBF } from './anime--custom.js'
+
 require('./off-canvas.js')
 require('./lory--custom.js')
 require('./accordion.js')
@@ -6,11 +8,14 @@ require('svg4everybody')
 require('./bu_animate.js')
 require('./action-nav.js')
 require('./scrollmagic--custom.js')
+require('./anime--custom.js')
 
-function debounce (func, wait = 5, immediate = true) {
+// Function to prevent constant polling. Modify 'wait' to control rate
+function debounce (func, wait = 4, immediate = true) {
   var timeout
   return function () {
-    var context = this, args = arguments
+    var context = this
+    var args = arguments
     var later = function () {
       timeout = null
       if (!immediate) func.apply(context, args)
@@ -23,21 +28,54 @@ function debounce (func, wait = 5, immediate = true) {
 };
 
 function checkScroll () {
-  const a = document.querySelectorAll('.sectionBlur')
-  a.forEach(holder => {
-    const aPos = (holder.offsetTop - window.scrollY) * -1 // multiply by -1 to turn the number
-    let b = ((aPos - 500) / 25) // subtract 500 delay scroll start && divide by 25 to increase the blur
-    const c = holder.querySelector('.sectionBlurImg img')
+  const sectionBlur = document.querySelectorAll('.sectionBlur')
+  let n = 1
 
-    if (aPos > 500 && b > 0) {
-      if (b < 15) {
-        c.style.filter = `blur(${b}px)`
-      } else {
-        c.style.filter = `blur(15px)`
+  sectionBlur.forEach(holder => {
+    const holderDistanceToTop = (holder.offsetTop - window.scrollY)
+    const holderBottom = (holder.offsetTop + holder.scrollHeight) - window.scrollY
+
+    const blurAmount = (holderDistanceToTop / -20) // divide to increase the blur rate
+    const blurImg = holder.querySelector('.sectionBlurImg')
+    const blurAttribute = holder.querySelector(`#sharpBlur${n} feGaussianBlur`)
+
+    const sectionLink = holder.getAttribute('id')
+    const anchorLink = document.querySelector(`.stickyBar a[href^='#${sectionLink}']`)
+
+    if (holderDistanceToTop < 0 && holderBottom > 0) {
+      anchorLink.classList.add('active')
+      blurImg.style.filter = `url('#sharpBlur${n}')`
+
+      if (blurAmount > 0 && blurAmount < 20) {
+        blurAttribute.setAttribute('stdDeviation', `${blurAmount}`)
+      } else if (blurAmount > 20) {
+        blurAttribute.setAttribute('stdDeviation', '20')
       }
     } else {
-      c.style.filter = `blur(0)`
+      blurImg.style.filter = `none`
+      blurAttribute.setAttribute('stdDeviation', '0')
+      anchorLink.classList.remove('active')
     }
+
+    // section title
+    const sectionTitle = holder.querySelector('.sectionBlurTitle')
+    const sTSH = sectionTitle.scrollHeight
+    const sTTop = sectionTitle.getBoundingClientRect().top
+    const animateAt = (window.scrollY + window.innerHeight) - sTSH / 2
+    const isHalfShown = animateAt - sTTop
+    const sectionTitleBottom = sectionTitle.getBoundingClientRect().bottom
+
+    // If sectionTitle does not contain class, animate and add class
+    if (isHalfShown > 0 && window.scrollY < sectionTitleBottom) {
+        if (!sectionTitle.classList.contains('animateBorder')) {
+          holder.querySelector('.sectionBlurTitle').classList.add('animateBorder')
+          const hB = sectionTitle.querySelectorAll('.animateBorder .horizontalBorder')
+          const vB = sectionTitle.querySelectorAll('.animateBorder .verticalBorder')
+          aBF(hB, vB)
+        }
+    }
+
+    n++
   })
 }
 
