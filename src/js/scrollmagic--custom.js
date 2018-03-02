@@ -16,7 +16,7 @@ const controller = new ScrollMagic.Controller()
 const scene = new ScrollMagic.Scene({
   triggerElement: '.sectionBlurContent .sectionBlurTitle'
 })
-  .addIndicators() // add indicators (requires plugin)
+  // .addIndicators() // add indicators (requires plugin)
   .addTo(controller)
 
 controller.scrollTo(function (newpos) {

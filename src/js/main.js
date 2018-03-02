@@ -57,22 +57,20 @@ function checkScroll () {
       anchorLink.classList.remove('active')
     }
 
-    // section title
     const sectionTitle = holder.querySelector('.sectionBlurTitle')
-    const sTSH = sectionTitle.scrollHeight
-    const sTTop = sectionTitle.getBoundingClientRect().top
-    const animateAt = (window.scrollY + window.innerHeight) - sTSH / 2
-    const isHalfShown = animateAt - sTTop
+    const sectionTitleTopX = sectionTitle.getBoundingClientRect().top
     const sectionTitleBottom = sectionTitle.getBoundingClientRect().bottom
+    const isShown = (sectionTitleTopX - window.innerHeight) < 0
+    const isPassed = sectionTitleBottom < 0
 
     // If sectionTitle does not contain class, animate and add class
-    if (isHalfShown > 0 && window.scrollY < sectionTitleBottom) {
-        if (!sectionTitle.classList.contains('animateBorder')) {
-          holder.querySelector('.sectionBlurTitle').classList.add('animateBorder')
-          const hB = sectionTitle.querySelectorAll('.animateBorder .horizontalBorder')
-          const vB = sectionTitle.querySelectorAll('.animateBorder .verticalBorder')
-          aBF(hB, vB)
-        }
+    if (isShown && !isPassed) {
+      if (!sectionTitle.classList.contains('animateBorder')) {
+        sectionTitle.classList.add('animateBorder')
+        const hB = sectionTitle.querySelectorAll('.animateBorder .horizontalBorder')
+        const vB = sectionTitle.querySelectorAll('.animateBorder .verticalBorder')
+        aBF(hB, vB)
+      }
     }
 
     n++

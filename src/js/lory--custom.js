@@ -10,10 +10,9 @@ if (hasSliders.length > 0) {
       const isPercentage = element.classList.contains('js_percentage')
       if (isPercentage) {
         lory(element, {
-          rewind: true
+          infinite: 1
         })
       } else {
-        console.log('wahtup')
         lory(element, {})
       }
     })

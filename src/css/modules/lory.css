@@ -4,8 +4,14 @@
  */
 
 .lory {
-    will-change: auto;
-    max-height: calc(100vh - 150px);
+
+    overflow: hidden;
+
+    @mixin respond-min 830px{
+        max-height: calc(100vh - 150px);
+        margin-top: -98px;
+        margin-bottom: 98px;
+    }
 
 /**
  * Slider specific styles
@@ -51,7 +57,13 @@
     margin-right: 10px;
 }
 
+.js_slide {
+    overflow: hidden;
+}
 
+.js_slide.active {
+    z-index: 10;
+}
 
 .percentage .slides {
     display: block;
@@ -148,23 +160,5 @@
     transform: scale(1.1);
 }
 
-.events_log {
-    display: block;
-    font-size: 12px;
-    line-height: 1.6;
-    text-align: center;
-    background-color: #fcfcfc;
-    border: 1px solid #d2d2d2;
-    margin-top: -20px;
-    margin-bottom: 20px;
-}
-
-.events_log>span {
-    display: none;
-}
-
-.events_log>span:nth-last-child(-n+5) {
-    display: block;
-}
 
 }
