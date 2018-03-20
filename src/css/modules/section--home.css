@@ -82,7 +82,7 @@
 	top: 4vh;
 	min-height: 96vh;
 	will-change: scroll-position;
-	background: black;
+	background: #fff;
 }
 
 .sectionBlurImg img {

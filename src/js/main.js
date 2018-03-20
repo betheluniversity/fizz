@@ -41,7 +41,7 @@ const requestAnimationFrame = function () {}
 
 function scrollPosition () {
   let wY = window.scrollY
-  console.log(wY);
+  console.log(wY)
   if (wY > sBATop && wY < sBABottom) {
     requestAnimationFrame(blurIt(sBA))
   } else if (wY > sBLTop && wY < sBLBottom) {
@@ -80,12 +80,12 @@ function blurIt (section, progress) {
   // anchorLink.classList.add('active')
   // blurImg.style.filter = `url('#sharpBlur${n}')`
 
-  if( blurAmount < 0 ){
-  blurImg.style.filter = `blur(0px)`;
-  } else if (blurAmount > 0 && blurAmount < 40 ) {
-  blurImg.style.filter = `blur(${blurAmount}px)`
+  if (blurAmount < 0) {
+    blurImg.style.filter = `blur(0px)`
+  } else if (blurAmount > 0 && blurAmount < 40) {
+    blurImg.style.filter = `blur(${blurAmount}px)`
   } else {
-  blurImg.style.filter = `blur(40px)`  
+    blurImg.style.filter = `blur(40px)`
   }
 
   // if (blurAmount > 0 && blurAmount < 40) {
