@@ -250,9 +250,9 @@ pageTitle: Test title
     </span>
 </div>
 
-<div class="mb6">
+{{!-- <div class="mb6">
     <section class="grid-section  mt0  pt6 pb3">
-        {{!-- <h2 class="center  mb1 alpha">Bethel by the numbers</h2> --}}
+         <h2 class="center  mb1 alpha">Bethel by the numbers</h2> 
         <div class="inner">
             <div class="grid false">
                 <div class="grid-cell">
@@ -293,12 +293,14 @@ pageTitle: Test title
             </div>
         </div>
     </section>
-</div>
+</div> --}}
 
-<div id="academics" class="sectionBlur">
-    <svg class='xsvgBlur  xhideSvgSoThatItSupportsFirefox' xmlns="http://www.w3.org/2000/svg" height="0">
+<div id="academics" class="sectionBlur lazyload" 
+        data-bgset="https://cdn1.bethel.edu/resize/unsafe/400x0/smart/https://c1.staticflickr.com/5/4502/37104836243_e48c158722_o.jpg 400w, https://cdn1.bethel.edu/resize/unsafe/600x0/smart/https://c1.staticflickr.com/5/4502/37104836243_e48c158722_o.jpg 600w, https://cdn1.bethel.edu/resize/unsafe/800x0/smart/https://c1.staticflickr.com/5/4502/37104836243_e48c158722_o.jpg 800w, https://cdn1.bethel.edu/resize/unsafe/1000x0/smart/https://c1.staticflickr.com/5/4502/37104836243_e48c158722_o.jpg 1000w, https://cdn1.bethel.edu/resize/unsafe/1200x0/smart/https://c1.staticflickr.com/5/4502/37104836243_e48c158722_o.jpg 1200w, https://cdn1.bethel.edu/resize/unsafe/1400x0/smart/https://c1.staticflickr.com/5/4502/37104836243_e48c158722_o.jpg 1400w, https://cdn1.bethel.edu/resize/unsafe/1600x0/smart/https://c1.staticflickr.com/5/4502/37104836243_e48c158722_o.jpg 1600w"
+        data-sizes="auto">
+    <svg class='xsvgBlur  xhideSvgSoThatItSupportsFirefox' xmlns="http://www.w3.org/2000/svg">
         <filter class="svgFilter" id='sharpBlur1' color-interpolation-filters="sRBG">
-            <feGaussianBlur stdDeviation='0'></feGaussianBlur>
+            <feGaussianBlur stdDeviation='10'></feGaussianBlur>
             <feColorMatrix type='matrix' values='1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 9 0'></feColorMatrix>
             <feComposite in2='SourceGraphic' operator='in'></feComposite>
         </filter>
@@ -306,10 +308,10 @@ pageTitle: Test title
     {{!-- <div class="sectionBlurImg  lazyload" 
         data-bgset="https://cdn1.bethel.edu/resize/unsafe/400x0/smart/https://c1.staticflickr.com/5/4502/37104836243_e48c158722_o.jpg 400w, https://cdn1.bethel.edu/resize/unsafe/600x0/smart/https://c1.staticflickr.com/5/4502/37104836243_e48c158722_o.jpg 600w, https://cdn1.bethel.edu/resize/unsafe/800x0/smart/https://c1.staticflickr.com/5/4502/37104836243_e48c158722_o.jpg 800w, https://cdn1.bethel.edu/resize/unsafe/1000x0/smart/https://c1.staticflickr.com/5/4502/37104836243_e48c158722_o.jpg 1000w, https://cdn1.bethel.edu/resize/unsafe/1200x0/smart/https://c1.staticflickr.com/5/4502/37104836243_e48c158722_o.jpg 1200w, https://cdn1.bethel.edu/resize/unsafe/1400x0/smart/https://c1.staticflickr.com/5/4502/37104836243_e48c158722_o.jpg 1400w, https://cdn1.bethel.edu/resize/unsafe/1600x0/smart/https://c1.staticflickr.com/5/4502/37104836243_e48c158722_o.jpg 1600w"
         data-sizes="auto"></div> --}}
-        <div class="sectionBlurImg">
-            <img class="lazyload" data-srcset="https://cdn1.bethel.edu/resize/unsafe/400x0/smart/https://c1.staticflickr.com/5/4502/37104836243_e48c158722_o.jpg 400w, https://cdn1.bethel.edu/resize/unsafe/600x0/smart/https://c1.staticflickr.com/5/4502/37104836243_e48c158722_o.jpg 600w, https://cdn1.bethel.edu/resize/unsafe/800x0/smart/https://c1.staticflickr.com/5/4502/37104836243_e48c158722_o.jpg 800w, https://cdn1.bethel.edu/resize/unsafe/1000x0/smart/https://c1.staticflickr.com/5/4502/37104836243_e48c158722_o.jpg 1000w, https://cdn1.bethel.edu/resize/unsafe/1200x0/smart/https://c1.staticflickr.com/5/4502/37104836243_e48c158722_o.jpg 1200w, https://cdn1.bethel.edu/resize/unsafe/1400x0/smart/https://c1.staticflickr.com/5/4502/37104836243_e48c158722_o.jpg 1400w, https://cdn1.bethel.edu/resize/unsafe/1600x0/smart/https://c1.staticflickr.com/5/4502/37104836243_e48c158722_o.jpg 1600w"
-            data-sizes="auto">
-        </div>
+    {{!-- <div class="sectionBlurImg">
+        <img  srcset="https://cdn1.bethel.edu/resize/unsafe/400x0/smart/https://c1.staticflickr.com/5/4502/37104836243_e48c158722_o.jpg 400w, https://cdn1.bethel.edu/resize/unsafe/600x0/smart/https://c1.staticflickr.com/5/4502/37104836243_e48c158722_o.jpg 600w, https://cdn1.bethel.edu/resize/unsafe/800x0/smart/https://c1.staticflickr.com/5/4502/37104836243_e48c158722_o.jpg 800w, https://cdn1.bethel.edu/resize/unsafe/1000x0/smart/https://c1.staticflickr.com/5/4502/37104836243_e48c158722_o.jpg 1000w, https://cdn1.bethel.edu/resize/unsafe/1200x0/smart/https://c1.staticflickr.com/5/4502/37104836243_e48c158722_o.jpg 1200w, https://cdn1.bethel.edu/resize/unsafe/1400x0/smart/https://c1.staticflickr.com/5/4502/37104836243_e48c158722_o.jpg 1400w, https://cdn1.bethel.edu/resize/unsafe/1600x0/smart/https://c1.staticflickr.com/5/4502/37104836243_e48c158722_o.jpg 1600w"
+        data-sizes="auto">
+    </div> --}}
     <div class="inner  sectionBlurContent">
         <div class="sectionBlurTitle">
             <div class="topBorder horizontalBorder"></div>
@@ -505,7 +507,7 @@ pageTitle: Test title
 
 {{> section--request-info }}
 
-<div id="learning" class="sectionBlur">
+{{!-- <div id="learning" class="sectionBlur">
     <svg class='svgBlur  hideSvgSoThatItSupportsFirefox'>
         <filter class="svgFilter" id='sharpBlur2' color-interpolation-filters="sRBG">
             <feGaussianBlur stdDeviation='0'></feGaussianBlur>
@@ -621,7 +623,7 @@ pageTitle: Test title
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 
 <div class="mb6">
     <section class="grid-section  mt0  pv5">
@@ -658,7 +660,7 @@ pageTitle: Test title
     </section>
 </div>
 
-<div id="spirituality" class="sectionBlur">
+{{!-- <div id="spirituality" class="sectionBlur">
     <svg class='svgBlur  hideSvgSoThatItSupportsFirefox'>
         <filter class="svgFilter" id='sharpBlur3' color-interpolation-filters="sRBG">
             <feGaussianBlur stdDeviation='0'></feGaussianBlur>
@@ -738,7 +740,7 @@ pageTitle: Test title
 
         </div>
     </div>
-</div>
+</div> --}}
 
 <section class="grid-section  pv6  mt0  bkg--white">
     <div class="inner">

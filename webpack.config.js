@@ -1,7 +1,7 @@
-const LodashModuleReplacementPlugin = require ('lodash-webpack-plugin')
+// const LodashModuleReplacementPlugin = require ('lodash-webpack-plugin')
 const webpack = require('webpack')
 const path = require('path')
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+// const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 
 module.exports = {
@@ -73,16 +73,16 @@ module.exports = {
     }
   },
   plugins: [
-    new LodashModuleReplacementPlugin(),
-    new UglifyJsPlugin({
-      sourceMap: true,
-      uglifyOptions: {
-        ecma: 8,
-        compress: {
-          warnings: false,
-          ecma: 5
-        }
-      }
-    })
+    // new LodashModuleReplacementPlugin(),
+    // new UglifyJsPlugin({
+    //   sourceMap: true,
+    //   uglifyOptions: {
+    //     ecma: 8,
+    //     compress: {
+    //       warnings: false,
+    //       ecma: 5
+    //     }
+    //   }
+    // })
   ]
 }

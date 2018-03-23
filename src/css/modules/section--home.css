@@ -50,19 +50,21 @@
 .sectionBlur {
 	position: relative;
 	/* top: 0; */
-	z-index: 1;
-	margin-bottom: -2px;
-	transform: translate3d(0,0,0);
+	/* z-index: 1; */
+	/* margin-bottom: -2px; */
+	/* transform: translate3d(0,0,0); */
 	/* will-change: auto; */
+	background-attachment: fixed;
+	background-size: cover;
 }
 
 .sectionBlur svg {
 	/* display: none; */
-	width: 0; 
+	/* width: 0; 
 	height: 0 ;
 	overflow: hidden ;
 	visibility: hidden;
-	will-change: auto;
+	will-change: auto; */
 }
 
 .hideSvgSoThatItSupportsFirefox {
@@ -77,26 +79,27 @@
 }
 
 .sectionBlurImg {
-	overflow: hidden;
-	position: sticky;
-	top: 4vh;
-	min-height: 96vh;
-	will-change: scroll-position;
-	background: #fff;
+	/* overflow: hidden; */
+	position: fixed;
+	top: 0;
+	/* min-height: 96vh; */
+	/* will-change: auto; */
+	/* background: #fff; */
 }
 
 .sectionBlurImg img {
 	/* filter: url('#sharpBlur1'); */
-	object-fit: cover;
-	margin: -1vh;
-	min-width: 104vw;
+	/* object-fit: cover; */
+	/* margin: -1vh; */
+	/* min-width: 104vw; */
+	/* position: fixed; */
 	/* will-change: scroll-position; */
 	}
 
 .sectionBlurContent {
 	position: inherit;
 	/* padding-top: 15em; */
-	margin-top: -50vh;
+	/* margin-top: -50vh; */
 	/* will-change: scroll-position; */
 }
 

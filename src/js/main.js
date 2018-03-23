@@ -10,7 +10,7 @@
 // require('svg4everybody')
 // require('./bu_animate.js')
 // require('./action-nav.js')
-require('./scrollmagic--custom.js')
+// require('./scrollmagic--custom.js')
 // require('./anime--custom.js')
 
 // stickybits('.stickyBar')
@@ -29,13 +29,13 @@ const sBA = document.querySelector('#academics')
 const sBATop = sBA.offsetTop
 const sBABottom = sBATop + sBA.scrollHeight
 
-const sBL = document.querySelector('#learning')
-const sBLTop = sBL.offsetTop
-const sBLBottom = sBLTop + sBL.scrollHeight
+// const sBL = document.querySelector('#learning')
+// const sBLTop = sBL.offsetTop
+// const sBLBottom = sBLTop + sBL.scrollHeight
 
-const sBS = document.querySelector('#spirituality')
-const sBSTop = sBS.offsetTop
-const sBSBottom = sBSTop + sBS.scrollHeight
+// const sBS = document.querySelector('#spirituality')
+// const sBSTop = sBS.offsetTop
+// const sBSBottom = sBSTop + sBS.scrollHeight
 
 const requestAnimationFrame = function () {}
 
@@ -69,8 +69,8 @@ function blurIt (section, progress) {
 //   sectionDistanceToTop = section.
 
   const blurImg = section.querySelector('.sectionBlurImg')
-  const blurAttribute = section.querySelector(`.svgFilter feGaussianBlur`)
-  const blurAmount = (section.offsetTop - window.scrollY) / -20 // divide to increase the blur rate
+  const blurAttribute = section.querySelector('.svgFilter feGaussianBlur')
+  const blurAmount = window.scrollY * 0.006 // divide to increase the blur rate
   console.log(blurAmount)
 
   // const sectionLink = holder.getAttribute('id')
@@ -81,26 +81,26 @@ function blurIt (section, progress) {
   // blurImg.style.filter = `url('#sharpBlur${n}')`
 
   if (blurAmount < 0) {
-    blurImg.style.filter = `blur(0px)`
-  } else if (blurAmount > 0 && blurAmount < 40) {
-    blurImg.style.filter = `blur(${blurAmount}px)`
+    blurImg.style.filter = 'blur(0px)'
+  } else if (blurAmount > 0 && blurAmount < 30) {
+    blurImg.style.filter = 'blur(' + blurAmount + 'px)'
+    blurImg.style.webkitFilter = 'blur(' + blurAmount + 'px)'
   } else {
-    blurImg.style.filter = `blur(40px)`
+    blurImg.style.filter = 'blur(30px)'
   }
 
   // if (blurAmount > 0 && blurAmount < 40) {
   //   blurAttribute.setAttribute('stdDeviation', `${blurAmount}`)
   // } else if (blurAmount > 40) {
   //   blurAttribute.setAttribute('stdDeviation', '40')
-  // }
   // } else {
   //   blurImg.style.filter = `none`
-  // blurAttribute.setAttribute('stdDeviation', '0')
-  // anchorLink.classList.remove('active')
+  //   blurAttribute.setAttribute('stdDeviation', '0')
+  //   anchorLink.classList.remove('active')
   // }
 
   // n++
   // )
 }
 
-// window.addEventListener('scroll', scrollPosition, false )
+// window.addEventListener('scroll', scrollPosition, false)
