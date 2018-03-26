@@ -84,7 +84,6 @@ function blurIt (section, progress) {
     blurImg.style.filter = 'blur(0px)'
   } else if (blurAmount > 0 && blurAmount < 30) {
     blurImg.style.filter = 'blur(' + blurAmount + 'px)'
-    blurImg.style.webkitFilter = 'blur(' + blurAmount + 'px)'
   } else {
     blurImg.style.filter = 'blur(30px)'
   }
@@ -103,4 +102,4 @@ function blurIt (section, progress) {
   // )
 }
 
-// window.addEventListener('scroll', scrollPosition, false)
+window.addEventListener('scroll', scrollPosition, false)

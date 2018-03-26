@@ -80,20 +80,29 @@
 
 .sectionBlurImg {
 	/* overflow: hidden; */
-	position: fixed;
+	position: absolute;
 	top: 0;
 	/* min-height: 96vh; */
 	/* will-change: auto; */
 	/* background: #fff; */
+
+	height: 100%;
+	width: 100vw;
+	background-attachment: fixed;
+	background-size: cover;
+
+	position: sticky;
 }
 
 .sectionBlurImg img {
 	/* filter: url('#sharpBlur1'); */
-	/* object-fit: cover; */
+	object-fit: cover;
 	/* margin: -1vh; */
 	/* min-width: 104vw; */
 	/* position: fixed; */
 	/* will-change: scroll-position; */
+	position: sticky;
+	top:0;
 	}
 
 .sectionBlurContent {
