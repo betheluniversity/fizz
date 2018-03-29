@@ -6,11 +6,11 @@ import { TweenMax } from 'gsap'
 // Adding a new plugin requires updating the webpack.config file!!
 // =====================
 const ScrollMagic = require('ScrollMagic')
-require('animation.gsap')
-require('debug.addIndicators')
+// require('animation.gsap')
+// require('debug.addIndicators')
 // const TimelineMax = require("TimelineMax");
 // const TweenMax = require('TweenMax')
-require('ScrollTo')
+// require('ScrollTo')
 // const anime = require('animejs')
 // ====================
 
@@ -20,11 +20,11 @@ const acad = document.querySelector('#academics')
 const acadTop = acad.getBoundingClientRect().top
 const acadBottom = acad.getBoundingClientRect().bottom
 const acadHeight = acad.scrollHeight
-const acadImg = acad.querySelector('.sectionBlurImg .lazyload')
-const blurAttribute = acad.querySelector(`.svgFilter feGaussianBlur`)
+const acadImg = acad.querySelector('.sectionBlurImg')
+// const blurAttribute = acad.querySelector(`.svgFilter feGaussianBlur`)
 
 const tween = TweenMax.to(acadImg, 1, { 
-  opacity: '.1',
+  opacity: '0',
 })
 
 const sceneAcademics = new ScrollMagic.Scene({
@@ -32,7 +32,7 @@ const sceneAcademics = new ScrollMagic.Scene({
   duration: 700
 })
   .setTween(tween)
-  .addIndicators() // add indicators (requires plugin)
+  // .addIndicators() // add indicators (requires plugin)
   .addTo(controller)
 
 // const progress = sceneAcademics.progress()

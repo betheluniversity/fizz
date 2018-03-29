@@ -4,7 +4,7 @@
 	  "baseImg": "https://cdn2.bethel.edu/resize/unsafe/375x0/smart/https://www.bethel.edu/_homepages/www/images/feature/lead-confidence-2x1.jpg",
 	  "mobileImg" : "https://cdn3.bethel.edu/resize/unsafe/830x0/smart/https://www.bethel.edu/_homepages/www/images/feature/lead-confidence-2x1.jpg",
 	  "bigImg" : "https://cdn2.bethel.edu/resize/unsafe/1000x0/smart/https://www.bethel.edu/_homepages/www/images/feature/lead-confidence-16x9.jpg 1000w, https://cdn2.bethel.edu/resize/unsafe/2000x0/smart/https://www.bethel.edu/_homepages/www/images/feature/lead-confidence-16x9.jpg 2000w",
-	  "headline" : "Lead with confidence.",
+	  "headline" : "Welcome Week 2017",
 	  "teaser" : "When you graduate from Bethel, you’ll be prepared to lead with confidence and make a difference in your workplace and community.",
 		"button" : "Learn More",
 		"show": true
@@ -17,7 +17,7 @@
 	  "headline" : "Find your calling.",
 	  "teaser" : "People come to Bethel with many different career goals—engineer, scientist, doctor, teacher, marketer, philosopher. Whatever career path God calls you to follow, we have top rated programs to help you reach your goals.",
 	  "button" : "Apply Now",
-	  "show": true
+	  "show": false
 	},
 	{
 	  "video": "https://www.bethel.edu/_shared-content/videos/Welcome Week 15 BKG Homepage Feature-HD.mp4",
@@ -27,7 +27,7 @@
 	  "headline" : "Show your pride.",
 	  "teaser" : "We’re proud to be Royals, and we show it in a lot of ways. We cheer loudly, we get decked out for gamedays, and we make homecoming a big deal.",
 		"button" : "Learn More",
-		"show": true
+		"show": false
 	},
 	{
 	  "video": "https://www.bethel.edu/_shared-content/videos/Welcome Week 15 BKG Homepage Feature-HD.mp4",
@@ -37,6 +37,6 @@
 	  "headline" : "Preparing students for excellence.",
 	  "teaser" : "Here, we lead with service to our students, and that’s why we’ve redesigned many of our programs—reducing program time and cost. We promise an excellent educational experience and it's now more affordable and achievable for you.",
 		"button" : "Learn More",
-		"show": true
+		"show": false
 	}
 ]

@@ -84,10 +84,6 @@ p:first-child {
 	margin-top: 0;
 }
 
-p, li {
-
-}
-
 a {
 	color: $bethel--blue;
 	text-decoration: none;
@@ -95,6 +91,10 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+.sans-serif {
+  font-family: $gotham;
 }
 
 .teaser {
@@ -123,4 +123,8 @@ a:hover {
 
 .parallax .uppercase-underlined {
   border-color: #fff;
+}
+
+.ta--center {
+  text-align: center;
 }
