@@ -1,0 +1,25 @@
+.bkg--diagonal {
+    position: relative;
+}
+.bkg--diagonal:before {
+    content: '';
+    background: linear-gradient(-10deg, #fff9e3, #ffc600); 
+    transform: skew(0, -4deg);
+    height: 470px;
+    width: 100%;
+    position: absolute;
+    top: -170px
+}
+
+.bkg--diagonal2 {
+    position: relative;
+}
+.bkg--diagonal2:before {
+    content: '';
+    background: linear-gradient(10deg, #fff,rgb(148, 200, 255)); 
+    transform: skew(0, -4deg);
+    height: 560px;
+    width: 100%;
+    position: absolute;
+    top: -200px
+}

@@ -1,0 +1,50 @@
+.stickyBar {
+	position: sticky;
+	top: -1px;
+	display: flex;
+	padding: 1.5em;
+	background: $bethel--blue;
+	z-index: 1000;
+	justify-content: space-around;
+	font-family: $gotham;
+	font-size: .8rem;
+	text-align: center;
+
+	@mixin respond-min 830px {
+		font-size: 1.2rem;
+		margin-top: -98px;
+	}
+}
+
+.stickyBar span {
+	display: flex;
+	padding: 1em;
+	margin: -2em 0;
+	background: #1584c9;
+	display: flex;
+	align-items: center;
+	border-radius: 5px;
+}
+
+.stickyBar span svg {
+	width: 3rem;
+	height: 3rem;
+	fill: $bethel--navy;
+}
+
+.stickyBar a {
+	padding: .5em 1em;
+	border-radius: 4px;
+	color: #fff;
+}
+
+.stickyBar a:hover {
+	text-decoration: none;
+}
+
+.stickyBar .active {
+	background: $bethel--yellow;
+	/* background: url('http://www.glamourmagazine.co.uk/static/img/pattern-1.jpg'); */
+	background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffc600' fill-opacity='.9' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+	
+}

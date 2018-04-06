@@ -35,6 +35,10 @@ $bkg--gradient-blue-yellow: linear-gradient(-150deg, $bethel--blue, 70%, $bethel
 	}
 }
 
+.u-posRel {
+	position: relative;
+}
+
 .va-container {
 	display: table;
 	width: 100%;
