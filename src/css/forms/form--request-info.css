@@ -7,7 +7,7 @@
 
 .sectionRequestInfo .grid-cell {
   /* background: #fff; */
-  margin: 1em !important;
+  /* margin: 1em !important; */
   /* padding: 1em; */
 }
 
@@ -42,7 +42,7 @@
   /* min-width: 12em; */
   border-bottom: 1px solid #ccc;
   font-size: 1.2rem;
-  color: $bethel--yellow;
+  color: $bethel--blue;
   text-align: center !important;
 
   @mixin respond-min $medium {
@@ -57,7 +57,7 @@
   border-bottom: 1px solid #ccc;
   border-radius: 0;
   background: transparent;
-  color: $bethel--yellow;
+  color: #ccc;
   font-size: 1.2rem;
   height: 2.5em;
   -moz-appearance: none;
@@ -83,24 +83,24 @@
 
 ::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
-  color: $bethel--yellow;
+  color: #ccc;
   opacity: 1;
 }
 
 ::-moz-placeholder {
   /* Firefox 19+ */
-  color: $bethel--yellow;
+  color: #ccc;
   opacity: 1;
 }
 
 :-ms-input-placeholder {
   /* IE 10+ */
-  color: $bethel--yellow;
+  color: #ccc;
   opacity: 1;
 }
 
 :-moz-placeholder {
   /* Firefox 18- */
-  color: $bethel--yellow;
+  color: #ccc;
   opacity: 1;
 }

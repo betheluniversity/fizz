@@ -7,7 +7,7 @@ const path = require('path')
 module.exports = {
   entry: './src/js/main.js',
   output: {
-    filename: 'glaze.js'
+    filename: 'newt.js'
   },
   module: {
     noParse: [/.\/src\/js\/vendor\/odometer.min.js/],
