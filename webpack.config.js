@@ -1,8 +1,6 @@
-// const LodashModuleReplacementPlugin = require ('lodash-webpack-plugin')
 const webpack = require('webpack')
 const path = require('path')
-// const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
-
+const MinifyPlugin = require('babel-minify-webpack-plugin')
 
 module.exports = {
   entry: './src/js/main.js',
@@ -61,7 +59,6 @@ module.exports = {
         'node_modules',
         'gsap/src/minified/plugins/ScrollToPlugin.min.js'
       ),
-      // ScrollMagic: path.resolve('node_modules', 'scrollmagic/scrollmagic/minified/ScrollMagic.js'),
       'animation.gsap': path.resolve(
         'node_modules',
         'scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js'
@@ -73,16 +70,6 @@ module.exports = {
     }
   },
   plugins: [
-    // new LodashModuleReplacementPlugin(),
-    // new UglifyJsPlugin({
-    //   sourceMap: true,
-    //   uglifyOptions: {
-    //     ecma: 8,
-    //     compress: {
-    //       warnings: false,
-    //       ecma: 5
-    //     }
-    //   }
-    // })
+    new MinifyPlugin({})
   ]
 }
