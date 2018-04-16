@@ -5,60 +5,75 @@ import { TweenLite } from 'gsap'
 // =====================
 const ScrollMagic = require('ScrollMagic')
 // require('animation.gsap')
-// require('debug.addIndicators')
+require('debug.addIndicators')
 require('ScrollTo')
 const anime = require('animejs')
 // ====================
 
 const controller = new ScrollMagic.Controller()
 
-const acad = document.querySelector('#academics')
-const acadImg = document.querySelector('#acadImg')
-const pP = document.querySelectorAll('.proofPoints')
-const pPS = document.querySelectorAll('.proofPoints .grid-cell')
+const pp1 = document.querySelector('#pp1')
+const pps1 = pp1.querySelectorAll('.proofPoints .grid-cell')
+const pp2 = document.querySelector('#pp2')
+const pps2 = pp2.querySelectorAll('.proofPoints .grid-cell')
 
-const scenePPS = new ScrollMagic.Scene({
-  triggerElement: pP
+const scenePP1 = new ScrollMagic.Scene({
+  triggerElement: pp1,
+  offset: -500
 })
-// .addIndicators() // add indicators (requires plugin)
-  .addTo(controller)
+.addIndicators() // add indicators (requires plugin)
+.addTo(controller)
 
-scenePPS.on('enter', function (e) {
+scenePP1.on('enter', function (e) {
   const animateProofPoints = anime.timeline({
-    delay: 0,
-    duration: 1000,
-    easing: [0.91, -0.64, 0.29, 1.56],
-    loop: false,
+    duration: 800,
+    easing: [0.99, -0.64, 0.29, 1.56],
     reverse: false,
-    delay: function (el, i) { return i * 300 }
+    delay: function (el, i) { return i * 200 }
   })
 
   animateProofPoints
     .add({
-      targets: pPS,
+      targets: pps1,
       opacity: [0, 1],
-      translateY: ['2em', 0]
+      scale: [0.7, 1]
     })
-}
-)
+})
 
-// const progress = sceneAcademics.progress()
+scenePP1.on('progress', function () {
+  pps1.forEach((pP) => {
+    pP.style.opacity = 0
+  })
+})
 
-// sceneAcademics.on('progress', function (event) {
-//   const prog = event.progress * 50
-//   // TweenMax.set(blurAttribute, {
-//   //   attr: {
-//   //     'stdDeviation': prog
-//   //   },
-//   //   rotation: 0.01
-//   // })
-// })
+const scenePP2 = new ScrollMagic.Scene({
+  triggerElement: pp2,
+  offset: -500
+})
+.addIndicators() // add indicators (requires plugin)
+.addTo(controller)
 
-// sceneAcademics.on('leave', function () {
-//   // console.log('out')
-// })
+scenePP2.on('enter', function (e) {
+  const animateProofPoints = anime.timeline({
+    duration: 800,
+    easing: [0.99, -0.64, 0.29, 1.56],
+    reverse: false,
+    delay: function (el, i) { return i * 200 }
+  })
 
-// sceneAcademics.triggerHook(0.5)
+  animateProofPoints
+    .add({
+      targets: pps2,
+      opacity: [0, 1],
+      scale: [0.7, 1]
+    })
+})
+
+scenePP2.on('progress', function () {
+  pps2.forEach((pP) => {
+    pP.style.opacity = 0
+  })
+})
 
 const anchorLinks = document.querySelectorAll('.stickyBar a[href^="#"]')
 
@@ -66,9 +81,6 @@ anchorLinks.forEach(link => {
   link.addEventListener('click', function (e) {
     e.preventDefault()
     const id = link.getAttribute('href')
-    // controller.scrollTo(id, function () {
-    //   console.log('finished')
-    // })
     TweenLite.to(window, 1, {scrollTo: id})
   })
 })

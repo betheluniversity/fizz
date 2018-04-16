@@ -19,21 +19,7 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'babel-loader',
-        options: {
-          plugins: ['lodash'],
-          presets: [
-            [
-              'env',
-              {
-                comments: false,
-                targets: {
-                  browsers: ['last 2 versions', 'ie 11']
-                }
-              }
-            ]
-          ]
-        }
+        loader: 'babel-loader'
       }
     ]
   },
