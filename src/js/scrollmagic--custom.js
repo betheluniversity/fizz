@@ -5,7 +5,7 @@ import { TweenLite } from 'gsap'
 // =====================
 const ScrollMagic = require('ScrollMagic')
 // require('animation.gsap')
-require('debug.addIndicators')
+// require('debug.addIndicators')
 require('ScrollTo')
 const anime = require('animejs')
 // ====================
@@ -21,7 +21,7 @@ const scenePP1 = new ScrollMagic.Scene({
   triggerElement: pp1,
   offset: -500
 })
-.addIndicators() // add indicators (requires plugin)
+// .addIndicators() // add indicators (requires plugin)
 .addTo(controller)
 
 scenePP1.on('enter', function (e) {
@@ -50,7 +50,7 @@ const scenePP2 = new ScrollMagic.Scene({
   triggerElement: pp2,
   offset: -500
 })
-.addIndicators() // add indicators (requires plugin)
+// .addIndicators() // add indicators (requires plugin)
 .addTo(controller)
 
 scenePP2.on('enter', function (e) {

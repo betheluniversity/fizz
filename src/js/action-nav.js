@@ -1,7 +1,7 @@
 var actionNav = document.querySelector('.action-nav')
 
 if (actionNav) {
-  var actionNavLink = actionNav.querySelectorAll('.action-nav__link')
+  // var actionNavLink = actionNav.querySelectorAll('.action-nav__link')
   var actionNavContentPanel = actionNav.querySelectorAll('.action-nav__content-panel')
 
   document.body.addEventListener('click', function aA (event) {
@@ -12,11 +12,11 @@ if (actionNav) {
 	    }
   })
 
-  openTags = function () {
+  const openTags = function () {
     actionNav.classList.add('active')
   }
 
-  openPanel = function (e) {
+  const openPanel = function (e) {
     var panelNumber = e.target.id
     var panelActive = document.querySelector(panelNumber).classList.contains('active')
 
@@ -29,7 +29,7 @@ if (actionNav) {
     }
   }
 
-  shutDown = function (i) {
+  const shutDown = function (i) {
     if (actionNav.classList.contains('active')) {
       actionNav.addEventListener('transitionend', function aB (event) {
         removeActive()
@@ -39,7 +39,7 @@ if (actionNav) {
     }
   }
 
-  removeActive = function () {
+  const removeActive = function () {
     for (var i = 0; i < actionNavContentPanel.length; i++) {
       actionNavContentPanel[i].classList.remove('active')
     }

@@ -9,7 +9,7 @@ require('./lory--custom.js')
 // require('./responsive-tables.js')
 // require('svg4everybody')
 // require('./bu_animate.js')
-// require('./action-nav.js')
+require('./action-nav.js')
 require('./scrollmagic--custom.js')
 
 // stickybits('.stickyBar')
