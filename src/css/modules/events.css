@@ -5,7 +5,7 @@ Module to style items in an event feed
 */
 
 .events__item {
-	margin: 2em 0;
+	margin: 0 0 2em;
 	display: flex;
 	align-items: flex-start;
 }

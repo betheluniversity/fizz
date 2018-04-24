@@ -10,7 +10,6 @@
     @mixin respond-min 830px{
         max-height: calc(100vh - 150px);
         margin-top: -98px;
-        margin-bottom: 98px;
     }
 
 /**

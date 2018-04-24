@@ -10,7 +10,7 @@ require('./lory--custom.js')
 // require('svg4everybody')
 // require('./bu_animate.js')
 require('./action-nav.js')
-require('./scrollmagic--custom.js')
+// require('./scrollmagic--custom.js')
 
 // stickybits('.stickyBar')
 // stickybits('#cleanAcademics', {scrollEl: '#academics'})
