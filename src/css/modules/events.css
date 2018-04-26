@@ -10,9 +10,9 @@ Module to style items in an event feed
 	align-items: flex-start;
 }
 
-.events__content {
+/* .events__content {
 	padding-left: 1em;
-}
+} */
 
 .events__headline {
 	font-weight: 500;
@@ -22,33 +22,38 @@ Module to style items in an event feed
 }
 
 .events__location {
-	margin-bottom: 0;
+	/* margin-bottom: 0; */
 	/* font-family: $gotham; */
-	color: #999;
+	/* color: #999; */
 	color: rgba(0, 105, 170, 0.6);
-	margin: 0 0 1em;
+	margin: 0;
+	font-style: italic;
+	display: None;
 	/* font-size: 90%; */
 }
 
 .events__description {
 	margin-top: 0;
+	color: #999;
 }
 
 .events__date-tile {
 	font-family: $gotham;
 	background: #fff;
 	display: flex;
+	min-width: 140px;
 	flex-direction: column;
-	flex-basis: 5em;
-	flex-shrink: 0;
+	margin-right: 1em;
+	/* flex-basis: 5em; */
+	/* flex-shrink: 0; */
 	text-align: center;
-	padding: .8em 1em;
-	border: 1px solid #ccc;
-	border-radius: .3em;
+	/* padding: .8em 1em; */
+	/* border: 1px solid #ccc; */
+	/* border-radius: .3em; */
 	font-size: .889em;
 }
 
 .events__date-tile span {
-	font-size: 2.2em;
+	font-size: 3.2em;
 	line-height: 1;
 }

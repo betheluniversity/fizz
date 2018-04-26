@@ -1,7 +1,7 @@
 .news {}
 
 .news__item {
-	margin: 0 0 2em;
+	margin: 0 0 2.5em;
 	display: flex;
 }
 
@@ -10,17 +10,23 @@
 	min-width: 1px;
 }
 
+.news__date {
+	opacity: .5;
+	color: $bethel--blue;
+	text-transform: uppercase;
+}
+
 .news__content {
-	padding-left: .75em;
+	padding-left: 1em;
 	flex-basis: 60%;
 	min-width: 1px;
 
 	@mixin respond-min $medium {
-		padding-left: 1em;
+		padding-left: 1.5em;
 	}
 
 	p {
-		margin-bottom: 0;
+		margin-bottom: .25em;
 		margin-top: 0;
 		line-height: 1.2;
 	

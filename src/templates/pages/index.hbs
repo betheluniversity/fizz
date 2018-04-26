@@ -14,7 +14,6 @@ pageTitle: Test title
     body {
         color: #667;
         font-family: "Gotham A", "Gotham B", Helvetica, Arial, sans;
-        font-display: block;
     }
 
     .inner {
@@ -23,8 +22,7 @@ pageTitle: Test title
     }
 
     .realSection {
-        background-image: linear-gradient(#fff, #f6feff);
-
+        /* {{!-- background-image: linear-gradient(#0f2c52, #fff); --}} */
 }
 
 
@@ -52,13 +50,87 @@ pageTitle: Test title
     z-index: 100;
 }
 
+.bigTitle {
+    /* background-image: url('https://www.bethel.edu/_homepages/www/images/blur--experience.jpg'); */
+    /* background-size: cover; */
+    /* background-image: linear-gradient(to left, #0f2c52, #0069aa); */
+}
+.bigTitle h2 {
+    margin: 0 auto 1em;
+    padding: 1em 2em;
+    font-weight: 400;
+    font-size: 3.5rem;
+    border: 8px solid #ddd;
+    display: table;
+    /* color: #fff; */
+}
+
+/* .bigTitle h2::before {
+    content:"";
+    width: 100px;
+    display: block;
+    border-top: 3px solid #ffc600;
+    margin: 0 auto .5em;
+} */
+
+/* .bigTitle h2::after {
+    content:"";
+    width: 100px;
+    display: block;
+    border-bottom: 3px solid #ffc600;
+    margin: .5em auto 0;
+} */
+
+.proofPoint {
+    border: 2px solid #ddd;
+    border-bottom: 12px solid #ffc600;
+    margin-right: 2em;
+    color: #667;
+    padding: 1em 1em;
+    border-radius: 4px;
+    font-weight: 400;
+    font-size: 1.75rem;
+    position: relative;
+    background: #fff;
+}
+
+.xproofPoint::after {
+    content: "";
+    width: calc(100% + -2em);
+    height: calc(100% + -2em);
+    display: block;
+    position: absolute;
+    toP: 1em;
+    left: 1em;
+    /* padding: 2em; */
+    border: 4px solid #fff;
+    /* transform: translate3d(-1em, -1em, 0); */
+}
+
+.proofPoint__number {
+    font-size: 4.25rem;
+    font-weight: 500;
+    margin: 0 0 .1em;
+    display: inline-block;
+    /* background: #ffc600; */
+    padding: .25em .5em;
+}
+
+.proofPoint small {
+    font-size: 1rem;
+}
+
+.overBlur a {
+    color: #fff;
+}
+
 </style>
 
 {{!-- {{> action-nav }} --}}
 
 {{> moving-picture }}
 
-{{!-- <div class="stickyBar">
+<div class="stickyBar">
     <span>
         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
             viewBox="0 0 512.004 512.004" style="enable-background:new 0 0 512.004 512.004;" xml:space="preserve">
@@ -283,30 +355,73 @@ pageTitle: Test title
         </svg>
         <a href="#faith">Life-changing faith</a>
     </span>
-</div> --}}
+</div>
 
-{{!-- Academics --}}
-<section id="academics" class="realSection">
+<!-- Academics -->
+<section 
+	class="mt0  pv6--medium  lazyload  overBlur" style="color:#fff;background-size:cover;"  
+	data-bgset="https://cdn1.bethel.edu/resize/unsafe/400x0/smart/https://www.bethel.edu/_homepages/www/images/blur--experience.jpg 400w, https://cdn1.bethel.edu/resize/unsafe/600x0/smart/https://www.bethel.edu/_homepages/www/images/blur--experience.jpg 600w, https://cdn1.bethel.edu/resize/unsafe/800x0/smart/https://www.bethel.edu/_homepages/www/images/blur--experience.jpg 800w, https://cdn1.bethel.edu/resize/unsafe/1000x0/smart/https://www.bethel.edu/_homepages/www/images/blur--experience.jpg 1000w, https://cdn1.bethel.edu/resize/unsafe/1200x0/smart/https://www.bethel.edu/_homepages/www/images/blur--experience.jpg 1200w, https://cdn1.bethel.edu/resize/unsafe/1400x0/smart/https://www.bethel.edu/_homepages/www/images/blur--experience.jpg 1400w, https://cdn1.bethel.edu/resize/unsafe/1600x0/smart/https://www.bethel.edu/_homepages/www/images/blur--experience.jpg 1600w" 
+	data-sizes="auto">
+    <div class="bigTitle">
+        <div class="inner">
+            <h2 class="ta--center">World-class Academics</h2>
+            
+            <div class="grid">
+                    <div class="grid-cell">
+                        <div class="medium-grid-pad-2x">
+                            <img src="https://c2.staticflickr.com/6/5611/15582254420_b1ca6067bb_b.jpg" alt="">
+                        </div>
+                    </div>
 
-    <div class="inner  pt6  pb3">
-        <div class="grid  gridShift">
-            <div class="grid-cell  u-1-1  u-x-large-1-3  gridShift--cell --upRight">
-                <div class="medium-grid-pad-2x">    
-                    <h2 class="alpha">World-class academics</h2>
-                    <h3>Extraordinary education starts with extraordinary teachers.</h3>
-                    <p>At Bethel, you’ll learn under passionate, engaged professors—many with Ivy League credentials—who will collaborate with you on everything from high-level research to national conference presentations.</p>
-                    {{!-- <p>Whether you’re rolling up your sleeves in our cadaver lab or connecting over a cup of coffee, our faculty will help you map out a path to the career you’ve always wanted.</p> --}}
-                </div>
-            </div>
-            <div class="grid-cell  u-1-1  u-x-large-2-3">
-                <div class="">
-                    <img src="https://c2.staticflickr.com/6/5611/15582254420_b1ca6067bb_b.jpg" alt="">
-                    <div class="" style="width: 50%; transform: translate3d(95%, -5em, 0); border: 2px solid #ffc600; padding: 1.5em 2em; background: #ffc600;">
-                        <p class="mb0">Bethel has <b>100s</b> of partnerships with companies like NASA, Medtronic and 3M</p>
+                    <div class="grid-cell">
+                        <div class="medium-grid-pad-2x">
+                                <h3 class="h2">Extraordinary education starts with extraordinary teachers.</h3>
+                        <p>At Bethel, you’ll learn under passionate, engaged professors—many with Ivy League credentials—who will collaborate with you on everything from high-level research to national conference presentations.</p>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+
+
+<section class="">
+    <div class="inner  pv6">
+
+        <div class="grid  proofPoints  pv3 ta--center">
+            <div class="grid-cell  proofPoint">
+                <div class="grid-pad-2x">
+                    <!-- <img class="lazyload  pt1" alt="Market research" data-src="https://www.bethel.edu/undergrad/academics/real-experience/images/market-research.png" width="60"> -->
+                    <div class="proofPoint__border">
+                        <p class="proofPoint__number">97%</p>
+                        <p class="h5  mv0  fw400">of recent grads are employed or in graduate school </p>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-cell  proofPoint">
+                <div class="grid-pad-2x">
+                    <!-- <img class="lazyload  pt1" alt="Share your story" data-src="https://www.bethel.edu/undergrad/academics/real-experience/images/share-story.png" title="" style="" width="60"> -->
+                    <p class="proofPoint__number">Top 15%</p>
+                    <p class="h5  mv0  fw400">Best Colleges for your Money</p>
+                    <small><i>— Money Magazine</i></small>
+                </div>
+            </div>
+            <!-- <div class="grid-cell  proofPoint">
+                <div class="grid-pad-2x">
+                    <img class="lazyload  pt1" alt="Hands-on learning" data-src="https://www.bethel.edu/undergrad/academics/real-experience/images/hands-on.png" width="60">
+                    <p class="proofPoint__number">100s</p>
+                    <p class="h5  mv0  fw400">Business partnerships with companies like NASA, Medtronic, and 3M</p>
+                </div>
+            </div> -->
+        </div>
+
+</div>
+</section>
+
+<section id="academics" class="realSection  pv3">
+
+    <div class="inner">
+
+        {{> section--find-program }}
 
         <div class="grid">
             <div class="grid-cell">
@@ -314,7 +429,7 @@ pageTitle: Test title
                     <img class="lazyload"  data-srcset="https://cdn1.bethel.edu/resize/unsafe/400x0/smart/https://c2.staticflickr.com/8/7237/7166150373_b763f233a6_o.jpg 400w, https://cdn1.bethel.edu/resize/unsafe/600x0/smart/https://c2.staticflickr.com/8/7237/7166150373_b763f233a6_o.jpg 600w, https://cdn1.bethel.edu/resize/unsafe/800x0/smart/https://c2.staticflickr.com/8/7237/7166150373_b763f233a6_o.jpg 800w, https://cdn1.bethel.edu/resize/unsafe/1000x0/smart/https://c2.staticflickr.com/8/7237/7166150373_b763f233a6_o.jpg 1000w, https://cdn1.bethel.edu/resize/unsafe/1200x0/smart/https://c2.staticflickr.com/8/7237/7166150373_b763f233a6_o.jpg 1200w, https://cdn1.bethel.edu/resize/unsafe/1400x0/smart/https://c2.staticflickr.com/8/7237/7166150373_b763f233a6_o.jpg 1400w, https://cdn1.bethel.edu/resize/unsafe/1600x0/smart/https://c2.staticflickr.com/8/7237/7166150373_b763f233a6_o.jpg 1600w"
                         data-sizes="auto">
 
-                    <div class="pt2  pl2" style="border-left: 2px solid #ffc600">
+                    <div class="pt2  pl2" style="padding: 2em;border: 4px solid #ffc600;transform: translate3d(1em,-1em,0);">
                         <h3><a href="#">Neuroscience Research</a></h3>
                         <p>Biology and psychology students collaborated with researchers at Boston University to advance modern science’s understanding and treatment of memory loss.</p>
                     </div>    
@@ -326,7 +441,7 @@ pageTitle: Test title
                 <div class="grid-pad-3x">
                     <img class="lazyload"  data-srcset="https://cdn1.bethel.edu/resize/unsafe/400x0/smart/https://c2.staticflickr.com/8/7537/15695331636_14802496ff_o.jpg 400w, https://cdn1.bethel.edu/resize/unsafe/600x0/smart/https://c2.staticflickr.com/8/7537/15695331636_14802496ff_o.jpg 600w, https://cdn1.bethel.edu/resize/unsafe/800x0/smart/https://c2.staticflickr.com/8/7537/15695331636_14802496ff_o.jpg 800w, https://cdn1.bethel.edu/resize/unsafe/1000x0/smart/https://c2.staticflickr.com/8/7537/15695331636_14802496ff_o.jpg 1000w, https://cdn1.bethel.edu/resize/unsafe/1200x0/smart/https://c2.staticflickr.com/8/7537/15695331636_14802496ff_o.jpg 1200w, https://cdn1.bethel.edu/resize/unsafe/1400x0/smart/https://c2.staticflickr.com/8/7537/15695331636_14802496ff_o.jpg 1400w, https://cdn1.bethel.edu/resize/unsafe/1600x0/smart/https://c2.staticflickr.com/8/7537/15695331636_14802496ff_o.jpg 1600w"
                         data-sizes="auto">
-                    <div class="pt2  pl2" style="border-left: 2px solid #ffc600">
+                    <div class="pt2  pl2" style="padding: 2em;border: 4px solid #ffc600;transform: translate3d(1em,-1em,0);">
                         <h3><a href="#">Student-Managed Investment Fund</a></h3>
                         <p>Our business and finance students manage a $1 million investment fund for both institutional and outside investors</p>
                     </div>
@@ -337,7 +452,7 @@ pageTitle: Test title
                 <div class="grid-pad-3x">
                     <img class="lazyload"  data-srcset="https://cdn1.bethel.edu/resize/unsafe/400x0/smart/https://www.bethel.edu/news/articles/2017/images/textura.jpg 400w, https://cdn1.bethel.edu/resize/unsafe/600x0/smart/https://www.bethel.edu/news/articles/2017/images/textura.jpg 600w, https://cdn1.bethel.edu/resize/unsafe/800x0/smart/https://www.bethel.edu/news/articles/2017/images/textura.jpg 800w, https://cdn1.bethel.edu/resize/unsafe/1000x0/smart/https://www.bethel.edu/news/articles/2017/images/textura.jpg 1000w, https://cdn1.bethel.edu/resize/unsafe/1200x0/smart/https://www.bethel.edu/news/articles/2017/images/textura.jpg 1200w, https://cdn1.bethel.edu/resize/unsafe/1400x0/smart/https://www.bethel.edu/news/articles/2017/images/textura.jpg 1400w, https://cdn1.bethel.edu/resize/unsafe/1600x0/smart/https://www.bethel.edu/news/articles/2017/images/textura.jpg 1600w"
                         data-sizes="auto">
-                    <div class="pt2  pl2" style="border-left: 2px solid #ffc600">
+                    <div class="pt2  pl2" style="padding: 2em;border: 4px solid #ffc600;transform: translate3d(1em,-1em,0);">
                         <h3><a href="#">Textura Magazine</a></h3>
                         <p>Our art and journalism students collaborated to produce a national award-winning cultural magazine.</p>
 
@@ -346,42 +461,7 @@ pageTitle: Test title
             </div>
         </div>
 
-        {{!-- <div id="pp1" class="proofPoints  grid  ta--center">
-            <div class="grid-cell  mr2--medium  mb2  bkg--white " style="border: 2px solid #ffc600; opacity: 1; border-radius: .5em;" >
-                <div class="grid-pad-1x ">
-                    
-                            <img class="lazyload  pt1" alt="Market research" data-src="https://www.bethel.edu/undergrad/academics/real-experience/images/market-research.png" width="60">
-                        
-                            <p class="mv0  sans-serif  fw400" style="font-size:3.5em">97%</p>
-                            <p class="h5  mv0  fw400 ">of recent grads are employed or in graduate school </p>
-
-                </div>
-
-            </div>
-            <div class="grid-cell  mr2--medium  mb2  bkg--white " style="border: 2px solid #ffc600; opacity: 1; border-radius: .5em;">
-                <div class="grid-pad-1x ">
-
-                            <img class="lazyload  pt1" alt="Share your story" data-src="https://www.bethel.edu/undergrad/academics/real-experience/images/share-story.png" title="" style="" width="60">
-  
-                            <p class="mv0  sans-serif  fw400" style="font-size:3.5em">Top 15%</p>
-                            <p class="h5  mv0  fw400">Best Colleges for your Money</p>
-                            <small><i>— Money Magazine</i></small>
-
-                </div>
-            </div>
-            <div class="grid-cell  mb2   bkg--white " style="border: 2px solid #ffc600; opacity: 1; border-radius: .5em;">
-                <div class="grid-pad-1x ">
- 
-                            <img class="lazyload  pt1" alt="Hands-on learning" data-src="https://www.bethel.edu/undergrad/academics/real-experience/images/hands-on.png" width="60">
-
-                            <p class="mv0  sans-serif  fw400" style="font-size:3.5em">100s</p>
-                            <p class="h5  mv0  fw400 ">Business partnerships with companies like NASA, Medtronic, and 3M</p>
-
-                </div>
-            </div>
-        </div> --}}
-
-        {{!-- <div class="grid  pb4  mb6">
+        <!-- <div class="grid  pb4  mb6">
             <div class="grid-cell">
                 <div class="grid-pad-1x">
                     <div class="quote">
@@ -411,131 +491,157 @@ pageTitle: Test title
                     </div>
                 </div>
             </div>
-        </div> --}}
+        </div> -->
     </div>
 </section>
 
-{{!-- {{> section--find-program }} --}}
+</section>
 
-{{!-- <section class="bkg--white">
-    <div class="inner" >
-        <div class="grid">
-        
-            <div class="grid-cell">
-                <div class="grid-pad-1x">
-                    <h2 class="">Find your major or program</h2>
-                    <p class="">We offer more than 100 areas of study for undergrads, as well as programs for adult undergrad, graduate, and seminary students. Enter a career or area of interest to find and compare majors, programs, certificates, and licenses.</p>
-                    <form id="find-program-form" class="form--find-program  xjs-animateRevealUp" action="https://www.bethel.edu/academics/program-search"
-                        method="GET">
-                        <div class="search--program">
-                            <input required name="search" id="find-program-txt" type="search" placeholder="Search for your program">
-                            <button id="find-program-btn" class="btn" type="submit">
-                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 32 32">
-                                    <title>Search</title>
-                                    <desc>Search icon</desc>
-                                    <path d="M31.008 27.231l-7.58-6.447c-0.784-0.705-1.622-1.029-2.299-0.998 1.789-2.096 2.87-4.815 2.87-7.787 0-6.627-5.373-12-12-12s-12 5.373-12 12c0 6.627 5.373 12 12 12 2.972 0 5.691-1.081 7.787-2.87-0.031 0.677 0.293 1.515 0.998 2.299l6.447 7.58c1.104 1.226 2.907 1.33 4.007 0.23s0.997-2.903-0.23-4.007zM12 20c-4.418 0-8-3.582-8-8s3.582-8 8-8 8 3.582 8 8-3.582 8-8 8z"></path>
-                                </svg>
-                                <span class="hide--small">Find programs</span>
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </div>
 
-            <div class="grid-cell">
-                <div class="grid-pad-1x">
-                    <h3 class="">Find by topic</h3>
-                    <ul class="linkBlock">
-                        <li><a href="#">Business</a></li>
-                        <li><a href="#">Healthcare</a></li>
-                        <li><a href="#">Education</a></li>
-                        <li><a href="#">Sciences</a></li>
-                        <li><a href="#">Art &amp; Design</a></li>                        
-                    </ul>
 
-                    <h3 class="">Find by school</h3>
-                    <ul class="linkBlock">
-                        <li><a href="#">Undergrad</a></li>
-                        <li><a href="#">Graduate</a></li>
-                        <li><a href="#">Adult Undergrad</a></li>
-                        <li><a href="#">Bethel Seminary</a></li>
-                        <li><a href="#">Online</a></li>
-                        <li><a href="#">BUILD</a></li>
-                    </ul>
 
-                    <h3 class="">Find by degree</h3>
-                    <ul class="linkBlock">
-                        <li><a href="#">Doctorate</a></li>
-                        <li><a href="#">Masters</a></li>
-                        <li><a href="#">Bachelors</a></li>
-                        <li><a href="#">Other</a></li>
-                    </ul>
-                </div>
-            </div>                   
-        
-        </div>
-    </div>
-</section> --}}
+<!-- Community  -->
+<section 
+	class="grid-section  mt0  pv6--medium  lazyload  bkg--white">
+    <div class="bigTitle">
+        <div class="inner">
+            <h2 class="ta--center">Wholistic Community</h2>
+            
+            <div class="grid">
+                    <div class="grid-cell">
+                        <div class="medium-grid-pad-2x">
+                                <img src="https://www.bethel.edu/_homepages/www/images/feature/community-belong-16x9.jpg" alt="">
+                            </div>
+                    </div>
 
-{{!-- Community --}}
-<section id="experience" class="realSection">
-    <div class="inner  pv6">
-        <div class="grid  mb2">
-            <div class="grid-cell">
-                <div class="">
-                    <img src="https://c2.staticflickr.com/4/3934/15274523267_79b1616e45_b.jpg" alt="">
-                    <div class="" style="width: 50%; transform: translate3d(1em, -3em, 0); border: 2px solid #ffc600; padding: 1.5em 2em; background: #ffc600;">
-                        <p class="mb0">97% of recent grads are employed or in graduate school</p>
+                    <div class="grid-cell">
+                        <div class="medium-grid-pad-2x">
+                            <h3 class="h2">Extraordinary education starts with extraordinary teachers.</h3>
+                            <p>At Bethel, you’ll learn under passionate, engaged professors—many with Ivy League credentials—who will collaborate with you on everything from high-level research to national conference presentations.</p>
                     </div>
                 </div>
             </div>
-            <div class="grid-cell u-medium-1-3">
-                <div class="grid-pad-2x">
-                    <h2 class="alpha">Community</h2>
-                    <h3 class="fancySub">Practice what you learn.</h3>
-                    <p>Some of the best learning comes from doing—that’s why we weave hundreds of hands-on experiences into our programs. Whether you’re a computer science student designing a corporate website or an aspiring nurse participating in end-of-life simulations, your learning will extend beyond the classroom so that you’re prepared to be as impressive in practice as you are on paper.</p>
-                    <p class="mv1" style="border: 3px solid #0f2c52; padding: 1em 2em;"><a href="#" >Community Resource</a></p>
-                    <p class="mv1" style="border: 3px solid #0f2c52; padding: 1em 2em;"><a href="#" >Clubs & Sports</a></p>
+        </div>
+    </div>
+</section>
+
+<section class="bkg--white">
+        <div class="inner  pv3">
+    
+            <div class="grid  proofPoints  pv3 ta--center">
+                <div class="grid-cell  proofPoint">
+                    <div class="grid-pad-2x">
+                        <!-- <img class="lazyload  pt1" alt="Market research" data-src="https://www.bethel.edu/undergrad/academics/real-experience/images/market-research.png" width="60"> -->
+                        <div class="proofPoint__border">
+                            <p class="proofPoint__number">97%</p>
+                            <p class="h5  mv0  fw400">of recent grads are employed or in graduate school </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-cell  proofPoint">
+                    <div class="grid-pad-2x">
+                        <!-- <img class="lazyload  pt1" alt="Share your story" data-src="https://www.bethel.edu/undergrad/academics/real-experience/images/share-story.png" title="" style="" width="60"> -->
+                        <p class="proofPoint__number">Top 15%</p>
+                        <p class="h5  mv0  fw400">Best Colleges for your Money</p>
+                        <small><i>— Money Magazine</i></small>
+                    </div>
+                </div>
+                <!-- <div class="grid-cell  proofPoint">
+                    <div class="grid-pad-2x">
+                        <img class="lazyload  pt1" alt="Hands-on learning" data-src="https://www.bethel.edu/undergrad/academics/real-experience/images/hands-on.png" width="60">
+                        <p class="proofPoint__number">100s</p>
+                        <p class="h5  mv0  fw400">Business partnerships with companies like NASA, Medtronic, and 3M</p>
+                    </div>
+                </div> -->
+            </div>
+    
+    </div>
+    </section>
+
+<section id="community" class="realSection  bkg--white">
+    <div class="inner  pv6">
+
+        <div class="center">
+            <h2 class="alpha  ta--center" style="border: 4px solid #ddd;padding: .75em 2em;">Schedule a Visit</h2>
+        </div>
+        <div class="inner pv3">
+            <div class="grid">
+                <div class="grid-cell">
+                    <div class="medium-grid-pad-1x">
+                        <img src="https://www.bethel.edu/_homepages/www/images/brushaber-external-day.jpg" alt="">
+                        <p class="" >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia, rerum libero error rem autem nostrum sit eveniet laborum nobis fugiat dolores quas laboriosam esse, officia aliquid quaerat non tempora nemo.</p>
+                        <p class=""><a class="btn mt2" href="https://www.bethel.edu/undergrad/admissions/visit/">Schedule a visit</a></p>
+                    </div>
+                </div>
+    
+                <div class="grid-cell">
+                    <div class="medium-grid-pad-3x">
+                        {{> events }}
+                    </div>
                 </div>
             </div>
         </div>
 
-        {{!-- <div id="pp2" class="proofPoints  grid  pt4  pb3  ta--center">
-            <div class="grid-cell  mr2--medium  mb2  bkg--white " style="border: 2px solid #ffc600; border-radius: .5em;" >
-                <div class="grid-pad-3x ">
-                    
-                            <img class="lazyload  pt1" alt="Market research" data-src="https://www.bethel.edu/undergrad/academics/real-experience/images/market-research.png" width="60">
-                        
-                            <p class="mv0  sans-serif  fw400" style="font-size:4.5em">97%</p>
-                            <p class="h5  mv0  fw400 ">of recent grads are employed or in graduate school </p>
-
+        <!-- {{!-- News & Events --}} -->
+        <section class="pv3 ">
+                <div class="center">
+                    <h2 class="alpha  ta--center" style="border: 4px solid #ddd;padding: .75em 2em;">News & Events</h2>
                 </div>
-
-            </div>
-            <div class="grid-cell  mr2--medium  mb2  bkg--white " style="border: 2px solid #ffc600; border-radius: .5em;">
-                <div class="grid-pad-3x ">
-
-                            <img class="lazyload  pt1" alt="Share your story" data-src="https://www.bethel.edu/undergrad/academics/real-experience/images/share-story.png" title="" style="" width="60">
-  
-                            <p class="mv0  sans-serif  fw400" style="font-size:4.5em">Top 15%</p>
-                            <p class="h5  mv0  fw400">Best Colleges for your Money</p>
-                            <small><i>— Money Magazine</i></small>
-
+                <div class="inner">
+            
+                    <div class="grid  mb3">
+                        <div class="grid-cell">
+                            <div class="grid-pad-2x">
+                                <img class="mb1" src="https://cdn1.bethel.edu/resize/unsafe/1500x0/smart/https://www.bethel.edu/news/articles/2018/images/ryan-wahlund.jpg">
+                                <h3 class="h1"><a href="#">The Path Less Traveled</a></h3>
+                                <p class="">Ryan Wahlund ’06 tried out several majors—and career paths—before he found one that fit.</p>
+                                <p><small>April 21, 2018</small></p>
+                            </div>
+                        </div>
+                        <div class="grid-cell">
+                            <div class="grid-pad-2x">
+                                <div class="grid  mb2">
+                                    <div class="grid-cell  mr1">
+                                        
+                                            <img src="https://cdn2.bethel.edu/resize/unsafe/1500x0/smart/https://www.bethel.edu/news/articles/2018/images/transfer-katie-murphy.jpg">
+                                    </div>
+                                    <div class="grid-cell">
+                                        
+                                            <h6 class="mt0  h3" style="margin-bottom: .25em; line-height: 1.3"><a href="#">Practicing the “Art of Conversation”</a></h6>
+                                            <p class="mv0" style="font-size: 14px;">The Office of Career Development and Calling hosted an event that allowed students to chat with alumni and improve their networking skills.</p>
+                                            <p><small>April 17, 2018</small></p>
+                                    </div>
+                                </div>
+            
+                                <div class="grid  mb2">
+                                    <div class="grid-cell  mr1">
+                                        
+                                            <img src="https://cdn1.bethel.edu/resize/unsafe/1500x0/smart/https://www.bethel.edu/news/articles/2018/images/art-of-conversation.jpg">
+                                    </div>
+                                    <div class="grid-cell">
+                                        
+                                            <h6 class="mt0  h3  " style="margin-bottom: .25em; line-height: 1.3"><a href="#">Transfer Student Experiences the Bethel Difference</a></h6>
+                                            <p class="mv0" style="font-size: 14px;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                            <p><small>April 14, 2018</small></p>
+                                    </div>
+                                </div>
+                                <p class="center  mt3"><a class="btn">See more Stories</a></p>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="grid">
+                        <div class="grid-cell  u-1-1  u-large-1-2">
+                            <div class="medium-grid-pad-1x  large-grid-pad-2x">{{> news }}</div>
+                        </div>
+                        <div class="grid-cell  u-1-1  u-large-1-2">
+                            <div class="medium-grid-pad-1x  large-grid-pad-2x">{{> events }}</div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="grid-cell  mb2   bkg--white " style="border: 2px solid #ffc600; border-radius: .5em;">
-                <div class="grid-pad-3x ">
- 
-                            <img class="lazyload  pt1" alt="Hands-on learning" data-src="https://www.bethel.edu/undergrad/academics/real-experience/images/hands-on.png" width="60">
+            </section>
 
-                            <p class="mv0  sans-serif  fw400" style="font-size:4.5em">100s</p>
-                            <p class="h5  mv0  fw400 ">Business partnerships with companies like NASA, Medtronic, and 3M</p>
-
-                </div>
-            </div>
-        </div> --}}
-
-        {{!-- <div class="grid  mb5">
+        <!-- <div class="grid  mb5">
             <div class="grid-cell">
                 <div class="grid-pad-1x">
                     <div class="quote">
@@ -565,14 +671,58 @@ pageTitle: Test title
                     </div>
                 </div>
             </div>
-        </div> --}}
+        </div> -->
     </div>
 </section>
 
-{{!-- Faith --}}
+<!-- Faith -->
+
+<section 
+	class="grid-section  mt0  pv6--medium  lazyload overBlur" style="color:#fff;background-size: cover;"  
+	data-bgset="https://cdn1.bethel.edu/resize/unsafe/400x0/smart/https://www.bethel.edu/_homepages/www/images/blur--experience.jpg 1600w" 
+	data-sizes="auto">
+    <div class="bigTitle">
+        <div class="inner">
+            <h2 class="ta--center">Life-changing Faith</h2>
+            
+            <div class="grid">
+                    <div class="grid-cell">
+                        <div class="medium-grid-pad-2x">
+                                <video id="video" loop="true" preload="none" src="https://www.bethel.edu/_homepages/www/images/welcome-week-2016-video.mp4"></video>
+
+                                <script>
+                                // Show loading animation.
+                                var playPromise = video.play();
+    
+                                if (playPromise !== undefined) {
+                                    playPromise.then(_ => {
+                                    // Automatic playback started!
+                                    // Show playing UI.
+                                    })
+                                    .catch(error => {
+                                    // Auto-play was prevented
+                                    // Show paused UI.
+                                    });
+                                }
+                                </script>
+                        </div>
+                    </div>
+
+                    <div class="grid-cell">
+                        <div class="medium-grid-pad-2x">
+                            <h3 class="h2">Live what you believe.</h3>
+                            <p>At Bethel, we’re drawn together by a sense of calling, a commitment to shared values, and a desire to fulfill a greater purpose. You’ll be challenged to think critically about your convictions and learn how to articulate them in an increasingly diverse world—so that when you graduate, you’ll know what it means to own your faith and live for something more.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 <section  id="faith" class="realSection">
     <div class="inner  pv6">
-        <div class="grid  mb2">
+        
+        <!-- <div class="grid  mb2">
             <div class="grid-cell u-medium-1-3">
                 <div class="grid-pad-2x">
                     <h2 class="alpha">Life-changing faith</h2>
@@ -606,14 +756,14 @@ pageTitle: Test title
 
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <div class="grid  mb3">
             <div class="grid-cell">
                 <div class="grid-pad-2x">
                     <img class="lazyload"  data-srcset="https://cdn1.bethel.edu/resize/unsafe/400x0/smart/https://c2.staticflickr.com/8/7215/7401407656_b8444de1c5_b.jpg 400w, https://cdn1.bethel.edu/resize/unsafe/600x0/smart/https://c2.staticflickr.com/8/7215/7401407656_b8444de1c5_b.jpg 600w, https://cdn1.bethel.edu/resize/unsafe/800x0/smart/https://c2.staticflickr.com/8/7215/7401407656_b8444de1c5_b.jpg 800w, https://cdn1.bethel.edu/resize/unsafe/1000x0/smart/https://c2.staticflickr.com/8/7215/7401407656_b8444de1c5_b.jpg 1000w, https://cdn1.bethel.edu/resize/unsafe/1200x0/smart/https://c2.staticflickr.com/8/7215/7401407656_b8444de1c5_b.jpg 1200w, https://cdn1.bethel.edu/resize/unsafe/1400x0/smart/https://c2.staticflickr.com/8/7215/7401407656_b8444de1c5_b.jpg 1400w, https://cdn1.bethel.edu/resize/unsafe/1600x0/smart/https://c2.staticflickr.com/8/7215/7401407656_b8444de1c5_b.jpg 1600w"
                         data-sizes="auto">
-                    <div class="" style="padding: 2em;border: 4px solid #e1f5ff;transform: translate3d(1em,-1em,0);">
+                    <div class="" style="padding: 2em;border: 4px solid #ffc600;transform: translate3d(1em,-1em,0);">
                         <h2><a href="#">Chapel</a></h2>
                         <p>Here, attending Chapel is a choice. Three times a week, you’ll have the opportunity to learn from campus pastors and renowned speakers.</p>
                     </div>
@@ -624,7 +774,7 @@ pageTitle: Test title
                 <div class="grid-pad-2x">
                     <img class="lazyload"  data-srcset="https://cdn1.bethel.edu/resize/unsafe/400x0/smart/https://c1.staticflickr.com/5/4538/38186429242_6149f592d2_b.jpg 400w, https://cdn1.bethel.edu/resize/unsafe/600x0/smart/https://c1.staticflickr.com/5/4538/38186429242_6149f592d2_b.jpg 600w, https://cdn1.bethel.edu/resize/unsafe/800x0/smart/https://c1.staticflickr.com/5/4538/38186429242_6149f592d2_b.jpg 800w, https://cdn1.bethel.edu/resize/unsafe/1000x0/smart/https://c1.staticflickr.com/5/4538/38186429242_6149f592d2_b.jpg 1000w, https://cdn1.bethel.edu/resize/unsafe/1200x0/smart/https://c1.staticflickr.com/5/4538/38186429242_6149f592d2_b.jpg 1200w, https://cdn1.bethel.edu/resize/unsafe/1400x0/smart/https://c1.staticflickr.com/5/4538/38186429242_6149f592d2_b.jpg 1400w, https://cdn1.bethel.edu/resize/unsafe/1600x0/smart/https://c1.staticflickr.com/5/4538/38186429242_6149f592d2_b.jpg 1600w"
                         data-sizes="auto">
-                    <div class="" style="padding: 2em;border: 4px solid #e1f5ff;transform: translate3d(1em,-1em,0);">
+                    <div class="" style="padding: 2em;border: 4px solid #ffc600;transform: translate3d(1em,-1em,0);">
                         <h2><a href="#">SHIFT</a></h2>
                         <p>Our Shift ministry will invest in your spiritual development and help you build community on your freshman floor while you transition to college life.</p>
                     </div>
@@ -635,7 +785,7 @@ pageTitle: Test title
                 <div class="grid-pad-2x">
                     <img class="lazyload"  data-srcset="https://cdn1.bethel.edu/resize/unsafe/400x0/smart/https://c2.staticflickr.com/8/7231/7401400560_e386eace5a_b.jpg 400w, https://cdn1.bethel.edu/resize/unsafe/600x0/smart/https://c2.staticflickr.com/8/7231/7401400560_e386eace5a_b.jpg 600w, https://cdn1.bethel.edu/resize/unsafe/800x0/smart/https://c2.staticflickr.com/8/7231/7401400560_e386eace5a_b.jpg 800w, https://cdn1.bethel.edu/resize/unsafe/1000x0/smart/https://c2.staticflickr.com/8/7231/7401400560_e386eace5a_b.jpg 1000w, https://cdn1.bethel.edu/resize/unsafe/1200x0/smart/https://c2.staticflickr.com/8/7231/7401400560_e386eace5a_b.jpg 1200w, https://cdn1.bethel.edu/resize/unsafe/1400x0/smart/https://c2.staticflickr.com/8/7231/7401400560_e386eace5a_b.jpg 1400w, https://cdn1.bethel.edu/resize/unsafe/1600x0/smart/https://c2.staticflickr.com/8/7231/7401400560_e386eace5a_b.jpg 1600w"
                         data-sizes="auto">
-                    <div class="" style="padding: 2em;border: 4px solid #e1f5ff;transform: translate3d(1em,-1em,0);">
+                    <div class="" style="padding: 2em;border: 4px solid #ffc600;transform: translate3d(1em,-1em,0);">
                         <h2><a href="#">Vespers</a></h2>
                         <p>Our Sunday evening Vespers services, led entirely by student vocalists and instrumentalists who are passionate about ministering through music.</p>
                     </div>
@@ -643,7 +793,7 @@ pageTitle: Test title
             </div>
         </div>
 
-        {{!-- <div class="grid  mb5">
+        <div class="grid  mb5">
             <div class="grid-cell">
                 <div class="grid-pad-1x">
                     <div class="quote">
@@ -673,154 +823,33 @@ pageTitle: Test title
                     </div>
                 </div>
             </div>
-        </div> --}}
-    </div>
-</section>
-
-{{!-- News & Events --}}
-<section class="pv3  bkg--white">
-    <div class="center">
-        <h2 class="alpha  ta--center" style="border: 4px solid #e1f5ff;padding: .75em 2em;">News & Events</h2>
-    </div>
-    <div class="inner">
-        {{!-- <div class="grid">
-            <div class="grid-cell">
-                <div class="grid-pad-3x">
-                    <img class="mb1" src="https://cdn1.bethel.edu/resize/unsafe/1500x0/smart/https://www.bethel.edu/news/articles/2018/images/ryan-wahlund.jpg">
-                    <h3 class="h1 fw400">The Path Less Traveled</h3>
-                    <p class="">Ryan Wahlund ’06 tried out several majors—and career paths—before he found one that fit.</p>
-                </div>
-
-                    <div class="grid">
-                        <div class="grid-cell u-1-3">
-                            <div class="grid-pad-1x">
-                                <img src="https://cdn2.bethel.edu/resize/unsafe/1500x0/smart/https://www.bethel.edu/news/articles/2018/images/transfer-katie-murphy.jpg">
-                            </div>
-                        </div>
-                        <div class="grid-cell">
-                            <div class="grid-pad-1x">
-                                        
-                                <h6 class="mt0  h3  fw400" style="margin-bottom: .25em; line-height: 1.3">Practicing the “Art of Conversation”</h6>
-                                <p class="mv0" style="font-size: 14px;">The Office of Career Development and Calling hosted an event that allowed students to chat with alumni and improve their networking skills.</p>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="grid">
-                        <div class="grid-cell u-1-3">
-                            <div class="grid-pad-1x">
-                                <img src="https://cdn1.bethel.edu/resize/unsafe/1500x0/smart/https://www.bethel.edu/news/articles/2018/images/art-of-conversation.jpg">
-                            </div>
-                        </div>
-                        <div class="grid-cell">
-                            <div class="grid-pad-1x">
-                                <h6 class="mt0  h3  fw400" style="margin-bottom: .25em; line-height: 1.3">Transfer Student Experiences the Bethel Difference</h6>
-                                <p class="mv0" style="font-size: 14px;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="center  mt3"><a class="btn">See more Stories</a></p>
-            </div>
-
-            <div class="grid-cell">
-                <div class="grid-pad-3x">{{> news }}</div>
-            </div>
-            <div class="grid-cell">
-                <div class="grid-pad-3x">{{> events }}</div>
-            </div>
-        </div> --}}
-
-        <div class="grid  mb3">
-            <div class="grid-cell">
-                <div class="grid-pad-2x">
-                    <img class="mb1" src="https://cdn1.bethel.edu/resize/unsafe/1500x0/smart/https://www.bethel.edu/news/articles/2018/images/ryan-wahlund.jpg">
-                    <h3 class="h1"><a href="#">The Path Less Traveled</a></h3>
-                    <p class="">Ryan Wahlund ’06 tried out several majors—and career paths—before he found one that fit.</p>
-                    <p><small>April 21, 2018</small></p>
-                </div>
-            </div>
-            <div class="grid-cell">
-                <div class="grid-pad-2x">
-                    <div class="grid  mb2">
-                        <div class="grid-cell  mr1">
-                            
-                                <img src="https://cdn2.bethel.edu/resize/unsafe/1500x0/smart/https://www.bethel.edu/news/articles/2018/images/transfer-katie-murphy.jpg">
-                        </div>
-                        <div class="grid-cell">
-                            
-                                <h6 class="mt0  h3  " style="margin-bottom: .25em; line-height: 1.3"><a href="#">Practicing the “Art of Conversation”</a></h6>
-                                <p class="mv0" style="font-size: 14px;">The Office of Career Development and Calling hosted an event that allowed students to chat with alumni and improve their networking skills.</p>
-                                <p><small>April 17, 2018</small></p>
-                        </div>
-                    </div>
-
-                    <div class="grid  mb2">
-                        <div class="grid-cell  mr1">
-                            
-                                <img src="https://cdn1.bethel.edu/resize/unsafe/1500x0/smart/https://www.bethel.edu/news/articles/2018/images/art-of-conversation.jpg">
-                        </div>
-                        <div class="grid-cell">
-                            
-                                <h6 class="mt0  h3  " style="margin-bottom: .25em; line-height: 1.3"><a href="#">Transfer Student Experiences the Bethel Difference</a></h6>
-                                <p class="mv0" style="font-size: 14px;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <p><small>April 14, 2018</small></p>
-                        </div>
-                    </div>
-                    <p class="center  mt3"><a class="btn">See more Stories</a></p>
-                </div>
-            </div>
-        </div>
-
-        <div class="grid">
-            <div class="grid-cell  u-1-1  u-large-1-2">
-                <div class="medium-grid-pad-1x  large-grid-pad-3x">{{> news }}</div>
-            </div>
-            <div class="grid-cell  u-1-1  u-large-1-2">
-                <div class="medium-grid-pad-1x  large-grid-pad-3x">{{> events }}</div>
-            </div>
         </div>
     </div>
 </section>
 
-{{!-- {{> section--request-info }} --}}
-
-<section class="pv3">
-    <div class="center">
-        <h2 class="alpha  ta--center" style="border: 4px solid #fff;padding: .75em 2em;">Schedule a Visit</h2>
-    </div>
-	<div class="inner pv3">
-		<div class="grid">
-			<div class="grid-cell">
-				<div class="medium-grid-pad-1x">
-					<p class="" >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia, rerum libero error rem autem nostrum sit eveniet laborum nobis fugiat dolores quas laboriosam esse, officia aliquid quaerat non tempora nemo.</p>
-                    <p class=""><a class="btn mt2" href="https://www.bethel.edu/undergrad/admissions/visit/">Schedule a visit</a></p>
-                </div>
-			</div>
-
-            <div class="grid-cell">
-                <div class="medium-grid-pad-1x">
-                    {{> events }}
-                </div>
-            </div>
-		</div>
-	</div>
-
 </section>
 
-<section class="pv3  bkg--white">
-    <div class="center">
-        <h2 class="alpha  ta--center" style="border: 4px solid #e1f5ff;padding: .75em 2em;">Apply Now</h2>
-    </div>
-    <div class="inner">
-        <div class="grid  grid--center">
-            <div class="grid-cell  u-medium-1-2">
-                <div class=" medium-grid-pad-2x ">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur nam ut aut dicta similique, explicabo nostrum, neque iure laboriosam praesentium officia omnis error? Nemo consequatur eligendi itaque veniam, ad repellendus!</p>
-                    <p><a class="btn">Start your application</a></p>
+{{> section--request-info }}
+
+<section class="">
+        <div class="grid  mt0">
+            <div class="grid-cell u-medium-1-2 pv6  lazyload" style="margin: 0; background-position: 60% 25%;background-size:cover;" data-bgset="https://cdn1.bethel.edu/resize/unsafe/400x0/smart/https://www.bethel.edu/_homepages/www/images/girl-laughing.jpg 400w, https://cdn1.bethel.edu/resize/unsafe/600x0/smart/https://www.bethel.edu/_homepages/www/images/girl-laughing.jpg 600w, https://cdn1.bethel.edu/resize/unsafe/800x0/smart/https://www.bethel.edu/_homepages/www/images/girl-laughing.jpg 800w, https://cdn1.bethel.edu/resize/unsafe/1000x0/smart/https://www.bethel.edu/_homepages/www/images/girl-laughing.jpg 1000w, https://cdn1.bethel.edu/resize/unsafe/1200x0/smart/https://www.bethel.edu/_homepages/www/images/girl-laughing.jpg 1200w, https://cdn1.bethel.edu/resize/unsafe/1400x0/smart/https://www.bethel.edu/_homepages/www/images/girl-laughing.jpg 1400w, https://cdn1.bethel.edu/resize/unsafe/1600x0/smart/https://www.bethel.edu/_homepages/www/images/girl-laughing.jpg 1600w" 
+            data-sizes="auto">
+                <!-- <img src="" alt="">
+                <div class="medium-grid-pad-2x">
+                    <div style="min-width: 300px; max-width: 500px; margin: 2em auto;">
+                        <h2 class="alpha  ta--center" style="border: 4px solid #fff;padding: .75em 2em;">Apply Now</h2>
+                    </div>
+                </div> -->
+            </div>
+            <div class="grid-cell u-medium-1-2  pv6" style="background-color:#ffc600;)">
+                <div class="medium-grid-pad-2x ">
+                    <div style="min-width: 300px; max-width: 500px; margin: 4em auto;">
+                        <h2 class="alpha  ta--center  mb2" style="border: 4px solid #fff;padding: .75em 2em;">Apply Now</h2>
+                        <p class="mb2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur nam ut aut dicta similique, explicabo nostrum, neque iure laboriosam praesentium officia omnis error? Nemo consequatur eligendi itaque veniam, ad repellendus!</p>
+                        <p><a class="btn">Start your application</a></p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-
+    </section>

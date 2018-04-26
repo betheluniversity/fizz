@@ -3,7 +3,7 @@
     /* background: url("../assets/images/study-smile-duotone.jpg") no-repeat; */
     background-size: cover;
     background-position: 60% 0;
-    color: #fff !important;
+    /* color: #fff !important; */
 
     @mixin respond-min $large {
         background-position: 20% 0;
