@@ -3,7 +3,7 @@
 	display: flex;
 	padding: 1em;
 	top: 0;
-	background: $bethel--blue;
+	/* background: $bethel--blue; */
 	z-index: 1000;
 	justify-content: space-around;
 	font-family: $gotham;
@@ -12,7 +12,7 @@
 
 	@mixin respond-min 830px {
 		font-size: 1.2rem;
-		margin-top: -86px;
+		/* margin-top: -86px; */
 	}
 }
 
