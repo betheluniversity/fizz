@@ -39,7 +39,7 @@ Module to style items in an event feed
 
 .events__date-tile {
 	font-family: $gotham;
-	background: #fff;
+	/* background: #fff; */
 	display: flex;
 	min-width: 140px;
 	flex-direction: column;

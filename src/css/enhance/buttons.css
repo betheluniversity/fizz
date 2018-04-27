@@ -144,6 +144,13 @@
   color: $bethel--navy;
 }
 
+.btn-outline {
+  background: none;
+  border-radius: 0;
+  border: 3px solid $bethel--blue;
+  color: $bethel--blue;
+}
+
 /*------------------------------------*\
     $FUNCTIONS
 \*------------------------------------*/
