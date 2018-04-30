@@ -29,8 +29,9 @@ body {
     /* background: #0f2c52; */
     /* background-image: url(https://www.bethel.edu/_homepages/www/images/blur--spirituality.jpg); */
     /* background-size: cover; */
-    margin: 0 auto;
-    padding: 60px;
+    margin: 0 auto 4em;
+    padding-top: 4em;
+    position: relative;
     /* color: #fff; */
 }
 
@@ -44,9 +45,18 @@ body {
 
 .attnHeader h3 {
     font-weight: 400;
-    margin: 1em auto;
+    margin: 1em auto 2em;
     display: table;
     /* color: #333; */
+}
+
+.attnHeader::after {
+    content: "";
+    position: absolute;
+    width: 200px;
+    bottom: 0;
+    left: calc(50% - 100px);
+    border-bottom: 4px double #ffc600;
 }
 
 .proofPoint {
@@ -715,82 +725,84 @@ body {
 </section>
 
 <section class="">
-        <div class="grid  mt0">
+    <div class="grid  mt0">
 
-            <div class="grid-cell u-medium-1-2  pv1" style="background:#eef8ff">
-                <div class="medium-grid-pad-1x ">
-                    <div style="min-width: 300px; max-width: 500px; margin: 4em auto;">
-                        <h2 class="alpha" >Schedule a visit</h2>
-                        <p class="mb2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur nam ut aut dicta similique, explicabo nostrum, neque iure laboriosam praesentium officia omnis error? Nemo consequatur eligendi itaque veniam, ad repellendus!</p>
-                        <p class="mb4"><a class="btn  btn-outline">Schedule Visit</a></p>
-                        {{> events }}
-                    </div>
+        <div class="grid-cell u-medium-1-2  pv1" style="background:#eef8ff">
+            <div class="medium-grid-pad-1x ">
+                <div style="min-width: 300px; max-width: 500px; margin: 4em auto;">
+                    <h2 class="alpha" >Schedule a visit</h2>
+                    <p class="mb2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur nam ut aut dicta similique, explicabo nostrum, neque iure laboriosam praesentium officia omnis error? Nemo consequatur eligendi itaque veniam, ad repellendus!</p>
+                    <p class="mb4"><a class="btn  btn-outline">Schedule Visit</a></p>
+                    {{> events }}
                 </div>
             </div>
-
-            <div class="grid-cell u-medium-1-2 pv6  lazyload" style="margin: 0; background-position: 60% 25%;background-size:cover;" data-bgset="https://cdn1.bethel.edu/resize/unsafe/400x0/smart/https://www.bethel.edu/_homepages/www/images/group-laughing.jpg 400w, https://cdn1.bethel.edu/resize/unsafe/600x0/smart/https://www.bethel.edu/_homepages/www/images/group-laughing.jpg 600w, https://cdn1.bethel.edu/resize/unsafe/800x0/smart/https://www.bethel.edu/_homepages/www/images/group-laughing.jpg 800w, https://cdn1.bethel.edu/resize/unsafe/1000x0/smart/https://www.bethel.edu/_homepages/www/images/group-laughing.jpg 1000w, https://cdn1.bethel.edu/resize/unsafe/1200x0/smart/https://www.bethel.edu/_homepages/www/images/group-laughing.jpg 1200w, https://cdn1.bethel.edu/resize/unsafe/1400x0/smart/https://www.bethel.edu/_homepages/www/images/group-laughing.jpg 1400w, https://cdn1.bethel.edu/resize/unsafe/1600x0/smart/https://www.bethel.edu/_homepages/www/images/group-laughing.jpg 1600w" data-sizes="auto">
-            </div>
         </div>
-    </section>
 
-<div class="inner  pv3">
-        <h2 class="h1  mb1  center  fw500 titleBorder">News &amp; Events</h2>
+        <div class="grid-cell u-medium-1-2 pv6  lazyload" style="margin: 0; background-position: 60% 25%;background-size:cover;" data-bgset="https://cdn1.bethel.edu/resize/unsafe/400x0/smart/https://www.bethel.edu/_homepages/www/images/group-laughing.jpg 400w, https://cdn1.bethel.edu/resize/unsafe/600x0/smart/https://www.bethel.edu/_homepages/www/images/group-laughing.jpg 600w, https://cdn1.bethel.edu/resize/unsafe/800x0/smart/https://www.bethel.edu/_homepages/www/images/group-laughing.jpg 800w, https://cdn1.bethel.edu/resize/unsafe/1000x0/smart/https://www.bethel.edu/_homepages/www/images/group-laughing.jpg 1000w, https://cdn1.bethel.edu/resize/unsafe/1200x0/smart/https://www.bethel.edu/_homepages/www/images/group-laughing.jpg 1200w, https://cdn1.bethel.edu/resize/unsafe/1400x0/smart/https://www.bethel.edu/_homepages/www/images/group-laughing.jpg 1400w, https://cdn1.bethel.edu/resize/unsafe/1600x0/smart/https://www.bethel.edu/_homepages/www/images/group-laughing.jpg 1600w" data-sizes="auto">
+        </div>
+    </div>
+</section>
+
+<section class="bkg--white  pv6">
+    <div class="inner mt4">
+            <h2 class="h1  mb1  center  fw500 titleBorder">News &amp; Events</h2>
+        
+            <div class="grid  mb3">
+                <div class="grid-cell">
+                    <div class="grid-pad-2x">
+                        <img class="mb1" src="https://cdn1.bethel.edu/resize/unsafe/1500x0/smart/https://www.bethel.edu/news/articles/2018/images/ryan-wahlund.jpg">
+                        <h3 class="h1"><a href="#">The Path Less Traveled</a></h3>
+                        <p class="">Ryan Wahlund ’06 tried out several majors—and career paths—before he found one that fit.</p>
+                        <p><small>April 21, 2018</small></p>
+                    </div>
+                </div>
+                <div class="grid-cell">
+                    <div class="grid-pad-2x">
+                        <div class="grid  mb2">
+                            <div class="grid-cell  mr1">
+                                
+                                    <img src="https://cdn2.bethel.edu/resize/unsafe/1500x0/smart/https://www.bethel.edu/news/articles/2018/images/transfer-katie-murphy.jpg">
+                            </div>
+                            <div class="grid-cell">
+                                
+                                    <h6 class="mt0  h3" style="margin-bottom: .25em; line-height: 1.3"><a href="#">Practicing the “Art of Conversation”</a></h6>
+                                    <p class="mv0" style="font-size: 14px;">The Office of Career Development and Calling hosted an event that allowed students to chat with alumni and improve their networking skills.</p>
+                                    <p><small>April 17, 2018</small></p>
+                            </div>
+                        </div>
     
-        <div class="grid  mb3">
-            <div class="grid-cell">
-                <div class="grid-pad-2x">
-                    <img class="mb1" src="https://cdn1.bethel.edu/resize/unsafe/1500x0/smart/https://www.bethel.edu/news/articles/2018/images/ryan-wahlund.jpg">
-                    <h3 class="h1"><a href="#">The Path Less Traveled</a></h3>
-                    <p class="">Ryan Wahlund ’06 tried out several majors—and career paths—before he found one that fit.</p>
-                    <p><small>April 21, 2018</small></p>
+                        <div class="grid  mb2">
+                            <div class="grid-cell  mr1">
+                                
+                                    <img src="https://cdn1.bethel.edu/resize/unsafe/1500x0/smart/https://www.bethel.edu/news/articles/2018/images/art-of-conversation.jpg">
+                            </div>
+                            <div class="grid-cell">
+                                
+                                    <h6 class="mt0  h3  " style="margin-bottom: .25em; line-height: 1.3"><a href="#">Transfer Student Experiences the Bethel Difference</a></h6>
+                                    <p class="mv0" style="font-size: 14px;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <p><small>April 14, 2018</small></p>
+                            </div>
+                        </div>
+                        <p class="center  mt3"><a class="btn  btn-outline">See more Stories</a></p>
+                    </div>
                 </div>
             </div>
-            <div class="grid-cell">
-                <div class="grid-pad-2x">
-                    <div class="grid  mb2">
-                        <div class="grid-cell  mr1">
-                            
-                                <img src="https://cdn2.bethel.edu/resize/unsafe/1500x0/smart/https://www.bethel.edu/news/articles/2018/images/transfer-katie-murphy.jpg">
-                        </div>
-                        <div class="grid-cell">
-                            
-                                <h6 class="mt0  h3" style="margin-bottom: .25em; line-height: 1.3"><a href="#">Practicing the “Art of Conversation”</a></h6>
-                                <p class="mv0" style="font-size: 14px;">The Office of Career Development and Calling hosted an event that allowed students to chat with alumni and improve their networking skills.</p>
-                                <p><small>April 17, 2018</small></p>
-                        </div>
-                    </div>
-
-                    <div class="grid  mb2">
-                        <div class="grid-cell  mr1">
-                            
-                                <img src="https://cdn1.bethel.edu/resize/unsafe/1500x0/smart/https://www.bethel.edu/news/articles/2018/images/art-of-conversation.jpg">
-                        </div>
-                        <div class="grid-cell">
-                            
-                                <h6 class="mt0  h3  " style="margin-bottom: .25em; line-height: 1.3"><a href="#">Transfer Student Experiences the Bethel Difference</a></h6>
-                                <p class="mv0" style="font-size: 14px;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <p><small>April 14, 2018</small></p>
-                        </div>
-                    </div>
-                    <p class="center  mt3"><a class="btn  btn-outline">See more Stories</a></p>
+    
+            <div class="grid">
+                <div class="grid-cell  u-1-1  u-large-1-2">
+                    <div class="medium-grid-pad-1x  large-grid-pad-2x">{{> news }}</div>
+                </div>
+                <div class="grid-cell  u-1-1  u-large-1-2">
+                    <div class="medium-grid-pad-1x  large-grid-pad-2x">{{> events }}</div>
                 </div>
             </div>
-        </div>
-
-        <div class="grid">
-            <div class="grid-cell  u-1-1  u-large-1-2">
-                <div class="medium-grid-pad-1x  large-grid-pad-2x">{{> news }}</div>
-            </div>
-            <div class="grid-cell  u-1-1  u-large-1-2">
-                <div class="medium-grid-pad-1x  large-grid-pad-2x">{{> events }}</div>
-            </div>
-        </div>
-</div>
+    </div>
+</section>
 
 {{> section--request-info }}
 
 <!-- Apply now -->
-<section class="">
+<section class="bkg--white" >
     <div class="grid  mt0">
         <div class="grid-cell u-medium-1-2 pv6  lazyload" style="margin: 0; background-position: 60% 25%;background-size:cover;" data-bgset="https://cdn1.bethel.edu/resize/unsafe/400x0/smart/https://www.bethel.edu/_homepages/www/images/girl-laughing.jpg 400w, https://cdn1.bethel.edu/resize/unsafe/600x0/smart/https://www.bethel.edu/_homepages/www/images/girl-laughing.jpg 600w, https://cdn1.bethel.edu/resize/unsafe/800x0/smart/https://www.bethel.edu/_homepages/www/images/girl-laughing.jpg 800w, https://cdn1.bethel.edu/resize/unsafe/1000x0/smart/https://www.bethel.edu/_homepages/www/images/girl-laughing.jpg 1000w, https://cdn1.bethel.edu/resize/unsafe/1200x0/smart/https://www.bethel.edu/_homepages/www/images/girl-laughing.jpg 1200w, https://cdn1.bethel.edu/resize/unsafe/1400x0/smart/https://www.bethel.edu/_homepages/www/images/girl-laughing.jpg 1400w, https://cdn1.bethel.edu/resize/unsafe/1600x0/smart/https://www.bethel.edu/_homepages/www/images/girl-laughing.jpg 1600w" data-sizes="auto">
         </div>
