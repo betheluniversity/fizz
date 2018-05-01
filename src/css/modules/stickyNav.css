@@ -1,41 +1,59 @@
 .stickyBar {
-	position: sticky;
-	display: flex;
+	/* position: sticky; */
+	/* display: flex; */
 	padding: 1em;
 	top: 0;
 	/* background: $bethel--blue; */
 	z-index: 1000;
 	justify-content: space-around;
-	font-family: $gotham;
-	font-size: .8rem;
-	text-align: center;
+	/* font-family: $gotham; */
 
 	@mixin respond-min 830px {
-		font-size: 1.2rem;
+		/* font-size: 1.2rem; */
 		/* margin-top: -86px; */
 	}
 }
 
+.stickyBar .grid-cell {
+	background: #eef8ff;
+	border: 1px solid #0069aa;
+	border-radius: 4px;
+	/* background: #fff; */
+	/* box-shadow: 0px 0px 20px #bbb; */
+}
+
 .stickyBar span {
-	display: flex;
+	/* display: flex; */
 	/* /* padding: 1em; */
 	/* margin: -2em 0; */ */
 	/* background: #1584c9; */
-	display: flex;
-	align-items: center;
+	/* display: flex; */
+	/* align-items: center; */
 	border-radius: 5px;
 }
 
-.stickyBar span svg {
-	width: 3rem;
-	height: 3rem;
-	fill: $bethel--navy;
+.stickyBar svg {
+	width: 100px;
+	height: 100px;
+	fill: $bethel--blue;
+	display: block;
+	margin: -3.5em auto 1em;
+	padding: 1em;
+	border: 1px solid #0069aa;
+	background: white;
+	border-radius: 50%;
 }
 
 .stickyBar a {
 	padding: .5em 1em;
 	border-radius: 4px;
-	color: #fff;
+	/* color: #fff; */
+	/* font-weight: 400; */
+	/* font-size: 120%; */
+}
+
+.stickyBar p {
+	/* font-size: 80%; */
 }
 
 .stickyBar a:hover {

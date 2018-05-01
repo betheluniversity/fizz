@@ -151,6 +151,11 @@
   color: $bethel--blue;
 }
 
+.btn-outline:hover {
+  background: $bethel--blue;
+  color: #fff;
+}
+
 /*------------------------------------*\
     $FUNCTIONS
 \*------------------------------------*/
