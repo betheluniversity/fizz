@@ -3,13 +3,16 @@
  * e.g. width including further controls like arrows etc.
  */
 
-.lory {
+.lory{
 
     overflow: hidden;
 
-    @mixin respond-min 830px{
-        max-height: calc(100vh - 55px);
-        margin-top: -98px;
+    &.hero {
+
+        @mixin respond-min 830px{
+            max-height: calc(100vh - 55px);
+            margin-top: -98px;
+        }
     }
 
 /**
@@ -28,30 +31,33 @@
     position: relative;
     /* width: 270px; */
     margin: 0 auto;
-    font-size: 0;
-    line-height: 0;
+    /* font-size: 0;
+    line-height: 0; */
     overflow: hidden;
-    white-space: nowrap;
+    /* white-space: nowrap; */
 }
 
-.frame li {
-    position: relative;
-    display: inline-block;
+.frame .js_slide {
+    /* position: relative; */
+    /* display: inline-block; */
+    /* display: flex; */
     /* height: 130px; */
-    text-align: center;
+    /* text-align: center;
     font-size: 15px;
-    line-height: 30px;
+    line-height: 30px; */
     /* background: #2E435A; */
-    color: #fff;
+    /* color: #fff; */
+    /* white-space: initial; */
 }
 
 .slides {
-    display: inline-block;
+    /* display: inline-block; */
+    display: flex;
 }
 
-.simple>.frame li,
-.rewind>.frame li,
-.events>.frame li {
+.simple>.frame .js_slide,
+.rewind>.frame .js_slide,
+.events>.frame .js_slide {
     /* width: 270px; */
     margin-right: 10px;
 }
@@ -74,29 +80,29 @@
     width: 100%;
 }
 
-.percentage li {
+.percentage .js_slide {
     width: 100%;
 }
 
-.variablewidth li {
-    width: 280px;
-    margin-right: 10px;
+.variablewidth .js_slide {
+    /* width: 280px; */
+    /* margin-right: 10px; */
 }
 
-.multipleelements li,
-.multislides li,
-.ease li {
+.multipleelements .js_slide,
+.multislides .js_slide,
+.ease .js_slide {
     width: 60px;
     margin-right: 10px;
 }
 
-.simple>.frame li:last-child,
-.rewind>.frame li:last-child,
-.events>.frame li:last-child,
-.variablewidth li:last-child,
-.multipleelements li:last-child,
-.multislides li:last-child,
-.ease li:last-child {
+.simple>.frame .js_slide:last-child,
+.rewind>.frame .js_slide:last-child,
+.events>.frame .js_slide:last-child,
+.variablewidth .js_slide:last-child,
+.multipleelements .js_slide:last-child,
+.multislides .js_slide:last-child,
+.ease .js_slide:last-child {
     margin-right: 0;
 }
 
@@ -125,39 +131,51 @@
     box-shadow: inset 2px 0px 2px -2px #333;
 }
 
-.prev,
-.next {
-    position: absolute;
-    top: 50%;
-    margin-top: -25px;
-    display: block;
-    cursor: pointer;
-}
+    .prev,
+    .next {
+        display: block;
+        cursor: pointer;
+    }
 
-.next {
-    right: 0;
-}
+    &.arrowsSide {
+        .prev,
+        .next {
+            position: absolute;
+            top: 50%;
+            margin-top: -25px;
+        }
 
-.prev {
-    left: 0;
-}
+        .next {
+            right: 0;
+        }
 
-.next.disabled,
-.prev.disabled {
-    opacity: .3;
-    pointer-events: none;
-}
+        .prev {
+            left: 0;
+        }
+    }
 
-.next svg,
-.prev svg {
-    width: 50px;
-    transition: .4s;
-}
+    &.arrowsBottom {
+        .prev,
+        .next {
 
-.next svg:hover,
-.prev svg:hover {
-    transform: scale(1.1);
-}
+        }
+    }
 
+    .next.disabled,
+    .prev.disabled {
+        opacity: .3;
+        pointer-events: none;
+    }
+
+    .next svg,
+    .prev svg {
+        width: 50px;
+        transition: .4s;
+    }
+
+    .next svg:hover,
+    .prev svg:hover {
+        transform: scale(1.1);
+    }
 
 }

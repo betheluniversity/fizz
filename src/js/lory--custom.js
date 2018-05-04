@@ -7,13 +7,20 @@ if (hasSliders.length > 0) {
   Array.prototype.slice
     .call(hasSliders)
     .forEach(function (element, index) {
-      const isPercentage = element.classList.contains('js_percentage')
-      if (isPercentage) {
+	  const percentage = element.classList.contains('js_percentage')
+	  const variableWidth = element.classList.contains('js_variableWidth')
+      if (percentage) {
         lory(element, {
           infinite: 1
         })
-      } else {
-        lory(element, {})
+	  } else if (variableWidth) {
+		  lory(element, {
+			  infinite: 2
+		  })
+	  } else {
+        lory(element, {
+
+		})
       }
     })
 }
