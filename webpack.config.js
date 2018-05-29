@@ -5,7 +5,7 @@ const MinifyPlugin = require('babel-minify-webpack-plugin')
 module.exports = {
   entry: './src/js/main.js',
   output: {
-    filename: 'newt.js'
+    filename: 'blanco.js'
   },
   module: {
     noParse: [/.\/src\/js\/vendor\/odometer.min.js/],

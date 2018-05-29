@@ -1,10 +1,19 @@
 ---
-title: Home 3
+title: Home 4 - Space
 layout: default
 pageTitle: Test title
 ---
 
 <style>
+
+.global__toolbox {
+    z-index: 100;
+}
+
+.global__footer {
+    z-index: 100;
+    position: relative;
+}
 
 @media (min-width: 830px){
     .global__header {
@@ -25,7 +34,8 @@ body {
 
 
 .feature--left {
-    padding-left: 1em;
+    padding-left: 2em;
+    padding-right: 2em;
 }
 
 @media (min-width: 830px){
@@ -36,12 +46,13 @@ body {
 
 @media (min-width: 1200px){
     .feature--left {
-        padding-left: 15vwe;
+        padding-left: 15vw;
     }
 }
 
 .feature--right {
-    padding-right: 1em;
+    padding-right: 2em;
+    padding-left: 2em;
 }
 
 @media (min-width: 830px){
@@ -62,21 +73,34 @@ body {
     /* background: #0f2c52; */
     /* background-image: url(https://www.bethel.edu/_homepages/www/images/blur--spirituality.jpg); */
     /* background-size: cover; */
-    margin: 0 auto 6em;
-    padding-top: 8em;
+    margin: 0 auto 2em;
+    padding-top: 4em;
     position: relative;
     /* color: #fff; */
     /* text-align: center; */
+}
+
+@media (min-width: 830px){
+    .attnHeader {
+        padding-top: 8em;
+        margin-bottom: 6em;
+    }
 }
 
 .attnHeader h2 {
     font-weight: 400;
     margin: 0 auto;
     padding: 0;
-    font-size: 3rem;
+    font-size: 2rem;
     /* border: 5px solid #ffc600; */
     display: table;
     
+}
+
+@media (min-width: 830px){
+    .attnHeader h2 {
+        font-size: 3rem;
+    }
 }
 
 .attnHeader h3 {
@@ -103,7 +127,6 @@ body {
 .proofPoint {
     /* background: #fff; */
     /* background: linear-gradient(170deg, #ffd230 60%, #ffc600); */
-    margin-right: 2em;
     color: #667;
     padding: 4em 1em 2em;
     /* border-radius: .5em; */
@@ -146,16 +169,81 @@ body {
 
 {{> moving-picture }}
 
-<div class="stickyBar  pb6  ph5  bkg--white">
+<style>
+    .overFeat {
+        position: relative;
+        z-index: 1000;
+        background: #f1f1f1;
+    }
+
+    .overFeat .grid-cell {
+        position: relative;
+        transform: translateY(-5em);
+    }
+
+    .overFeat img {
+        border: .5em solid #fff;
+    }
+
+    .overFeat h3 {
+        position: absolute;
+        bottom: 1em;
+        left: 1.2em;
+        padding-right: 1em;
+        text-shadow: 1px 1px 1px #333;
+    }
+</style>
+
+<div style="background: #fff;margin-top: calc(100vw*.5625 - 150px);position: relative;z-index:100;">
+
+<section class="overFeat  pb2">
+    <div class="inner" style="overflow: initial;">
+        <div class="grid" style="margin-bottom: -5em;">
+            <div class="grid-cell">
+                <div class="grid-pad-2x">
+                    <div style="position: relative">
+
+                    <img class="lazyload"  data-srcset="https://cdn1.bethel.edu/resize/unsafe/400x0/smart/https://c2.staticflickr.com/8/7215/7401407656_b8444de1c5_b.jpg 400w, https://cdn1.bethel.edu/resize/unsafe/600x0/smart/https://c2.staticflickr.com/8/7215/7401407656_b8444de1c5_b.jpg 600w, https://cdn1.bethel.edu/resize/unsafe/800x0/smart/https://c2.staticflickr.com/8/7215/7401407656_b8444de1c5_b.jpg 800w, https://cdn1.bethel.edu/resize/unsafe/1000x0/smart/https://c2.staticflickr.com/8/7215/7401407656_b8444de1c5_b.jpg 1000w, https://cdn1.bethel.edu/resize/unsafe/1200x0/smart/https://c2.staticflickr.com/8/7215/7401407656_b8444de1c5_b.jpg 1200w, https://cdn1.bethel.edu/resize/unsafe/1400x0/smart/https://c2.staticflickr.com/8/7215/7401407656_b8444de1c5_b.jpg 1400w, https://cdn1.bethel.edu/resize/unsafe/1600x0/smart/https://c2.staticflickr.com/8/7215/7401407656_b8444de1c5_b.jpg 1600w"
+                        data-sizes="auto">
+                    <h3 class="h2" style="color: #fff;">The Path Less Traveled</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid-cell">
+                <div class="grid-pad-2x">
+                    <div style="position: relative">
+
+                    <img class="lazyload"  data-srcset="https://cdn1.bethel.edu/resize/unsafe/400x0/smart/https://c1.staticflickr.com/5/4538/38186429242_6149f592d2_b.jpg 400w, https://cdn1.bethel.edu/resize/unsafe/600x0/smart/https://c1.staticflickr.com/5/4538/38186429242_6149f592d2_b.jpg 600w, https://cdn1.bethel.edu/resize/unsafe/800x0/smart/https://c1.staticflickr.com/5/4538/38186429242_6149f592d2_b.jpg 800w, https://cdn1.bethel.edu/resize/unsafe/1000x0/smart/https://c1.staticflickr.com/5/4538/38186429242_6149f592d2_b.jpg 1000w, https://cdn1.bethel.edu/resize/unsafe/1200x0/smart/https://c1.staticflickr.com/5/4538/38186429242_6149f592d2_b.jpg 1200w, https://cdn1.bethel.edu/resize/unsafe/1400x0/smart/https://c1.staticflickr.com/5/4538/38186429242_6149f592d2_b.jpg 1400w, https://cdn1.bethel.edu/resize/unsafe/1600x0/smart/https://c1.staticflickr.com/5/4538/38186429242_6149f592d2_b.jpg 1600w"
+                        data-sizes="auto">
+                    <h3 class="h2" style="color: #fff;">Practicing the Art of Conversation</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid-cell">
+                <div class="grid-pad-2x">
+                    <div style="position: relative">
+
+                    <img class="lazyload"  data-srcset="https://cdn1.bethel.edu/resize/unsafe/400x0/smart/https://c2.staticflickr.com/8/7231/7401400560_e386eace5a_b.jpg 400w, https://cdn1.bethel.edu/resize/unsafe/600x0/smart/https://c2.staticflickr.com/8/7231/7401400560_e386eace5a_b.jpg 600w, https://cdn1.bethel.edu/resize/unsafe/800x0/smart/https://c2.staticflickr.com/8/7231/7401400560_e386eace5a_b.jpg 800w, https://cdn1.bethel.edu/resize/unsafe/1000x0/smart/https://c2.staticflickr.com/8/7231/7401400560_e386eace5a_b.jpg 1000w, https://cdn1.bethel.edu/resize/unsafe/1200x0/smart/https://c2.staticflickr.com/8/7231/7401400560_e386eace5a_b.jpg 1200w, https://cdn1.bethel.edu/resize/unsafe/1400x0/smart/https://c2.staticflickr.com/8/7231/7401400560_e386eace5a_b.jpg 1400w, https://cdn1.bethel.edu/resize/unsafe/1600x0/smart/https://c2.staticflickr.com/8/7231/7401400560_e386eace5a_b.jpg 1600w"
+                        data-sizes="auto">
+                    <h3 class="h2" style="color: #fff;">Transfer Student Experiences the Bethel Difference</h3>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <p class="center"><a href="#news"><small>&#9660 See more stories &#9660</small></a></p>
+    </div>
+</section>
+
+<div class="stickyBar  pb6  ph5--medium  bkg--white">
     <div class="inner  mb3" style="overflow: visible;">
         <div class="attnHeader  center">
-            <div class="inner">
                 <h2 class="titleBorder">The Bethel Experience</h2>
                 <h3 class="h2">World-class Academics. Real-world Experience. Authentic Faith.</h3>        
-            </div>
         </div>
         <div class="grid  ta--center">
-            <div class="grid-cell  mr3">
+            <div class="grid-cell  mr3--medium">
                 <div class="grid-pad-2x">
                         
                                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -248,7 +336,7 @@ body {
                             
                 </div>
             </div>
-            <div class="grid-cell  mr3">
+            <div class="grid-cell  mr3--medium">
                 <div class="grid-pad-2x">
                         
                                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -400,7 +488,7 @@ body {
 </div>
 
 <!-- Academics -->
-<section class="mt0  pb4--medium  u-posRel" style="background: #fffcf1; ">
+<section class="mt0  pb4--medium " style="background: #f6f9fa; ">
 
     <div class="attnHeader">
         <div class="inner ">
@@ -411,8 +499,10 @@ body {
         
     <!-- intro -->
     <div class="grid  mb4">
-        <div class="grid-cell  u-medium-3-5  ml0  pr3">
-                <img src="https://c2.staticflickr.com/6/5611/15582254420_b1ca6067bb_b.jpg" alt="">
+        <div class="grid-cell  u-medium-3-5  mb2">
+                {{!-- <img src="https://c2.staticflickr.com/6/5611/15582254420_b1ca6067bb_b.jpg" alt=""> --}}
+                <img class="lazyload"  data-srcset="https://cdn1.bethel.edu/resize/unsafe/400x0/smart/https://c2.staticflickr.com/6/5611/15582254420_b676b8ec88_o.jpg 400w, https://cdn1.bethel.edu/resize/unsafe/600x0/smart/https://c2.staticflickr.com/6/5611/15582254420_b676b8ec88_o.jpg 600w, https://cdn1.bethel.edu/resize/unsafe/800x0/smart/https://c2.staticflickr.com/6/5611/15582254420_b676b8ec88_o.jpg 800w, https://cdn1.bethel.edu/resize/unsafe/1000x0/smart/https://c2.staticflickr.com/6/5611/15582254420_b676b8ec88_o.jpg 1000w, https://cdn1.bethel.edu/resize/unsafe/1200x0/smart/https://c2.staticflickr.com/6/5611/15582254420_b676b8ec88_o.jpg 1200w, https://cdn1.bethel.edu/resize/unsafe/1400x0/smart/https://c2.staticflickr.com/6/5611/15582254420_b676b8ec88_o.jpg 1400w, https://cdn1.bethel.edu/resize/unsafe/1600x0/smart/https://c2.staticflickr.com/6/5611/15582254420_b676b8ec88_o.jpg 1600w" >
+                
         </div>
 
         <div class="grid-cell  mr0  feature--right">
@@ -444,12 +534,12 @@ body {
     </div>
 
     <!-- proof points -->
-    <section class="  mv6  pv1">
+    <section class=" mv6  pv1">
         <div class="inner pt6">
                 <!-- <h2 class="h1  mb4  center  fw500 titleBorder">Bethel Academics by the Numbers</h2> -->
             
             <div class="grid  proofPoints  pb4">
-                <div class="grid-cell  proofPoint">
+                <div class="grid-cell  proofPoint  mr2--medium  mb2">
                     <div class="ph2">
                         <!-- <img class="lazyload  pt1" alt="Market research" data-src="https://www.bethel.edu/undergrad/academics/real-experience/images/market-research.png" width="60"> -->
                         <div class="proofPoint__border">
@@ -458,7 +548,7 @@ body {
                         </div>
                     </div>
                 </div>
-                <div class="grid-cell  proofPoint">
+                <div class="grid-cell  proofPoint  mr2--medium  mb2">
                     <div class="ph2">
                         <!-- <img class="lazyload  pt1" alt="Share your story" data-src="https://www.bethel.edu/undergrad/academics/real-experience/images/share-story.png" title="" style="" width="60"> -->
                         <p class="proofPoint__number">Top 15%</p>
@@ -466,7 +556,7 @@ body {
                         <small><i>— Money Magazine</i></small>
                     </div>
                 </div>
-                <div class="grid-cell  proofPoint">
+                <div class="grid-cell  proofPoint  mr2--medium  mb2">
                     <div class="ph2">
                         <!-- <img class="lazyload  pt1" alt="Hands-on learning" data-src="https://www.bethel.edu/undergrad/academics/real-experience/images/hands-on.png" width="60"> -->
                         <p class="proofPoint__number">100s</p>
@@ -518,9 +608,8 @@ body {
     </div>
 </section>
 
-
 <!-- Experience  -->
-<section class="mt0 pb6"  style="background:#f6f9fa;">
+<section class="mt0  pb4--medium  bkg--white">
 
     <div class="attnHeader">
         <div class="inner">
@@ -547,28 +636,28 @@ body {
             <div class="inner  pv6">
                 
             <div class="grid  proofPoints">
-                <div class="grid-cell  proofPoint">
+                <div class="grid-cell  proofPoint  mr2--medium  mb2">
                     <div class="ph2">
                         <!-- <img class="lazyload  pt1" alt="Market research" data-src="https://www.bethel.edu/undergrad/academics/real-experience/images/market-research.png" width="60"> -->
                         <div class="proofPoint__border">
-                            <p class="proofPoint__number">97%</p>
-                            <p class="h5  mv0  fw400">of recent grads are employed or in graduate school </p>
+                            <p class="proofPoint__number">90%</p>
+                            <p class="h5  mv0  fw400">of incoming students receive financial aid</p>
                         </div>
                     </div>
                 </div>
-                <div class="grid-cell  proofPoint">
+                <div class="grid-cell  proofPoint  mr2--medium  mb2">
                     <div class="ph2">
                         <!-- <img class="lazyload  pt1" alt="Share your story" data-src="https://www.bethel.edu/undergrad/academics/real-experience/images/share-story.png" title="" style="" width="60"> -->
-                        <p class="proofPoint__number">Top 15%</p>
-                        <p class="h5  mv0  fw400">Best Colleges for your Money</p>
-                        <small><i>— Money Magazine</i></small>
+                        <p class="proofPoint__number">$65-75k</p>
+                        <p class="h5  mv0  fw400">median salary for recent CAPS graduates</p>
+                        <!-- <small><i>— Money Magazine</i></small> -->
                     </div>
                 </div>
-                <div class="grid-cell  proofPoint">
+                <div class="grid-cell  proofPoint  mr2--medium  mb2">
                     <div class="ph2">
                         <!-- <img class="lazyload  pt1" alt="Hands-on learning" data-src="https://www.bethel.edu/undergrad/academics/real-experience/images/hands-on.png" width="60"> -->
-                        <p class="proofPoint__number">100s</p>
-                        <p class="h5  mv0  fw400">Business partnerships with companies like NASA, Medtronic, and 3M</p>
+                        <p class="proofPoint__number">30+</p>
+                        <p class="h5  mv0  fw400">study abroad destinations</p>
                     </div>
                 </div>
             </div>
@@ -584,118 +673,84 @@ body {
     </style>
 
     <div class="lory loryCustom  arrowsBottom">
-    <div class="slider js_variableWidth  variableWidth">
-        <div class="frame js_frame">
-            <div class="slides js_slides">
+        <div class="slider js_variableWidth  variableWidth">
+            <div class="frame js_frame">
+                <div class="slides js_slides">
 
+                    <div class="js_slide">
+                        <div class="grid-pad-2x">
+                            <img class="lazyload"  data-srcset="https://cdn1.bethel.edu/resize/unsafe/400x0/smart/https://c2.staticflickr.com/8/7237/7166150373_b763f233a6_o.jpg 400w, https://cdn1.bethel.edu/resize/unsafe/600x0/smart/https://c2.staticflickr.com/8/7237/7166150373_b763f233a6_o.jpg 600w, https://cdn1.bethel.edu/resize/unsafe/800x0/smart/https://c2.staticflickr.com/8/7237/7166150373_b763f233a6_o.jpg 800w, https://cdn1.bethel.edu/resize/unsafe/1000x0/smart/https://c2.staticflickr.com/8/7237/7166150373_b763f233a6_o.jpg 1000w, https://cdn1.bethel.edu/resize/unsafe/1200x0/smart/https://c2.staticflickr.com/8/7237/7166150373_b763f233a6_o.jpg 1200w, https://cdn1.bethel.edu/resize/unsafe/1400x0/smart/https://c2.staticflickr.com/8/7237/7166150373_b763f233a6_o.jpg 1400w, https://cdn1.bethel.edu/resize/unsafe/1600x0/smart/https://c2.staticflickr.com/8/7237/7166150373_b763f233a6_o.jpg 1600w" data-sizes="auto">
 
-            <div class="js_slide">
-                <div class="grid-pad-2x">
-                    <img class="lazyload"  data-srcset="https://cdn1.bethel.edu/resize/unsafe/400x0/smart/https://c2.staticflickr.com/8/7237/7166150373_b763f233a6_o.jpg 400w, https://cdn1.bethel.edu/resize/unsafe/600x0/smart/https://c2.staticflickr.com/8/7237/7166150373_b763f233a6_o.jpg 600w, https://cdn1.bethel.edu/resize/unsafe/800x0/smart/https://c2.staticflickr.com/8/7237/7166150373_b763f233a6_o.jpg 800w, https://cdn1.bethel.edu/resize/unsafe/1000x0/smart/https://c2.staticflickr.com/8/7237/7166150373_b763f233a6_o.jpg 1000w, https://cdn1.bethel.edu/resize/unsafe/1200x0/smart/https://c2.staticflickr.com/8/7237/7166150373_b763f233a6_o.jpg 1200w, https://cdn1.bethel.edu/resize/unsafe/1400x0/smart/https://c2.staticflickr.com/8/7237/7166150373_b763f233a6_o.jpg 1400w, https://cdn1.bethel.edu/resize/unsafe/1600x0/smart/https://c2.staticflickr.com/8/7237/7166150373_b763f233a6_o.jpg 1600w" data-sizes="auto">
+                            <div class="" style="border: 1px solid #ccc; padding: 1em 2em">
+                                <h3><a href="#">Neuroscience Research</a></h3>
+                                <p>Biology and psychology students collaborated with researchers at Boston University to advance modern science’s understanding and treatment of memory loss.</p>
+                            </div>    
 
-                    <div class="" style="border: 1px solid #ccc; padding: 1em 2em">
-                        <h3><a href="#">Neuroscience Research</a></h3>
-                        <p>Biology and psychology students collaborated with researchers at Boston University to advance modern science’s understanding and treatment of memory loss.</p>
-                    </div>    
-
-                </div>
-            </div>
-
-            <div class="js_slide">
-                <div class="grid-pad-2x">
-                    <img class="lazyload"  data-srcset="https://cdn1.bethel.edu/resize/unsafe/400x0/smart/https://c2.staticflickr.com/8/7537/15695331636_14802496ff_o.jpg 400w, https://cdn1.bethel.edu/resize/unsafe/600x0/smart/https://c2.staticflickr.com/8/7537/15695331636_14802496ff_o.jpg 600w, https://cdn1.bethel.edu/resize/unsafe/800x0/smart/https://c2.staticflickr.com/8/7537/15695331636_14802496ff_o.jpg 800w, https://cdn1.bethel.edu/resize/unsafe/1000x0/smart/https://c2.staticflickr.com/8/7537/15695331636_14802496ff_o.jpg 1000w, https://cdn1.bethel.edu/resize/unsafe/1200x0/smart/https://c2.staticflickr.com/8/7537/15695331636_14802496ff_o.jpg 1200w, https://cdn1.bethel.edu/resize/unsafe/1400x0/smart/https://c2.staticflickr.com/8/7537/15695331636_14802496ff_o.jpg 1400w, https://cdn1.bethel.edu/resize/unsafe/1600x0/smart/https://c2.staticflickr.com/8/7537/15695331636_14802496ff_o.jpg 1600w"
-                        data-sizes="auto">
-                    <div class="" style="border: 1px solid #ccc; padding: 1em 2em">
-                        <h3><a href="#">Student-Managed Investment Fund</a></h3>
-                        <p>Our business and finance students manage a $1 million investment fund for both institutional and outside investors</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="js_slide">
-                <div class="grid-pad-2x">
-                    <img class="lazyload"  data-srcset="https://cdn1.bethel.edu/resize/unsafe/400x0/smart/https://www.bethel.edu/news/articles/2017/images/textura.jpg 400w, https://cdn1.bethel.edu/resize/unsafe/600x0/smart/https://www.bethel.edu/news/articles/2017/images/textura.jpg 600w, https://cdn1.bethel.edu/resize/unsafe/800x0/smart/https://www.bethel.edu/news/articles/2017/images/textura.jpg 800w, https://cdn1.bethel.edu/resize/unsafe/1000x0/smart/https://www.bethel.edu/news/articles/2017/images/textura.jpg 1000w, https://cdn1.bethel.edu/resize/unsafe/1200x0/smart/https://www.bethel.edu/news/articles/2017/images/textura.jpg 1200w, https://cdn1.bethel.edu/resize/unsafe/1400x0/smart/https://www.bethel.edu/news/articles/2017/images/textura.jpg 1400w, https://cdn1.bethel.edu/resize/unsafe/1600x0/smart/https://www.bethel.edu/news/articles/2017/images/textura.jpg 1600w"
-                        data-sizes="auto">
-                    <div class="" style="border: 1px solid #ccc; padding: 1em 2em">
-                        <h3><a href="#">Textura Magazine</a></h3>
-                        <p>Our art and journalism students collaborated to produce a national award-winning cultural magazine.</p>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="js_slide">
-                    <div class="grid-pad-2x">
-                        <img class="lazyload"  data-srcset="https://cdn1.bethel.edu/resize/unsafe/400x0/smart/https://c2.staticflickr.com/8/7537/15695331636_14802496ff_o.jpg 400w, https://cdn1.bethel.edu/resize/unsafe/600x0/smart/https://c2.staticflickr.com/8/7537/15695331636_14802496ff_o.jpg 600w, https://cdn1.bethel.edu/resize/unsafe/800x0/smart/https://c2.staticflickr.com/8/7537/15695331636_14802496ff_o.jpg 800w, https://cdn1.bethel.edu/resize/unsafe/1000x0/smart/https://c2.staticflickr.com/8/7537/15695331636_14802496ff_o.jpg 1000w, https://cdn1.bethel.edu/resize/unsafe/1200x0/smart/https://c2.staticflickr.com/8/7537/15695331636_14802496ff_o.jpg 1200w, https://cdn1.bethel.edu/resize/unsafe/1400x0/smart/https://c2.staticflickr.com/8/7537/15695331636_14802496ff_o.jpg 1400w, https://cdn1.bethel.edu/resize/unsafe/1600x0/smart/https://c2.staticflickr.com/8/7537/15695331636_14802496ff_o.jpg 1600w"
-                            data-sizes="auto">
-                        <div class="" style="border: 1px solid #ccc; padding: 1em 2em">
-                            <h3><a href="#">Student-Managed Investment Fund</a></h3>
-                            <p>Our business and finance students manage a $1 million investment fund for both institutional and outside investors</p>
                         </div>
                     </div>
-                </div>
-    
-                <div class="js_slide">
-                    <div class="grid-pad-2x">
-                        <img class="lazyload"  data-srcset="https://cdn1.bethel.edu/resize/unsafe/400x0/smart/https://www.bethel.edu/news/articles/2017/images/textura.jpg 400w, https://cdn1.bethel.edu/resize/unsafe/600x0/smart/https://www.bethel.edu/news/articles/2017/images/textura.jpg 600w, https://cdn1.bethel.edu/resize/unsafe/800x0/smart/https://www.bethel.edu/news/articles/2017/images/textura.jpg 800w, https://cdn1.bethel.edu/resize/unsafe/1000x0/smart/https://www.bethel.edu/news/articles/2017/images/textura.jpg 1000w, https://cdn1.bethel.edu/resize/unsafe/1200x0/smart/https://www.bethel.edu/news/articles/2017/images/textura.jpg 1200w, https://cdn1.bethel.edu/resize/unsafe/1400x0/smart/https://www.bethel.edu/news/articles/2017/images/textura.jpg 1400w, https://cdn1.bethel.edu/resize/unsafe/1600x0/smart/https://www.bethel.edu/news/articles/2017/images/textura.jpg 1600w"
-                            data-sizes="auto">
-                        <div class="" style="border: 1px solid #ccc; padding: 1em 2em">
-                            <h3><a href="#">Textura Magazine</a></h3>
-                            <p>Our art and journalism students collaborated to produce a national award-winning cultural magazine.</p>
-    
+
+                    <div class="js_slide">
+                        <div class="grid-pad-2x">
+                            <img class="lazyload"  data-srcset="https://cdn1.bethel.edu/resize/unsafe/400x0/smart/https://c2.staticflickr.com/8/7537/15695331636_14802496ff_o.jpg 400w, https://cdn1.bethel.edu/resize/unsafe/600x0/smart/https://c2.staticflickr.com/8/7537/15695331636_14802496ff_o.jpg 600w, https://cdn1.bethel.edu/resize/unsafe/800x0/smart/https://c2.staticflickr.com/8/7537/15695331636_14802496ff_o.jpg 800w, https://cdn1.bethel.edu/resize/unsafe/1000x0/smart/https://c2.staticflickr.com/8/7537/15695331636_14802496ff_o.jpg 1000w, https://cdn1.bethel.edu/resize/unsafe/1200x0/smart/https://c2.staticflickr.com/8/7537/15695331636_14802496ff_o.jpg 1200w, https://cdn1.bethel.edu/resize/unsafe/1400x0/smart/https://c2.staticflickr.com/8/7537/15695331636_14802496ff_o.jpg 1400w, https://cdn1.bethel.edu/resize/unsafe/1600x0/smart/https://c2.staticflickr.com/8/7537/15695331636_14802496ff_o.jpg 1600w"
+                                data-sizes="auto">
+                            <div class="" style="border: 1px solid #ccc; padding: 1em 2em">
+                                <h3><a href="#">Student-Managed Investment Fund</a></h3>
+                                <p>Our business and finance students manage a $1 million investment fund for both institutional and outside investors</p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-            </div>
+                    <div class="js_slide">
+                        <div class="grid-pad-2x">
+                            <img class="lazyload"  data-srcset="https://cdn1.bethel.edu/resize/unsafe/400x0/smart/https://www.bethel.edu/news/articles/2017/images/textura.jpg 400w, https://cdn1.bethel.edu/resize/unsafe/600x0/smart/https://www.bethel.edu/news/articles/2017/images/textura.jpg 600w, https://cdn1.bethel.edu/resize/unsafe/800x0/smart/https://www.bethel.edu/news/articles/2017/images/textura.jpg 800w, https://cdn1.bethel.edu/resize/unsafe/1000x0/smart/https://www.bethel.edu/news/articles/2017/images/textura.jpg 1000w, https://cdn1.bethel.edu/resize/unsafe/1200x0/smart/https://www.bethel.edu/news/articles/2017/images/textura.jpg 1200w, https://cdn1.bethel.edu/resize/unsafe/1400x0/smart/https://www.bethel.edu/news/articles/2017/images/textura.jpg 1400w, https://cdn1.bethel.edu/resize/unsafe/1600x0/smart/https://www.bethel.edu/news/articles/2017/images/textura.jpg 1600w"
+                                data-sizes="auto">
+                            <div class="" style="border: 1px solid #ccc; padding: 1em 2em">
+                                <h3><a href="#">Textura Magazine</a></h3>
+                                <p>Our art and journalism students collaborated to produce a national award-winning cultural magazine.</p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="js_slide">
+                        <div class="grid-pad-2x">
+                            <img class="lazyload"  data-srcset="https://cdn1.bethel.edu/resize/unsafe/400x0/smart/https://c1.staticflickr.com/1/828/40675286985_1475167db7_h.jpg 400w, https://cdn1.bethel.edu/resize/unsafe/600x0/smart/https://c1.staticflickr.com/1/828/40675286985_1475167db7_h.jpg 600w, https://cdn1.bethel.edu/resize/unsafe/800x0/smart/https://c1.staticflickr.com/1/828/40675286985_1475167db7_h.jpg 800w, https://cdn1.bethel.edu/resize/unsafe/1000x0/smart/https://c1.staticflickr.com/1/828/40675286985_1475167db7_h.jpg 1000w, https://cdn1.bethel.edu/resize/unsafe/1200x0/smart/https://c1.staticflickr.com/1/828/40675286985_1475167db7_h.jpg 1200w, https://cdn1.bethel.edu/resize/unsafe/1400x0/smart/https://c1.staticflickr.com/1/828/40675286985_1475167db7_h.jpg 1400w, https://cdn1.bethel.edu/resize/unsafe/1600x0/smart/https://c1.staticflickr.com/1/828/40675286985_1475167db7_h.jpg 1600w"
+                                data-sizes="auto">
+                            <div class="" style="border: 1px solid #ccc; padding: 1em 2em">
+                                <h3><a href="#">Student-Managed Investment Fund</a></h3>
+                                <p>Our business and finance students manage a $1 million investment fund for both institutional and outside investors</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="js_slide">
+                        <div class="grid-pad-2x">
+                            <img class="lazyload"  data-srcset="https://cdn1.bethel.edu/resize/unsafe/400x0/smart/https://c1.staticflickr.com/1/807/27698179718_95e1b6828f_b.jpg 400w, https://cdn1.bethel.edu/resize/unsafe/600x0/smart/https://c1.staticflickr.com/1/807/27698179718_95e1b6828f_b.jpg 600w, https://cdn1.bethel.edu/resize/unsafe/800x0/smart/https://c1.staticflickr.com/1/807/27698179718_95e1b6828f_b.jpg 800w, https://cdn1.bethel.edu/resize/unsafe/1000x0/smart/https://c1.staticflickr.com/1/807/27698179718_95e1b6828f_b.jpg 1000w, https://cdn1.bethel.edu/resize/unsafe/1200x0/smart/https://c1.staticflickr.com/1/807/27698179718_95e1b6828f_b.jpg 1200w, https://cdn1.bethel.edu/resize/unsafe/1400x0/smart/https://c1.staticflickr.com/1/807/27698179718_95e1b6828f_b.jpg 1400w, https://cdn1.bethel.edu/resize/unsafe/1600x0/smart/https://c1.staticflickr.com/1/807/27698179718_95e1b6828f_b.jpg 1600w"
+                                data-sizes="auto">
+                            <div class="" style="border: 1px solid #ccc; padding: 1em 2em">
+                                <h3><a href="#">Another Feature</a></h3>
+                                <p>Our art and journalism students collaborated to produce a national award-winning cultural magazine.</p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
 
             <span class="js_prev prev">
-                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 501.5 501.5"><g><path fill="#2E435A" d="M302.67 90.877l55.77 55.508L254.575 250.75 358.44 355.116l-55.77 55.506L143.56 250.75z"/></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 501.5 501.5"><g><path fill="#0069aa" d="M302.67 90.877l55.77 55.508L254.575 250.75 358.44 355.116l-55.77 55.506L143.56 250.75z"/></g></svg>
             </span>
             <span class="js_next next">
-                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 501.5 501.5"><g><path fill="#2E435A" d="M199.33 410.622l-55.77-55.508L247.425 250.75 143.56 146.384l55.77-55.507L358.44 250.75z"/></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 501.5 501.5"><g><path fill="#0069aa" d="M199.33 410.622l-55.77-55.508L247.425 250.75 143.56 146.384l55.77-55.507L358.44 250.75z"/></g></svg>
             </span>
-    </div>
+        </div>
     </div>
 
-
-        <!-- <div class="grid  mb5">
-            <div class="grid-cell">
-                <div class="grid-pad-1x">
-                    <div class="quote">
-                        <div class="quote__avatar">
-                            <img src="https://cdn1.bethel.edu/resize/unsafe/200x0/smart/https://www.bethel.edu//_shared-content/quotes/images/cas__business_nettleton-nicole.jpg">
-                        </div>
-                        <div class="quote__text">
-                            <p>“My college experience not only gave me the knowledge I needed to pursue a career in medicine, but also provided me with opportunities to gain real-life skills that increased my confidence as both a researcher and a Christian. Having this experience in a Christian environment allowed me to learn with others who share similar core values and reminded me that faith can exist in every aspect of our lives."</p>
-                            <cite class="quote__source">—Hannah Manion ’18, biology and Spanish</cite>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="grid-cell">
-                <div class="grid-pad-1x">
-                    <div class="quote">
-                        <div class="quote__avatar">
-                            <img class="lazyload" data-src="https://cdn2.bethel.edu/resize/unsafe/200x0/smart/https://www.bethel.edu//_shared-content/quotes/images/cas__business_lin-chin-chin.jpg"
-                                title="">
-                        </div>
-                    
-                        <div class="quote__text">
-                            <p>“I’m extremely grateful I got a liberal arts education. I didn’t just learn the answers in undergrad—I learned how to find the answers myself while working through problems and issues, and how to apply what I learned in different settings. I wouldn’t be where I am today without my Bethel degree, and I wouldn’t trade it for anything.”</p>
-                            <cite class="quote__source">—Ryan Wahlund ’06, biblical and theological studies, risk management consultant</cite>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-    </div>
 </section>
 
 <!-- Faith -->
-<section class="mt0  pb3--medium  bkg--white"  style="border-left: 1em solid #ffc600;">
+<section class="mt0  pb4--medium" style="background: #fffff1">
 
     <div class="attnHeader">
             <div class="inner ">
@@ -704,8 +759,6 @@ body {
             </div>
         </div>
 
-
-        
         <div class="grid">
             <div class="grid-cell  u-medium-3-5">
                         <!-- <video id="video" loop="true" preload="none" src="https://www.bethel.edu/_homepages/www/images/welcome-week-2016-video.mp4"></video>
@@ -775,7 +828,7 @@ body {
             </div>
         </div> -->
 
-        <div class="grid  mv3">
+        <div class="grid  mv6  pv6">
             <div class="grid-cell">
                 <div class="grid-pad-2x">
                     <img class="lazyload"  data-srcset="https://cdn1.bethel.edu/resize/unsafe/400x0/smart/https://c2.staticflickr.com/8/7215/7401407656_b8444de1c5_b.jpg 400w, https://cdn1.bethel.edu/resize/unsafe/600x0/smart/https://c2.staticflickr.com/8/7215/7401407656_b8444de1c5_b.jpg 600w, https://cdn1.bethel.edu/resize/unsafe/800x0/smart/https://c2.staticflickr.com/8/7215/7401407656_b8444de1c5_b.jpg 800w, https://cdn1.bethel.edu/resize/unsafe/1000x0/smart/https://c2.staticflickr.com/8/7215/7401407656_b8444de1c5_b.jpg 1000w, https://cdn1.bethel.edu/resize/unsafe/1200x0/smart/https://c2.staticflickr.com/8/7215/7401407656_b8444de1c5_b.jpg 1200w, https://cdn1.bethel.edu/resize/unsafe/1400x0/smart/https://c2.staticflickr.com/8/7215/7401407656_b8444de1c5_b.jpg 1400w, https://cdn1.bethel.edu/resize/unsafe/1600x0/smart/https://c2.staticflickr.com/8/7215/7401407656_b8444de1c5_b.jpg 1600w"
@@ -810,7 +863,7 @@ body {
             </div>
         </div>
 
-        <div class="grid  mb5">
+        <div class="grid  mb6  pb6">
             <div class="grid-cell">
                 <div class="grid-pad-1x">
                     <div class="quote">
@@ -845,10 +898,11 @@ body {
     </div>
 </section>
 
+<!-- Visit -->
 <section class="">
     <div class="grid  mt0">
 
-        <div class="grid-cell u-medium-1-2  pv1" style="background:#eef8ff">
+        <div class="grid-cell u-medium-1-2  pv1" style="background:#f6f9fa">
             <div class="medium-grid-pad-1x ">
                 <div style="min-width: 300px; max-width: 500px; margin: 4em auto;">
                     <h2 class="alpha" >Schedule a visit</h2>
@@ -864,7 +918,8 @@ body {
     </div>
 </section>
 
-<section class="bkg--white  pv6">
+<!-- News Events -->
+<section class="bkg--white  pv6" id="news">
     <div class="inner mt4">
             <h2 class="h1  mb1  center  fw500 titleBorder">News &amp; Events</h2>
         
@@ -938,3 +993,5 @@ body {
         </div>
     </div>
 </section>
+
+</div>

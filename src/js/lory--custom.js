@@ -7,20 +7,25 @@ if (hasSliders.length > 0) {
   Array.prototype.slice
     .call(hasSliders)
     .forEach(function (element, index) {
-	  const percentage = element.classList.contains('js_percentage')
-	  const variableWidth = element.classList.contains('js_variableWidth')
+      const percentage = element.classList.contains('js_percentage')
+      const variableWidth = element.classList.contains('js_variableWidth')
       if (percentage) {
         lory(element, {
           infinite: 1
         })
-	  } else if (variableWidth) {
-		  lory(element, {
-			  infinite: 2
-		  })
-	  } else {
+      } else if (variableWidth) {
+        const slider = lory(element, {
+          infinite: 4,
+          slidesToScroll: 1
+        })
+
+        setInterval(function () {
+          slider.next()
+        }, 4000 + 300) // interval + transition
+      } else {
         lory(element, {
 
-		})
+        })
       }
     })
 }
