@@ -49,20 +49,22 @@ var odometers = document.getElementsByClassName('odometer');
 
 for (var i = 0, len = odometers.length; i < len; i++) {
     var el = odometers[i];
-    var od = new Odometer({
-        el: el
-    });
+    if( el.className.includes('skip-animation') == false ){
+      var od = new Odometer({
+          el: el
+      });
 
-    sr.reveal(el, {
-        beforeReveal: function(el){
-            el.innerHTML = el.getAttribute('data-final-number');
-        },
-        afterReset: function(el){
-            el.innerHTML = 00;
-        },
-        distance: '0px',
-        scale: 1,
-        duration: 1700,
-        mobile: true
-    });
+      sr.reveal(el, {
+          beforeReveal: function(el){
+              el.innerHTML = el.getAttribute('data-final-number');
+          },
+          afterReset: function(el){
+              el.innerHTML = 00;
+          },
+          distance: '0px',
+          scale: 1,
+          duration: 1700,
+          mobile: true
+      });
+    }
 }
