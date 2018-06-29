@@ -1,11 +1,11 @@
 const toggleGlobalNav = function (e) {
-  e.preventDefault()
-  document.querySelector('body').classList.toggle('js-openGlobalNav')
+    e.preventDefault()
+    document.querySelector('body').classList.toggle('js-openGlobalNav')
 }
 
 const toggleSiteNav = function (e) {
-  e.preventDefault()
-  document.querySelector('body').classList.toggle('js-openSiteNav')
+    e.preventDefault()
+    document.querySelector('body').classList.toggle('js-openSiteNav')
 }
 
 const globalNavBtn = document.querySelector('#js-globalNav-button')

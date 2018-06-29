@@ -32,7 +32,7 @@
     flex-wrap: wrap;
     list-style: none;
 
-    @mixin respond-min $medium {
+    @mixin respond-min $large {
       /* flex-wrap: nowrap; */
     }
 }
@@ -51,9 +51,19 @@
     width: 100%;
     min-width: 1px;
     margin-top: 0;
-}
 
-@mixin respond-min $medium  {
+    @mixin respond-min $medium {
+        max-width: 30em;
+        margin: 0 auto;
+    }
+
+    @mixin respond-min $large {
+        margin: 0;
+        max-width: 100%;
+    }
+}    
+
+@mixin respond-min $large  {
     .grid-cell {
         flex: 1;
     }

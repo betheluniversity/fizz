@@ -9,7 +9,7 @@
 
     &.hero {
 
-        @mixin respond-min 830px{
+        @mixin respond-min $large{
             max-height: calc(100vh - 55px);
             margin-top: -114px;
         }

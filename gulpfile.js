@@ -1,18 +1,16 @@
-var gulp 		= require('gulp'),
-  fs			= require('fs'),
-  assemble 	= require('assemble'),
-  webpack 	= require('webpack-stream')
-source 		= require('vinyl-source-stream'),
-browserSync	= require('browser-sync'),
-reload		= browserSync.reload,
-del 		= require('del'),
-// svgSprite   = require("gulp-svg-sprites");
-vinylPaths 	= require('vinyl-paths'),
-eslint		= require('gulp-eslint'),
-postcss 	= require('gulp-postcss'),
-cssnano = require('gulp-cssnano'), // minimize css
-// precss		= require('precss'),
-autoprefixer = require('autoprefixer')
+var gulp = require('gulp')
+var fs = require('fs')
+var assemble = require('assemble')
+var webpack = require('webpack-stream')
+var source = require('vinyl-source-stream')
+var browserSync = require('browser-sync')
+var reload = browserSync.reload
+var del = require('del')
+var vinylPaths = require('vinyl-paths')
+var eslint = require('gulp-eslint')
+var postcss = require('gulp-postcss')
+var cssnano = require('gulp-cssnano') // minimize css
+var autoprefixer = require('autoprefixer')
 
 var $ = require('gulp-load-plugins')()
 var outputDir = './builds/'
@@ -23,20 +21,25 @@ gulp.task('css', function () {
     require('postcss-mixins'),
     require('postcss-nested'),
     require('postcss-simple-vars'),
-    // precss({prefix:''}),
-    autoprefixer({browsers: ['last 2 versions']})
+    autoprefixer({
+      remove: false
+    })
   ]
   return gulp.src('src/css/*.css')
     .pipe(postcss(plugins))
     .pipe(gulp.dest(outputDir + '/css'))
-    .pipe(reload({stream: true}))
+    .pipe(reload({
+      stream: true
+    }))
 })
 
 gulp.task('js', function () {
   return gulp.src('./src/js/main.js')
     .pipe(webpack(require('./webpack.config.js')))
     .pipe(gulp.dest(outputDir + '/js/'))
-    .pipe(reload({stream: true}))
+    .pipe(reload({
+      stream: true
+    }))
 })
 
 // excluding Odometer because it has lots of issues
@@ -44,8 +47,12 @@ gulp.task('jslint', function () {
   return gulp.src(['src/js/*.js', '!src/js/vendor/odometer.min.js'])
     .pipe(eslint({
       extends: 'eslint:recommended',
-      ecmaFeatures: {'modules': true},
-      globals: {'$': true},
+      ecmaFeatures: {
+        'modules': true
+      },
+      globals: {
+        '$': true
+      },
       envs: ['browser']
     }))
     .pipe(eslint.formatEach('compact', process.stderr))
@@ -70,7 +77,9 @@ gulp.task('assemble', ['load'], function () {
       extname: '.html'
     }))
     .pipe(app.dest(outputDir + ''))
-    .pipe(reload({stream: true}))
+    .pipe(reload({
+      stream: true
+    }))
 })
 
 // ===========================
@@ -85,14 +94,16 @@ var config = {
 
 gulp.task('sprites', function () {
   return gulp.src('./src/assets/icon-sprite/*.svg')
-	    .pipe($.svgSprite(config))
-	    .pipe(gulp.dest(outputDir + '/assets/icon-sprite'))
+    .pipe($.svgSprite(config))
+    .pipe(gulp.dest(outputDir + '/assets/icon-sprite'))
 })
 
 gulp.task('copyfiles', function () {
   gulp.src('./src/assets/**')
     .pipe(gulp.dest(outputDir + '/assets'))
-    .pipe(reload({stream: true}))
+    .pipe(reload({
+      stream: true
+    }))
 })
 
 gulp.task('browser-sync', function () {

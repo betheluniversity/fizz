@@ -146,8 +146,8 @@
 
 .btn-outline {
   background: none;
-  border-radius: 0;
-  border: 2px solid $bethel--blue;
+  /* border-radius: 0; */
+  border: 1px solid $bethel--blue;
   color: $bethel--blue;
 }
 

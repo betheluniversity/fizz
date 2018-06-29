@@ -1,4 +1,9 @@
 {
+  "browserslist": [
+    "> 4%",
+    "last 2 versions",
+    "ie 11"
+  ],
   "devDependencies": {
     "assemble": "^0.24.3",
     "autoprefixer": "^8.1.0",
@@ -54,7 +59,7 @@
     "webpack-stream": "^4.0.2"
   },
   "name": "fizz",
-  "description": "fizz ==== Files for responsive site",
+  "description": "fizz === Files for responsive site",
   "version": "1.0.0",
   "main": "assemble.config.js",
   "dependencies": {

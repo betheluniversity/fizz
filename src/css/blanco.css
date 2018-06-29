@@ -38,13 +38,14 @@
 @import "modules/calendar.css";
 @import "modules/card.css";
 @import "modules/events.css";
+@import "modules/hero.css";
 @import "modules/maps.css";
 @import "modules/news.css";
 @import "modules/moving-picture.css";
 @import "modules/program-search.css";
 @import "modules/routing.css";
 @import "modules/section--apply.css";
-/* @import "modules/section--home.css"; */
+@import "modules/section--home.css";
 @import "modules/social-media.css";
 @import "modules/stickyNav.css";
 

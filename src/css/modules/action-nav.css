@@ -3,7 +3,7 @@
 	font-family: $gotham;
 	font-size: .9rem;
 
-	@mixin respond-min $medium {
+	@mixin respond-min $large {
 		display: flex;
 		position: fixed;
 		right:  0;

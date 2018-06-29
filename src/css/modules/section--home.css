@@ -1,3 +1,183 @@
+body {
+    color: #667;
+    font-family: $gotham;
+}
+
+.global__header {
+
+	@mixin respond-min $large {
+		background: rgba(0,0,0,.2);
+		z-index: 100
+	}
+}
+
+.global__toolbox {
+
+	@mixin respond-min $large {
+		z-index: 100;
+	}
+}
+
+.global__footer {
+    z-index: 100;
+    position: relative;
+}
+
+.inner {
+    max-width: 80em;
+    overflow: auto;
+}
+
+.body__holder {
+	background: #fff;
+	position: relative;
+	z-index:100;
+
+	@mixin respond-min $large {
+		margin-top: calc(100vw*.5625 - 150px);
+	}
+}
+
+.overFeat {
+	position: relative;
+	z-index: 1000;
+	background: #f1f1f1;
+}
+
+.overFeat .grid {
+	@mixin respond-min $large {
+		margin-bottom: -5em;
+	}
+}
+
+.overFeat .grid-cell {
+	position: relative;
+
+	@mixin respond-min $large {
+		transform: translateY(-5em);
+	}
+}
+
+.overFeat img {
+	border: .5em solid #fff;
+}
+
+.overFeat h3 {
+	position: absolute;
+	bottom: 1em;
+	left: 1.2em;
+	padding-right: 1em;
+	text-shadow: 1px 1px 1px #333;
+}
+
+// Use .grid-reverse to switch order on large screens
+
+.feature--left {
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.grid-cell.feature--left {
+	@mixin respond-min $large {
+        padding-left: 8vw;
+    }
+
+	@mixin respond-min $x-large {
+        // padding-left: 15vw;
+        // restricts width of column for large widths
+        max-width: 46em; 
+        // pushes left column to the center, and right column to right border
+        margin-left: auto; 
+    }
+}
+
+.feature--left + .grid-cell {
+    margin-right: 0;
+}
+
+.feature--right {
+    padding-right: 2em;
+    padding-left: 2em;
+}
+
+.feature--right {
+	@mixin respond-min $large {
+        padding-right: 8vw;
+    }
+
+	@mixin respond-min $x-large {
+        // padding-right: 15vw;
+        max-width: 40em;
+        padding-left: 4em;
+    }
+}
+
+.grid-cell + .feature--right {
+    margin-right: 0;
+}
+
+.attnHeader {
+    margin: 0 auto 4em;
+    padding-top: 4em;
+    position: relative;
+}
+
+.attnHeader {
+	@mixin respond-min $x-large {
+        padding-top: 8em;
+        margin-bottom: 6em;
+    }
+}
+
+.attnHeader h2 {
+    font-weight: 400;
+    margin: 0 auto;
+    padding: 0;
+    font-size: 2rem;
+    display: table;
+    
+}
+
+.attnHeader h2 {
+	@mixin respond-min $x-large {
+        font-size: 3rem;
+    }
+}
+
+.attnHeader h3 {
+    font-weight: 400;
+    font-size: 1.25rem;
+    margin: 1em auto 2em;
+    display: table;
+}
+
+.attnHeader::after {
+    content: "";
+    position: absolute;
+    width: 200px;
+    bottom: 0;
+    left: calc(50% - 100px);
+    border-bottom: 4px double #ffc600;
+}
+
+.proofPoint {
+    color: #667;
+    padding: 4em 1em 2em;
+    font-weight: 300;
+    font-size: 1.15rem;
+    border: 1px solid #0069aa;
+}
+
+.proofPoint__number {
+    font-size: 3.5rem;
+    font-weight: 200;
+    margin: 0 0 .25em;
+    color: #0069aa;
+}
+
+.proofPoint small {
+    font-size: 1rem;
+}
 
 .linkBlock {
 	list-style-type:none;
@@ -6,56 +186,16 @@
 }
 
 .linkBlock li a {
-	color: #fff;
-	background: rgba(0,0,0,.3);
 	display: block;
 	width: 100%;
 	padding: .5em 1em;
-	margin-bottom: 4px;
+    margin-bottom: 8px;
+    border: 1px solid $bethel--blue;
 }
 
-
-.section--home__academics {
-	/* background: url("https://cdn1.bethel.edu/resize/unsafe/1600x0/smart/https://www.bethel.edu/_homepages/www/images/chemistry-lab.jpg");*/
-	background-size: cover;
-	background-position: center;
-}
-
-.section--home__faith {
-	/* background: url("https://cdn1.bethel.edu/resize/unsafe/1600x0/smart/https://www.bethel.edu/_homepages/www/images/girl-laughing.jpg");*/
-	background-size: cover;
-	background-position: center;
-}
-
-.section--home__community {
-	/* background: url("https://cdn1.bethel.edu/resize/unsafe/1600x0/smart/https://www.bethel.edu/_homepages/www/images/group-laughing.jpg");*/
-	background-size: cover;
-	background-position: 20% !important;
-}
-
-.section--home__story {
-	/* background-color: #000;*/
-
-	.grid-cell {
-		margin: 0 auto !important;
-		/* text-align: center;*/
-	}
-
-	.rotate-text__holder {
-		color: $bethel--yellow;
-		font-weight: 400;
-		font-size: 1.5rem;
-	}
-
-	h3 {
-		font-weight: 400;
-		font-size: 1.35rem;
-		/* color: $bethel--yellow;*/
-	}
-}
-
-.section--home__online {
-	background: url("https://cdn1.bethel.edu/resize/unsafe/1600x0/smart/https://www.bethel.edu/_homepages/online/images/study-online.jpg");
-	background-size: cover;
-	background-position: right center;	
+.linkBlock li a:hover {
+    text-decoration: none;
+    background: $bethel--blue;
+    color: #fff;
+    transition: all .1s;
 }

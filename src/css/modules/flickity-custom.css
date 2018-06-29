@@ -6,7 +6,7 @@
 
 .flickity-viewport {
 
-    @mixin respond-min 830px {
+    @mixin respond-min $large {
         max-height: 75vh;
     }
 }
@@ -67,7 +67,7 @@
     height: 100%;
     display: block;
 
-    @mixin respond-min 830px {
+    @mixin respond-min $large {
         max-height: 75vh;
     }
 }
@@ -75,7 +75,7 @@
 .carousel--text-over-media .ratio-box{
     padding-bottom: 50%;
 
-    @mixin respond-min 830px {
+    @mixin respond-min $large {
         padding-bottom: 56.25%;
     }
 }
@@ -108,7 +108,7 @@ Styles for the big carousel on bethel.edu
     height: 415px;
     /* max-height: 80vh;*/
 
-    @mixin respond-min 830px {
+    @mixin respond-min $large {
         height: 100%;
     }
 
@@ -145,14 +145,14 @@ Styles for the big carousel on bethel.edu
 .flickity-prev-next-button.previous { 
     left: 0em; 
 
-    @mixin respond-min 830px {
+    @mixin respond-min $large {
         left: 1em;
     }
 }
 .flickity-prev-next-button.next { 
     right: 0em; 
 
-    @mixin respond-min 830px {
+    @mixin respond-min $large {
         right: 1em;
     }
 }

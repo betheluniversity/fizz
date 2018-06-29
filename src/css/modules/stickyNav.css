@@ -8,7 +8,7 @@
 	justify-content: space-around;
 	/* font-family: $gotham; */
 
-	@mixin respond-min 830px {
+	@mixin respond-min $large {
 		/* font-size: 1.2rem; */
 		/* margin-top: -86px; */
 	}
