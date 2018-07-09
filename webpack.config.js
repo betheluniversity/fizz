@@ -13,7 +13,7 @@ module.exports = {
 		loaders: [
 		  {
   			test: /(flickity|fizzy-ui-utils|get-size|unipointer)/,
-  	        loader: 'imports?define=>false&this=>window'
+  	        loader: 'imports-loader?define=>false&this=>window'
 		  }
 		]
 	},
