@@ -9,7 +9,7 @@ var del = require('del')
 var vinylPaths = require('vinyl-paths')
 var eslint = require('gulp-eslint')
 var postcss = require('gulp-postcss')
-var cssnano = require('gulp-cssnano') // minimize css
+var cssnano = require('gulp-cssnano')
 var autoprefixer = require('autoprefixer')
 
 var $ = require('gulp-load-plugins')()
@@ -23,7 +23,8 @@ gulp.task('css', function () {
     require('postcss-simple-vars'),
     autoprefixer({
       remove: false
-    })
+    }),
+    require('cssnano')
   ]
   return gulp.src('src/css/*.css')
     .pipe(postcss(plugins))

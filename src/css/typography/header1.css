@@ -1,0 +1,43 @@
+.header1 {
+    margin: 0 auto 4em;
+    padding-top: 4em;
+    position: relative;
+}
+
+.header1 {
+	@mixin respond-min $x-large {
+        padding-top: 8em;
+        margin-bottom: 6em;
+    }
+}
+
+.header1 h2 {
+    font-weight: 400;
+    margin: 0 auto;
+    padding: 0;
+    font-size: 2rem;
+    display: table;
+    
+}
+
+.header1 h2 {
+	@mixin respond-min $x-large {
+        font-size: 3rem;
+    }
+}
+
+.header1 h3 {
+    font-weight: 400;
+    font-size: 1.25rem;
+    margin: 1em auto 2em;
+    display: table;
+}
+
+.header1::after {
+    content: "";
+    position: absolute;
+    width: 200px;
+    bottom: 0;
+    left: calc(50% - 100px);
+    border-bottom: 4px double #ffc600;
+}

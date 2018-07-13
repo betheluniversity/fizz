@@ -14,9 +14,11 @@
 
 @import "typography/typography.css";
 @import "typography/dl.css";
+@import "typography/header1.css";
 
 @import "grid/flex-grid.css";
 @import "grid/layout.css";
+@import "grid/sectionFeature.css";
 
 @import "global/header.css";
 @import "global/off-canvas--global.css";

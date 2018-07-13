@@ -1,0 +1,78 @@
+
+.sectionFeature--imgLeft > .grid-cell:nth-child(1) {
+    margin-bottom: 2em;
+    
+    @mixin respond-min $large {
+        margin-left: 0;
+    }
+
+    @mixin respond-min $large {
+        flex: 1 0 50%;
+    }
+
+    @mixin respond-min $x-large {
+        flex: 0 0 50%;   
+    }
+}
+
+.sectionFeature--imgLeft > .grid-cell:nth-child(2) {
+    padding-right: 2em;
+    padding-left: 2em;
+    
+    @mixin respond-min $large {
+        margin-right: 0;
+        padding-left: 3em;
+        flex: 1 0 50%;
+        max-width: 30em;
+    }
+
+    @mixin respond-min $x-large {
+        padding-left: 4em;
+    }
+}
+
+
+.sectionFeature--imgRight {
+    flex-direction: row-reverse;
+}
+
+.sectionFeature--imgRight > .grid-cell:nth-child(1) {
+    margin-bottom: 2em;
+
+    @mixin respond-min $large {
+        flex: 1 0 50%;
+    }
+
+    @mixin respond-min $x-large {
+        flex: 0 0 50%;   
+    }
+}
+
+.sectionFeature--imgRight > .grid-cell:nth-child(2) {
+    padding-right: 2em;
+    padding-left: 2em;
+
+    @mixin respond-min $large {
+        padding-right: 3em;
+        flex: 1 0 50%;
+        max-width: 30em;
+    }
+
+    @mixin respond-min $x-large {
+        padding-right: 4em;
+    }
+}
+
+.grid-cell.sectionFeature > .grid-cell:nth-child(1) {
+
+    @mixin respond-min $medium {
+        margin-left: 0;
+    }
+}
+
+.grid-cell.sectionFeature > .grid-cell:nth-child(2) {
+    
+    @mixin respond-min $medium {
+        margin-right: 0;
+    }
+}
