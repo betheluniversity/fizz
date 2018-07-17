@@ -1,3 +1,5 @@
+import objectFitImages from 'object-fit-images'
+
 require("./off-canvas.js");
 var Flickity = require("flickity");
 // var skrollr = require("./skrollr.min.js");
@@ -155,3 +157,9 @@ function addEvent(obj, type, fn) {
     obj.attachEvent("on" + type, obj[type + fn]);
   }
 }
+
+// Object fit for sectionSplit
+const splitImgRight = document.querySelectorAll(".sectionSplit--imgRight img")
+const splitImgLeft = document.querySelectorAll(".sectionSplit--imgLeft img")
+objectFitImages(splitImgRight)
+objectFitImages(splitImgLeft)
