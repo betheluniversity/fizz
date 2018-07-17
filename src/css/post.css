@@ -19,6 +19,7 @@
 @import "grid/flex-grid.css";
 @import "grid/layout.css";
 @import "grid/sectionFeature.css";
+@import "grid/sectionSplit.css";
 
 @import "global/header.css";
 @import "global/off-canvas--global.css";
