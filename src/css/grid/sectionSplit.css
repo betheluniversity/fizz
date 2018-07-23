@@ -1,0 +1,44 @@
+.sectionSplit--imgLeft {
+    height: 100%;
+} 
+
+.sectionSplit--imgRight {
+    height: 100%;
+    flex-direction: row-reverse;
+}
+
+.sectionSplit--imgLeft > .grid-cell:nth-child(1),
+.sectionSplit--imgRight > .grid-cell:nth-child(1){
+    min-height: 25em;
+ 
+    @mixin respond-min $medium {
+        min-height: auto;
+    }
+}
+
+/* Cascade flex layout automatically puts in a 'grid-pad' class
+This is to ensure the height of the pad is 100% and the object-fit works */
+
+.sectionSplit--imgRight div[class*="pad"],
+.sectionSplit--imgLeft div[class*="pad"] {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sectionSplit--imgLeft > .grid-cell:nth-child(1) img,
+.sectionSplit--imgRight > .grid-cell:nth-child(1) img{
+    object-fit: cover;
+    font-family: 'object-fit: cover;';
+    height: 100%;
+}
+
+.sectionSplit--imgLeft > .grid-cell:nth-child(2),
+.sectionSplit--imgRight > .grid-cell:nth-child(2) {
+    min-width: 300px; 
+    max-width: 500px; 
+    margin: 0 auto;
+    padding: 4em 2em;
+
+}
