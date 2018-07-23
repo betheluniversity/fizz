@@ -46,6 +46,8 @@ a,t,r,b,l,h,v = all,top,right,bottom,left,horizontal,vertical
 .pl5, .ph5, .pa5 {padding-left: 5em !important; }
 .pl6, .ph6, .pa6 {padding-left: 6em !important; }
 .mhA {margin-left: auto !important; margin-right: auto !important;}
+.mlA {margin-left: auto !important;}
+.mrA {margin-right: auto !important;}
 .mt0, .mv0, .ma0 {margin-top: 0 !important; }
 .mt1, .mv1, .ma1 {margin-top: 1em !important; }
 .mt2, .mv2, .ma2 {margin-top: 2em !important; }

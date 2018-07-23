@@ -1,35 +1,21 @@
-/*
-
-Module to style items in an event feed
-
-*/
-
 .events__item {
 	margin: 0 0 2em;
 	display: flex;
 	align-items: flex-start;
-}
-
-/* .events__content {
 	padding-left: 1em;
-} */
+} 
 
 .events__headline {
 	font-weight: 500;
 	font-family: $gotham;
 	margin-bottom: 0;
-	/* font-size: 120%; */
 }
 
 .events__location {
-	/* margin-bottom: 0; */
-	/* font-family: $gotham; */
-	/* color: #999; */
 	color: rgba(0, 105, 170, 0.6);
 	margin: 0;
 	font-style: italic;
 	display: None;
-	/* font-size: 90%; */
 }
 
 .events__description {
@@ -39,18 +25,12 @@ Module to style items in an event feed
 
 .events__date-tile {
 	font-family: $gotham;
-	/* background: #fff; */
 	display: flex;
-	min-width: 140px;
+	min-width: 4em;
 	flex-direction: column;
-	margin-right: 1em;
-	/* flex-basis: 5em; */
-	/* flex-shrink: 0; */
-	text-align: center;
-	/* padding: .8em 1em; */
-	/* border: 1px solid #ccc; */
-	/* border-radius: .3em; */
+	margin-right: 3em;
 	font-size: .889em;
+	text-align: center;
 }
 
 .events__date-tile span {

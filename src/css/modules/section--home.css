@@ -34,7 +34,7 @@ body {
 	z-index:100;
 
 	@mixin respond-min $large {
-		margin-top: calc(100vw*.5625 - 150px);
+		/* margin-top: calc(100vw*.5625 - 150px); */
 	}
 }
 
@@ -68,96 +68,6 @@ body {
 	left: 1.2em;
 	padding-right: 1em;
 	text-shadow: 1px 1px 1px #333;
-}
-
-// Use .grid-reverse to switch order on large screens
-
-.feature--left {
-    padding-left: 2em;
-    padding-right: 2em;
-}
-
-.grid-cell.feature--left {
-	@mixin respond-min $large {
-        padding-left: 8vw;
-    }
-
-	@mixin respond-min $x-large {
-        // padding-left: 15vw;
-        // restricts width of column for large widths
-        max-width: 46em; 
-        // pushes left column to the center, and right column to right border
-        margin-left: auto; 
-    }
-}
-
-.feature--left + .grid-cell {
-    margin-right: 0;
-}
-
-.feature--right {
-    padding-right: 2em;
-    padding-left: 2em;
-}
-
-.feature--right {
-	@mixin respond-min $large {
-        padding-right: 8vw;
-    }
-
-	@mixin respond-min $x-large {
-        // padding-right: 15vw;
-        max-width: 40em;
-        padding-left: 4em;
-    }
-}
-
-.grid-cell + .feature--right {
-    margin-right: 0;
-}
-
-.attnHeader {
-    margin: 0 auto 4em;
-    padding-top: 4em;
-    position: relative;
-}
-
-.attnHeader {
-	@mixin respond-min $x-large {
-        padding-top: 8em;
-        margin-bottom: 6em;
-    }
-}
-
-.attnHeader h2 {
-    font-weight: 400;
-    margin: 0 auto;
-    padding: 0;
-    font-size: 2rem;
-    display: table;
-    
-}
-
-.attnHeader h2 {
-	@mixin respond-min $x-large {
-        font-size: 3rem;
-    }
-}
-
-.attnHeader h3 {
-    font-weight: 400;
-    font-size: 1.25rem;
-    margin: 1em auto 2em;
-    display: table;
-}
-
-.attnHeader::after {
-    content: "";
-    position: absolute;
-    width: 200px;
-    bottom: 0;
-    left: calc(50% - 100px);
-    border-bottom: 4px double #ffc600;
 }
 
 .proofPoint {

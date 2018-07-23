@@ -146,14 +146,23 @@
 
 .btn-outline {
   background: none;
-  /* border-radius: 0; */
   border: 1px solid $bethel--blue;
   color: $bethel--blue;
+  display: inline-block;/* [1] */
+  vertical-align: middle;/* [2] */
+  white-space: nowrap;/* [3] */
+  font-family: $gotham;
+  font-size: 100%;/* [4] */
+  cursor: pointer;/* [5] */
+  margin: 0;/* [6] */
+  padding: 0 1em;
+  line-height: 3;/* [7] */
 }
 
 .btn-outline:hover {
   background: $bethel--blue;
   color: #fff;
+  text-decoration: none;
 }
 
 /*------------------------------------*\

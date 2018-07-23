@@ -8,16 +8,16 @@
 
 /* ====================================*/
 
-/*section*/.grid-section {
+.grid-section {
   margin-top: 2em;
 }
 
 /* Removing top margin and padding from first child*/
-/*section*/.grid-section:first-child {
+.grid-section:first-child {
     margin-top: 0;
 }
 
-/*section*/.grid-section:first-child [class*="pad"] {
+.grid-section:first-child [class*="pad"] {
     padding-top: 0;
 }
 
@@ -52,16 +52,12 @@
     min-width: 1px;
     margin-top: 0;
 
-    @mixin respond-min $medium {
-        max-width: 30em;
-        margin: 0 auto;
-    }
-
+    
     @mixin respond-min $large {
         margin: 0;
         max-width: 100%;
     }
-}    
+}   
 
 @mixin respond-min $large  {
     .grid-cell {
