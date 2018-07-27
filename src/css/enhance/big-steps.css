@@ -17,7 +17,7 @@
 
 	> li:before {
 		border-radius:2em;
-		background: color($bethel--blue lightness(70%));
+		background: $bethel--blue;
 		content: counter(li);
 		counter-increment: li;
 		position: absolute;

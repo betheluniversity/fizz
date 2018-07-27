@@ -10,6 +10,12 @@ require("svg4everybody");
 require("./bu_animate.js");
 require("./action-nav.js");
 
+// Object fit for sectionSplit
+const splitImgRight = document.querySelectorAll(".sectionSplit--imgRight img")
+const splitImgLeft = document.querySelectorAll(".sectionSplit--imgLeft img")
+objectFitImages(splitImgRight)
+objectFitImages(splitImgLeft)
+
 // Select a random image from the carousel to appear first
 
 if( document.getElementsByClassName('js-rotate-order-carousel')[0] ){
@@ -51,7 +57,7 @@ if( document.getElementsByClassName('js-rotate-order-carousel')[0] ){
 
 // Flickity customizations
 
-var carousels = document.getElementsByClassName('flickity');
+var carousels = document.querySelectorAll('flickity');
 
 if (carousels.length != 0){
     for (var i = 0, len = carousels.length; i < len; i++) {
@@ -62,7 +68,7 @@ if (carousels.length != 0){
     // set the proper target
 
         if (carousel.classList.contains("js-rotate-order-carousel")){
-            local_initial_load = initial_load;
+            var local_initial_load = initial_load
         }
         else {
             local_initial_load = 0;
@@ -157,9 +163,3 @@ function addEvent(obj, type, fn) {
     obj.attachEvent("on" + type, obj[type + fn]);
   }
 }
-
-// Object fit for sectionSplit
-const splitImgRight = document.querySelectorAll(".sectionSplit--imgRight img")
-const splitImgLeft = document.querySelectorAll(".sectionSplit--imgLeft img")
-objectFitImages(splitImgRight)
-objectFitImages(splitImgLeft)

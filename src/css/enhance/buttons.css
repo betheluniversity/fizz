@@ -40,7 +40,7 @@
  * 8. Basic cosmetics for default buttons. Change or override at will.
  * 9. Don’t allow buttons to have underlines; it kinda ruins the illusion.
  */
-.btn {
+ .btn {
   display: inline-block;/* [1] */
   vertical-align: middle;/* [2] */
   white-space: nowrap;/* [3] */
@@ -142,6 +142,27 @@
 .btn-yellow {
   background: $bethel--yellow;
   color: $bethel--navy;
+}
+
+.btn-outline {
+  background: none;
+  border: 1px solid $bethel--blue;
+  color: $bethel--blue;
+  display: inline-block;/* [1] */
+  vertical-align: middle;/* [2] */
+  white-space: nowrap;/* [3] */
+  font-family: $gotham;
+  font-size: 100%;/* [4] */
+  cursor: pointer;/* [5] */
+  margin: 0;/* [6] */
+  padding: 0 1em;
+  line-height: 3;/* [7] */
+}
+
+.btn-outline:hover {
+  background: $bethel--blue;
+  color: #fff;
+  text-decoration: none;
 }
 
 /*------------------------------------*\

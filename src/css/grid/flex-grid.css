@@ -81,9 +81,9 @@
 
 /* These rules remove the top margin of heading when it is the first in*/
 /* a grid-cell to make content top-aligned*/
-.grid-cell h2:first-of-type,
-.grid-cell h3:first-of-type,
-.grid-cell h4:first-of-type {
+.grid-cell h2:first-child,
+.grid-cell h3:first-child,
+.grid-cell h4:first-child {
   margin-top: 0;
 }
 

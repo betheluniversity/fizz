@@ -1,0 +1,19 @@
+.grid-cell.outlineBox {
+    border: 1px solid #bbb;
+    margin-bottom: 1em;
+    
+    @mixin respond-min $medium {
+        margin-left: 0em;
+        margin-right: 1em;
+    }
+}
+
+.grid-cell.outlineBox:last-child{
+    @mixin respond-min $medium {
+        margin-right: 0em;
+    }
+}
+
+.outlineBox div[class*='pad'] > :last-child {
+    margin-bottom: 0;
+}
