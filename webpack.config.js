@@ -1,27 +1,14 @@
-var webpack = require("webpack");
-// require("scrollreveal");
-
 module.exports = {
-	entry: './src/js/main.js',
-	output: {
-		filename: 'webpack.js'
-	},
-	module: {
-		noParse: [
-			/.\/src\/js\/odometer.min.js/
-		],
-		loaders: [
-		  {
-  			test: /(flickity|fizzy-ui-utils|get-size|unipointer)/,
-  	        loader: 'imports-loader?define=>false&this=>window'
-		  }
-		]
-	},
-	plugins: [
-		new webpack.optimize.UglifyJsPlugin({ output: {comments:false}}),
-		new webpack.ProvidePlugin({
-		    ScrollReveal: "scrollreveal"
-		})
-
-	]
+    entry: './src/js/main.js',
+    output: {
+        filename: 'blanco.js'
+    },
+    module: {
+        rules: [
+            {
+                test: /\.js$/,
+                exclude: /node_modules/
+            }
+        ]
+    }
 }

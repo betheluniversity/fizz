@@ -37,11 +37,15 @@
 @import "page/page__title.css";
 @import "page/page--home.css";
 
+@import "modules/action-nav.css";
+@import "modules/big-list.css";
+@import "modules/calendar.css";
+@import "modules/events.css";
+@import "modules/flickity.css";
+@import "modules/flickity-custom.css";
 @import "modules/section--apply.css";
 @import "modules/maps.css";
-@import "modules/calendar.css";
 @import "modules/news.css";
-@import "modules/events.css";
 @import "modules/moving-picture.css";
 @import "modules/outlineBox.css";
 @import "modules/program-search.css";
@@ -49,13 +53,9 @@
 @import "modules/routing.css";
 @import "modules/section--home.css";
 @import "modules/social-media.css";
-@import "modules/action-nav.css";
-@import "modules/big-list.css";
 
 @import "enhance/carousel.css";
 
-@import "modules/flickity.css";
-@import "modules/flickity-custom.css";
 
 @import "enhance/search.css";
 @import "enhance/accordion.css";

@@ -1,41 +1,45 @@
-<div class="js-rotate-order-carousel">
+<div class="flickity  js-rotate-order-carousel  carousel--text-over-media">
 
 {{#each movingPic}}
     {{#if show}}
 
-    <div class="moving-picture no-gradient">
-        <div class="moving-picture__media">
-            <div id="vid-wrap"></div>
-            <script type="text/javascript">
-                // if (window.matchMedia("(min-width: 1100px)").matches) {
-                //     var vidStr = '<video preload="auto" autoplay="autoplay" muted="true" loop="true" style="min-width: 100%" id="vid">';
-                //     vidStr += '<source src="https://www.bethel.edu/cdn/videos/pathways-in-healthcare.mp4" type="video/mp4" />';
-                //     vidStr += '<img src="https://cdn3.bethel.edu/resize/unsafe/800x0/smart/https://www.bethel.edu/_homepages/www/images/feature/welcome-week-2016-2x1.jpg" />';
-                //     vidStr += '</video>';
-                //     document.getElementById('vid-wrap').innerHTML = vidStr;
-                //     document.getElementById('vid').play();
-                // }
-            </script>
-            <picture>
-                <!--[if IE 9]><video style="display: none"><![endif]-->
-                <source srcset="{{ this.bigImg }}" media="(min-width: 830px)" />
-                <source srcset="{{ this.mobileImg }}" />
-                <!--[if IE 9]></video><![endif]-->
-                <img
-                        {{!-- class="lazyload" --}}
-                        alt="image with artdirection"
-                        data-sizes="auto"
-                />
-            </picture>
-        </div>
+    <div class="flickity--cell">
+        <div class="ratio-box">
+            <div class="moving-picture no-gradient">
+                <div class="moving-picture__media">
+                    <div id="vid-wrap"></div>
+                    <script type="text/javascript">
+                        // if (window.matchMedia("(min-width: 1100px)").matches) {
+                        //     var vidStr = '<video preload="auto" autoplay="autoplay" muted="true" loop="true" style="min-width: 100%" id="vid">';
+                        //     vidStr += '<source src="https://www.bethel.edu/cdn/videos/pathways-in-healthcare.mp4" type="video/mp4" />';
+                        //     vidStr += '<img src="https://cdn3.bethel.edu/resize/unsafe/800x0/smart/https://www.bethel.edu/_homepages/www/images/feature/welcome-week-2016-2x1.jpg" />';
+                        //     vidStr += '</video>';
+                        //     document.getElementById('vid-wrap').innerHTML = vidStr;
+                        //     document.getElementById('vid').play();
+                        // }
+                    </script>
+                    <picture>
+                        <!--[if IE 9]><video style="display: none"><![endif]-->
+                        <source srcset="{{ this.bigImg }}" media="(min-width: 830px)" />
+                        <source srcset="{{ this.mobileImg }}" />
+                        <!--[if IE 9]></video><![endif]-->
+                        <img
+                                class="lazyload"
+                                alt="image with artdirection"
+                                data-sizes="auto"
+                        />
+                    </picture>
+                </div>
 
-        <div class="moving-picture__overlay  js-animateSequence">
-            <h2 class="moving-picture__overlay__headline seq">{{  this.headline }}</h2>
-            <p class="moving-picture__overlay__teaser seq">{{  this.teaser }}</p> 
-            <p class="seq"><a class="moving-picture__overlay__button " href="admissions/index.php">{{ this.button }}</a></p>
+                <div class="moving-picture__overlay  js-animateSequence">
+                    <h2 class="moving-picture__overlay__headline seq">{{  this.headline }}</h2>
+                    <p class="moving-picture__overlay__teaser seq">{{  this.teaser }}</p> 
+                    <p class="seq"><a class="moving-picture__overlay__button " href="admissions/index.php">{{ this.button }}</a></p>
+                </div>
+            </div>
         </div>
     </div>
-
+    
     {{/if}}
 {{/each}}
 

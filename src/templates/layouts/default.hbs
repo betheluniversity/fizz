@@ -4,47 +4,58 @@
 {{> head }}
 
 <body class="no-js" id="top">
-	<script type="text/javascript">document.body.className = document.body.className.replace("no-js","js");</script>
+<script type="text/javascript">document.body.className = document.body.className.replace("no-js","js");</script>
 
 	{{> global--school}}
+
 	<div class="inner-wrap--global__navigation" id="js-inner-wrap--global__navigation">
+
 		{{> global__header }}
-		{{> school__navigation }}
-		{{> page__banner }}
-		
-		<div class="inner--content">
-			<div class="inner-wrap--site__navigation">
-				{{!-- {{> page__title }} --}}
-				{{> site__navigation }}
+
+		{{!-- {{> school__navigation }} --}}
+
+		{{!-- {{> section--apply }} --}}
+
+		    	{{!-- {{> site__navigation }} --}}
+
+
+		        {{!-- {{> page__title }} --}}
+
 				{% body %}
-			</div>
-		</div>
+
+				{{!-- {{> section--home__academics }} --}}
 
 		{{> global__footer }}
+
 	</div>
 
-	<script>
-		function loadJS(u) {var r = document.getElementsByTagName("script")[0], s = document.createElement("script"); s.src = u; r.parentNode.insertBefore(s, r); }
-		if (!window.HTMLPictureElement) {
-			document.createElement('picture');
-			window.picturefillCFG = window.picturefillCFG || [];
-			picturefillCFG.push(["algorithm", "saveData"]);
-			loadJS("https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.1/picturefill.min.js");
-		};
 
-		var cb = function() {
-			var l = document.createElement('link'); l.rel = 'stylesheet';
-			l.href = 'https://cloud.typography.com/6664852/692222/css/fonts.css';
-			var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
-		};
-		var raf = requestAnimationFrame || mozRequestAnimationFrame ||
-		webkitRequestAnimationFrame || msRequestAnimationFrame;
-		if (raf) raf(cb);
-		else window.addEventListener('load', cb);
+<script>
+    function loadJS(u) {var r = document.getElementsByTagName("script")[0], s = document.createElement("script"); s.src = u; r.parentNode.insertBefore(s, r); }
+    
+	loadJS("js/blanco.js");
 
-		// loadJS("https://www.bethel.edu/cdn/js/webpack.js");
-		loadJS("js/webpack.js");
-	</script>
+    if (!window.HTMLPictureElement) {
+        document.createElement('picture');
+        window.picturefillCFG = window.picturefillCFG || [];
+        picturefillCFG.push(["algorithm", "saveData"]);
+        loadJS("https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.1/picturefill.min.js");
+    };
+
+	var cb = function() {
+		var l = document.createElement('link'); l.rel = 'stylesheet';
+		l.href = '//cloud.typography.com/6664852/665108/css/fonts.css';
+		var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
+	};
+	var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+	webkitRequestAnimationFrame || msRequestAnimationFrame;
+	if (raf) raf(cb);
+	else window.addEventListener('load', cb);
+
+</script>
+<script id="__bs_script__">//<![CDATA[
+    document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.24.6'><\/script>".replace("HOST", location.hostname));
+//]]></script>
 
 </body>
 </html>

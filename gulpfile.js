@@ -1,135 +1,136 @@
-var gulp = require('gulp')
-var fs = require('fs')
+const { src, dest, series, parallel, watch } = require('gulp')
 var assemble = require('assemble')
 var webpack = require('webpack-stream')
-var source = require('vinyl-source-stream')
 var browserSync = require('browser-sync')
 var reload = browserSync.reload
 var del = require('del')
 var vinylPaths = require('vinyl-paths')
-var eslint = require('gulp-eslint')
 var postcss = require('gulp-postcss')
-var cssnano = require('gulp-cssnano')
 var autoprefixer = require('autoprefixer')
+var babel = require('gulp-babel')
 
 var $ = require('gulp-load-plugins')()
 var outputDir = './builds/'
 
-gulp.task('css', function () {
-  var plugins = [
-    require('postcss-easy-import'),
-    require('postcss-mixins'),
-    require('postcss-nested'),
-    require('postcss-simple-vars'),
-    autoprefixer({
-      remove: false
-    }),
-    require('cssnano')
-  ]
-  return gulp.src('src/css/*.css')
-    .pipe(postcss(plugins))
-    .pipe(gulp.dest(outputDir + '/css'))
-    .pipe(reload({
-      stream: true
-    }))
-})
+function css () {
+    var plugins = [
+        require('postcss-easy-import'),
+        require('postcss-mixins'),
+        require('postcss-nested'),
+        require('postcss-simple-vars'),
+        autoprefixer({
+            remove: false
+        }),
+        require('cssnano')
+    ]
+    return src('src/css/*.css')
+        .pipe(postcss(plugins))
+        .pipe(dest(outputDir + '/css'))
+        .pipe(reload({
+            stream: true
+        }))
+}
 
-gulp.task('js', function () {
-  return gulp.src('./src/js/main.js')
-    .pipe(webpack(require('./webpack.config.js')))
-    .pipe(gulp.dest(outputDir + '/js/'))
-    .pipe(reload({
-      stream: true
-    }))
-})
+exports.css = css
 
-// excluding Odometer because it has lots of issues
-gulp.task('jslint', function () {
-  return gulp.src(['src/js/*.js', '!src/js/vendor/odometer.min.js'])
-    .pipe(eslint({
-      extends: 'eslint:recommended',
-      ecmaFeatures: {
-        'modules': true
-      },
-      globals: {
-        '$': true
-      },
-      envs: ['browser']
-    }))
-    .pipe(eslint.formatEach('compact', process.stderr))
-})
+function js () {
+    return src('./src/js/main.js')
+        .pipe(webpack(require('./webpack.config.js')))
+        .pipe(babel())
+        .pipe(dest(outputDir + '/js/'))
+        .pipe(reload({
+            stream: true
+        }))
+}
 
-// ==========================
+exports.js = js
 
 var app = assemble()
 
-gulp.task('load', function (cb) {
-  app.partials('src/templates/partials/*.hbs')
-  app.layouts('src/templates/layouts/*.hbs')
-  app.pages('src/templates/pages/*.hbs')
-  app.data('src/templates/data/*json')
-  cb()
-})
-
-gulp.task('assemble', ['load'], function () {
-  return app.toStream('pages')
-    .pipe(app.renderFile())
-    .pipe($.rename({
-      extname: '.html'
-    }))
-    .pipe(app.dest(outputDir + ''))
-    .pipe(reload({
-      stream: true
-    }))
-})
-
-// ===========================
-
-// http://css-tricks.com/svg-symbol-good-choice-icons
-// https://github.com/jkphl/svg-sprite
-var config = {
-  'mode': {
-    'symbol': true
-  }
+function loadTemps (cb) {
+    app.partials('src/templates/partials/*.hbs')
+    app.layouts('src/templates/layouts/*.hbs')
+    app.pages('src/templates/pages/*.hbs')
+    app.data('src/templates/data/*json')
+    cb()
 }
 
-gulp.task('sprites', function () {
-  return gulp.src('./src/assets/icon-sprite/*.svg')
-    .pipe($.svgSprite(config))
-    .pipe(gulp.dest(outputDir + '/assets/icon-sprite'))
-})
+function buildTemps () {
+// gulp.task('assemble', ['load'], function () {
+    return app.toStream('pages')
+        .pipe(app.renderFile())
+        .pipe($.rename({
+            extname: '.html'
+        }))
+        .pipe(app.dest(outputDir + ''))
+        .pipe(reload({
+            stream: true
+        }))
+}
 
-gulp.task('copyfiles', function () {
-  gulp.src('./src/assets/**')
-    .pipe(gulp.dest(outputDir + '/assets'))
-    .pipe(reload({
-      stream: true
-    }))
-})
+// // ===========================
 
-gulp.task('browser-sync', function () {
-  browserSync({
-    // tunnel: true,
-    server: {
-      baseDir: outputDir
-    },
-    browser: 'Google Chrome'
-  })
-})
+// // http://css-tricks.com/svg-symbol-good-choice-icons
+// // https://github.com/jkphl/svg-sprite
+// var config = {
+//     'mode': {
+//         'symbol': true
+//     }
+// }
 
-gulp.task('clean', function () {
-  return gulp.src(outputDir + '/*')
-    .pipe(gulp.dest(outputDir))
-    .pipe(vinylPaths(del))
-})
+// gulp.task('sprites', function () {
+//     return src('./src/assets/icon-sprite/*.svg')
+//         .pipe($.svgSprite(config))
+//         .pipe(dest(outputDir + '/assets/icon-sprite'))
+// })
 
-gulp.task('build', ['js', 'css', 'copyfiles', 'assemble'])
+function copyfiles () {
+    src('./src/assets/**')
+        .pipe(dest(outputDir + '/assets'))
+}
 
-gulp.task('serve', ['js', 'css', 'copyfiles', 'assemble', 'browser-sync'], function () {
-  gulp.watch('./src/css/**/*.css', ['css'])
-  gulp.watch('./src/templates/**/*.hbs', ['assemble'])
-  gulp.watch('./src/templates/**/*.json', ['assemble'])
-  gulp.watch('./src/assets/icon-sprite/*.svg', ['sprites'])
-  gulp.watch('./src/assets/filters/*.svg', ['copyfiles'])
-  gulp.watch('./src/js/*.js', ['js'])
-})
+function browser () {
+    browserSync({
+        server: {
+            baseDir: outputDir
+        },
+        browser: 'Google Chrome'
+    })
+}
+
+function clean () {
+    return src(outputDir + '/*')
+        .pipe(dest(outputDir))
+        .pipe(vinylPaths(del))
+}
+exports.clean = clean
+
+// exports.build = series(
+//     clean,
+//     parallel(
+//         js,
+//         css
+//         // copyfiles
+//         // assemble
+//     ))
+
+watch('src/*.css', css)
+watch('./src/css/**/*.css', css)
+watch('./src/templates/**/*.hbs', series(loadTemps, buildTemps))
+watch('./src/templates/**/*.json', series(loadTemps, buildTemps))
+// watch('./src/assets/icon-sprite/*.svg', sprites)
+// watch('./src/assets/filters/*.svg', copyfiles)
+watch('./src/js/*.js', js)
+
+exports.serve = series(
+    clean,
+    parallel(
+        js,
+        css
+    ),
+    series(
+        loadTemps,
+        buildTemps
+    ),
+    browser
+)
