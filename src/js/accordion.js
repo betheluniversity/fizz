@@ -38,16 +38,14 @@ function nextByClass (node, cls) {
 }
 
 const collapsibleBlock = function (e) {
-    e.preventDefault()
-    // var subList = this.('.collapsible-block');
-    this.classList.toggle('open-block')
-    var next = nextByClass(this, 'collapsible-block')
-    next.classList.toggle('open-block')
-};
+    e.target.classList.toggle('open-block')
+    let parent = e.srcElement.parentNode
+    parent.classList.toggle('open-block')
+    parent.querySelector('.collapsible-block').classList.toggle('open-block')
+}
 
-[].forEach.call(document.querySelectorAll('.collapsible-heading'), function (el) {
-    el.addEventListener('click', collapsibleBlock)
-})
+const collapsibleBlocks = Array.from(document.querySelectorAll('.collapsible-heading'))
+collapsibleBlocks.forEach(key => key.addEventListener('click', collapsibleBlock))
 
 const showFilters = function (e) {
     e.preventDefault()

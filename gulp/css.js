@@ -1,8 +1,7 @@
+const { outputDir, reload } = require('../gulpfile')
 const { src, dest } = require('gulp')
-var postcss = require('gulp-postcss')
-var autoprefixer = require('autoprefixer')
-const { require, outputDir, reload } = require('./gulpfile')
-
+const postcss = require('gulp-postcss')
+const autoprefixer = require('autoprefixer')
 function css () {
     var plugins = [
         require('postcss-easy-import'),
