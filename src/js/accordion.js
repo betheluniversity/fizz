@@ -39,7 +39,7 @@ function nextByClass (node, cls) {
 
 const collapsibleBlock = function (e) {
     e.target.classList.toggle('open-block')
-    let parent = e.srcElement.parentNode
+    let parent = e.target.parentNode
     parent.classList.toggle('open-block')
     parent.querySelector('.collapsible-block').classList.toggle('open-block')
 }
