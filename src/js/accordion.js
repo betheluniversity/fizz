@@ -33,8 +33,6 @@ function toggleOpen () {
     el.addEventListener('click', toggleOpen)
 })
 
-// collapsible.forEach(collapsible => collapsible.addEventListener('click', toggleOpen))
-
 // Collapsible filter for program search
 // Ex. https://www.bethel.edu/academics/program-search
 
