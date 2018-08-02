@@ -1,19 +1,15 @@
-.collapsible {
+.collapsible-block {
+	display: none;
+}
+
+.collapsible.open-block .collapsible-block {
+	display: block;
 }
 
 .collapsible-heading {
 	position: relative;
 	cursor: pointer;
 }
-
-.collapsible-block {
-	display: none;
-}
-
-.collapsible-block.open-block {
-	display: block;
-}
-
 
 
 .collapsible--generic {
@@ -34,11 +30,10 @@
 			line-height: 2;
 		}
 	}
+}
 
-	.collapsible-heading.open-block {
-
-		&:before {
-			transform: rotate(-45deg);
-		}
+.collapsible--generic.open-block .collapsible-heading {
+	&:before {
+		transform: rotate(-45deg);
 	}
 }

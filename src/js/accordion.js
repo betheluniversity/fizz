@@ -22,38 +22,26 @@ const openItem = function (e) {
     el.addEventListener('click', openItem)
 })
 
-function hasClass (elem, cls) {
-    var str = ' ' + elem.className + ' '
-    var testCls = ' ' + cls + ' '
-    return (str.indexOf(testCls) !== -1)
+// Generic collapsible block
+// Ex. https://www.bethel.edu/graduate/financial-aid/types/grants-scholarships/
+
+function toggleOpen () {
+    this.classList.toggle('open-block')
 }
 
-function nextByClass (node, cls) {
-    while (node === node.nextSibling) {
-        if (hasClass(node, cls)) {
-            return node
-        }
-    }
-    return null
-}
+[].forEach.call(document.querySelectorAll('.collapsible'), function (el) {
+    el.addEventListener('click', toggleOpen)
+})
 
-const collapsibleBlock = function (e) {
-    e.target.classList.toggle('open-block')
-    let parent = e.srcElement.parentNode
-    parent.classList.toggle('open-block')
-    parent.querySelector('.collapsible-block').classList.toggle('open-block')
-}
+// collapsible.forEach(collapsible => collapsible.addEventListener('click', toggleOpen))
 
-const collapsibleBlocks = Array.from(document.querySelectorAll('.collapsible-heading'))
-collapsibleBlocks.forEach(key => key.addEventListener('click', collapsibleBlock))
+// Collapsible filter for program search
+// Ex. https://www.bethel.edu/academics/program-search
 
 const showFilters = function (e) {
     e.preventDefault()
-    // var subList = this.('.collapsible-block');
     var filterList = document.querySelector('.form--search-filter__filters')
     filterList.classList.toggle('open-filters')
-    // var next = nextByClass(this, 'form--search-filter__filters');
-    // next.classList.toggle('open-block');
 };
 
 [].forEach.call(document.querySelectorAll('.form--search-filter__button'), function (el) {
