@@ -1,7 +1,7 @@
 module.exports = {
     entry: './src/js/main.js',
     output: {
-        filename: 'blanco.js'
+        filename: 'quatro.js'
     },
     module: {
         rules: [

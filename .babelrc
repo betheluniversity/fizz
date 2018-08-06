@@ -1,11 +1,4 @@
 {
-    "presets": [
-        ["minify"],
-        ["env", {
-            "modules": false,
-            "targets": {
-              "browsers": ["> 4%", "last 2 versions", "ie 11"]
-            }
-        }]
-    ]
+    "presets": 
+        ["minify", "@babel/preset-env"]
 } 
