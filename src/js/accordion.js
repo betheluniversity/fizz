@@ -26,10 +26,10 @@ const openItem = function (e) {
 // Ex. https://www.bethel.edu/graduate/financial-aid/types/grants-scholarships/
 
 function toggleOpen () {
-    this.classList.toggle('open-block')
+    this.parentNode.classList.toggle('open-block')
 }
 
-[].forEach.call(document.querySelectorAll('.collapsible'), function (el) {
+[].forEach.call(document.querySelectorAll('.collapsible-heading'), function (el) {
     el.addEventListener('click', toggleOpen)
 })
 
