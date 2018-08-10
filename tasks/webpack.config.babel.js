@@ -1,8 +1,6 @@
 module.exports = {
-    entry: [
-        './src/js/main.js'
-    ],
     mode: 'production',
+    // mode: 'none',
     output: {
         filename: 'quatro.js'
     },
@@ -10,7 +8,8 @@ module.exports = {
         rules: [
             {
                 test: /\.js$/,
-                exclude: /node_modules/
+                exclude: /node_modules/,
+                loader: 'babel-loader'
             }
         ]
     }

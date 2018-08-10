@@ -1,10 +1,8 @@
 const presets = [
     ['@babel/preset-env', {
         'debug': true,
-        'useBuiltIns': 'usage'
+        'useBuiltIns': 'false'
     }]
 ]
 
-const plugins = []
-
-module.exports = { presets, plugins }
+module.exports = { presets }
