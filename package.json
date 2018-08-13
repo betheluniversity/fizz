@@ -30,6 +30,7 @@
     "gulp-babel-minify": "^0.4.3",
     "gulp-postcss": "^8.0.0",
     "gulp-rename": "^1.4.0",
+    "lazysizes": "^4.1.0",
     "lory.js": "^2.5.1",
     "postcss-easy-import": "^3.0.0",
     "postcss-mixins": "^6.2.0",

@@ -1,0 +1,34 @@
+
+        <div class="heroVideo  heroVideo--home">
+            <div class="heroVideo__media">
+                <div id="heroVideo__wrap"></div>               
+
+                <script type="text/javascript">
+
+                    const mql = window.matchMedia('only screen and (min-width: 912px)')
+                    const handleMQL = function(mql) {
+                        if (mql.matches) {
+                            var vidStr = '<video preload="auto" autoplay="autoplay" muted="true" loop="true" style="min-width: 100%" id="vid">';                        
+                            vidStr += '<source src="https://www.bethel.edu/_homepages/www/video/welcome2-2018.mp4" type="video/mp4" />';                            
+                            vidStr += '<img src="https://cdn3.bethel.edu/resize/unsafe/800x0/smart/https://www.bethel.edu/_homepages/www/images/feature/welcome-week-2016-2x1.jpg" />';
+                            vidStr += '</video>';
+                            document.getElementById('heroVideo__wrap').innerHTML = vidStr;
+                            document.getElementById('vid').play();
+                        } else {
+                            const imgStr = '<img class="lazyload" data-srcset="https://cdn1.bethel.edu/resize/unsafe/400x0/smart/https://www.bethel.edu/_homepages/www/images/feature/lead-confidence-2x1.jpg 400w, https://cdn1.bethel.edu/resize/unsafe/600x0/smart/https://www.bethel.edu/_homepages/www/images/feature/lead-confidence-2x1.jpg 600w, https://cdn1.bethel.edu/resize/unsafe/800x0/smart/https://www.bethel.edu/_homepages/www/images/feature/lead-confidence-2x1.jpg 800w, https://cdn1.bethel.edu/resize/unsafe/1000x0/smart/https://www.bethel.edu/_homepages/www/images/feature/lead-confidence-2x1.jpg 1000w, https://cdn1.bethel.edu/resize/unsafe/1200x0/smart/https://www.bethel.edu/_homepages/www/images/feature/lead-confidence-2x1.jpg 1200w, https://cdn1.bethel.edu/resize/unsafe/1400x0/smart/https://www.bethel.edu/_homepages/www/images/feature/lead-confidence-2x1.jpg 1400w, https://cdn1.bethel.edu/resize/unsafe/1600x0/smart/https://www.bethel.edu/_homepages/www/images/feature/lead-confidence-2x1.jpg 1600w" data-sizes="auto">'
+                            document.getElementById('heroVideo__wrap').innerHTML = imgStr;
+                        }
+                    }
+                    handleMQL(mql)
+                    mql.addListener(handleMQL)
+
+                </script>
+            </div>
+
+            <div class="heroVideo__overlay">
+                <h2 class="heroVideo__overlay__headline">{{ this.headline }}</h2>
+                <p class="ta--center">
+                    <a class="xheroVideo__overlay__button btn" href="admissions/index.php">{{ this.button }}</a>
+                </p>
+            </div>
+        </div>

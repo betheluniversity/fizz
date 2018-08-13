@@ -1,7 +1,7 @@
 module.exports = {
     entry: {
-        index: './src/js/main.js',
-        lazy: './src/js/lazysizes.js'
+        main: './src/js/main.js',
+        lazy: './src/js/lazy.js'
     },
     mode: 'production',
     // mode: 'none',

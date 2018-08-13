@@ -1,0 +1,62 @@
+.heroVideo {
+    position: relative;
+    min-width: 100%;
+}
+
+.heroVideo--home {
+    @mixin respond-min $large {
+        /* position: fixed; */
+        margin-top: -154px;
+    }
+}
+
+.heroVideo__media {
+    height: 30em;
+
+    @mixin respond-min $large {
+        height: auto;
+    }
+}
+
+.heroVideo__media img {
+    position: absolute;
+    object-fit: cover;
+    height: 30em;
+
+    @mixin respond-min $large {
+        height: auto;
+    }
+}
+
+.heroVideo__overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1em;
+
+    @mixin respond-min $large {
+        justify-content: center;
+    }
+}
+
+.heroVideo__overlay__headline {
+	font-size: 2.5rem;
+    color: #fff;
+    text-shadow: 1px 1px 1px #333;
+	font-weight: 500;
+	letter-spacing: .02em;
+
+	@mixin respond-min $medium {
+		font-size: 2.8rem;
+	}
+
+	@mixin respond-min $x-large{
+		font-size: 4rem;
+	}
+}

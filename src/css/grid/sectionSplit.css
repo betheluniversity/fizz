@@ -27,6 +27,8 @@ This is to ensure the height of the pad is 100% and the object-fit works */
     justify-content: center;
 }
 
+/* font-family > cover is needed for IE11 */
+
 .sectionSplit--imgLeft > .grid-cell:nth-child(1) img,
 .sectionSplit--imgRight > .grid-cell:nth-child(1) img{
     object-fit: cover;
