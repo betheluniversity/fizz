@@ -1,8 +1,12 @@
 module.exports = {
+    entry: {
+        index: './src/js/main.js',
+        lazy: './src/js/lazysizes.js'
+    },
     mode: 'production',
     // mode: 'none',
     output: {
-        filename: 'quatro.js'
+        filename: '[name].quatro.js'
     },
     module: {
         rules: [
