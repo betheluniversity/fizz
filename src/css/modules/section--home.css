@@ -1,97 +1,66 @@
-.section--home .grid-cell {
-		margin: 0;
+.global__header {
+
+	@mixin respond-min $large {
+		background: rgba(0,0,0,.2);
+		z-index: 100
+	}
 }
 
-.section--home__holder:before {
-	background-image: linear-gradient(180deg, transparent 50%, #333);
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	content: '';
+.inner {
+    max-width: 80em;
 }
 
-.section--home__holder {
-	overflow: auto;
-	height: 110vh;
-	width: 100%;
-	padding: 5em 0;
-	font-family: $gotham;
-	background: $bethel--navy;
-	font-size: 100%;
-	color: #ddd;
+.overFeat {
 	position: relative;
-	display: table;
+	z-index: 1000;
+	background: #f1f1f1;
+}
 
-	@mixin respond-min $medium {
-		padding: 10em 0;
-	}
-
-	.inner {
-		position: relative;
-		z-index: 1;
-		display: table-cell;
-		vertical-align: bottom;
-	}
-
-	h2 {
-		color: #fff;
-		font-size: 2rem;
-		font-weight: 400;
-
-		@mixin respond-min $medium  {
-			font-size: 3rem;
-		}
-	}
-
-	a:not(.btn) {
-		color: $bethel--yellow;
+.overFeat .grid {
+	@mixin respond-min $large {
+		margin-bottom: -5em;
 	}
 }
 
+.overFeat .grid-cell {
+	position: relative;
 
-.section--home__academics {
-	/* background: url("https://cdn1.bethel.edu/resize/unsafe/1600x0/smart/https://www.bethel.edu/_homepages/www/images/chemistry-lab.jpg");*/
-	background-size: cover;
-	background-position: center;
-}
-
-.section--home__faith {
-	/* background: url("https://cdn1.bethel.edu/resize/unsafe/1600x0/smart/https://www.bethel.edu/_homepages/www/images/girl-laughing.jpg");*/
-	background-size: cover;
-	background-position: center;
-}
-
-.section--home__community {
-	/* background: url("https://cdn1.bethel.edu/resize/unsafe/1600x0/smart/https://www.bethel.edu/_homepages/www/images/group-laughing.jpg");*/
-	background-size: cover;
-	background-position: 20% !important;
-}
-
-.section--home__story {
-	/* background-color: #000;*/
-
-	.grid-cell {
-		margin: 0 auto !important;
-		/* text-align: center;*/
-	}
-
-	.rotate-text__holder {
-		color: $bethel--yellow;
-		font-weight: 400;
-		font-size: 1.5rem;
-	}
-
-	h3 {
-		font-weight: 400;
-		font-size: 1.35rem;
-		/* color: $bethel--yellow;*/
+	@mixin respond-min $large {
+		transform: translateY(-5em);
 	}
 }
 
-.section--home__online {
-	background: url("https://cdn1.bethel.edu/resize/unsafe/1600x0/smart/https://www.bethel.edu/_homepages/online/images/study-online.jpg");
-	background-size: cover;
-	background-position: right center;	
+.overFeat img {
+	border: .5em solid #fff;
+}
+
+.overFeat h3 {
+	position: absolute;
+	bottom: 1em;
+	left: 1.2em;
+	padding-right: 1em;
+	text-shadow: 1px 1px 1px #333;
+}
+
+.proofPoints .grid-cell {
+    color: #667;
+    padding: 4em 1em 2em;
+    font-weight: 300;
+    font-size: 1.15rem;
+    border: 1px solid #0069aa;
+}
+
+.proofPoints .grid-cell:not(:last-of-type) {
+	margin-right: 2em;
+}
+
+.proofPoint__number {
+    font-size: 3.5rem;
+    font-weight: 200;
+    margin: 0 0 .25em;
+    color: #0069aa;
+}
+
+.proofPoint small {
+    font-size: 1rem;
 }

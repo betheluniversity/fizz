@@ -164,3 +164,14 @@ Styles for the big carousel on bethel.edu
 .flickity-page-dots {
     left: 0;
 }
+
+
+.flickityCustom--experience {
+    .flickity--cell {
+        width: 375px;
+
+        @mixin respond-min 1600px {
+            width: 600px;
+        }
+    }
+}

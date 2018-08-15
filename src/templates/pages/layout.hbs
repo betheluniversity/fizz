@@ -8,10 +8,9 @@ pageTitle: Test title
 {{!-- {{> moving-picture }} --}}
 {{> heroVideo }}
 
-<div class="body__holder">
 
     <section class="overFeat  pb2">
-        <div class="inner" style="overflow: initial;">
+        <div class="inner" style="overflow: visible;">
             <div class="grid">
                 <div class="grid-cell">
                     <div class="grid-pad-2x">
@@ -50,7 +49,7 @@ pageTitle: Test title
         </div>
     </section>
 
-    <div class="stickyBar  pb6  ph5--large  bkg--white">
+    <div class="section--focus  pb6  ph5--large  bkg--white">
         <div class="inner  mb3">
             <div class="header1">
                 <div class="inner">
@@ -342,21 +341,18 @@ pageTitle: Test title
         <!-- proof points -->
         <section class="">
             <div class="inner">
-                
-                <div class="grid  pb4">
+                <div class="grid  pb4  proofPoints">
                     <div class="grid-cell  mr2--large  mb2">
-                        <div class="proofPoint">
+                        <div class="">
                             <div class="ph2">
                                 <!-- <img class="lazyload  pt1" alt="Market research" data-src="https://www.bethel.edu/undergrad/academics/real-experience/images/market-research.png" width="60"> -->
-                                <div class="proofPoint__border">
                                     <p class="proofPoint__number">97%</p>
                                     <p class="h5  mv0  fw400">of recent grads are employed or in graduate school </p>
-                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="grid-cell  mr2--large  mb2">
-                        <div class="proofPoint">
+                        <div class="">
                             <div class="ph2">
                                 <!-- <img class="lazyload  pt1" alt="Share your story" data-src="https://www.bethel.edu/undergrad/academics/real-experience/images/share-story.png" title="" style="" width="60"> -->
                                 <p class="proofPoint__number">Top 15%</p>
@@ -366,7 +362,7 @@ pageTitle: Test title
                         </div>
                     </div>
                     <div class="grid-cell  mb2">
-                        <div class="proofPoint">
+                        <div class="">
                             <div class="ph2">
                                 <!-- <img class="lazyload  pt1" alt="Hands-on learning" data-src="https://www.bethel.edu/undergrad/academics/real-experience/images/hands-on.png" width="60"> -->
                                 <p class="proofPoint__number">100s</p>
@@ -396,7 +392,7 @@ pageTitle: Test title
             
         <div class="grid  sectionFeature--imgRight">
             <div class="grid-cell">
-                <img src="https://www.bethel.edu/_homepages/www/images/feature/community-belong-16x9.jpg" alt="">
+                <img class="lazyload"  data-srcset="https://cdn1.bethel.edu/resize/unsafe/400x0/smart/https://www.bethel.edu/_homepages/www/images/feature/community-belong-16x9.jpg 400w, https://cdn1.bethel.edu/resize/unsafe/600x0/smart/https://www.bethel.edu/_homepages/www/images/feature/community-belong-16x9.jpg 600w, https://cdn1.bethel.edu/resize/unsafe/800x0/smart/https://www.bethel.edu/_homepages/www/images/feature/community-belong-16x9.jpg 800w, https://cdn1.bethel.edu/resize/unsafe/1000x0/smart/https://www.bethel.edu/_homepages/www/images/feature/community-belong-16x9.jpg 1000w, https://cdn1.bethel.edu/resize/unsafe/1200x0/smart/https://www.bethel.edu/_homepages/www/images/feature/community-belong-16x9.jpg 1200w, https://cdn1.bethel.edu/resize/unsafe/1400x0/smart/https://www.bethel.edu/_homepages/www/images/feature/community-belong-16x9.jpg 1400w, https://cdn1.bethel.edu/resize/unsafe/1600x0/smart/https://www.bethel.edu/_homepages/www/images/feature/community-belong-16x9.jpg 1600w" >         
             </div>
 
             <div class="grid-cell">
@@ -437,15 +433,97 @@ pageTitle: Test title
                 </div>
         </section>
 
-        <style>
-            .loryCustom .js_slide {
-                flex-basis: 375px;
-                flex-shrink: 0;
-                flex-wrap: nowrap;
-            }
-        </style>
+        <div class="flickityCustom--experience">
+            <div class="flickity--cell">
+                <div class="ratio-box">
+                    <div class="grid-pad-2x">
+                        <img    class="carousel-cell-image" 
+                                data-flickity-lazyload-srcset="https://cdn1.bethel.edu/resize/unsafe/400x0/smart/https://c2.staticflickr.com/8/7237/7166150373_b763f233a6_o.jpg 400w, https://cdn1.bethel.edu/resize/unsafe/600x0/smart/https://c2.staticflickr.com/8/7237/7166150373_b763f233a6_o.jpg 600w, https://cdn1.bethel.edu/resize/unsafe/800x0/smart/https://c2.staticflickr.com/8/7237/7166150373_b763f233a6_o.jpg 800w, https://cdn1.bethel.edu/resize/unsafe/1000x0/smart/https://c2.staticflickr.com/8/7237/7166150373_b763f233a6_o.jpg 1000w, https://cdn1.bethel.edu/resize/unsafe/1200x0/smart/https://c2.staticflickr.com/8/7237/7166150373_b763f233a6_o.jpg 1200w, https://cdn1.bethel.edu/resize/unsafe/1400x0/smart/https://c2.staticflickr.com/8/7237/7166150373_b763f233a6_o.jpg 1400w, https://cdn1.bethel.edu/resize/unsafe/1600x0/smart/https://c2.staticflickr.com/8/7237/7166150373_b763f233a6_o.jpg 1600w"
+                                sizes="(min-width: 1200px) 1200px, 600px"
+                        />
+                        <div class="" style="border: 1px solid #ccc; padding: 1em 2em">
+                            <h3><a href="#">Neuroscience Research</a></h3>
+                            <p>Biology and psychology students collaborated with researchers at Boston University to advance modern science’s understanding and treatment of memory loss.</p>
+                        </div>   
+                    </div>
+                </div>
+            </div>
+            <div class="flickity--cell">
+                <div class="ratio-box">
+                    <div class="grid-pad-2x">
+                        <img    class="carousel-cell-image" 
+                                data-flickity-lazyload-srcset="https://cdn1.bethel.edu/resize/unsafe/400x0/smart/https://c2.staticflickr.com/8/7537/15695331636_14802496ff_o.jpg 400w, https://cdn1.bethel.edu/resize/unsafe/600x0/smart/https://c2.staticflickr.com/8/7537/15695331636_14802496ff_o.jpg 600w, https://cdn1.bethel.edu/resize/unsafe/800x0/smart/https://c2.staticflickr.com/8/7537/15695331636_14802496ff_o.jpg 800w, https://cdn1.bethel.edu/resize/unsafe/1000x0/smart/https://c2.staticflickr.com/8/7537/15695331636_14802496ff_o.jpg 1000w, https://cdn1.bethel.edu/resize/unsafe/1200x0/smart/https://c2.staticflickr.com/8/7537/15695331636_14802496ff_o.jpg 1200w, https://cdn1.bethel.edu/resize/unsafe/1400x0/smart/https://c2.staticflickr.com/8/7537/15695331636_14802496ff_o.jpg 1400w, https://cdn1.bethel.edu/resize/unsafe/1600x0/smart/https://c2.staticflickr.com/8/7537/15695331636_14802496ff_o.jpg 1600w"
+                                sizes="(min-width: 1200px) 1200px, 600px"
+                        />
+                        <div class="" style="border: 1px solid #ccc; padding: 1em 2em">
+                            <h3><a href="#">Student-Managed Investment Fund</a></h3>
+                            <p>Our business and finance students manage a $1 million investment fund for both institutional and outside investors</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flickity--cell">
+                <div class="ratio-box">
+                    <div class="grid-pad-2x">
+                        <img    class="carousel-cell-image" 
+                                data-flickity-lazyload-srcset="https://cdn1.bethel.edu/resize/unsafe/400x0/smart/https://www.bethel.edu/news/articles/2017/images/textura.jpg 400w, https://cdn1.bethel.edu/resize/unsafe/600x0/smart/https://www.bethel.edu/news/articles/2017/images/textura.jpg 600w, https://cdn1.bethel.edu/resize/unsafe/800x0/smart/https://www.bethel.edu/news/articles/2017/images/textura.jpg 800w, https://cdn1.bethel.edu/resize/unsafe/1000x0/smart/https://www.bethel.edu/news/articles/2017/images/textura.jpg 1000w, https://cdn1.bethel.edu/resize/unsafe/1200x0/smart/https://www.bethel.edu/news/articles/2017/images/textura.jpg 1200w, https://cdn1.bethel.edu/resize/unsafe/1400x0/smart/https://www.bethel.edu/news/articles/2017/images/textura.jpg 1400w, https://cdn1.bethel.edu/resize/unsafe/1600x0/smart/https://www.bethel.edu/news/articles/2017/images/textura.jpg 1600w"
+                                sizes="(min-width: 1200px) 1200px, 600px"
+                        />
+                        <div class="" style="border: 1px solid #ccc; padding: 1em 2em">
+                            <h3><a href="#">Textura Magazine</a></h3>
+                            <p>Our art and journalism students collaborated to produce a national award-winning cultural magazine.</p>
 
-        <div class="lory  loryCustom  arrowsBottom">
+                        </div>
+                    </div>
+                </div>
+            </div>
+                        <div class="flickity--cell">
+                <div class="ratio-box">
+                    <div class="grid-pad-2x">
+                        <img    class="carousel-cell-image" 
+                                data-flickity-lazyload-srcset="https://cdn1.bethel.edu/resize/unsafe/400x0/smart/https://c2.staticflickr.com/8/7237/7166150373_b763f233a6_o.jpg 400w, https://cdn1.bethel.edu/resize/unsafe/600x0/smart/https://c2.staticflickr.com/8/7237/7166150373_b763f233a6_o.jpg 600w, https://cdn1.bethel.edu/resize/unsafe/800x0/smart/https://c2.staticflickr.com/8/7237/7166150373_b763f233a6_o.jpg 800w, https://cdn1.bethel.edu/resize/unsafe/1000x0/smart/https://c2.staticflickr.com/8/7237/7166150373_b763f233a6_o.jpg 1000w, https://cdn1.bethel.edu/resize/unsafe/1200x0/smart/https://c2.staticflickr.com/8/7237/7166150373_b763f233a6_o.jpg 1200w, https://cdn1.bethel.edu/resize/unsafe/1400x0/smart/https://c2.staticflickr.com/8/7237/7166150373_b763f233a6_o.jpg 1400w, https://cdn1.bethel.edu/resize/unsafe/1600x0/smart/https://c2.staticflickr.com/8/7237/7166150373_b763f233a6_o.jpg 1600w"
+                                sizes="(min-width: 1200px) 1200px, 600px"
+                        />
+                        <div class="" style="border: 1px solid #ccc; padding: 1em 2em">
+                            <h3><a href="#">Neuroscience Research</a></h3>
+                            <p>Biology and psychology students collaborated with researchers at Boston University to advance modern science’s understanding and treatment of memory loss.</p>
+                        </div>   
+                    </div>
+                </div>
+            </div>
+            <div class="flickity--cell">
+                <div class="ratio-box">
+                    <div class="grid-pad-2x">
+                        <img    class="carousel-cell-image" 
+                                data-flickity-lazyload-srcset="https://cdn1.bethel.edu/resize/unsafe/400x0/smart/https://c2.staticflickr.com/8/7537/15695331636_14802496ff_o.jpg 400w, https://cdn1.bethel.edu/resize/unsafe/600x0/smart/https://c2.staticflickr.com/8/7537/15695331636_14802496ff_o.jpg 600w, https://cdn1.bethel.edu/resize/unsafe/800x0/smart/https://c2.staticflickr.com/8/7537/15695331636_14802496ff_o.jpg 800w, https://cdn1.bethel.edu/resize/unsafe/1000x0/smart/https://c2.staticflickr.com/8/7537/15695331636_14802496ff_o.jpg 1000w, https://cdn1.bethel.edu/resize/unsafe/1200x0/smart/https://c2.staticflickr.com/8/7537/15695331636_14802496ff_o.jpg 1200w, https://cdn1.bethel.edu/resize/unsafe/1400x0/smart/https://c2.staticflickr.com/8/7537/15695331636_14802496ff_o.jpg 1400w, https://cdn1.bethel.edu/resize/unsafe/1600x0/smart/https://c2.staticflickr.com/8/7537/15695331636_14802496ff_o.jpg 1600w"
+                                sizes="(min-width: 1200px) 1200px, 600px"
+                        />
+                        <div class="" style="border: 1px solid #ccc; padding: 1em 2em">
+                            <h3><a href="#">Student-Managed Investment Fund</a></h3>
+                            <p>Our business and finance students manage a $1 million investment fund for both institutional and outside investors</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flickity--cell">
+                <div class="ratio-box">
+                    <div class="grid-pad-2x">
+                        <img    class="carousel-cell-image" 
+                                data-flickity-lazyload-srcset="https://cdn1.bethel.edu/resize/unsafe/400x0/smart/https://www.bethel.edu/news/articles/2017/images/textura.jpg 400w, https://cdn1.bethel.edu/resize/unsafe/600x0/smart/https://www.bethel.edu/news/articles/2017/images/textura.jpg 600w, https://cdn1.bethel.edu/resize/unsafe/800x0/smart/https://www.bethel.edu/news/articles/2017/images/textura.jpg 800w, https://cdn1.bethel.edu/resize/unsafe/1000x0/smart/https://www.bethel.edu/news/articles/2017/images/textura.jpg 1000w, https://cdn1.bethel.edu/resize/unsafe/1200x0/smart/https://www.bethel.edu/news/articles/2017/images/textura.jpg 1200w, https://cdn1.bethel.edu/resize/unsafe/1400x0/smart/https://www.bethel.edu/news/articles/2017/images/textura.jpg 1400w, https://cdn1.bethel.edu/resize/unsafe/1600x0/smart/https://www.bethel.edu/news/articles/2017/images/textura.jpg 1600w"
+                                sizes="(min-width: 1200px) 1200px, 600px"
+                        />
+                        <div class="" style="border: 1px solid #ccc; padding: 1em 2em">
+                            <h3><a href="#">Textura Magazine</a></h3>
+                            <p>Our art and journalism students collaborated to produce a national award-winning cultural magazine.</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        {{!-- <div class="lory  loryCustom  arrowsBottom">
             <div class="loryModule  js_variableWidth  variableWidth">
                 <div class="frame  js_frame">
                     <div class="slides  js_slides">
@@ -518,7 +596,7 @@ pageTitle: Test title
                     <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 501.5 501.5"><g><path fill="#0069aa" d="M199.33 410.622l-55.77-55.508L247.425 250.75 143.56 146.384l55.77-55.507L358.44 250.75z"/></g></svg>
                 </span>
             </div>
-        </div>
+        </div> --}}
 
     </section>
 
@@ -646,33 +724,13 @@ pageTitle: Test title
     </section>
 
     <!-- Visit -->
-    {{!-- <section>
-        <div class="grid  sectionSplit--imgLeft">
-
-            <div class="grid-cell  u-large-1-2  ml0">
-                <div class="sectionSplit__img  lazyload" data-bgset="https://cdn1.bethel.edu/resize/unsafe/400x0/smart/https://www.bethel.edu/_homepages/www/images/group-laughing.jpg 400w, https://cdn1.bethel.edu/resize/unsafe/600x0/smart/https://www.bethel.edu/_homepages/www/images/group-laughing.jpg 600w, https://cdn1.bethel.edu/resize/unsafe/800x0/smart/https://www.bethel.edu/_homepages/www/images/group-laughing.jpg 800w, https://cdn1.bethel.edu/resize/unsafe/1000x0/smart/https://www.bethel.edu/_homepages/www/images/group-laughing.jpg 1000w, https://cdn1.bethel.edu/resize/unsafe/1200x0/smart/https://www.bethel.edu/_homepages/www/images/group-laughing.jpg 1200w, https://cdn1.bethel.edu/resize/unsafe/1400x0/smart/https://www.bethel.edu/_homepages/www/images/group-laughing.jpg 1400w, https://cdn1.bethel.edu/resize/unsafe/1600x0/smart/https://www.bethel.edu/_homepages/www/images/group-laughing.jpg 1600w" data-sizes="auto">
-                </div>
-            </div>
-
-            <div class="grid-cell  u-large-1-2  mr0  bkg--light-blue">
-                <div class="sectionSplit__content  pv6--large">
-                    <h2 class="alpha">Schedule a visit</h2>
-                    <p class="mb2">Tucked serenely into the woods of Arden Hills, our waterfront campuses are just 15 minutes north of the Twin Cities. Come and experience our vibrant community for yourself—we’d love to show you around.</p>
-                    <p class="mb4"><a class="btn  btn-outline">Schedule a visit</a></p>
-                    {{> events }}
-                </div>
-            </div>
-
-        </div>
-    </section> --}}
-
     <section>
         <div class="grid  sectionSplit--imgRight    bkg--light-blue">
-            <div class="grid-cell  u-large-1-2">
+            <div class="grid-cell">
                 <img class="lazyload" data-sizes="auto" data-srcset="https://cdn1.bethel.edu/resize/unsafe/400x0/smart/https://www.bethel.edu/_homepages/www/images/two-smiling.jpg 400w, https://cdn1.bethel.edu/resize/unsafe/600x0/smart/https://www.bethel.edu/_homepages/www/images/two-smiling.jpg 600w, https://cdn1.bethel.edu/resize/unsafe/800x0/smart/https://www.bethel.edu/_homepages/www/images/two-smiling.jpg 800w, https://cdn1.bethel.edu/resize/unsafe/1000x0/smart/https://www.bethel.edu/_homepages/www/images/two-smiling.jpg 1000w, https://cdn1.bethel.edu/resize/unsafe/1200x0/smart/https://www.bethel.edu/_homepages/www/images/two-smiling.jpg 1200w, https://cdn1.bethel.edu/resize/unsafe/1400x0/smart/https://www.bethel.edu/_homepages/www/images/two-smiling.jpg 1400w, https://cdn1.bethel.edu/resize/unsafe/1600x0/smart/https://www.bethel.edu/_homepages/www/images/two-smiling.jpg 1600w" >
             </div>
 
-            <div class="grid-cell  u-large-1-2">
+            <div class="grid-cell">
                 <h2 class="alpha">Schedule a visit</h2>
                 <p class="mb2">Tucked serenely into the woods of Arden Hills, our waterfront campuses are just 15 minutes north of the Twin Cities. Come and experience our vibrant community for yourself—we’d love to show you around.</p>
                 <p class="mb4"><a class="btn  btn-outline">Schedule a visit</a></p>
@@ -744,12 +802,12 @@ pageTitle: Test title
     <!-- Apply now -->
     <section>
         <div class="grid  sectionSplit--imgLeft">
-            <div class="grid-cell u-large-1-2">
+            <div class="grid-cell ">
                     <div class="grid-pad-0x">
                         <img class="lazyload" data-srcset="https://cdn1.bethel.edu/resize/unsafe/400x0/smart/https://www.bethel.edu/_homepages/www/images/girl-laughing.jpg 400w, https://cdn1.bethel.edu/resize/unsafe/600x0/smart/https://www.bethel.edu/_homepages/www/images/girl-laughing.jpg 600w, https://cdn1.bethel.edu/resize/unsafe/800x0/smart/https://www.bethel.edu/_homepages/www/images/girl-laughing.jpg 800w, https://cdn1.bethel.edu/resize/unsafe/1000x0/smart/https://www.bethel.edu/_homepages/www/images/girl-laughing.jpg 1000w, https://cdn1.bethel.edu/resize/unsafe/1200x0/smart/https://www.bethel.edu/_homepages/www/images/girl-laughing.jpg 1200w, https://cdn1.bethel.edu/resize/unsafe/1400x0/smart/https://www.bethel.edu/_homepages/www/images/girl-laughing.jpg 1400w, https://cdn1.bethel.edu/resize/unsafe/1600x0/smart/https://www.bethel.edu/_homepages/www/images/girl-laughing.jpg 1600w" data-sizes="auto">
                     </div>
             </div>
-            <div class="grid-cell u-large-1-2">
+            <div class="grid-cell ">
                 <div class="grid-pad-0x">
                     <h2 class="alpha">Apply Now</h2>
                     <p class="mb2">If you think Bethel could be the place for you, start filing out your application today. The whole process should only take about 30 minutes.</p>
@@ -759,4 +817,4 @@ pageTitle: Test title
         </div>
     </section>
 
-</div>
+

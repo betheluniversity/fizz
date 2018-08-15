@@ -44,7 +44,7 @@
 @import "modules/flickity.css";
 @import "modules/flickity-custom.css";
 @import "modules/hero.css";
-@import "modules/lory.css";
+@import "modules/linkBlock.css";
 @import "modules/maps.css";
 @import "modules/news.css";
 @import "modules/moving-picture.css";
@@ -53,6 +53,7 @@
 @import "modules/pull-quote.css";
 @import "modules/routing.css";
 @import "modules/section--apply.css";
+@import "modules/section--focus.css";
 @import "modules/section--home.css";
 @import "modules/social-media.css";
 

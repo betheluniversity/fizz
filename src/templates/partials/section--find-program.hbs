@@ -1,39 +1,99 @@
-<section 
-	class="grid-section  section--find-program  mt0  pv6--medium  lazyload"  
-	data-bgset="https://cdn1.bethel.edu/resize/unsafe/400x0/smart/https://www.bethel.edu/_homepages/www/images/study-smile-duotone.jpg 400w, https://cdn1.bethel.edu/resize/unsafe/600x0/smart/https://www.bethel.edu/_homepages/www/images/study-smile-duotone.jpg 600w, https://cdn1.bethel.edu/resize/unsafe/800x0/smart/https://www.bethel.edu/_homepages/www/images/study-smile-duotone.jpg 800w, https://cdn1.bethel.edu/resize/unsafe/1000x0/smart/https://www.bethel.edu/_homepages/www/images/study-smile-duotone.jpg 1000w, https://cdn1.bethel.edu/resize/unsafe/1200x0/smart/https://www.bethel.edu/_homepages/www/images/study-smile-duotone.jpg 1200w, https://cdn1.bethel.edu/resize/unsafe/1400x0/smart/https://www.bethel.edu/_homepages/www/images/study-smile-duotone.jpg 1400w, https://cdn1.bethel.edu/resize/unsafe/1600x0/smart/https://www.bethel.edu/_homepages/www/images/study-smile-duotone.jpg 1600w" 
-	data-sizes="auto">
 
-	<div class="inner">
-		<div class="grid  grid--center  mt3  mb6--medium  pb3 pb6--medium">
-			<div class="grid-cell  u-large-4-5">
-				<div class="medium-grid-pad-1x">
+<div class="grid  grid--center  mb3">
+	<div class="grid-cell  u-large-4-5">
+		<div class="medium-grid-pad-1x">
 
-					<div class="grid  grid--center">
-						<div class="grid-cell u-medium-1-1">
-							<div class="medium-grid-pad-1x">
-								<h2 class="beta  mb1  center  fw300">Find your major or program</h2>
-								<p class="h4  mb2  mb3--medium  fw400">We offer more than 100 areas of study for undergrads, as well as programs for adult undergrad, graduate, and seminary students. Enter a career or area of interest to find and compare majors, programs, certificates, and licenses.</p>
-							</div>
-						</div>
+
+						<h2 class="mb1  center">Find your major or program</h2>
+						<p class="h4  mb2  mb3--medium  fw400">We offer more than 100 areas of study for undergrads, as well as programs for adult undergrad, graduate, and seminary students. Enter a career or area of interest to find and compare majors, programs, certificates, and licenses.</p>
+
+
+			<form id="find-program-form" class="form--find-program  mb2" action="https://www.bethel.edu/academics/program-search" method="GET">
+				<div class="search--program">
+					<input required name="search" id="find-program-txt" type="search" placeholder="Search for your program">
+					<button id="find-program-btn" class="btn" type="submit">
+						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 32 32">
+							<title>Search</title>
+							<desc>Search icon</desc>
+							<path d="M31.008 27.231l-7.58-6.447c-0.784-0.705-1.622-1.029-2.299-0.998 1.789-2.096 2.87-4.815 2.87-7.787 0-6.627-5.373-12-12-12s-12 5.373-12 12c0 6.627 5.373 12 12 12 2.972 0 5.691-1.081 7.787-2.87-0.031 0.677 0.293 1.515 0.998 2.299l6.447 7.58c1.104 1.226 2.907 1.33 4.007 0.23s0.997-2.903-0.23-4.007zM12 20c-4.418 0-8-3.582-8-8s3.582-8 8-8 8 3.582 8 8-3.582 8-8 8z"></path>
+						</svg>
+						<span class="hide--small">Find programs</span>
+					</button>
+				</div>						
+			</form>
+
+			<div class="grid">
+				<div class="grid-cell">
+					<div class="medium-grid-pad-2x">
+						<h3 class="">Find by topic</h3>
+						<ul class="linkBlock">
+							<li>
+								<a href="#">Business</a>
+							</li>
+							<li>
+								<a href="#">Healthcare</a>
+							</li>
+							<li>
+								<a href="#">Education</a>
+							</li>
+							<li>
+								<a href="#">Sciences</a>
+							</li>
+							<li>
+								<a href="#">Art &amp; Design</a>
+							</li>
+						</ul>
 					</div>
+				</div>
 
-					<form id="find-program-form" class="form--find-program  js-animateRevealUp" action="https://www.bethel.edu/academics/program-search" method="GET">
-						<div class="search--program">
-							<input required name="search" id="find-program-txt" type="search" placeholder="Search for your program">
-							<button id="find-program-btn" class="btn" type="submit">
-								<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 32 32">
-									<title>Search</title>
-									<desc>Search icon</desc>
-									<path d="M31.008 27.231l-7.58-6.447c-0.784-0.705-1.622-1.029-2.299-0.998 1.789-2.096 2.87-4.815 2.87-7.787 0-6.627-5.373-12-12-12s-12 5.373-12 12c0 6.627 5.373 12 12 12 2.972 0 5.691-1.081 7.787-2.87-0.031 0.677 0.293 1.515 0.998 2.299l6.447 7.58c1.104 1.226 2.907 1.33 4.007 0.23s0.997-2.903-0.23-4.007zM12 20c-4.418 0-8-3.582-8-8s3.582-8 8-8 8 3.582 8 8-3.582 8-8 8z"></path>
-								</svg>
-								<span class="hide--small">Find programs</span>
-							</button>
-						</div>						
-					</form>
+				<div class="grid-cell">
+					<div class="medium-grid-pad-2x">
+						<h3 class="">Find by school</h3>
+						<ul class="linkBlock">
+							<li>
+								<a href="#">Undergrad</a>
+							</li>
+							<li>
+								<a href="#">Graduate</a>
+							</li>
+							<li>
+								<a href="#">Adult Undergrad</a>
+							</li>
+							<li>
+								<a href="#">Bethel Seminary</a>
+							</li>
+							<li>
+								<a href="#">Online</a>
+							</li>
+							<li>
+								<a href="#">BUILD</a>
+							</li>
+						</ul>
+					</div>
+				</div>
 
+				<div class="grid-cell">
+					<div class="medium-grid-pad-2x">
+						<h3 class="">Find by degree</h3>
+						<ul class="linkBlock">
+							<li>
+								<a href="#">Doctorate</a>
+							</li>
+							<li>
+								<a href="#">Masters</a>
+							</li>
+							<li>
+								<a href="#">Bachelors</a>
+							</li>
+							<li>
+								<a href="#">Other</a>
+							</li>
+						</ul>
+					</div>
 				</div>
 			</div>
-		</div>
 
+		</div>
 	</div>
-</section>
+</div>
+

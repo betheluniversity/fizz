@@ -10,6 +10,8 @@
 .sectionSplit--imgLeft > .grid-cell:nth-child(1),
 .sectionSplit--imgRight > .grid-cell:nth-child(1){
     min-height: 25em;
+    flex: 0 0 50%;
+    margin: 0;
  
     @mixin respond-min $medium {
         min-height: auto;
@@ -42,5 +44,6 @@ This is to ensure the height of the pad is 100% and the object-fit works */
     max-width: 500px; 
     margin: 0 auto;
     padding: 4em 2em;
+    flex: 0 0 50%;
 
 }

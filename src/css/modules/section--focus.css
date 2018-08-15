@@ -1,0 +1,46 @@
+.section--focus {
+	top: 0;
+	z-index: 1000;
+	justify-content: space-around;
+}
+
+.section--focus .grid-cell {
+	background: #f6f9fa;
+	border: 1px solid #0069aa;
+	border-radius: 4px;
+	margin-top: 3em;
+}
+
+.section--focus span {
+	border-radius: 5px;
+}
+
+.section--focus svg {
+	width: 100px;
+	height: 100px;
+	fill: $bethel--blue;
+	display: block;
+	margin: -3.5em auto 1em;
+	padding: 1em;
+	border: 1px solid #0069aa;
+	background: white;
+	border-radius: 50%;
+}
+
+.section--focus a {
+	padding: .5em 1em;
+	border-radius: 4px;
+}
+
+.section--focus p {
+}
+
+.section--focus a:hover {
+	text-decoration: none;
+}
+
+.section--focus .active {
+	background: $bethel--yellow;
+	background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffc600' fill-opacity='.9' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+	
+}
