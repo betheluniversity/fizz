@@ -1,3 +1,26 @@
+.proofPoints .grid-cell {
+    color: #667;
+    padding: 4em 1em 2em;
+    font-weight: 300;
+    font-size: 1.15rem;
+    border: 1px solid #0069aa;
+}
+
+.proofPoints .grid-cell:not(:last-of-type) {
+	margin-right: 2em;
+}
+
+.proofPoint__number {
+    font-size: 3.5rem;
+    font-weight: 200;
+    margin: 0 0 .25em;
+    color: #0069aa;
+}
+
+.proofPoint small {
+    font-size: 1rem;
+}
+
 .proof-points {
     font-family: $gotham;
 

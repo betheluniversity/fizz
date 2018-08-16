@@ -1,8 +1,8 @@
 
 .inner-wrap--global__navigation {
   position: relative;
-  background: #fff;
-  overflow: hidden;
+  background: #f5f5f5;
+  /* overflow: hidden; */
 }
 
 .global__toolbox {
@@ -23,7 +23,7 @@
     padding: 0 2em;
 }
 
-@media screen and (max-width: 51.99em) {
+@media screen and (max-width: 56.99em) {
 
   .no-js {
       .global__toolbox:not(:target) {
@@ -88,7 +88,7 @@
     }
 }
 
-@media screen and (max-width: 51.99em){
+@media screen and (max-width: 56.99em){
     .no-js .close-btn {
         display: block;
     }

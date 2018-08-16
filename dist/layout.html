@@ -109,7 +109,6 @@
                         if (mql.matches) {
                             var vidStr = '<video preload="auto" autoplay="autoplay" muted="true" loop="true" style="min-width: 100%" id="vid">';                        
                             vidStr += '<source src="https://www.bethel.edu/_homepages/www/video/welcome2-2018.mp4" type="video/mp4" />';                            
-                            vidStr += '<img src="https://cdn3.bethel.edu/resize/unsafe/800x0/smart/https://www.bethel.edu/_homepages/www/images/feature/welcome-week-2016-2x1.jpg" />';
                             vidStr += '</video>';
                             document.getElementById('heroVideo__wrap').innerHTML = vidStr;
                             document.getElementById('vid').play();
@@ -132,6 +131,25 @@
             </div>
         </div>
 
+
+<style>
+@media (min-width: 912px) {
+
+    .global__toolbox {
+        z-index: 100;
+    }
+
+    .global__header {
+		background: rgba(0,0,0,.2);
+		z-index: 100
+	}
+}
+
+.inner {
+    max-width: 80em;
+}
+
+</style>    
 
     <section class="overFeat  pb2">
         <div class="inner" style="overflow: visible;">
@@ -742,7 +760,6 @@
             </div>
 
         </div>
-
 
     </section>
 

@@ -144,7 +144,7 @@ function(t){return"object"==typeof window.Node?t instanceof window.Node:null!==t
 	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 	THE SOFTWARE.
 */function r(t){if(t.constructor!==Array)throw new TypeError("Expected array.");if(16===t.length)return t;if(6===t.length){var e=a();return e[0]=t[0],e[1]=t[1],e[4]=t[2],e[5]=t[3],e[12]=t[4],e[13]=t[5],e}throw new RangeError("Expected array with either 6 or 16 values.")}function a(){for(var t=[],e=0;e<16;e++)e%5==0?t.push(1):t.push(0);return t}function l(t,e){for(var i=r(t),n=r(e),o=[],s=0;s<4;s++)for(var a=[i[s],i[s+4],i[s+8],i[s+12]],l=0;l<4;l++){var c=4*l,h=[n[c],n[c+1],n[c+2],n[c+3]],d=a[0]*h[0]+a[1]*h[1]+a[2]*h[2]+a[3]*h[3];o[s+c]=d}return o}function c(t){var e=Math.PI/180*t,i=a();return i[0]=i[5]=Math.cos(e),i[1]=i[4]=Math.sin(e),i[4]*=-1,i}function h(t,e){var i=a();return i[0]=t,i[5]="number"==typeof e?e:t,i}
-/*! @license miniraf v1.0.0
+/*! @license miniraf v1.0.1
 
 	Copyright 2018 Fisssion LLC.
 
