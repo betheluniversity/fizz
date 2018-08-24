@@ -44,7 +44,7 @@ const showFilters = function (e) {
     filterList.classList.toggle('open-filters')
 }
 
-const formFilters = document.querySelectorAll('.accordion-list__button')
+const formFilters = document.querySelectorAll('.form--search-filter__button')
 for (let index = 0; index < formFilters.length; index++) {
     formFilters[index].addEventListener('click', showFilters)
 }

@@ -27,71 +27,61 @@
   /* margins on basic grids. If flex-wrap is required above medium*/
   /* use .grid--wrap*/
   
-  .grid {
-      display: flex;
-      flex-wrap: wrap;
-      list-style: none;
-  
-      @mixin respond-min $large {
-        /* flex-wrap: nowrap; */
-      }
-  }
-  
-  .grid--wrap {
+.grid {
+    display: flex;
     flex-wrap: wrap;
-  }
-  
-  .grid--nowrap {
-      flex-wrap: nowrap;
-  }
-  
-  /* Setting width to 100% defaults to full-width on mobile*/
-  
-  .grid-cell {
-      width: 100%;
-      min-width: 1px;
-      margin-top: 0;
-  
-      
-      @mixin respond-min $large {
-          margin: 0;
-          max-width: 100%;
-      }
-  }   
+    list-style: none;
+
+    @mixin respond-min $large {
+    /* flex-wrap: nowrap; */
+    }
+}
+
+.grid--wrap {
+    flex-wrap: wrap;
+}
+
+.grid--nowrap {
+    flex-wrap: nowrap;
+}
+
+/* Setting width to 100% defaults to full-width on mobile*/
+
+.grid-cell {
+    width: 100%;
+    min-width: 1px;
+    margin-top: 0;
+}   
   
   @mixin respond-min $large  {
-      .grid-cell {
-          flex: 1;
-      }
-  
-      .grid-cell:first-child {
+    .grid-cell {
+        flex: 1;
+    }
+
+    .grid-cell:first-child {
         margin-left: -1em;
-      }
-  
-      .grid-cell:last-child {
+    }
+
+    .grid-cell:last-child {
         margin-right: -1em;
-      }
-  
-      /* removing negative margins on nested grids*/
-      .grid .grid .grid-cell:first-child {
+    }
+
+    .grid-cell:only-child {
+        margin: 0;
+    }
+
+    /* removing negative margins on nested grids*/
+    .grid .grid .grid-cell:first-child {
         margin-left:0;
-      }
-  
-      .grid .grid .grid-cell:last-child {
+    }
+
+    .grid .grid .grid-cell:last-child {
         margin-right: 0;
-      }
-  }
+    }
+}   
   
   .grid--wrap .grid-cell:first-child {margin-left: 0;}
   .grid--wrap .grid-cell:last-child {margin-right: 0; flex-grow: 0}
-  
-  /* These rules remove the top margin of heading when it is the first in*/
-  /* a grid-cell to make content top-aligned*/
-  .grid-cell h2:first-of-type,
-  .grid-cell h3:first-of-type,
-  .grid-cell h4:first-of-type {
-    margin-top: 0;
-  }
   
   /* Aligns all cells*/
   .grid--top {

@@ -1,6 +1,6 @@
 .proofPoints .grid-cell {
     color: #667;
-    padding: 4em 1em 2em;
+    padding: 3em 1em 2em;
     font-weight: 300;
     font-size: 1.15rem;
     border: 1px solid #0069aa;
@@ -17,19 +17,19 @@
     color: #0069aa;
 }
 
-.proofPoint small {
-    font-size: 1rem;
+.proofPoint__cite {
+    font-size: .8rem;
 }
 
 .proof-points {
-    font-family: $gotham;
+    /* font-family: $gotham; */
 
     .grid-cell {
-        background-color: #fff; 
+        /* background-color: #fff;  */
         padding: 1em 1em;
-        border-radius: .5em;
+        /* border-radius: .5em; */
         margin: 1em 0;
-        border: 1px solid #e5e5e5; 
+        border: 1px solid $bethel--blue; 
 
         @mixin respond-min $medium {
             margin: 1em;
@@ -37,6 +37,7 @@
             justify-content: center;
             align-items: center;
             flex: 1;
+            padding: 3em 2em;
         }
     }
 
@@ -49,7 +50,7 @@
 
 .proof-point__text {
     margin-bottom: .75em;
-    text-align: center;
+    /* text-align: center; */
     font-size: 1.25rem;
 }
 
@@ -57,16 +58,18 @@
     font-size: 3.5rem;
     line-height: 1;
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
+    font-weight: 200;
+    color: $bethel--blue;
 
-    @mixin respond-min $medium {
+    /* @mixin respond-min $medium {
         font-size: 4rem;
     }
 
     @mixin respond-min 75em {
     	font-size: 5rem;
-    }
+    } */
 }
 
 .proof-point__number > * {

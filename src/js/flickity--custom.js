@@ -67,10 +67,14 @@ if (carousels.length !== 0) {
     }
 }
 
-var flickityCustomExperience = new Flickity('.flickityCustom--experience', {
-    autoPlay: 5000,
-    cellAlign: 'left',
-    lazyLoad: 10,
-    percentPosition: false,
-    wrapAround: true
-})
+var carouselsCustom = document.querySelectorAll('.flickityCustom--experience')
+
+if (carouselsCustom.length > 0) {
+    var flickityCustomExperience = new Flickity('.flickityCustom--experience', {
+        autoPlay: 5000,
+        cellAlign: 'left',
+        lazyLoad: 10,
+        percentPosition: false,
+        wrapAround: true
+    })
+}

@@ -28,6 +28,10 @@
     }
 }
 
+.heroVideo__media video {
+    display: block;
+}
+
 .heroVideo__overlay {
     position: absolute;
     top: 0;
@@ -38,7 +42,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    padding: 1em;
+    /* padding: 1em; */
 
     @mixin respond-min $large {
         justify-content: center;
@@ -60,3 +64,4 @@
 		font-size: 4rem;
 	}
 }
+

@@ -10,10 +10,10 @@
 .sectionSplit--imgLeft > .grid-cell:nth-child(1),
 .sectionSplit--imgRight > .grid-cell:nth-child(1){
     min-height: 25em;
-    flex: 0 0 50%;
     margin: 0;
- 
-    @mixin respond-min $medium {
+    
+    @mixin respond-min $large {
+        flex: 0 0 50%;
         min-height: auto;
     }
 }
