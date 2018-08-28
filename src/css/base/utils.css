@@ -20,14 +20,14 @@
 }
 
 .bkg--white { background-color: #fff; }
-.bkg--light-gray { background-color: #eee; }
+.bkg--light-gray { background-color: #f6f9fa; }
 .bkg--blue { background-color: $bethel--blue; }
 .bkg--navy { background-color: $bethel--navy; }
 .bkg--yellow { background-color: $bethel--yellow; }
-.bkg--light-blue { background-color: #eff8ff; }
+.bkg--light-blue { background-color: #effeff; }
 .bkg--light-yellow { background-color: #ffc6001f;}
 .bkg--gradient-blue-yellow { background: linear-gradient(-150deg, $bethel--blue, 70%, $bethel--yellow); }
-$bkg--gradient-blue-yellow: linear-gradient(-150deg, $bethel--blue, 70%, $bethel--yellow);
+.bkg--gradient-blue-yellow: linear-gradient(-150deg, $bethel--blue, 70%, $bethel--yellow);
 .bkg--gradient-navy-blue { background: linear-gradient(-150deg, $bethel--navy, $bethel--blue); }
 
 .vh50 {

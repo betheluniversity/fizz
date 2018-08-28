@@ -1,7 +1,5 @@
 .flickity {
     margin: auto;
-    /* background-color: #000;*/
-    /* background: transparent url(https://www.bethel.edu/cdn/images/load.gif) no-repeat center;*/
 }
 
 .flickity-viewport {
@@ -36,14 +34,6 @@
     margin: 0 auto;
     max-width: 100%;
 }
-
-/* .carousel--employee .flickity--cell img {*/
-/*     visibility: hidden;*/
-/* }*/
-
-/* .carousel--employee .flickity--cell img.lazyloaded {*/
-/*     visibility: visible;*/
-/* }*/
 
 .carousel--text-over-media .ratio-box {
     position: relative;
@@ -80,11 +70,22 @@
     }
 }
 
+.carousel--text-over-media {
+    .flickity-prev-next-button .arrow {
+        fill: white;
+    }
+    
+    .flickity-prev-next-button.no-svg {
+        color: white;
+    }
+       
+}
+
 .carousel--image-bank .ratio-box {
     padding-bottom: 33.2361516%;
 }
 
-.lazyload {
+/* .lazyload {
     opacity: 0;
 }
 
@@ -97,28 +98,8 @@
 .lazyloaded {
     opacity: 1;
     transition: 100ms opacity;
-}
+} */
 
-
-/* =====================
-Styles for the big carousel on bethel.edu 
-======================== */
-
-.flickity--home {
-    height: 415px;
-    /* max-height: 80vh;*/
-
-    @mixin respond-min 830px {
-        height: 100%;
-    }
-
-    .flickity-viewport {
-
-        @mixin respond-max 829px {
-           height: 100% !important;
-       }
-   }
-}
 
 /* buttons, no circle */
 .flickity-prev-next-button {
@@ -135,11 +116,11 @@ Styles for the big carousel on bethel.edu
 
 /* arrow color */
 .flickity-prev-next-button .arrow {
-    fill: white;
+    fill: $bethel--blue;
 }
 
 .flickity-prev-next-button.no-svg {
-    color: white;
+    color: $bethel--blue;
 }
 
 .flickity-prev-next-button.previous { 
@@ -163,4 +144,34 @@ Styles for the big carousel on bethel.edu
 
 .flickity-page-dots {
     left: 0;
+}
+
+/* =====================
+Styles for the big carousel on bethel.edu 
+======================== */
+
+.flickity--home {
+    height: 415px;
+    /* max-height: 80vh;*/
+
+    @mixin respond-min 830px {
+        height: 100%;
+    }
+
+    .flickity-viewport {
+
+        @mixin respond-max 829px {
+           height: 100% !important;
+       }
+   }
+}
+
+.flickityCustom--experience {
+    .flickity--cell {
+        width: 375px;
+
+        @mixin respond-min 1600px {
+            width: 600px;
+        }
+    }
 }

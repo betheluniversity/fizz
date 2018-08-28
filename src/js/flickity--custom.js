@@ -1,7 +1,6 @@
 import Flickity from 'flickity'
 
 // Select a random image from the carousel to appear first
-
 if (document.querySelectorAll('.js-rotate-order-carousel')[0]) {
     if (typeof (Storage) !== 'undefined') {
         // Set a unique index.
@@ -65,77 +64,17 @@ if (carousels.length !== 0) {
             draggable: false,
             cellAlign: 'left'
         })
-
-        flkty.on('cellSelect', function () {
-            isSelected()
-        })
     }
 }
 
-// function onLoadeddata (event) {
-//     var cell = flkty.getParentCell(event.target)
-//     flkty.cellSizeChange(cell && cell.element)
-// }
+var carouselsCustom = document.querySelectorAll('.flickityCustom--experience')
 
-// if (typeof flkty !== 'undefined') {
-//     if (flkty.selectedElement.querySelectorAll('video')) {
-//         var videos = flkty.selectedElement.querySelectorAll('video')
-//     }
-
-//     for (var j = 0, jLen = videos.length; j < jLen; j++) {
-//         var video = videos[i]
-//         video.play()
-//         addEvent(video, 'loadeddata', onLoadeddata)
-//     }
-// }
-
-// var videos = flkty.selectedElement.querySelectorAll('.video');
-
-// if ( videos.length != 0){
-//     for ( var i=0, len = videos.length; i < len; i++ ) {
-//       var video = videos[i];
-//       // resume autoplay for WebKit
-//       video.play();
-//       addEvent( video, 'loadeddata', onLoadeddata );
-//     }
-// }
-
-// Checking for 'is-selected' on load
-
-addEvent(window, 'load', function () {
-    isSelected()
-})
-
-// This function needs a double test because some carousels
-// may not have the .lazyload class applied on load. If it already
-// has the class, we don't want to remove it
-
-function isSelected () {
-    var fc = document.querySelectorAll('.js-load-on-demand .flickity--cell')
-    for (var i = 0; i < fc.length; i++) {
-        if (fc[i].classList.contains('is-selected')) {
-            if (fc[i].querySelector('img').classList.contains('lazyload')) {} else {
-                fc[i].querySelector('img').classList.add('lazyload')
-            }
-        }
-    }
-}
-
-// var gallery = document.querySelector('.flickity')
-// if (carousels.length > 0) {
-//     flkty = new Flickity(carousels[i])
-// }
-
-// Generic addEvent function
-
-function addEvent (obj, type, fn) {
-    if (obj.addEventListener) {
-        obj.addEventListener(type, fn, false)
-    } else if (obj.attachEvent) {
-        obj['e' + type + fn] = fn
-        obj[type + fn] = function () {
-            obj['e' + type + fn](window.event)
-        }
-        obj.attachEvent('on' + type, obj[type + fn])
-    }
+if (carouselsCustom.length > 0) {
+    var flickityCustomExperience = new Flickity('.flickityCustom--experience', {
+        autoPlay: 5000,
+        cellAlign: 'left',
+        lazyLoad: 10,
+        percentPosition: false,
+        wrapAround: true
+    })
 }

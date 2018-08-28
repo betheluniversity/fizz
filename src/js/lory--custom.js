@@ -1,5 +1,4 @@
 const loryModule = document.querySelectorAll('.loryModule')
-// const percentage = document.querySelector('.js_percentage')
 
 if (loryModule.length > 0) {
     const lory = require('lory.js').lory
@@ -15,8 +14,7 @@ if (loryModule.length > 0) {
                 })
             } else if (variableWidth) {
                 const slider = lory(element, {
-                    // infinite: 1,
-                    rewind: true,
+                    infinite: 1,
                     slidesToScroll: 1
                 })
 

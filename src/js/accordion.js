@@ -16,22 +16,24 @@ const openItem = function (e) {
     } else {
         this.innerHTML = '+'
     }
-};
+}
 
-[].forEach.call(document.querySelectorAll('.accordion-list__button'), function (el) {
-    el.addEventListener('click', openItem)
-})
+const accordionButtons = document.querySelectorAll('.accordion-list__button')
+for (let index = 0; index < accordionButtons.length; index++) {
+    accordionButtons[index].addEventListener('click', openItem)
+}
 
 // Generic collapsible block
 // Ex. https://www.bethel.edu/graduate/financial-aid/types/grants-scholarships/
 
 function toggleOpen () {
-    this.classList.toggle('open-block')
+    this.parentNode.classList.toggle('open-block')
 }
 
-[].forEach.call(document.querySelectorAll('.collapsible'), function (el) {
-    el.addEventListener('click', toggleOpen)
-})
+const collapsibleHeading = document.querySelectorAll('.collapsible-heading')
+for (let index = 0; index < collapsibleHeading.length; index++) {
+    collapsibleHeading[index].addEventListener('click', toggleOpen)
+}
 
 // Collapsible filter for program search
 // Ex. https://www.bethel.edu/academics/program-search
@@ -40,8 +42,9 @@ const showFilters = function (e) {
     e.preventDefault()
     var filterList = document.querySelector('.form--search-filter__filters')
     filterList.classList.toggle('open-filters')
-};
+}
 
-[].forEach.call(document.querySelectorAll('.form--search-filter__button'), function (el) {
-    el.addEventListener('click', showFilters)
-})
+const formFilters = document.querySelectorAll('.form--search-filter__button')
+for (let index = 0; index < formFilters.length; index++) {
+    formFilters[index].addEventListener('click', showFilters)
+}

@@ -12,13 +12,13 @@
 
 		{{> global__header }}
 
-		{{> school__navigation }}
+		{{!-- {{> school__navigation }} --}}
 
 
-		    	{{> site__navigation }}
+		    	{{!-- {{> site__navigation }} --}}
 
 
-		        {{> page__title }}
+		        {{!-- {{> page__title }} --}}
 
 				{% body %}
 
@@ -27,33 +27,20 @@
 
 	</div>
 
-
 <script>
-    function loadJS(u) {var r = document.getElementsByTagName("script")[0], s = document.createElement("script"); s.src = u; r.parentNode.insertBefore(s, r); }
-    
-	loadJS("js/blanco.js");
 
-    if (!window.HTMLPictureElement) {
-        document.createElement('picture');
-        window.picturefillCFG = window.picturefillCFG || [];
-        picturefillCFG.push(["algorithm", "saveData"]);
-        loadJS("https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.1/picturefill.min.js");
-    };
+
 
 	var cb = function() {
 		var l = document.createElement('link'); l.rel = 'stylesheet';
-		l.href = '//cloud.typography.com/6664852/665108/css/fonts.css';
+		l.href = 'https://cloud.typography.com/6664852/665108/css/fonts.css';
 		var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
 	};
 	var raf = requestAnimationFrame || mozRequestAnimationFrame ||
 	webkitRequestAnimationFrame || msRequestAnimationFrame;
 	if (raf) raf(cb);
 	else window.addEventListener('load', cb);
-
 </script>
-<script id="__bs_script__">//<![CDATA[
-    document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.24.6'><\/script>".replace("HOST", location.hostname));
-//]]></script>
 
 </body>
 </html>

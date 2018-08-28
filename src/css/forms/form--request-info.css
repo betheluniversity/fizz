@@ -1,11 +1,8 @@
 .form--request-info fieldset {
-  font-family: $gotham;
   font-size: 1.2rem;
   line-height: 2em;
-  color: #ddd;
 
   @mixin respond-min $medium {
-    font-size: 1.5rem;
     line-height: 3em;
   }
 }
@@ -14,11 +11,6 @@
   font-size: 1.2rem;
   display: inline;
   font-weight: 400;
-  color: #ddd;
-
-  @mixin respond-min $medium {
-    font-size: 1.5rem;
-  }
 }
 
 .form--request-info input {
@@ -26,10 +18,9 @@
   box-shadow: none;
   border-radius: 0;
   border: 0;
-  /* min-width: 12em; */
   border-bottom: 1px solid #ccc;
   font-size: 1.2rem;
-  color: $bethel--yellow;
+  color: $bethel--blue;
   text-align: center !important;
 
   @mixin respond-min $medium {
@@ -44,7 +35,7 @@
   border-bottom: 1px solid #ccc;
   border-radius: 0;
   background: transparent;
-  color: $bethel--yellow;
+  color: #ccc;
   font-size: 1.2rem;
   height: 2.5em;
   -moz-appearance: none;
@@ -55,10 +46,7 @@
   }
 }
 
-.form--request-info #user_firstName {
-  width: 5em;
-}
-
+.form--request-info #user_firstName,
 .form--request-info #user_lastName {
   width: 5em;
 }
@@ -69,4 +57,28 @@
 
 .form--request-info__select {
   width: 13em;
+}
+
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #ccc;
+  opacity: 1;
+}
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #ccc;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #ccc;
+  opacity: 1;
+}
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: #ccc;
+  opacity: 1;
 }

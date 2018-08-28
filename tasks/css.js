@@ -1,8 +1,8 @@
-const { outputDir, reload } = require('../gulpfile')
-const { src, dest } = require('gulp')
-const postcss = require('gulp-postcss')
-const autoprefixer = require('autoprefixer')
-function css () {
+import { src, dest } from 'gulp'
+import autoprefixer from 'autoprefixer'
+import postcss from 'gulp-postcss'
+
+export function css () {
     var plugins = [
         require('postcss-easy-import'),
         require('postcss-mixins'),
@@ -15,9 +15,5 @@ function css () {
     ]
     return src('src/css/*.css')
         .pipe(postcss(plugins))
-        .pipe(dest(outputDir + '/css'))
-        .pipe(reload({
-            stream: true
-        }))
+        .pipe(dest('./dist/css'))
 }
-exports.css = css

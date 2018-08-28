@@ -1,0 +1,21 @@
+
+.linkBlock {
+	list-style-type:none;
+	margin: 0;
+	padding: 0;
+}
+
+.linkBlock li a {
+	display: block;
+	width: 100%;
+	padding: .5em 1em;
+    margin-bottom: 8px;
+    border: 1px solid $bethel--blue;
+}
+
+.linkBlock li a:hover {
+    text-decoration: none;
+    background: $bethel--blue;
+    color: #fff;
+    transition: all .1s;
+}

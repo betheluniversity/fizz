@@ -10,8 +10,10 @@
 .sectionSplit--imgLeft > .grid-cell:nth-child(1),
 .sectionSplit--imgRight > .grid-cell:nth-child(1){
     min-height: 25em;
- 
-    @mixin respond-min $medium {
+    margin: 0;
+    
+    @mixin respond-min $large {
+        flex: 0 0 50%;
         min-height: auto;
     }
 }
@@ -27,6 +29,8 @@ This is to ensure the height of the pad is 100% and the object-fit works */
     justify-content: center;
 }
 
+/* font-family > cover is needed for IE11 */
+
 .sectionSplit--imgLeft > .grid-cell:nth-child(1) img,
 .sectionSplit--imgRight > .grid-cell:nth-child(1) img{
     object-fit: cover;
@@ -40,5 +44,6 @@ This is to ensure the height of the pad is 100% and the object-fit works */
     max-width: 500px; 
     margin: 0 auto;
     padding: 4em 2em;
+    flex: 0 0 50%;
 
 }

@@ -1,13 +1,10 @@
-
 .inner-wrap--global__navigation {
   position: relative;
   background: #fff;
-  overflow: hidden;
 }
 
 .global__toolbox {
   background: $bethel--navy;
-  font-family: $gotham;
   top: 0;
   overflow-y: auto;
   contain: paint;
@@ -18,12 +15,10 @@
 }
 
 .global__toolbox .inner {
-    /* display: flex;*/
-    /* justify-content: space-between;*/
     padding: 0 2em;
 }
 
-@media screen and (max-width: 51.99em) {
+@media screen and (max-width: 56.99em) {
 
   .no-js {
       .global__toolbox:not(:target) {
@@ -88,7 +83,7 @@
     }
 }
 
-@media screen and (max-width: 51.99em){
+@media screen and (max-width: 56.99em){
     .no-js .close-btn {
         display: block;
     }
