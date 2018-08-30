@@ -47,10 +47,6 @@ if (document.querySelectorAll('.js-animateSequence').length !== 0) {
 
 // Odometer
 
-window.odometerOptions = {
-    auto: false
-}
-
 var odometers = document.getElementsByClassName('odometer')
 
 for (var i = 0, len = odometers.length; i < len; i++) {
@@ -68,6 +64,7 @@ for (var i = 0, len = odometers.length; i < len; i++) {
         },
         distance: 0,
         delay: 0,
-        duration: 1700
+        duration: 1700,
+        mobile: true
     })
 }

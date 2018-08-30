@@ -70,7 +70,8 @@
     }
 }
 
-.carousel--text-over-media {
+.carousel--text-over-media,
+.carousel--image-bank {
     .flickity-prev-next-button .arrow {
         fill: white;
     }
@@ -167,6 +168,19 @@ Styles for the big carousel on bethel.edu
 }
 
 .flickityCustom--experience {
+    
+    @mixin respond-min $large {
+        padding-left: 1em;
+    }
+
+    /* .ratio-box {
+        padding-bottom: 50%;
+
+        @mixin respond-min 830px {
+            padding-bottom: 56.25%;
+        }
+    } */
+
     .flickity--cell {
         width: 375px;
 

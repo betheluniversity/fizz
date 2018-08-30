@@ -7,7 +7,9 @@
 }
 
 .proofPoints .grid-cell:not(:last-of-type) {
-	margin-right: 2em;
+    @mixin respond-min $large {
+        margin-right: 2em;
+    }
 }
 
 .proofPoint__number {
