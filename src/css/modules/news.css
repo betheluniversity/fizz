@@ -1,36 +1,45 @@
-.news {}
 
-.news__item {
-	margin: 2em 0;
-	display: flex;
+@mixin respond-min $medium {
+	.news__item {
+		display: flex;
+	}
+
+	.news__image {
+		flex-basis: 30%;
+		min-width: 1px;
+	}
+
+	.news__content {
+		padding-left: 1em;
+		flex-basis: 60%;
+		min-width: 1px;
+	}
 }
 
-.news__image {
-	flex-basis: 40%;
-	min-width: 1px;
+/* Using grid layout to override the above css. 
+Remove the above when IE11 is no longer supported */
+
+.news__item {
+	margin: 3em 0;
+	display: grid;
+	grid-template-columns: 1fr;
+
+	@mixin respond-min $medium {
+		display: grid;
+		grid-template-columns: minmax(100px, 1fr) minmax(auto, 2fr);
+		grid-gap: .75em;
+	}
 }
 
 .news__content {
-	padding-left: .75em;
-	flex-basis: 60%;
-	min-width: 1px;
+	margin-top: 1em;
 
 	@mixin respond-min $medium {
-		padding-left: 1em;
-	}
-
-	p {
-		margin-bottom: 0;
 		margin-top: 0;
-		line-height: 1.2;
-	
-		@mixin respond-min $large {
-			line-height: 1.4;
-		}
 	}
+}
 
-	.news__headline {
-		font-weight: 500;
-		font-family: $gotham;
-	}
+.news__date {
+	font-size: .8rem;
+	color: #aaa;
 }
