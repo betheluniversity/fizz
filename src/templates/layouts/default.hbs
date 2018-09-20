@@ -9,38 +9,24 @@
 	{{> global--school}}
 
 	<div class="inner-wrap--global__navigation" id="js-inner-wrap--global__navigation">
-
-		{{> global__header }}
-
-		{{!-- {{> school__navigation }} --}}
-
-
-		    	{{!-- {{> site__navigation }} --}}
-
-
-		        {{!-- {{> page__title }} --}}
-
-				{% body %}
-
-
+		{{> mobile__header }}
+		{{> school__navigation }}
+		{{!-- {{> site__navigation }} --}}
+		{{!-- {{> page__title }} --}}
+		{% body %}
 		{{> global__footer }}
-
 	</div>
 
-<script>
-
-
-
-	var cb = function() {
-		var l = document.createElement('link'); l.rel = 'stylesheet';
-		l.href = 'https://cloud.typography.com/6664852/665108/css/fonts.css';
-		var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
-	};
-	var raf = requestAnimationFrame || mozRequestAnimationFrame ||
-	webkitRequestAnimationFrame || msRequestAnimationFrame;
-	if (raf) raf(cb);
-	else window.addEventListener('load', cb);
-</script>
-
+	<script>
+		var cb = function() {
+			var l = document.createElement('link'); l.rel = 'stylesheet';
+			l.href = 'https://cloud.typography.com/6664852/665108/css/fonts.css';
+			var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
+		};
+		var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+		webkitRequestAnimationFrame || msRequestAnimationFrame;
+		if (raf) raf(cb);
+		else window.addEventListener('load', cb);
+	</script>
 </body>
 </html>

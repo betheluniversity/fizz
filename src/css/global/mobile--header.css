@@ -1,39 +1,43 @@
-.global__header {
-    background: #123563;
+.mobile__header {
+    background: #143a6b;
     position: relative;
     padding: 0;
     width: 100%;
+
+    @mixin respond-min $large {
+        display: none;
+    }
 }
 
-.global__header .inner {
+.mobile__header .inner {
     position: relative;
-    padding: 0 1em;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
     @mixin respond-min $large {
         padding: 0 2em;
     }
 }
 
-.global__logo {
-    width: 9em;
-    padding: .7em 0 .4em;
-    float: left;
+.mobile__logo {
+    width: 180px;
+    /* padding: .7em 0 .4em; */
+    /* float: left; */
     
     @mixin respond-min $large { 
-        padding: 1.5em 0;
-        width: 11em;
-        float: none;
+        /* padding: 1.5em 0; */
+        /* width: 11em; */
+        /* float: none; */
     }
 }
 
-.global__logo a { 
+.mobile__logo a { 
     display: block; 
 }
 
-.global__logo img {
+.mobile__logo img {
     border: none;
 }
 

@@ -21,7 +21,7 @@
 @import "grid/sectionFeature.css";
 @import "grid/sectionSplit.css";
 
-@import "global/header.css";
+@import "global/mobile--header.css";
 @import "global/off-canvas--global.css";
 @import "global/navigation.css";
 @import "global/breadcrumb.css";

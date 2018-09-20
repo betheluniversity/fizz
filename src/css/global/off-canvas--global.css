@@ -1,21 +1,46 @@
 .inner-wrap--global__navigation {
   position: relative;
   background: #fff;
+  overflow: hidden;
 }
 
 .global__toolbox {
-  background: $bethel--navy;
-  top: 0;
-  overflow-y: auto;
-  contain: paint;
+  /* background: $bethel--navy; */
+  background-color: #123563;
 
   @mixin respond-min $large {
     position: relative;
   }
 }
 
-.global__toolbox .inner {
+.global__toolboxGrid {
     padding: 0 2em;
+
+    @mixin respond-min $large {
+        display: grid;
+        grid-template-columns: 200px auto;
+        grid-gap: 3em;
+        align-items: center;
+        overflow: visible;
+    }
+}
+
+.global__logo {
+    display: none;
+    @mixin respond-min $large {
+        display: block;
+    }
+}
+
+.global__navigation {
+    /* display: grid; */
+    grid-row: 2/3;
+}
+
+.nav__holder {
+    @mixin respond-min $large {
+        display: grid;
+    }
 }
 
 @media screen and (max-width: 56.99em) {
@@ -41,7 +66,6 @@
         height: auto;
       }
     }
-
 
 
   .js .global__toolbox {
@@ -74,8 +98,8 @@
 }
 
 .global__toolbox__close-btn {
-    float: right;
-    margin-top: 1em !important; /* need !important to overide .btn styles */ 
+    /* float: right; */
+    margin-top: 2em !important;
     color: #fff;
 
     @mixin respond-min $large {
