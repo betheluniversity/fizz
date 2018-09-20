@@ -118,7 +118,7 @@ form#cse-search-box {
 
 	input {
 		/* @mixin font-size(.702);*/
-		font-family: $gotham;
+		 
 		font-size: .7rem;
 		text-transform: uppercase;
 		letter-spacing: .05em;

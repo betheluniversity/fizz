@@ -6,7 +6,7 @@
     counter-increment: section;
     content: counter(section);
     font-size: 4rem;
-    font-family: $gotham;
+     
     flex-basis: 100px;
     flex-shrink: 0;
     text-align: center;

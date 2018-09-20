@@ -3,7 +3,7 @@
     margin: 0;
     padding: 1em .5em;
     border-bottom: 1px solid #ccc;
-    font-family: $gotham;
+     
 
     @mixin respond-min $x-large{
         padding: 1em;

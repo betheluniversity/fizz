@@ -39,7 +39,7 @@
     margin-right: .8em;
     font-size: 1.5rem;
     color: #fff;
-    font-family: $gotham;
+     
     font-weight: 500;
     font-style: normal;
     line-height: 1.4;
@@ -68,7 +68,7 @@
 .carousel--basic .feature__figcaption {
     margin-bottom: 0;
     color: #665;
-    font-family: $gotham;
+     
     font-weight: 500;
     font-style: normal;
     font-size: .8em

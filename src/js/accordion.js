@@ -1,3 +1,17 @@
+// Generic collapsible block
+// Ex. https://www.bethel.edu/graduate/financial-aid/types/grants-scholarships/
+
+function toggleOpen () {
+    this.parentNode.classList.toggle('open-block')
+}
+
+const collapsibleHeading = document.querySelectorAll('.collapsible-heading')
+for (let index = 0; index < collapsibleHeading.length; index++) {
+    collapsibleHeading[index].addEventListener('click', toggleOpen)
+}
+
+// Site navigation
+
 const openItem = function (e) {
     e.preventDefault()
 
@@ -21,18 +35,6 @@ const openItem = function (e) {
 const accordionButtons = document.querySelectorAll('.accordion-list__button')
 for (let index = 0; index < accordionButtons.length; index++) {
     accordionButtons[index].addEventListener('click', openItem)
-}
-
-// Generic collapsible block
-// Ex. https://www.bethel.edu/graduate/financial-aid/types/grants-scholarships/
-
-function toggleOpen () {
-    this.parentNode.classList.toggle('open-block')
-}
-
-const collapsibleHeading = document.querySelectorAll('.collapsible-heading')
-for (let index = 0; index < collapsibleHeading.length; index++) {
-    collapsibleHeading[index].addEventListener('click', toggleOpen)
 }
 
 // Collapsible filter for program search

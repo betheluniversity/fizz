@@ -83,7 +83,7 @@
 	left: 0;
 	bottom: 0;
 	color: #fff;
-	font-family: $gotham;
+	 
 	z-index: 1;
 	padding: 1em 2.5em;
 
@@ -150,7 +150,7 @@
 	left: 0;
 	bottom: 0; */
 	color: #fff;
-	font-family: $gotham;
+	 
 	z-index: 20;
 	padding: 1em 2.5em;
 	text-align: center;

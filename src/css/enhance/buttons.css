@@ -57,7 +57,7 @@
   border-radius: .4em;/* [8] */
   
   background: $bethel--blue;
-  font-family: $gotham;
+   
   color: #fff; 
 }
 
@@ -151,7 +151,7 @@
   display: inline-block;/* [1] */
   vertical-align: middle;/* [2] */
   white-space: nowrap;/* [3] */
-  font-family: $gotham;
+   
   font-size: 100%;/* [4] */
   cursor: pointer;/* [5] */
   margin: 0;/* [6] */

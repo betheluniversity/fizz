@@ -1,6 +1,6 @@
 .action-nav {
 	display: none;
-	font-family: $gotham;
+	 
 	font-size: .9rem;
 
 	@mixin respond-min $medium {

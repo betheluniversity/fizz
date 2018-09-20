@@ -1,5 +1,5 @@
 .social-media {
-	font-family: $gotham;
+	 
 
 	display: flex;
 	flex-direction: column;
@@ -16,7 +16,7 @@
 		white-space: nowrap;
 		margin-right: 1em;
 		margin-bottom: .25em;
-		font-family: $gotham;
+		 
 
 	.svg-icon,
 	.social-media__icon {
@@ -31,7 +31,7 @@
 	margin-bottom: .25em;
 	font-weight: 500;
 	margin-right: 1em;
-	font-family: $gotham;
+	 
 }
 
 .twitter-quote-link {

@@ -50,7 +50,7 @@ input,
 button,
 select,
 textarea {
-  font-family: $gotham;
+   
 }
 
 /* Identify controls by their labels*/
@@ -61,7 +61,7 @@ label {
   font-size: 12px;
   font-weight: bold;
   line-height: $baseLineHeight;
-  font-family: $gotham;
+   
 }
 
 .inline-label {

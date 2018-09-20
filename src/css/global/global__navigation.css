@@ -1,0 +1,178 @@
+.nav__holder {
+    margin-top: 2em;
+  
+    @mixin respond-min $large {
+        display: grid;
+        margin-top: 0;
+    }
+}
+
+.global__navigation {
+    grid-row: 2/3;
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+        font-weight: 500;
+    
+        @mixin respond-min $large {
+            display: flex;
+            justify-content: flex-start;
+            /* padding-right: 1.5em; */
+            margin: .8em .4em;
+        }
+    }
+    
+    ul li {
+        padding-bottom: .35em;
+    }
+
+    @mixin respond-min $large {
+        li {
+            display: block;
+            position: relative;
+            padding: .5em 0;
+            /* transition-duration: 0.25s; */
+        }
+
+        li:hover,
+        li:focus-within {
+            background: $bethel--blue;
+            cursor: pointer;
+            /* border-radius: .2rem; */
+        }
+        
+        li:focus-within a {
+            outline: none;
+        }
+    }
+
+    a {
+        color: #fff;
+
+        @mixin respond-min $large {
+            padding: .75rem 1rem .65rem;
+        }
+    }
+
+    a:hover {
+        background: $bethel--blue;
+
+        @mixin respond-min $large {
+            text-decoration: none;
+        }
+    }
+
+    .svg-icon {
+        height: 1.05em;
+        width: 1.05em;
+        vertical-align: text-top;
+        fill: #fff;
+    }
+
+    ul.dropdown {
+        display: none;
+    }
+
+
+    @mixin respond-min $large {        
+        ul.dropdown {
+            background: #fff;
+            border: 1px solid $bethel--blue;
+            visibility: hidden;
+            opacity: 0;
+            min-width: 15rem;
+            position: absolute;
+            transition: all 0.5s ease;
+            margin-top: .5rem;
+            left: 0;
+            margin-left: 0;
+            font-size: .9rem;
+            padding: 1.5em;
+        }
+
+        ul.dropdown li:hover {
+            background: none;
+            text-decoration: underline;
+        }
+        
+        ul li:hover > ul.dropdown,
+        ul li:focus-within > ul.dropdown,
+        ul li ul.dropdown:hover,
+        ul li ul.dropdown:focus {
+            visibility: visible;
+            opacity: 1;
+            display: block;
+            z-index: 100;
+        }
+        
+        ul li ul.dropdown li {
+            clear: both;
+            width: 100%;
+            padding: .5em;
+            /* font-weight: normal; */
+        }
+
+        ul.dropdown li a {
+            color: $bethel--blue;
+            padding: 0;
+        }
+
+        ul.dropdown li a:hover {
+            background: none;
+        }
+    }
+}
+
+.quick-links {
+    @mixin respond-min $large {
+        display: flex;
+        justify-content: space-between;
+        background: $bethel--navy;
+    } 
+    
+    ul {
+        padding: 0;
+        list-style: none;
+        font-size: .8rem;
+    
+        @mixin respond-min $large {
+            padding: 0 1em;
+            margin: .75em 0; 
+        }
+    }
+    
+    ul li {
+        padding: .2em 0;
+    
+        @mixin respond-min $large {
+            display: inline-block;
+            padding: .2em .5em;
+        }
+    }
+    
+    a {
+        color: #ccc;
+    }
+    
+    a:hover {
+        color: #fff;
+    }
+}
+
+a.quick-links__my {
+    @mixin respond-min $large {
+        padding-right: 1.5em;
+        border-right: 1px solid #777;
+    }
+}
+
+.quick-links__search {
+    margin-top: 1em !important;
+    font-weight: 500;
+    color: #fff !important;
+
+    @mixin respond-min $large {
+        margin: .5em 0 !important;
+    }
+}

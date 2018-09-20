@@ -23,7 +23,7 @@
 
 @import "global/mobile--header.css";
 @import "global/off-canvas--global.css";
-@import "global/navigation.css";
+@import "global/global__navigation.css";
 @import "global/breadcrumb.css";
 @import "global/footer.css";
 

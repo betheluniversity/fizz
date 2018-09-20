@@ -1,5 +1,5 @@
 .program-search {
-	font-family: $gotham;
+	 
 
 	.grid {
 		padding: .5em 0;
@@ -80,7 +80,7 @@
 	}
 
 	.icon {
-		font-family: $gotham;
+		 
 		border-radius: 50%;
 		width: 1.65em;
 		height: 1.65em;

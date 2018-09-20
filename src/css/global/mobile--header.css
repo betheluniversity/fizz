@@ -15,22 +15,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    @mixin respond-min $large {
-        padding: 0 2em;
-    }
 }
 
 .mobile__logo {
     width: 180px;
-    /* padding: .7em 0 .4em; */
-    /* float: left; */
-    
-    @mixin respond-min $large { 
-        /* padding: 1.5em 0; */
-        /* width: 11em; */
-        /* float: none; */
-    }
 }
 
 .mobile__logo a { 
@@ -44,17 +32,9 @@
 .burger {
     background: #0069aa;
     padding: .5em 1em;
-    /*margin-top: 1em;*/
-    font-family: $gotham;
-    font-size: 1rem;
-    /*float: right;*/
     display: flex;
     border-radius: 3px;
     align-items: center;
-
-    @mixin respond-min $large {
-      display: none;
-    }
 }
 
 .burger-icon {
