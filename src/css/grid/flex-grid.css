@@ -81,7 +81,7 @@
 }   
   
   .grid--wrap .grid-cell:first-child {margin-left: 0;}
-  .grid--wrap .grid-cell:last-child {margin-right: 0; flex-grow: 0}
+
   
   /* Aligns all cells*/
   .grid--top {

@@ -1,33 +1,17 @@
-
-@mixin respond-min $medium {
-	.news__item {
-		display: flex;
-	}
-
-	.news__image {
-		flex-basis: 30%;
-		min-width: 1px;
-	}
-
-	.news__content {
-		padding-left: 1em;
-		flex-basis: 60%;
-		min-width: 1px;
+.news__item {
+	margin: 3em 0;
+	
+	@mixin respond-min $medium {
+		grid-template-columns: 1fr;
+		grid-template-columns: minmax(100px, 1fr) minmax(200px, 2fr);
+		display: grid;
 	}
 }
 
-/* Using grid layout to override the above css. 
-Remove the above when IE11 is no longer supported */
-
-.news__item {
-	margin: 3em 0;
-	display: grid;
-	grid-template-columns: 1fr;
-
+.news__image {
 	@mixin respond-min $medium {
-		display: grid;
-		grid-template-columns: minmax(100px, 1fr) minmax(auto, 2fr);
-		grid-gap: .75em;
+		grid-column: 1/2;
+		margin-right: 1.5em;
 	}
 }
 
@@ -35,6 +19,7 @@ Remove the above when IE11 is no longer supported */
 	margin-top: 1em;
 
 	@mixin respond-min $medium {
+		grid-column: 2/3;
 		margin-top: 0;
 	}
 }
