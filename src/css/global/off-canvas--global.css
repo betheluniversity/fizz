@@ -16,23 +16,23 @@
     padding: 0 2em;
 
     @mixin respond-min $large {
-        display: grid;
-        /* grid-template-columns: 200px auto; */
-        grid-template-columns: minmax(150px, 210px) minmax(700px, auto);
-        grid-gap: 2em;
-        align-items: center;
-        overflow: visible;
-    }
 
-    @mixin respond-min $x-large {
-        grid-gap: 3em;
+        display: grid;
+        grid-template-columns: minmax(170px, 210px) minmax(710px, 900px);
+        /* autoprefixer: ignore next */
+        grid-template-columns: minmax(170px, 210px) minmax(710px, auto);
+        overflow: visible;
     }
 }
 
 .global__logo {
     display: none;
+    grid-column: 1/2;
+
     @mixin respond-min $large {
         display: block;
+        margin-top: 1.8em;
+        margin-right: 2em;
     }
 }
 
@@ -91,7 +91,6 @@
 }
 
 .global__toolbox__close-btn {
-    /* float: right; */
     margin-top: 2em !important;
     color: #fff;
 

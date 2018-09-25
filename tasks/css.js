@@ -9,7 +9,8 @@ export function css () {
         require('postcss-nested'),
         require('postcss-simple-vars'),
         autoprefixer({
-            remove: false
+            remove: false,
+            grid: true
         }),
         require('cssnano')
     ]
