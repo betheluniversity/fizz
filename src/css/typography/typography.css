@@ -118,6 +118,10 @@ a:hover {
 	padding: 0;
 }
 
+.u-uppercase {
+  text-transform: uppercase;
+}
+
 .uppercase-underlined {
     text-transform: uppercase;
     padding-bottom: 0.5em;

@@ -21,11 +21,11 @@
 @import "grid/sectionFeature.css";
 @import "grid/sectionSplit.css";
 
-@import "global/mobile--header.css";
-@import "global/off-canvas--global.css";
-@import "global/global__navigation.css";
 @import "global/breadcrumb.css";
 @import "global/footer.css";
+@import "global/global__navigation.css";
+@import "global/global__toolbox.css";
+@import "global/mobile--header.css";
 
 @import "school/school__navigation.css";
 

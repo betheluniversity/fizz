@@ -1,20 +1,32 @@
 .global__footer {
-    margin-top: 0;
+    /* margin-top: 0; */
     background: $bethel--navy;
-    padding-top: 3em;
+    /* background: #777; */
+    /* padding-top: 3em; */
+    color: #ffffff;
+    font-size: .8rem;
+
+    .inner {
+        position: relative;
+        overflow: visible;
+    }
+
+    .grid {
+        z-index: 10;
+        position: relative;
+    }
 
     ul {
         padding-left: 1.25em;
     }
 
     p, li {
-        color: #77cbff; 
+        /* color: #77cbff;  */
          
     }
 
-
     a, a i {
-        color: rgba(255,255,255, .5); 
+        color: rgba(255,255,255, 1); 
     }
 
     a:hover {
@@ -23,7 +35,7 @@
 
     h1, h2, h3, h4, h5, h6 {
         color: #ffc600;
-        font-size: 100%; 
+        /* font-size: 100%;  */
         margin-top: 0;
         margin-bottom: .5em;
     }
@@ -31,35 +43,53 @@
     address {
         font-style: normal;
         margin-bottom: 0;
-        color: #77cbff; 
+        /* color: #77cbff;  */
          
     }
 
-    .svg-icon {
-        width: 1em;
-        height: 1em;
-        margin-right: .5em;
+    .icon {
+        width: 16px;
+        height: 16px;
+        /* margin-right: .5em; */
         vertical-align: text-top;
-        fill: white;
-        fill-opacity: .5;
+        fill: $bethel--blue;
+        /* fill-opacity: .5; */
         margin-bottom: 0;
+        margin-right: .5em;
     }
 
     small, small a {
-        color: #777;
+        color: #eee;
     }
 
     a.btn {
-        color: #fff;
+        /* color: #fff; */
     }
 
-    .social-media {
+    /* .social-media {
         padding-left: 1em;
         padding-right: 1em;
-    }
+    } */
 }
 
-.arrow-up {
+.global__footer__watermark {
+    /* position: absolute; */
+    top: 0em;
+    /* left: 30%; */
+    width: 80px;
+    height: 80px;
+    z-index: 1;
+}
+
+.global__footer__copyright {
+    margin-top: 1em;
+    background: #071C32;
+    padding: .5em;
+    position: relative;
+    z-index: 10;
+}
+
+/* .arrow-up {
     width: 16px;
     height: 16px;
     display: inline-block;
@@ -68,4 +98,4 @@
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center center;
-}
+} */

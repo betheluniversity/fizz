@@ -34,3 +34,9 @@
       padding-right: 3rem;
   }
 }
+
+.inner-wrap--global__navigation {
+    position: relative;
+    background: #fff;
+    overflow: hidden;
+  }
