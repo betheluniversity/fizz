@@ -109,7 +109,7 @@
 
         ul.dropdown li:hover {
             background: $bethel--yellow;
-            transition: background 500ms ease;
+            transition: background 250ms ease;
         }
         
         ul li:hover > ul.dropdown,

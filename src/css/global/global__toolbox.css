@@ -74,13 +74,13 @@
     }
   
     .js .inner-wrap--global__navigation {
-      transform: translate3d(0, 0, 0);
+      transform: translateX(0);
       transition: transform 500ms ease;
       backface-visibility: hidden;
     }
   
     .js.js-openGlobalNav .inner-wrap--global__navigation {
-      transform: translate3d(-18em, 0, 0);
+      transform: translateX(-18em);
     }
   }
   
