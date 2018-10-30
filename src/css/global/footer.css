@@ -1,20 +1,46 @@
 .global__footer {
-    margin-top: 0;
-    background: $bethel--navy;
-    padding-top: 3em;
+    background:#123563;
+    color: rgba(255,255,255, .8);
+    font-size: .8rem;
+
+    .grid {
+        flex-direction: column;
+        justify-content: space-between;
+    
+        @mixin respond-min $large {
+            flex-direction: row;
+        }
+    }
+
+    .footer__gridCell {
+        order: 2;
+
+        @mixin respond-max $large {
+            flex: 1 1 auto;
+        }
+    }
+
+    .footer__gridCell--address {
+        order: 1;
+        font-size: 120%;
+
+        @mixin respond-max $large {
+            flex: 1 1 auto;
+        }
+
+        @mixin respond-min $large {
+            order: 2;
+            text-align: center;
+            flex: 1;
+        }
+    }
 
     ul {
         padding-left: 1.25em;
     }
 
-    p, li {
-        color: #77cbff; 
-        font-family: $gotham;
-    }
-
-
-    a, a i {
-        color: rgba(255,255,255, .5); 
+    a {
+        color: rgba(255,255,255, .8); 
     }
 
     a:hover {
@@ -23,49 +49,35 @@
 
     h1, h2, h3, h4, h5, h6 {
         color: #ffc600;
-        font-size: 100%; 
-        margin-top: 0;
-        margin-bottom: .5em;
     }
 
     address {
         font-style: normal;
         margin-bottom: 0;
-        color: #77cbff; 
-        font-family: $gotham;
     }
 
-    .svg-icon {
-        width: 1em;
-        height: 1em;
-        margin-right: .5em;
-        vertical-align: text-top;
-        fill: white;
-        fill-opacity: .5;
+    .icon svg {
+        width: 16px;
+        height: 16px;
+        vertical-align: middle;
+        fill: #77cbff;
         margin-bottom: 0;
+        margin-right: .5em;
     }
 
-    small, small a {
-        color: #777;
+    a:hover.icon {
+        text-decoration: none;
     }
 
-    a.btn {
-        color: #fff;
-    }
-
-    .social-media {
-        padding-left: 1em;
-        padding-right: 1em;
+    a:hover.icon svg {
+        fill: #fff;
     }
 }
 
-.arrow-up {
-    width: 16px;
-    height: 16px;
-    display: inline-block;
-    margin: -2px 18px;
-    background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjEwcHgiIGhlaWdodD0iN3B4IiB2aWV3Qm94PSIwIDAgMTAgNyIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTAgNyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PGc+PHBhdGggZmlsbD0iIzQzNDM0NiIgZD0iTTcuNzgxLDQuODQ0SDIuMTU2bDIuODEyLTIuODEzTDcuNzgxLDQuODQ0eiIvPjwvZz48L3N2Zz4=);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: center center;
+.global__footer__copyright {
+    margin-top: 1em;
+    background: $bethel--navy;
+    padding: .5em;
+    position: relative;
+    z-index: 10;
 }
