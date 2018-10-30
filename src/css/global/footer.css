@@ -12,17 +12,26 @@
         }
     }
 
-    .footer__grid-cell {
+    .footer__gridCell {
         order: 2;
+
+        @mixin respond-max $large {
+            flex: 1 1 auto;
+        }
     }
 
-    .--address {
+    .footer__gridCell--address {
         order: 1;
         font-size: 120%;
+
+        @mixin respond-max $large {
+            flex: 1 1 auto;
+        }
 
         @mixin respond-min $large {
             order: 2;
             text-align: center;
+            flex: 1;
         }
     }
 
@@ -47,13 +56,21 @@
         margin-bottom: 0;
     }
 
-    .icon {
+    .icon svg {
         width: 16px;
         height: 16px;
-        vertical-align: text-top;
+        vertical-align: middle;
         fill: #77cbff;
         margin-bottom: 0;
         margin-right: .5em;
+    }
+
+    a:hover.icon {
+        text-decoration: none;
+    }
+
+    a:hover.icon svg {
+        fill: #fff;
     }
 }
 
