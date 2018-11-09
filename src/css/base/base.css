@@ -11,6 +11,23 @@ body {
 	box-sizing: inherit;
 }
 
+.skipNav a
+{
+position:absolute;
+left:-10000px;
+top:auto;
+width:1px;
+height:1px;
+overflow:hidden;
+}
+ 
+.skipNav a:focus
+{
+position:static;
+width:auto;
+height:auto;
+} 
+
 /* https://twitter.com/paul_irish/status/524959136782364672*/
 
 /* * {*/

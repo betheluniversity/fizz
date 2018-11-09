@@ -31,19 +31,25 @@
         }
     }
     
-    ul li {
-        /* padding-bottom: .35em; */
+    li {
+        margin-bottom: .35em;
     }
 
     @mixin respond-min $large {
         li {
             display: flex;
             position: relative;
-            border-bottom: .5em solid $bethel--navy;
+            margin-bottom: 0;
+            border-bottom: .5em solid #123563;
         }
 
-        li:hover,
         li:focus-within {
+            cursor: pointer;
+            border-bottom: .5em solid $bethel--yellow;
+            transition: border 250ms ease;
+        }
+
+        li:hover {
             cursor: pointer;
             border-bottom: .5em solid $bethel--yellow;
             transition: border 250ms ease;
@@ -69,15 +75,8 @@
         }
     }
 
-    .svg-icon {
-        height: 1.05em;
-        width: 1.05em;
-        vertical-align: text-top;
-        fill: #fff;
-    }
-
     ul.dropdown {
-        @mixin respond-max $small {
+        @mixin respond-max $large {
             display: none;
         }
     }
@@ -90,16 +89,16 @@
             border: 2px solid $bethel--yellow;
             visibility: hidden;
             opacity: 0;
-            min-width: 15rem;
+            min-width: 13rem;
             position: absolute;
-            transition: all 250ms ease;
+            transition: opacity 250ms ease;
             margin-top: 0;
             top: 3.25rem;
             left: 0;
             margin-left: 0;
             font-size: .9rem;
             padding: 1.5em;
-            pointer-events: none;
+            /* pointer-events: none; */
 
             @mixin respond-min 1100px {
                 top: 3.5rem;
@@ -109,7 +108,7 @@
 
         ul.dropdown li:hover {
             background: $bethel--yellow;
-            transition: background 250ms ease;
+            /* transition: background 250ms ease; */
         }
         
         ul li:hover > ul.dropdown,
@@ -121,12 +120,12 @@
             display: block;
             z-index: 100;
             /* transition: all 500ms ease; */
-            pointer-events: all;
+            /* pointer-events: all; */
         }
         
         ul li ul.dropdown li {
-            clear: both;
-            width: 100%;
+            /* clear: both;
+            width: 100%; */
             padding: .5em;
             /* font-weight: normal; */
             border-bottom: none;
@@ -136,10 +135,6 @@
             color: $bethel--blue;
             border: 0;
             padding: 0;
-        }
-
-        ul.dropdown li a:hover {
-            /* background: white; */
         }
     }
 }
@@ -158,6 +153,7 @@
         font-size: .8rem;
     
         @mixin respond-min $large {
+            display: flex;
             padding: 0 1em;
             margin: .75em 0; 
         }
@@ -167,17 +163,23 @@
         padding: .2em 0;
     
         @mixin respond-min $large {
-            display: inline-block;
+            /* display: inline-block; */
             padding: .2em .5em;
         }
     }
     
-    a {
+    a, svg {
         color: #ccc;
+        fill: #ccc;
+        vertical-align: middle;
     }
     
     a:hover {
         color: #fff;
+    }
+
+    a svg:hover {
+        fill: #fff;
     }
 }
 

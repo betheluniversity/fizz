@@ -1,5 +1,5 @@
 .mobile__header {
-    background: #143a6b;
+    background: $bethel--navy;
     position: relative;
     padding: 0;
     width: 100%;
@@ -19,6 +19,7 @@
 
 .mobile__logo {
     width: 180px;
+    margin-top: .3em;
 }
 
 .mobile__logo a { 
