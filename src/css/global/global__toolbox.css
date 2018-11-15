@@ -27,6 +27,11 @@
           display: block;
           margin-top: 2rem;
           margin-right: 2em;
+          
+        }
+
+      &:hover {
+        outline: 1px solid #123563; /* fixes some weird hover issue in Edge */
       }
   }
 
