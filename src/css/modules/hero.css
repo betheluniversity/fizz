@@ -1,12 +1,9 @@
 .heroVideo {
     position: relative;
     min-width: 100%;
-}
 
-.heroVideo--home {
     @mixin respond-min $large {
-        /* position: fixed; */
-        margin-top: -154px;
+        max-height: 80vh;
     }
 }
 
