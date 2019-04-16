@@ -1,7 +1,8 @@
 const presets = [
     ['@babel/preset-env', {
-        'debug': false,
-        'useBuiltIns': 'false'
+        'debug': true,
+        'useBuiltIns': 'usage',
+        'corejs': 3
     }]
 ]
 

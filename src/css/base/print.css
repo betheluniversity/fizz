@@ -1,0 +1,9 @@
+@media print {
+    .global__toolbox,
+    .mobile__header,
+    .site__features,
+    .global__footer
+    {
+        display: none;
+    }
+}

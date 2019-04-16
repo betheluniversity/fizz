@@ -3,10 +3,10 @@ module.exports = {
         main: './src/js/main.js',
         lazy: './src/js/lazy.js'
     },
-    mode: 'production',
-    // mode: 'none',
+    // mode: 'production',
+    mode: 'development',
     output: {
-        filename: '[name].quatro.js'
+        filename: '[name].pickles.js'
     },
     module: {
         rules: [
