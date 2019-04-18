@@ -6,4 +6,7 @@
     {
         display: none;
     }
+    img, video {
+        max-width: 50%;
+    }
 }
