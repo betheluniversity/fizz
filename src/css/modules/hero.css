@@ -39,7 +39,9 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    /* padding: 1em; */
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
 
     @mixin respond-min $large {
         justify-content: center;
@@ -61,4 +63,3 @@
 		font-size: 4rem;
 	}
 }
-
