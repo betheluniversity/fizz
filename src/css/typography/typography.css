@@ -84,9 +84,9 @@ h6, .h6 {
 
   /* These rules remove the top margin of heading when it is the first in*/
   /* a grid-cell to make content top-aligned*/
-  .main h2:first-of-type,
-  .main h3:first-of-type,
-  .main h4:first-of-type {
+  .main h2:first-child,
+  .main h3:first-child,
+  .main h4:first-child {
     margin-top: 0;
   }
 

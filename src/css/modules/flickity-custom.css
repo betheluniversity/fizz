@@ -1,39 +1,36 @@
-.flickity {
+/* .flickity {
     margin: auto;
 }
 
 .flickity-viewport {
+    transition: height 0.2s;
 
     @mixin respond-min 830px {
         max-height: 75vh;
     }
-}
+} */
 
-.flickity.flickity-enabled {
-    /* background: none;*/
-}
 
-.flickity-enabled .flickity--cell {
+
+/* .flickity-enabled .flickity--cell {
     visibility: visible;
-    /* background: none;*/
 }
 
 .is-selected {
     z-index: 2;
-}
+} */
 
 .flickity--cell {
-    /* visibility: hidden; */
     width: 100%;
     overflow: hidden;
 }
 
-.flickity--cell img {
+/* .flickity--cell img {
     display: block;
     max-height: 100%;
     margin: 0 auto;
     max-width: 100%;
-}
+} */
 
 .carousel--text-over-media .ratio-box {
     position: relative;
@@ -70,7 +67,7 @@
     }
 }
 
-.carousel--text-over-media,
+/* .carousel--text-over-media,
 .carousel--image-bank {
     .flickity-prev-next-button .arrow {
         fill: white;
@@ -80,30 +77,15 @@
         color: white;
     }
        
-}
+} */
 
 .carousel--image-bank .ratio-box {
     padding-bottom: 33.2361516%;
 }
 
-/* .lazyload {
-    opacity: 0;
-}
-
-.lazyloading {
-    opacity: 1;
-    transition: 600ms opacity;
-    min-height: 60px;
-}
-
-.lazyloaded {
-    opacity: 1;
-    transition: 100ms opacity;
-} */
-
 
 /* buttons, no circle */
-.flickity-prev-next-button {
+/* .flickity-prev-next-button {
     width: 40px;
     height: 40px;
     background: transparent;
@@ -115,7 +97,6 @@
     opacity: 1;
 }
 
-/* arrow color */
 .flickity-prev-next-button .arrow {
     fill: $bethel--blue;
 }
@@ -137,40 +118,21 @@
     @mixin respond-min 830px {
         right: 1em;
     }
-}
+} */
 
-.flickity-prev-next-button:disabled {
+/* .flickity-prev-next-button:disabled {
     display: none;
-}
+} */
 
-.flickity-page-dots {
+/* .flickity-page-dots {
     left: 0;
-}
+} */
 
-/* =====================
-Styles for the big carousel on bethel.edu 
-======================== */
-
-.flickity--home {
-    height: 415px;
-    /* max-height: 80vh;*/
-
-    @mixin respond-min 830px {
-        height: 100%;
-    }
-
-    .flickity-viewport {
-
-        @mixin respond-max 829px {
-           height: 100% !important;
-       }
-   }
-}
 
 .flickityCustom--experience {
     
     @mixin respond-min $large {
-        padding-left: 1em;
+        /* padding-left: 1em; */
     }
 
     /* .ratio-box {
