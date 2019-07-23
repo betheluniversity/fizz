@@ -90,6 +90,15 @@ h6, .h6 {
     margin-top: 0;
   }
 
+.grid-cell h2:first-child,
+.grid-cell h3:first-child,
+.grid-cell h4:first-child,
+.grid-cell h5:first-child,
+.grid-cell h6:first-child {
+  margin-top: 0;
+}
+
+
 p:first-child {
 	margin-top: 0;
 }
