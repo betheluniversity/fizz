@@ -17,11 +17,11 @@
 		<div id="main" role="main">
 			{% body %}
 		</div>
-		{{> action-nav }}
+		{{!-- {{> action-nav }} --}}
 		{{> global__footer }}
 	</div>
 
-	<script>
+	{{!-- <script>
 		var cb = function() {
 			var l = document.createElement('link'); l.rel = 'stylesheet';
 			l.href = 'https://cloud.typography.com/6664852/665108/css/fonts.css';
@@ -31,6 +31,6 @@
 		webkitRequestAnimationFrame || msRequestAnimationFrame;
 		if (raf) raf(cb);
 		else window.addEventListener('load', cb);
-	</script>
+	</script> --}}
 </body>
 </html>

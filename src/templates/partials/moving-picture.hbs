@@ -5,9 +5,9 @@
 
     <div class="flickity--cell">
         <div class="ratio-box">
-            <div class="moving-picture no-gradient">
+            <div class="moving-picture xno-gradient">
                 <div class="moving-picture__media">
-                    <div id="vid-wrap"></div>
+                    {{!-- <div id="vid-wrap"></div>
                     <script type="text/javascript">
                         // if (window.matchMedia("(min-width: 1100px)").matches) {
                         //     var vidStr = '<video preload="auto" autoplay="autoplay" muted="true" loop="true" style="min-width: 100%" id="vid">';
@@ -17,11 +17,11 @@
                         //     document.getElementById('vid-wrap').innerHTML = vidStr;
                         //     document.getElementById('vid').play();
                         // }
-                    </script>
+                    </script> --}}
                     <picture>
                         <!--[if IE 9]><video style="display: none"><![endif]-->
-                        <source srcset="{{ this.bigImg }}" media="(min-width: 830px)" />
-                        <source srcset="{{ this.mobileImg }}" />
+                        <source data-srcset="{{ this.bigImg }}" media="(min-width: 830px)" />
+                        <source data-srcset="{{ this.mobileImg }}" />
                         <!--[if IE 9]></video><![endif]-->
                         <img
                                 class="lazyload"
