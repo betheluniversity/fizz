@@ -82,13 +82,21 @@ h6, .h6 {
   font-weight: 600;
 }
 
-  /* These rules remove the top margin of heading when it is the first in*/
-  /* a grid-cell to make content top-aligned*/
-  .main h2:first-child,
-  .main h3:first-child,
-  .main h4:first-child {
-    margin-top: 0;
-  }
+.main h2:first-child,
+.main h3:first-child,
+.main h4:first-child {
+  margin-top: 0;
+}
+
+/* These rules remove the top margin of heading when it is the first in*/
+/* a grid-cell to make content top-aligned*/
+.grid-cell h2:first-child,
+.grid-cell h3:first-child,
+.grid-cell h4:first-child,
+.grid-cell h5:first-child,
+.grid-cell h6:first-child {
+  margin-top: 0;
+}
 
 p:first-child {
 	margin-top: 0;
