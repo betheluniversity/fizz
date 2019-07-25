@@ -90,19 +90,11 @@ h6, .h6 {
 
 /* These rules remove the top margin of heading when it is the first in*/
 /* a grid-cell to make content top-aligned*/
-.grid-cell h2:first-child,
-.grid-cell h3:first-child,
-.grid-cell h4:first-child,
-.grid-cell h5:first-child,
-.grid-cell h6:first-child {
-  margin-top: 0;
-}
-
-.grid-cell h2:first-child,
-.grid-cell h3:first-child,
-.grid-cell h4:first-child,
-.grid-cell h5:first-child,
-.grid-cell h6:first-child {
+.grid-cell > h2,
+.grid-cell > h3,
+.grid-cell > h4,
+.grid-cell > h5,
+.grid-cell > h6 {
   margin-top: 0;
 }
 

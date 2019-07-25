@@ -32,7 +32,7 @@
 @import "site/off-canvas--site.css";
 @import "site/site__title.css";
 @import "site/site__features.css";
-@import "site/site__image-bank.css";
+/* @import "site/site__image-bank.css"; */
 
 @import "page/page__title.css";
 @import "page/page--home.css";
