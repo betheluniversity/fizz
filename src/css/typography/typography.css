@@ -82,9 +82,9 @@ h6, .h6 {
   font-weight: 600;
 }
 
-.main h2:first-child,
-.main h3:first-child,
-.main h4:first-child {
+.main > h2:first-child,
+.main > h3:first-child,
+.main > h4:first-child {
   margin-top: 0;
 }
 
