@@ -5,19 +5,19 @@
     "ie 11"
   ],
   "devDependencies": {
-    "@babel/core": "^7.4.3",
-    "@babel/preset-env": "^7.1.0",
-    "@babel/register": "^7.0.0-beta.55",
+    "@babel/core": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
+    "@babel/register": "^7.6.0",
     "ajv": "^6.5.3",
     "assemble": "^0.24.3",
     "autoprefixer": "^9.1.2",
     "browser-sync": "^2.24.6",
     "cssnano": "^4.0.5",
     "del": "^5.1.0",
-    "eslint": "^6.2.2",
-    "eslint-config-standard": "^14.0.1",
+    "eslint": "^6.4.0",
+    "eslint-config-standard": "^14.1.0",
     "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-node": "^10.0.0",
     "eslint-plugin-promise": "^4.0.0",
     "eslint-plugin-standard": "^4.0.1",
     "flickity": "^2.1.2",
@@ -33,7 +33,7 @@
     "postcss-simple-vars": "^5.0.1",
     "scrollreveal": "^4.0.2",
     "svg4everybody": "^2.1.9",
-    "webpack": "^4.39.3",
+    "webpack": "^4.40.2",
     "webpack-stream": "^5.1.1"
   },
   "name": "fizz",
@@ -41,9 +41,9 @@
   "version": "1.0.0",
   "main": "assemble.config.js",
   "dependencies": {
-    "@babel/runtime": "^7.0.0-beta.56",
+    "@babel/runtime": "^7.6.0",
     "babel-loader": "^8.0.0-beta",
-    "npm": "^6.11.2",
+    "npm": "^6.11.3",
     "npm-check": "^5.8.0"
   },
   "scripts": {
